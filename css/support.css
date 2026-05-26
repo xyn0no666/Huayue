@@ -16,7 +16,7 @@
 
 /* Guides Grid */
 .guides-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3)}
-.guide-card{background:var(--color-dark-surface);border-radius:var(--radius-md);overflow:hidden;transition:all var(--transition)}
+.guide-card{display:block;text-decoration:none;color:inherit;background:var(--color-dark-surface);border-radius:var(--radius-md);overflow:hidden;transition:all var(--transition)}
 .guide-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .guide-card__image{aspect-ratio:3/2;background:var(--color-border-dark);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
 .guide-card__body{padding:var(--space-3)}

@@ -76,15 +76,15 @@
     if(!grid)return;
     var icons=['🌿','🪓','❄️','⚡'];
     grid.innerHTML=guides.map(function(g,i){
-      return '<div class="guide-card">'+
+      return '<a href="'+(g.url||'#')+'" class="guide-card">'+
         '<div class="guide-card__image">'+icons[i]+'</div>'+
         '<div class="guide-card__body">'+
           '<div class="guide-card__time">阅读时间：'+g.readTime+'</div>'+
           '<h3 class="guide-card__title">'+g.title+'</h3>'+
           '<p class="guide-card__desc">'+g.desc+'</p>'+
-          '<a href="#" class="guide-card__link">阅读全文 →</a>'+
+          '<span class="guide-card__link">阅读全文 →</span>'+
         '</div>'+
-      '</div>';
+      '</a>';
     }).join('');
   }
 
