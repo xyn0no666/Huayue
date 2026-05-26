@@ -1,0 +1,26 @@
+/* === Contact Page === */
+
+.contact-layout{display:grid;grid-template-columns:1fr 380px;gap:var(--space-6);align-items:start}
+
+/* Form Wrapper */
+.contact-form-wrapper{background:var(--color-surface);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:var(--space-4)}
+.contact-form{margin-top:var(--space-4)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+
+/* Contact Info Sidebar */
+.contact-info{display:flex;flex-direction:column;gap:var(--space-3)}
+.contact-info__card{background:var(--color-surface);padding:var(--space-3);border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}
+.contact-info__icon{font-size:1.5rem;margin-bottom:var(--space-1)}
+.contact-info__card h3{font-size:0.8125rem;color:var(--color-text-light);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.contact-info__phone{font-family:var(--font-heading);font-size:1.5rem;color:var(--color-gold-dark)}
+.contact-info__meta{font-size:0.75rem;color:var(--color-text-muted)}
+.contact-info__qr{width:120px;height:120px;background:var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);font-size:0.75rem;margin:var(--space-1) 0}
+@media (max-width:1023px){
+  .contact-layout{grid-template-columns:1fr}
+  .contact-info{display:grid;grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:767px){
+  .form-row{grid-template-columns:1fr}
+  .contact-info{grid-template-columns:1fr}
+  .contact-form-wrapper{padding:var(--space-3)}
+}

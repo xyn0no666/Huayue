@@ -1,0 +1,12 @@
+node_modules/
+.netlify/
+.superpowers/
+.claude/
+*.traineddata
+create_brochure.js
+create_improved_pdf.js
+package-lock.json
+package.json
+design-philosophy.md
+todo.html
+brand-bg-preview.html

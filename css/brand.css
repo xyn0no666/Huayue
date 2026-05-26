@@ -1,0 +1,87 @@
+/* === Brand Page === */
+
+/* Hero */
+.brand-hero{
+  position:relative;height:70vh;min-height:500px;
+  background:url('../assets/images/brand-hero-bg.jpg') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  margin-top:var(--header-height);
+}
+.brand-hero__overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(15,12,8,0.78) 0%,rgba(15,12,8,0.5) 50%,rgba(15,12,8,0.75) 100%);
+}
+.brand-hero__content{position:relative;text-align:center;color:#fff;padding:var(--space-3)}
+.brand-hero__content h1{font-size:clamp(2.25rem,6vw,4rem);margin:var(--space-2) 0 var(--space-3)}
+.brand-hero__content p{font-size:1.125rem;color:var(--color-text-muted);max-width:480px;margin:0 auto}
+
+/* Timeline */
+.timeline{position:relative;max-width:800px;margin:0 auto;padding:var(--space-5) 0}
+.timeline__line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--color-gold);transform:translateX(-50%);opacity:0.3}
+.timeline__item{position:relative;margin-bottom:var(--space-6)}
+.timeline__item:nth-child(odd) .timeline__card{margin-left:calc(50% + 40px)}
+.timeline__item:nth-child(even) .timeline__card{margin-right:calc(50% + 40px);text-align:right}
+.timeline__item::before{
+  content:'';position:absolute;left:50%;top:24px;
+  width:12px;height:12px;background:var(--color-gold);border-radius:50%;
+  transform:translate(-50%,-50%);z-index:1;
+  box-shadow:0 0 0 4px var(--color-base),0 0 0 6px var(--color-gold);
+}
+.timeline__card{background:var(--color-surface);padding:var(--space-3);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:all var(--transition)}
+.timeline__card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.timeline__year{font-family:var(--font-heading);font-size:1.5rem;color:var(--color-gold);margin-bottom:var(--space-1)}
+.timeline__card h3{font-size:1.0625rem;margin-bottom:6px}
+.timeline__card p{font-size:0.8125rem;color:var(--color-text-light);line-height:1.7}
+
+/* Craftsmanship */
+.craft-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center}
+.craft-text p{color:var(--color-text-muted);font-size:0.9375rem;line-height:1.9;margin-bottom:var(--space-2)}
+.craft-image{aspect-ratio:4/3;background:var(--color-dark-surface);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.craft-image__placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);color:var(--color-gold);opacity:0.5}
+.craft-image__placeholder svg{width:80px;height:80px}
+.craft-image__placeholder p{font-size:0.75rem;color:var(--color-text-muted);margin:0}
+.craft-stats{display:flex;gap:var(--space-5);margin-top:var(--space-4)}
+.craft-stat{text-align:center}
+.craft-stat strong{display:block;font-family:var(--font-heading);font-size:2rem;color:var(--color-gold)}
+.craft-stat span{font-size:0.6875rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em}
+
+/* Sustainability */
+.sustainability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3)}
+.sustainability-card{background:var(--color-surface);padding:var(--space-4);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);text-align:center;transition:all var(--transition)}
+.sustainability-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.sustainability-card__icon{font-size:2.5rem;margin-bottom:var(--space-2)}
+.sustainability-card h3{font-size:1rem;margin-bottom:var(--space-1)}
+.sustainability-card p{font-size:0.8125rem;color:var(--color-text-light);line-height:1.7}
+
+/* Certifications */
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3)}
+.cert-card{background:var(--color-surface);padding:var(--space-4);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);text-align:center;transition:all var(--transition)}
+.cert-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cert-card__icon{margin-bottom:var(--space-2)}
+.cert-card h3{font-size:0.9375rem;margin-bottom:4px}
+.cert-card p{font-size:0.75rem;color:var(--color-text-light)}
+
+/* Home CTA (shared) */
+.home-cta{padding:var(--space-12) 0;background:linear-gradient(180deg,var(--color-dark-bg) 0%,#2a2018 100%)}
+.home-cta h2{color:#fff;font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:var(--space-2);font-family:var(--font-heading)}
+.home-cta p{color:var(--color-text-muted);margin-bottom:var(--space-5);font-size:1.0625rem}
+
+/* Values */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3)}
+.value-card{text-align:center;padding:var(--space-5) var(--space-3)}
+.value-card__icon{font-size:1.5rem;color:var(--color-gold);margin-bottom:var(--space-2)}
+.value-card h3{font-size:1rem;margin-bottom:var(--space-1);color:var(--color-text-inverse)}
+.value-card p{font-size:0.8125rem;color:var(--color-text-muted);line-height:1.7}
+
+@media (max-width:1023px){
+  .craft-grid{grid-template-columns:1fr;gap:var(--space-5)}
+  .sustainability-grid,.values-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:767px){
+  .brand-hero{height:50vh;min-height:360px}
+  .timeline__line{left:20px}
+  .timeline__item::before{left:20px}
+  .timeline__item:nth-child(odd) .timeline__card,.timeline__item:nth-child(even) .timeline__card{margin-left:48px;margin-right:0;text-align:left}
+  .sustainability-grid,.values-grid{grid-template-columns:1fr}
+  .craft-stats{gap:var(--space-3);flex-wrap:wrap}
+}
