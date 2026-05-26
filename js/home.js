@@ -90,7 +90,7 @@
   }
 
   function getCategoryName(cat){var map={mower:'割灌机',chainsaw:'油锯',blower:'吹风机',brushcutter:'割灌机'};return map[cat]||cat}
-  function getPowerLabel(pt){var m={gasoline:'汽油',electric:'电动',battery:'锂电'};return m[pt]||pt}
+  function getPowerLabel(pt){var m={gasoline:'汽油',diesel:'柴油',hybrid:'混合动力'};return m[pt]||pt}
   function getKeySpec(p){if(p.specs.displacement)return p.specs.displacement;if(p.specs.motor)return p.specs.motor;return p.specs.power||''}
 
   function bindProductCardEvents(){
