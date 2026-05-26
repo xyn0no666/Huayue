@@ -36,8 +36,14 @@
 .checkout-summary__row--total{border-top:1px solid var(--color-border-dark);margin-top:8px;padding-top:var(--space-3);font-size:1.125rem;font-weight:700}
 .checkout-summary__total-price{font-family:var(--font-heading);font-size:1.5rem;color:var(--color-gold)}
 .checkout-form{margin-top:var(--space-4)}
+.checkout-form .form-label{color:#e8e4db}
+.checkout-form .form-input,
+.checkout-form .form-textarea,
+.checkout-form .form-select{color:#000;background:#fff}
 .checkout-empty{text-align:center;padding:var(--space-10) var(--space-4)}
 .checkout-empty__icon{margin-bottom:var(--space-3);opacity:0.3}
+.form-error-msg{display:none;font-size:0.75rem;color:#e74c3c;margin-top:4px}
+.form-error-msg--visible{display:block}
 @media (max-width:1023px){.checkout-layout{grid-template-columns:1fr}}
 
 /* Payment Modal */
@@ -151,12 +157,12 @@
             </div>
             
             <form class="checkout-form" id="checkoutForm" novalidate>
-              <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">姓名 / Name <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="text" class="form-input" required placeholder="您的姓名"></div>
-              <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">邮箱 / Email <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="email" class="form-input" required placeholder="example@email.com"></div>
-              <div class="form-group"><label class="form-label" style="color:var(--color-text-inverse)">公司名称 / Company</label><input type="text" class="form-input" placeholder="公司名称"></div>
-              <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">电话 / Phone <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="tel" class="form-input" required placeholder="+86 或 +1 等"></div>
-              <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">地址 / Address <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="text" class="form-input" required placeholder="国家、城市、街道地址"></div>
-              <div class="form-group"><label class="form-label" style="color:var(--color-text-inverse)">备注 / Notes</label><textarea class="form-textarea" rows="3" placeholder="特殊需求、目标市场、预计年采购量等..."></textarea></div>
+              <div class="form-group"><label class="form-label form-label--required">姓名 / Name</label><input type="text" class="form-input" id="checkoutName" required placeholder="您的姓名"></div>
+              <div class="form-group"><label class="form-label form-label--required">邮箱 / Email</label><input type="text" class="form-input" id="checkoutEmail" required placeholder="example@email.com"><span class="form-error-msg" id="emailError"></span></div>
+              <div class="form-group"><label class="form-label">公司名称 / Company</label><input type="text" class="form-input" id="checkoutCompany" placeholder="公司名称"></div>
+              <div class="form-group"><label class="form-label form-label--required">电话 / Phone</label><input type="text" class="form-input" id="checkoutPhone" required placeholder="+86 138xxxxxxx 或 +1 555xxxxxxx"><span class="form-error-msg" id="phoneError"></span></div>
+              <div class="form-group"><label class="form-label form-label--required">地址 / Address</label><input type="text" class="form-input" id="checkoutAddress" required placeholder="国家、城市、街道地址"></div>
+              <div class="form-group"><label class="form-label">备注 / Notes</label><textarea class="form-textarea" id="checkoutNotes" rows="3" placeholder="特殊需求、目标市场、预计年采购量等..."></textarea></div>
               <button type="submit" class="btn btn--primary btn--lg btn--block">提交订单</button>
             </form>
           </div>
@@ -230,18 +236,58 @@
     if(summaryTotal)summaryTotal.textContent='$'+totalPrice.toLocaleString();
   }
 
+  var emailRegex=/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+  var phoneRegex=/^\+?\d{7,20}$/;
+
+  function clearErrors(){
+    document.querySelectorAll('.form-input--error,.form-error-msg--visible').forEach(function(el){
+      el.classList.remove('form-input--error','form-error-msg--visible');
+    });
+  }
+
+  function validateField(input,errorEl,regex,errorMsg){
+    var val=input.value.trim();
+    if(!val)return true;
+    if(regex&&!regex.test(val)){
+      input.classList.add('form-input--error');
+      if(errorEl){errorEl.textContent=errorMsg;errorEl.classList.add('form-error-msg--visible')}
+      return false;
+    }
+    input.classList.remove('form-input--error');
+    if(errorEl)errorEl.classList.remove('form-error-msg--visible');
+    return true;
+  }
+
   document.getElementById('checkoutForm').addEventListener('submit',function(e){
     e.preventDefault();
-    var required=this.querySelectorAll('[required]');
+    clearErrors();
     var valid=true;
+    var required=this.querySelectorAll('[required]');
     required.forEach(function(el){
       if(!el.value.trim()){
         el.classList.add('form-input--error');
         valid=false;
-      }else{
-        el.classList.remove('form-input--error');
       }
     });
+
+    var emailInput=document.getElementById('checkoutEmail');
+    var emailErr=document.getElementById('emailError');
+    if(emailInput.value.trim()&&!emailRegex.test(emailInput.value.trim())){
+      emailInput.classList.add('form-input--error');
+      emailErr.textContent='邮箱格式不正确，请检查（如：name@example.com）';
+      emailErr.classList.add('form-error-msg--visible');
+      valid=false;
+    }
+
+    var phoneInput=document.getElementById('checkoutPhone');
+    var phoneErr=document.getElementById('phoneError');
+    if(phoneInput.value.trim()&&!phoneRegex.test(phoneInput.value.trim())){
+      phoneInput.classList.add('form-input--error');
+      phoneErr.textContent='电话格式不正确，请输入7-20位数字（可含+号前缀）';
+      phoneErr.classList.add('form-error-msg--visible');
+      valid=false;
+    }
+
     if(!valid)return;
     showPaymentModal();
   });
