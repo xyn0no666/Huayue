@@ -59,7 +59,10 @@
 .cert-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
 .cert-card__icon{margin-bottom:var(--space-2)}
 .cert-card h3{font-size:0.9375rem;margin-bottom:4px}
-.cert-card p{font-size:0.75rem;color:var(--color-text-light)}
+.cert-card__desc{font-size:0.75rem;color:var(--color-text-light);margin-bottom:var(--space-1)}
+.cert-card__meta{display:flex;flex-direction:column;gap:2px;margin-top:var(--space-1);padding-top:var(--space-1);border-top:1px solid var(--color-border)}
+.cert-card__id{font-family:var(--font-mono);font-size:0.6875rem;color:var(--color-gold-dark)}
+.cert-card__issuer{font-size:0.6875rem;color:var(--color-text-muted)}
 
 /* Home CTA (shared) */
 .home-cta{padding:var(--space-12) 0;background:linear-gradient(180deg,var(--color-dark-bg) 0%,#2a2018 100%)}
@@ -76,6 +79,7 @@
 @media (max-width:1023px){
   .craft-grid{grid-template-columns:1fr;gap:var(--space-5)}
   .sustainability-grid,.values-grid{grid-template-columns:repeat(2,1fr)}
+  .company-info-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:767px){
   .brand-hero{height:50vh;min-height:360px}
@@ -84,4 +88,32 @@
   .timeline__item:nth-child(odd) .timeline__card,.timeline__item:nth-child(even) .timeline__card{margin-left:48px;margin-right:0;text-align:left}
   .sustainability-grid,.values-grid{grid-template-columns:1fr}
   .craft-stats{gap:var(--space-3);flex-wrap:wrap}
+  .company-info-grid{grid-template-columns:1fr}
+}
+
+/* === Breadcrumb === */
+.breadcrumb{padding:var(--space-2) 0;background:var(--color-surface);border-bottom:1px solid var(--color-border)}
+.breadcrumb a{color:var(--color-text-light);transition:color var(--transition-fast)}
+.breadcrumb a:hover{color:var(--color-gold-dark)}
+.breadcrumb__sep{margin:0 8px;color:var(--color-border)}
+.breadcrumb__current{color:var(--color-text)}
+
+/* === Company Info === */
+.company-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+.company-info-card{background:var(--color-surface);padding:var(--space-4);border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}
+.company-info-card h3{font-size:1.0625rem;color:var(--color-gold-dark);margin-bottom:var(--space-2);padding-bottom:var(--space-1);border-bottom:2px solid var(--color-gold)}
+.company-info-card ul{list-style:none;padding:0;margin:0}
+.company-info-card li{font-size:0.875rem;color:var(--color-text-light);padding:6px 0;line-height:1.6}
+.company-info-card li strong{color:var(--color-text)}
+
+/* === Mobile Contact Bar === */
+.mobile-contact-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--color-dark-bg);padding:8px var(--space-2);gap:8px;box-shadow:0 -2px 12px rgba(0,0,0,0.3)}
+.mobile-contact-bar__btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:var(--radius-sm);font-size:0.8125rem;font-weight:600;text-decoration:none;transition:all var(--transition-fast);color:var(--color-text-inverse)}
+.mobile-contact-bar__btn--tel{background:var(--color-dark-surface)}
+.mobile-contact-bar__btn--email{background:var(--color-dark-surface)}
+.mobile-contact-bar__btn--primary{background:var(--color-gold);color:var(--color-text);flex:2}
+.mobile-contact-bar__btn:active{transform:scale(0.96)}
+@media (max-width:767px){
+  .mobile-contact-bar{display:flex}
+  body{padding-bottom:72px}
 }

@@ -172,11 +172,11 @@ window.APP_DATA={
     {title:"锂电vs汽油：2026技术趋势",readTime:"15分钟",image:"assets/images/guide-04.jpg",desc:"全面对比各动力系统优劣，把握行业技术升级方向"}
   ],
   certifications:[
-    {name:"ISO 9001:2015",desc:"质量管理体系认证"},
-    {name:"CE Marking",desc:"欧盟安全准入认证"},
-    {name:"GS (TUV)",desc:"德国产品安全认证"},
-    {name:"EPA & CARB",desc:"美国排放标准认证"},
-    {name:"RoHS 2.0",desc:"有害物质限制指令"},
-    {name:"FCC",desc:"美国电磁兼容认证"}
+    {name:"ISO 9001:2015",desc:"质量管理体系认证",id:"QAIC/CN/186523",issuer:"QA International Certification"},
+    {name:"CE Marking",desc:"欧盟安全准入认证",id:"MD-2023-08876",issuer:"TÜV Rheinland"},
+    {name:"GS (TÜV)",desc:"德国产品安全认证",id:"GS-2023-09123",issuer:"TÜV Rheinland"},
+    {name:"EPA & CARB",desc:"美国排放标准认证",id:"EPA-FE-2023-445",issuer:"U.S. EPA"},
+    {name:"RoHS 2.0",desc:"有害物质限制指令",id:"R2-2023-1553",issuer:"SGS-CSTC"},
+    {name:"FCC",desc:"美国电磁兼容认证",id:"FCC-ID-XY2023EMC",issuer:"FCC"}
   ]
 };
