@@ -169,7 +169,7 @@ window.APP_DATA={
     {title:"割灌机选购指南——按市场选型",readTime:"10分钟",image:"assets/images/guide-brushcutter.jpg",desc:"不同国家市场对割灌机的法规、使用习惯和价格带分析",url:"guide-1.html"},
     {title:"油锯安全操作与维护手册",readTime:"12分钟",image:"assets/images/guide-chainsaw.jpg",desc:"专业油锯操作的安全规范和日常维护保养指南",url:"guide-2.html"},
     {title:"园林设备海运包装规范",readTime:"8分钟",image:"assets/images/guide-shipping.jpg",desc:"出口设备防锈处理、包装标准和集装箱装载方案",url:"guide-3.html"},
-    {title:"2冲程vs4冲程：动力系统选型指南",readTime:"15分钟",image:"assets/images/guide-engine.jpg",desc:"全面对比各动力系统优劣，帮助选择最适合的汽油机型",url:"guide-4.html"}
+    {title:"2冲程vs4冲程：动力系统选型指南",readTime:"15分钟",image:"assets/images/guide-engine.png",desc:"全面对比各动力系统优劣，帮助选择最适合的汽油机型",url:"guide-4.html"}
   ],
   certifications:[
     {name:"ISO 9001:2015",desc:"质量管理体系认证",id:"QAIC/CN/186523",issuer:"QA International Certification"},
