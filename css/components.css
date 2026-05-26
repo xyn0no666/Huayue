@@ -164,7 +164,9 @@
 .cart-item__qty button{width:28px;height:28px;border:1px solid var(--color-border-dark);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);font-size:0.875rem;transition:all var(--transition-fast)}
 .cart-item__qty button:hover{background:var(--color-gold);color:#fff;border-color:var(--color-gold)}
 .cart-item__qty span{width:32px;text-align:center;font-size:0.8125rem}
-.cart-item__remove{color:var(--color-text-muted);font-size:0.75rem;cursor:pointer;transition:color var(--transition-fast);margin-left:auto}
+.cart-item__right{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;flex-shrink:0}
+.cart-item__subtotal{font-family:var(--font-heading);font-size:0.9375rem;color:var(--color-gold);white-space:nowrap}
+.cart-item__remove{color:var(--color-text-muted);font-size:0.75rem;cursor:pointer;transition:color var(--transition-fast)}
 .cart-item__remove:hover{color:#c0392b}
 .cart-panel__footer{padding:var(--space-3);border-top:1px solid var(--color-border-dark)}
 .cart-panel__total{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-3);font-size:1rem}
