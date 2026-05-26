@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="结算 — 华悦园林，确认您的产品清单并提交询价。">
+<meta name="description" content="结算 — 华悦园林，确认订单并完成支付。">
 <meta property="og:title" content="结算 — 华悦园林 园林机械制造">
-<meta property="og:description" content="确认产品清单并提交询价，24小时内获取报价。">
+<meta property="og:description" content="确认产品清单，填写收货信息并完成支付。">
 <meta property="og:image" content="assets/images/hero-bg-01.png">
 <meta property="og:url" content="https://huayueyuanlin.com/checkout.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="结算 — 华悦园林 园林机械制造">
-<meta name="twitter:description" content="确认产品清单并提交询价。">
+<meta name="twitter:description" content="确认产品清单，填写收货信息并完成支付。">
 <meta name="twitter:image" content="assets/images/hero-bg-01.png">
 <title>结算 — 华悦园林 园林机械制造</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,55 @@
 .checkout-empty{text-align:center;padding:var(--space-10) var(--space-4)}
 .checkout-empty__icon{margin-bottom:var(--space-3);opacity:0.3}
 @media (max-width:1023px){.checkout-layout{grid-template-columns:1fr}}
+
+/* Payment Modal */
+.payment-overlay{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(0,0,0,0.7);align-items:center;justify-content:center;
+  opacity:0;transition:opacity 0.3s ease;
+}
+.payment-overlay--visible{opacity:1}
+.payment-modal{
+  background:var(--color-base);border-radius:var(--radius-lg);
+  padding:var(--space-5) var(--space-4);max-width:420px;width:90%;
+  text-align:center;position:relative;
+  transform:translateY(20px);transition:transform 0.3s ease;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+.payment-modal--visible{transform:translateY(0)}
+.payment-modal__close{
+  position:absolute;top:12px;right:12px;width:32px;height:32px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--color-text-muted);cursor:pointer;
+  transition:all var(--transition-fast);
+}
+.payment-modal__close:hover{background:var(--color-border);color:var(--color-text)}
+.payment-modal__title{
+  font-family:var(--font-heading);font-size:1.5rem;
+  margin-bottom:var(--space-1);color:var(--color-text);
+}
+.payment-modal__amount{font-size:1rem;color:var(--color-text-light);margin-bottom:var(--space-4)}
+.payment-modal__amount strong{color:var(--color-gold-dark);font-size:1.25rem;font-family:var(--font-heading)}
+
+/* Payment Tabs */
+.payment-tabs{display:flex;gap:0;margin-bottom:var(--space-4);border-radius:var(--radius-sm);overflow:hidden;border:1.5px solid var(--color-border)}
+.payment-tab{
+  flex:1;padding:10px;font-size:0.875rem;font-weight:600;cursor:pointer;
+  background:var(--color-surface);color:var(--color-text-muted);
+  border:none;transition:all var(--transition-fast);
+}
+.payment-tab--active{background:var(--color-gold);color:var(--color-text)}
+.payment-tab:not(.payment-tab--active):hover{background:var(--color-border)}
+
+/* Payment QR */
+.payment-qr{display:none;padding:var(--space-3) 0}
+.payment-qr--active{display:block}
+.payment-qr img{display:block;margin:0 auto var(--space-2);border-radius:var(--radius-md);background:#fff;padding:8px}
+.payment-qr p{font-size:0.875rem;color:var(--color-text);margin-bottom:4px}
+.payment-qr__hint{font-size:0.75rem;color:var(--color-text-muted)}
+.payment-modal__footer{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--color-border)}
+.payment-modal__footer p{font-size:0.75rem;color:var(--color-text-muted);margin-bottom:4px}
+.payment-modal__footer a{font-size:0.9375rem;color:var(--color-gold-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -70,7 +119,7 @@
     <div class="u-container">
       <span class="tag">Checkout</span>
       <h1 class="page-hero__title">确认订单</h1>
-      <p class="page-hero__subtitle">核对产品清单，填写联系方式，我们将在24小时内提供详细报价</p>
+      <p class="page-hero__subtitle">核对产品清单，填写收货信息，选择支付方式完成订单</p>
     </div>
   </section>
 
@@ -100,8 +149,7 @@
               <span>预估总价</span>
               <span class="checkout-summary__total-price" id="summaryTotal">$0</span>
             </div>
-            <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:var(--space-2)">* 最终价格以外贸经理正式报价单为准</p>
-
+            
             <form class="checkout-form" id="checkoutForm" novalidate>
               <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">姓名 / Name <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="text" class="form-input" required placeholder="您的姓名"></div>
               <div class="form-group"><label class="form-label form-label--required" style="color:var(--color-text-inverse)">邮箱 / Email <span style="color:var(--color-error);font-size:0.75rem">(必填)</span></label><input type="email" class="form-input" required placeholder="example@email.com"></div>
@@ -122,19 +170,19 @@
   <div class="footer__grid">
     <div class="footer__col"><div class="footer__brand-name">华悦<span style="color:var(--color-gold)">园林</span></div><p class="footer__brand-desc">专业园林机械制造商，源头工厂，20年OEM/ODM经验，产品出口50+国家，年产能20万台。欢迎全球客户合作。</p></div>
     <div class="footer__col"><div class="footer__col-title">产品</div><div class="footer__links"><a href="products.html?category=mower">割灌机</a><a href="products.html?category=chainsaw">油锯</a><a href="products.html?category=blower">吹风机</a></div></div>
-    <div class="footer__col"><div class="footer__col-title">公司</div><div class="footer__links"><a href="brand.html">关于我们</a><a href="brand.html#factory">工厂实力</a><a href="brand.html#certifications">国际认证</a><a href="contact.html">加入我们</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">公司</div><div class="footer__links"><a href="brand.html">关于我们</a><a href="brand.html#factory">工厂实力</a><a href="brand.html#company-info">公司信息</a><a href="contact.html">加入我们</a></div></div>
     <div class="footer__col"><div class="footer__col-title">支持</div><div class="footer__links"><a href="support.html">技术支持</a><a href="support.html#faqAccordion">常见问题</a><a href="support.html#guidesGrid">保养指南</a><a href="contact.html">售后配件</a></div></div>
     <div class="footer__col"><div class="footer__col-title">联系</div><div class="footer__links"><a href="tel:0579-8722-8888">0579-8722-8888</a><a href="mailto:export@huayueyuanlin.com">export@huayueyuanlin.com</a><a href="contact.html">在线询盘</a><a href="dealer.html">经销商门户</a></div></div>
   </div>
-  <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span>浙ICP备2024XXXXXXXX号</span></div>
+  <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span>浙ICP备2024XXXXXX号-1</span></div>
 </footer>
 
 <script src="js/core.js?v=2"></script>
 <script src="js/data.js?v=6"></script>
-<script src="js/cart.js?v=2"></script>
+<script src="js/cart.js?v=5"></script>
 <script>
 (function(){
-  var STORAGE_KEY='huayuegarden_inquiry';
+  var STORAGE_KEY='huayuegarden_cart';
 
   function getItems(){
     try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||[]}catch(e){return[]}
@@ -169,7 +217,7 @@
         '<div class="checkout-item__image"><img src="'+img+'" alt="'+i.name+'" onerror="this.parentElement.style.background=\'var(--color-border-dark)\';this.style.display=\'none\'"></div>'+
         '<div class="checkout-item__info">'+
           '<div class="checkout-item__name">'+i.name+'</div>'+
-          '<div class="checkout-item__meta">MOQ: '+(i.moq||'咨询')+' &nbsp; 交期: '+(i.leadTime||'咨询')+' &nbsp; 单价: '+unitPrice+'</div>'+
+          '<div class="checkout-item__meta">MOQ: '+(i.moq||'咨询')+' | 交期: '+(i.leadTime||'咨询')+' | 单价: '+unitPrice+'</div>'+
         '</div>'+
         '<div class="checkout-item__qty">x'+i.quantity+'</div>'+
         '<div class="checkout-item__price">'+(i.price?'$'+(i.price*i.quantity).toLocaleString():'—')+'</div>'+
@@ -194,17 +242,86 @@
         el.classList.remove('form-input--error');
       }
     });
-    if(!valid){
-      if(window.App&&window.App.toast)window.App.toast('请填写所有必填字段');
-      return;
-    }
-    if(window.App&&window.App.toast)window.App.toast('订单已提交！我们将在24小时内与您联系。');
-    this.reset();
+    if(!valid)return;
+    showPaymentModal();
+  });
+
+  function showPaymentModal(){
+    var totalPrice=document.getElementById('summaryTotal').textContent;
+    var overlay=document.getElementById('paymentOverlay');
+    var modal=document.getElementById('paymentModal');
+    if(!overlay||!modal)return;
+    document.getElementById('paymentAmount').textContent=totalPrice;
+    overlay.style.display='flex';
+    requestAnimationFrame(function(){
+      overlay.classList.add('payment-overlay--visible');
+      modal.classList.add('payment-modal--visible');
+    });
+  }
+
+  function closePaymentModal(){
+    var overlay=document.getElementById('paymentOverlay');
+    var modal=document.getElementById('paymentModal');
+    if(!overlay||!modal)return;
+    overlay.classList.remove('payment-overlay--visible');
+    modal.classList.remove('payment-modal--visible');
+    setTimeout(function(){overlay.style.display='none'},300);
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.target.closest('#paymentClose')){closePaymentModal();return}
+    if(e.target.id==='paymentOverlay'){closePaymentModal();return}
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closePaymentModal()}
+  });
+
+  document.addEventListener('click',function(e){
+    var tab=e.target.closest('.payment-tab');
+    if(!tab)return;
+    var pay=tab.getAttribute('data-pay');
+    document.querySelectorAll('.payment-tab').forEach(function(t){t.classList.remove('payment-tab--active')});
+    tab.classList.add('payment-tab--active');
+    document.querySelectorAll('.payment-qr').forEach(function(q){q.classList.remove('payment-qr--active')});
+    var target=document.getElementById(pay==='wechat'?'payWechat':'payAlipay');
+    if(target)target.classList.add('payment-qr--active');
   });
 
   render();
-  document.addEventListener('inquiry:updated',render);
+  document.addEventListener('cart:updated',render);
 })();
 </script>
+
+<!-- Payment Modal -->
+<div class="payment-overlay" id="paymentOverlay">
+  <div class="payment-modal" id="paymentModal">
+    <button class="payment-modal__close" id="paymentClose" aria-label="关闭">✕</button>
+    <h2 class="payment-modal__title">扫码支付</h2>
+    <p class="payment-modal__amount">应付金额：<strong id="paymentAmount">$0</strong></p>
+
+    <div class="payment-tabs">
+      <button class="payment-tab payment-tab--active" data-pay="wechat">微信支付</button>
+      <button class="payment-tab" data-pay="alipay">支付宝</button>
+    </div>
+
+    <div class="payment-qr payment-qr--active" id="payWechat">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=WECHAT_PAY_HUAYUE_GARDEN_MACHINERY&bgcolor=f5f2eb&color=2c2416" alt="微信支付二维码" width="220" height="220">
+      <p>打开微信扫一扫</p>
+      <p class="payment-qr__hint">支付完成后请截图发送给客服确认</p>
+    </div>
+
+    <div class="payment-qr" id="payAlipay">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=ALIPAY_HUAYUE_GARDEN_MACHINERY&bgcolor=f5f2eb&color=2c2416" alt="支付宝支付二维码" width="220" height="220">
+      <p>打开支付宝扫一扫</p>
+      <p class="payment-qr__hint">支付完成后请截图发送给客服确认</p>
+    </div>
+
+    <div class="payment-modal__footer">
+      <p>如有疑问，请联系客服</p>
+      <a href="tel:0579-8722-8888">0579-8722-8888</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
