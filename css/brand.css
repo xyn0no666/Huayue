@@ -3,7 +3,7 @@
 /* Hero */
 .brand-hero{
   position:relative;height:70vh;min-height:500px;
-  background:url('../assets/images/brand-hero-bg.jpg') center/cover no-repeat;
+  background:url('../assets/images/brand-hero-new.png') center/cover no-repeat;
   display:flex;align-items:center;justify-content:center;overflow:hidden;
   margin-top:var(--header-height);
 }

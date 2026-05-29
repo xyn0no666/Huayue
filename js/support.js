@@ -1,7 +1,8 @@
 (function(){'use strict';
-  var faqData=(window.APP_DATA&&window.APP_DATA.faq)||[];
-  var guides=(window.APP_DATA&&window.APP_DATA.guides)||[];
-  var products=(window.APP_DATA&&window.APP_DATA.products)||[];
+  function getFaq(){return (window.App&&window.App.getData().faq)||[]}
+  function getGuides(){return (window.App&&window.App.getData().guides)||[]}
+  function getProducts(){return (window.App&&window.App.getData().products)||[]}
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
   var currentCat='all';
 
   /* === FAQ Rendering === */
@@ -75,17 +76,17 @@
     var grid=document.getElementById('guidesGrid');
     if(!grid)return;
     var icons=['🌿','🪓','❄️','⚡'];
-    grid.innerHTML=guides.map(function(g,i){
+    grid.innerHTML=getGuides().map(function(g,i){
       var imgHtml=g.image
         ?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy" style="width:100%;height:100%;object-fit:cover">'
         :icons[i];
       return '<a href="'+(g.url||'#')+'" class="guide-card">'+
         '<div class="guide-card__image">'+imgHtml+'</div>'+
         '<div class="guide-card__body">'+
-          '<div class="guide-card__time">阅读时间：'+g.readTime+'</div>'+
+          '<div class="guide-card__time">'+__('support.readTime')+g.readTime+'</div>'+
           '<h3 class="guide-card__title">'+g.title+'</h3>'+
           '<p class="guide-card__desc">'+g.desc+'</p>'+
-          '<span class="guide-card__link">阅读全文 →</span>'+
+          '<span class="guide-card__link">'+__('support.readMore')+'</span>'+
         '</div>'+
       '</a>';
     }).join('');
@@ -96,15 +97,16 @@
     filter=filter||'all';
     var list=document.getElementById('manualList');
     if(!list)return;
-    var filtered=(filter==='all')?products:products.filter(function(p){return p.category===filter});
+    var prods=getProducts();
+    var filtered=(filter==='all')?prods:prods.filter(function(p){return p.category===filter});
     list.innerHTML=filtered.map(function(p){
       return '<div class="manual-item">'+
         '<div class="manual-item__icon">📄</div>'+
-        '<div class="manual-item__info"><div class="manual-item__name">'+p.name+'</div><div class="manual-item__meta">PDF · '+p.specs.displacement||p.specs.motor||''+'</div></div>'+
-        '<button class="manual-item__download" data-manual-download="'+p.id+'">下载手册</button>'+
+        '<div class="manual-item__info"><div class="manual-item__name">'+p.name+'</div><div class="manual-item__meta">PDF · '+(p.specs.displacement||p.specs.motor||'')+'</div></div>'+
+        '<button class="manual-item__download" data-manual-download="'+p.id+'">'+__('support.download')+'</button>'+
       '</div>';
     }).join('');
-    if(filtered.length===0){list.innerHTML='<p class="u-text-center" style="color:var(--color-text-muted);padding:var(--space-5)">没有找到对应产品</p>'}
+    if(filtered.length===0){list.innerHTML='<p class="u-text-center" style="color:var(--color-text-muted);padding:var(--space-5)">'+__('support.noProduct')+'</p>'}
   }
 
   function initManualFilter(){
@@ -115,7 +117,7 @@
 
   /* === Init === */
   function init(){
-    renderFAQ(faqData);renderGuides();renderManuals();initFAQCats();initFAQSearch();initManualFilter();
+    renderFAQ(getFaq());renderGuides();renderManuals();initFAQCats();initFAQSearch();initManualFilter();
   }
 
   window.App=window.App||{};
@@ -123,4 +125,8 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
+
+  document.addEventListener('lang:changed',function(){
+    renderFAQ(getFaq());renderGuides();renderManuals();
+  });
 })();

@@ -123,9 +123,9 @@
 <main>
   <section class="page-hero">
     <div class="u-container">
-      <span class="tag">Checkout</span>
-      <h1 class="page-hero__title">确认订单</h1>
-      <p class="page-hero__subtitle">核对产品清单，填写收货信息，选择支付方式完成订单</p>
+      <span class="tag" data-i18n="checkout.tag">Checkout</span>
+      <h1 class="page-hero__title" data-i18n="checkout.title">确认订单</h1>
+      <p class="page-hero__subtitle" data-i18n="checkout.subtitle">核对产品清单，填写收货信息，选择支付方式完成订单</p>
     </div>
   </section>
 
@@ -134,7 +134,7 @@
       <div class="checkout-layout">
         <div class="checkout-items" id="checkoutItems">
           <div class="checkout-items__header">
-            <h2>产品清单</h2>
+            <h2 data-i18n="checkout.items">产品清单</h2>
             <span id="itemCount" style="color:var(--color-text-muted);font-size:0.875rem">0 款产品</span>
           </div>
           <div id="checkoutList"></div>
@@ -153,7 +153,7 @@
             <div class="checkout-summary__row"><span>产品数量</span><span id="summaryCount">0</span></div>
             <div class="checkout-summary__row checkout-summary__row--total">
               <span>预估总价</span>
-              <span class="checkout-summary__total-price" id="summaryTotal">$0</span>
+              <span class="checkout-summary__total-price" id="summaryTotal">¥0</span>
             </div>
             
             <form class="checkout-form" id="checkoutForm" novalidate>
@@ -183,8 +183,10 @@
   <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span>浙ICP备2024XXXXXX号-1</span></div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/core.js?v=2"></script>
 <script src="js/data.js?v=7"></script>
+<script src="js/i18n-data.js"></script>
 <script src="js/cart.js?v=5"></script>
 <script>
 (function(){
@@ -209,7 +211,7 @@
       if(empty)empty.style.display='block';
       if(itemCount)itemCount.textContent='0 款产品';
       if(summaryCount)summaryCount.textContent='0';
-      if(summaryTotal)summaryTotal.textContent='$0';
+      if(summaryTotal)summaryTotal.textContent='¥0';
       return;
     }
 
@@ -218,7 +220,7 @@
 
     list.innerHTML=items.map(function(i){
       var img=i.image||'';
-      var unitPrice=i.price?'$'+i.price.toLocaleString():'咨询';
+      var unitPrice=i.price?'¥'+i.price.toLocaleString():'咨询';
       return '<div class="checkout-item">'+
         '<div class="checkout-item__image"><img src="'+img+'" alt="'+i.name+'" onerror="this.parentElement.style.background=\'var(--color-border-dark)\';this.style.display=\'none\'"></div>'+
         '<div class="checkout-item__info">'+
@@ -226,14 +228,14 @@
           '<div class="checkout-item__meta">MOQ: '+(i.moq||'咨询')+' | 交期: '+(i.leadTime||'咨询')+' | 单价: '+unitPrice+'</div>'+
         '</div>'+
         '<div class="checkout-item__qty">x'+i.quantity+'</div>'+
-        '<div class="checkout-item__price">'+(i.price?'$'+(i.price*i.quantity).toLocaleString():'—')+'</div>'+
+        '<div class="checkout-item__price">'+(i.price?'¥'+(i.price*i.quantity).toLocaleString():'—')+'</div>'+
       '</div>';
     }).join('');
 
     var totalQty=items.reduce(function(s,i){return s+i.quantity},0);
     var totalPrice=items.reduce(function(s,i){return s+(i.price||0)*i.quantity},0);
     if(summaryCount)summaryCount.textContent=totalQty+' 台';
-    if(summaryTotal)summaryTotal.textContent='$'+totalPrice.toLocaleString();
+    if(summaryTotal)summaryTotal.textContent='¥'+totalPrice.toLocaleString();
   }
 
   var emailRegex=/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
@@ -344,7 +346,7 @@
   <div class="payment-modal" id="paymentModal">
     <button class="payment-modal__close" id="paymentClose" aria-label="关闭">✕</button>
     <h2 class="payment-modal__title">扫码支付</h2>
-    <p class="payment-modal__amount">应付金额：<strong id="paymentAmount">$0</strong></p>
+    <p class="payment-modal__amount">应付金额：<strong id="paymentAmount">¥0</strong></p>
 
     <div class="payment-tabs">
       <button class="payment-tab payment-tab--active" data-pay="wechat">微信支付</button>

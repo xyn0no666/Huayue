@@ -4,146 +4,146 @@ window.APP_DATA={
       id:"mower-pro-x1",name:"CG-430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.png",
-      specs:{engine:"2冲程",displacement:"43cc",cuttingWidth:"42cm",weight:"7.2kg",shaftType:"直杆"},
+      specs:{engine:"二冲程",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
-      moq:"50台",leadTime:"25-30天",price:185,
-      description:"手提式割灌机，43cc强劲动力，轻量化设计仅7.2kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
+      moq:"1台",leadTime:"15-25天",price:185,
+      description:"手提式割灌机，42.7cc强劲动力，轻量化设计仅8.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
     },
     {
-      id:"mower-elite-x2",name:"5800",
+      id:"mower-elite-x2",name:"5200",
       category:"chainsaw",powerType:"gasoline",
       image:"assets/images/chainsaw-5800.png",
-      specs:{engine:"2冲程",displacement:"58cc",barLength:"20\"",weight:"5.8kg",chainPitch:"3/8\""},
+      specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",weight:"5.5kg"},
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
       certifications:["CE","GS","EPA"],
-      moq:"100台",leadTime:"25-30天",price:320,
-      description:"大功率油锯5800，58cc强劲动力，20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。"
+      moq:"1台",leadTime:"15-25天",price:320,
+      description:"大功率油锯5200，52cc强劲动力，18寸/20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。"
     },
     {
       id:"mower-ride-rx3",name:"EB-260",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260.png",
-      specs:{engine:"2冲程",displacement:"25.4cc",airVolume:"8.5m³/min",airSpeed:"70m/s",weight:"4.5kg"},
+      specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["轻量手提设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"50台",leadTime:"25-30天",price:145,
-      description:"手提式汽油吹风机，25.4cc动力，70m/s风速。轻量便携仅4.5kg，适合庭院清扫、落叶清理和轻型商业用途。"
+      moq:"1台",leadTime:"15-25天",price:145,
+      description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
       id:"blower-eb260a",name:"EB-260A",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260A.png",
-      specs:{engine:"2冲程",displacement:"25.4cc",airVolume:"9.5m³/min",airSpeed:"75m/s",weight:"4.8kg"},
-      features:["升级动力","无级变速油门","巡航定速","低振动","大容量油箱"],
+      specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
+      features:["手提式设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"50台",leadTime:"25-30天",price:220,
-      description:"EB260升级版，25.4cc动力，75m/s风速。优化风道设计，吹扫效率提升15%，适合中型庭院和商业清扫。"
+      moq:"1台",leadTime:"15-25天",price:220,
+      description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携4.5kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
       id:"blower-eb260s",name:"EB-260S",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260S.png",
-      specs:{engine:"2冲程",displacement:"25.4cc",airVolume:"10m³/min",airSpeed:"78m/s",weight:"5.0kg"},
-      features:["强力吹扫","无级变速油门","巡航定速","减震手柄","大型油箱"],
+      specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
+      features:["手提式设计","无级变速油门","巡航定速","减震手柄","大型油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"50台",leadTime:"25-30天",price:330,
+      moq:"1台",leadTime:"15-25天",price:330,
       description:"EB260加强版，25.4cc动力优化调校，78m/s强劲风速。配备减震手柄和大型油箱，适合长时间商业吹扫作业。"
     },
     {
       id:"blower-hbz2602",name:"HBZ-2602",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-HBZ2602.png",
-      specs:{engine:"2冲程",displacement:"25.4cc",airVolume:"10m³/min",airSpeed:"78m/s",weight:"5.3kg"},
-      features:["大功率发动机","涡轮增压风道","巡航定速","人体工学手柄","静音设计"],
+      specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
+      features:["轻量手提设计","高效涡流风道","巡航定速","人体工学手柄","低振动"],
       certifications:["CE","GS","EPA"],
-      moq:"30台",leadTime:"25-30天",price:450,
-      description:"专业级背负式吹风机，25.4cc涡轮增压风道优化，78m/s强劲风速。静音设计，适合市政环卫和专业园林养护。"
+      moq:"1台",leadTime:"15-25天",price:450,
+      description:"手提式汽油吹风机，25.4cc动力，70m/s风速。轻量便携仅3.8kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
       id:"blower-eb430",name:"EB-430",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB430.png",
-      specs:{engine:"2冲程",displacement:"42.7cc",airVolume:"13m³/min",airSpeed:"85m/s",weight:"6.2kg"},
-      features:["42.7cc大排量","高效涡流风道","无级变速","低排放技术","加厚机身"],
+      specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
+      features:["42.7cc大排量","高效涡流风道","无级变速","背带减负系统","加厚机身"],
       certifications:["CE","GS","EPA"],
-      moq:"50台",leadTime:"25-30天",price:360,
-      description:"42.7cc大排量吹风机，85m/s高风速，13m³/min大风量。适合大面积场地清扫、果园落叶清理等重型作业。"
+      moq:"1台",leadTime:"15-25天",price:360,
+      description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb650",name:"EB-650",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB650.png",
-      specs:{engine:"2冲程",displacement:"63.3cc",airVolume:"17m³/min",airSpeed:"95m/s",weight:"7.2kg"},
+      specs:{engine:"二冲程",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc大功率","双涡轮风道","背带减负系统","防震设计","大油箱续航"],
       certifications:["CE","GS","EPA"],
-      moq:"30台",leadTime:"30-35天",price:350,
-      description:"63.3cc大功率吹风机，风量17m³/min。配备双涡轮风道和背带减负系统，适合专业林场和大型绿地吹扫。"
+      moq:"1台",leadTime:"15-25天",price:350,
+      description:"背负式汽油吹风机，63.3cc动力，87m/s风速。重量9.2/11kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb808",name:"EB-808",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB808.png",
-      specs:{engine:"2冲程",displacement:"42.7cc",airVolume:"14m³/min",airSpeed:"88m/s",weight:"6.5kg"},
+      specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc动力","高效涡流风道","背带减负系统","强力启动马达","耐用型机身"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"20台",leadTime:"30-35天",price:350,
-      description:"42.7cc工业级吹风机，88m/s飓风级风速。优化风道设计，适合高尔夫球场、大型公园等专业场景。"
+      moq:"1台",leadTime:"15-25天",price:350,
+      description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb850",name:"EB-850",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB850.png",
-      specs:{engine:"4冲程",displacement:"75.6cc",airVolume:"20m³/min",airSpeed:"103m/s",weight:"8.5kg"},
+      specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc四冲程动力","低噪音低振动","四涡轮风道系统","人体工学背带","一键启动"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"20台",leadTime:"30-35天",price:600,
-      description:"75.6cc四冲程旗舰吹风机，103m/s超高速风，20m³/min超大流量。四冲程低油耗低噪音，专为高标准商业和市政清洁设计。"
+      moq:"1台",leadTime:"15-25天",price:600,
+      description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.5/11.5kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb851",name:"EB-851",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB851.png",
-      specs:{engine:"4冲程",displacement:"75.6cc",airVolume:"21m³/min",airSpeed:"105m/s",weight:"8.8kg"},
+      specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc四冲程旗舰","五涡轮增压系统","全悬浮减震","电子点火","航空级材质"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"20台",leadTime:"30-35天",price:650,
-      description:"EB-850旗舰升级版，75.6cc四冲程，105m/s极速风速，21m³/min超大流量。五涡轮增压与全悬浮减震，顶级商业清洁利器。"
+      moq:"1台",leadTime:"15-25天",price:650,
+      description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.4/12.2kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb8500",name:"EB-8500",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB8500.png",
-      specs:{engine:"2冲程",displacement:"75.6cc",airVolume:"19m³/min",airSpeed:"100m/s",weight:"7.8kg"},
-      features:["75.6cc大功率","高效涡轮风道","省油技术","轻量化设计","耐用型空滤"],
+      specs:{engine:"二冲程",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
+      features:["63.6cc大功率","高效涡轮风道","省油技术","背带减负系统","耐用型空滤"],
       certifications:["CE","GS","EPA"],
-      moq:"30台",leadTime:"25-30天",price:550,
-      description:"75.6cc大功率吹风机，100m/s风速，19m³/min大风量。兼顾动力与燃油经济性，适合日常高频使用场景。"
+      moq:"1台",leadTime:"15-25天",price:550,
+      description:"背负式汽油吹风机，63.6cc动力，87m/s风速。重量9/10.8kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
       id:"blower-eb850e",name:"EB-850E",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB850E.png",
-      specs:{engine:"2冲程",displacement:"75.6cc",airVolume:"19m³/min",airSpeed:"100m/s",weight:"7.9kg"},
+      specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc电子点火","高效涡轮风道","电子燃油喷射","一键启动","智能温控"],
       certifications:["CE","GS","EPA"],
-      moq:"30台",leadTime:"25-30天",price:550,
-      description:"EB-8500电子升级版，75.6cc动力，电子燃油喷射和智能温控系统。启动更便捷，燃烧更充分，适合寒冷地区和高端用户。"
+      moq:"1台",leadTime:"15-25天",price:550,
+      description:"背负式汽油吹风机，75.6cc动力，92m/s风速。重量11/12.9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     }
   ],
   categories:[
     {id:"all",name:"全部产品"},
-    {id:"mower",name:"割灌机",icon:"mower"},
-    {id:"chainsaw",name:"油锯",icon:"chainsaw"},
-    {id:"blower",name:"吹风机",icon:"blower"}
+    {id:"mower",name:"割灌机"},
+    {id:"chainsaw",name:"油锯"},
+    {id:"blower",name:"吹风机"}
   ],
   testimonials:[
-    {name:"张大伟",location:"陕西·延安",avatar:"https://i.pravatar.cc/150?u=zhang-dawei",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5,company:"阳光果业合作社"},
-    {name:"李建国",location:"浙江·杭州",avatar:"https://i.pravatar.cc/150?u=li-jianguo",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5,company:"杭州绿城园林工程有限公司"},
-    {name:"王芳",location:"江苏·苏州",avatar:"https://i.pravatar.cc/150?u=wang-fang",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:5,company:"家庭用户"},
-    {name:"刘志强",location:"福建·龙岩",avatar:"https://i.pravatar.cc/150?u=liu-zhiqiang",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5,company:"龙岩林场"},
-    {name:"Olivier Dubois",location:"法国·里昂",avatar:"https://i.pravatar.cc/150?u=olivier-dubois",text:"我们在法国定位中高端园艺市场，对自有品牌调性要求很高。华悦的灵活定制能力让人服气——从潘通配色到压铸铭牌到彩盒设计，全部按需落地，新品开发周期仅 60-75 天，比欧洲本地 OEM 厂还快两周。合作五年，年订单从 30 万欧元增长到 180 万欧元，是最信赖的亚洲制造伙伴。",rating:5,company:"JardinTech SARL"},
-    {name:"Ahmed Al-Rashid",location:"沙特·利雅得",avatar:"https://i.pravatar.cc/150?u=ahmed-alrashid",text:"中东市场对设备的要求比较特殊——夏季 45°C 高温 + 细沙粉尘，普通发动机空滤三个月就堵。华悦为我们定制了双层油浴空滤方案，装在 VP-B630 吹风机和 VP-C580 油锯上，故障率降到之前的 1/5。他们还有专业的阿拉伯语外贸经理，沟通零障碍，信用证、SASO 认证单证处理非常专业。",rating:5,company:"Green Desert Trading"}
+    {name:"陈志远",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=chen-zhiyuan&backgroundColor=b6e3f4&mouth=smile&eyes=happy",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
+    {name:"赵明辉",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=zhao-minghui&backgroundColor=c0aede,d1d4f9,b6e3f4,ffd5dc,ffdfbf&mouth=smile&eyes=happy",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
+    {name:"林小雨",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=lin-xiaoyu&backgroundColor=ffd5dc,ffdfbf,c0aede&mouth=smile&eyes=happy",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:5},
+    {name:"孙文博",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=sun-wenbo&backgroundColor=b6e3f4,c0aede,d1d4f9&mouth=smile&eyes=happy",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
+    {name:"Marco Ferrara",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=marco-ferrara&backgroundColor=d1d4f9,b6e3f4,ffdfbf&mouth=smile&eyes=happy",text:"我们在法国定位中高端园艺市场，对自有品牌调性要求很高。华悦的灵活定制能力让人服气——从潘通配色到压铸铭牌到彩盒设计，全部按需落地，新品开发周期仅 60-75 天，比欧洲本地 OEM 厂还快两周。合作五年，年订单从 30 万欧元增长到 180 万欧元，是最信赖的亚洲制造伙伴。",rating:5},
+    {name:"Karim Hassan",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=karim-hassan&backgroundColor=b6e3f4,c0aede,ffd5dc,ffdfbf&mouth=smile&eyes=happy",text:"中东市场对设备的要求比较特殊——夏季 45°C 高温 + 细沙粉尘，普通发动机空滤三个月就堵。华悦为我们定制了双层油浴空滤方案，装在 VP-B630 吹风机和 VP-C580 油锯上，故障率降到之前的 1/5。他们还有专业的阿拉伯语外贸经理，沟通零障碍，信用证、SASO 认证单证处理非常专业。",rating:5}
   ],
   faq:[
     {q:"如何选择适合我市场的割灌机型号？",a:"选择型号需考虑目标市场法规(EPA/CE等)、草坪面积、地形和价格定位。面积<200㎡推荐手推式，200-800㎡推荐自走式，>800㎡推荐驾乘式。我们的外贸经理可针对您的市场需求提供专业建议。",cat:"产品选择"},
@@ -163,7 +163,7 @@ window.APP_DATA={
     {value:20,label:"年制造经验",suffix:"+"},
     {value:200000,label:"年产能(台)",suffix:"+"},
     {value:50,label:"出口国家",suffix:"+"},
-    {value:41000,label:"工厂面积(㎡)",suffix:""}
+    {value:41334,label:"工厂面积(㎡)",suffix:""}
   ],
   guides:[
     {title:"割灌机选购指南——按市场选型",readTime:"10分钟",image:"assets/images/guide-brushcutter.jpg",desc:"不同国家市场对割灌机的法规、使用习惯和价格带分析",url:"guide-1.html"},

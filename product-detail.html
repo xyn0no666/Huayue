@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="产品详情 — 华悦园林 园林机械制造">
+<title>产品详情 — 华悦园林 园林机械制造</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css?v=4">
+<link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">华悦<span>园林</span><i class="header__logo-dot"></i></a>
+    <button class="hamburger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="header__nav">
+      <a href="index.html" class="header__nav-link">首页</a>
+      <a href="products.html" class="header__nav-link">产品中心</a>
+      <a href="brand.html" class="header__nav-link">关于我们</a>
+      <a href="support.html" class="header__nav-link">技术支持</a>
+      <a href="contact.html" class="header__nav-link">联系我们</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__cart-btn" data-cart-toggle aria-label="购物车">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><path d="M20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 1.46 1.46l11.08 1.54a2 2 0 0 0 2.17-1.16L23 6H6"/></svg>
+        <span class="header__cart-count">0</span>
+      </button>
+      <a href="dealer.html" class="header__dealer-link">经销商入口</a>
+      <a href="contact.html" class="btn btn--outline btn--sm">立即询问</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="product-detail" id="productDetail">
+    <div class="u-container">
+      <!-- Breadcrumb -->
+      <nav class="product-detail__breadcrumb">
+        <a href="index.html" data-i18n="nav.home">首页</a> /
+        <a href="products.html" data-i18n="nav.products">产品中心</a> /
+        <span id="breadcrumbCat"></span> /
+        <span id="breadcrumbName"></span>
+      </nav>
+
+      <!-- Content: filled by JS -->
+      <div id="productDetailContent"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__col"><div class="footer__brand-name">华悦<span style="color:var(--color-gold)">园林</span></div><p class="footer__brand-desc">专业园林机械制造商，源头工厂，20年OEM/ODM经验，产品出口50+国家，年产能20万台。欢迎全球客户合作。</p></div>
+    <div class="footer__col"><div class="footer__col-title">产品</div><div class="footer__links"><a href="products.html?category=mower">割灌机</a><a href="products.html?category=chainsaw">油锯</a><a href="products.html?category=blower">吹风机</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">公司</div><div class="footer__links"><a href="brand.html">关于我们</a><a href="brand.html#factory">工厂实力</a><a href="brand.html#company-info">公司信息</a><a href="contact.html">加入我们</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">支持</div><div class="footer__links"><a href="support.html">技术支持</a><a href="support.html#faqAccordion">常见问题</a><a href="support.html#guidesGrid">保养指南</a><a href="contact.html">售后配件</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">联系</div><div class="footer__links"><a href="tel:0579-8722-8888">0579-8722-8888</a><a href="mailto:export@huayueyuanlin.com">export@huayueyuanlin.com</a><a href="contact.html">在线询盘</a><a href="dealer.html">经销商门户</a></div></div>
+  </div>
+  <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span>浙ICP备2024XXXXXX号-1</span></div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/core.js?v=2"></script>
+<script src="js/data.js?v=7"></script>
+<script src="js/i18n-data.js"></script>
+<script src="js/cart.js?v=5"></script>
+<script src="js/product-detail.js"></script>
+</body>
+</html>

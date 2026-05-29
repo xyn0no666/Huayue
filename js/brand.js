@@ -1,16 +1,18 @@
 (function(){'use strict';
-  var certs=(window.APP_DATA&&window.APP_DATA.certifications)||[];
+  function getCerts(){return (window.App&&window.App.getData().certifications)||[]}
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
 
   function renderCerts(){
     var grid=document.getElementById('certsGrid');
     if(!grid)return;
+    var certs=getCerts();
     if(!certs.length){
       grid.style.display='none';return;
     }
     grid.innerHTML=certs.map(function(c){
       var detail='';
       if(c.id) detail+='<span class="cert-card__id">'+c.id+'</span>';
-      if(c.issuer) detail+='<span class="cert-card__issuer">发证机构: '+c.issuer+'</span>';
+      if(c.issuer) detail+='<span class="cert-card__issuer">'+__('brand.issuer')+c.issuer+'</span>';
       return '<div class="cert-card fade-in">'+
         '<div class="cert-card__icon">'+
           '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-dark)" stroke-width="1.5">'+
@@ -48,4 +50,6 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
+
+  document.addEventListener('lang:changed',function(){renderCerts();});
 })();

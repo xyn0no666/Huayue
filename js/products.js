@@ -1,10 +1,14 @@
 (function(){'use strict';
-  var products=(window.APP_DATA&&window.APP_DATA.products)||[];
+  function getProducts(){return (window.App&&window.App.getData().products)||[]}
+  function getCategories(){return (window.App&&window.App.getData().categories)||[]}
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
+  function getCatName(cat){var cats=getCategories();var found=cats.find(function(c){return c.id===cat});return found?found.name:cat}
+  function getPowerLabel(pt){if(pt==='gasoline')return __('filter.gasoline');return pt}
   var filters={category:'all',powerType:'all',engine:'all',search:'',sort:'default'};
 
   /* === Filter Logic === */
   function getFilteredProducts(){
-    var filtered=products.slice();
+    var filtered=getProducts().slice();
     if(filters.category!=='all')filtered=filtered.filter(function(p){return p.category===filters.category});
     if(filters.powerType!=='all')filtered=filtered.filter(function(p){return p.powerType===filters.powerType});
     if(filters.engine!=='all'){
@@ -34,12 +38,12 @@
     if(!grid)return;
 
     grid.innerHTML=f.map(function(p){return createProductCardHTML(p)}).join('');
-    if(count)count.textContent='共 '+f.length+' 款产品';
+    if(count)count.textContent=__('products.count').replace('{count}',f.length);
     if(empty)empty.style.display=f.length===0?'block':'none';
 
     grid.querySelectorAll('[data-quickview]').forEach(function(btn){
       btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();
-        var p=products.find(function(x){return x.id===this.getAttribute('data-quickview')});
+        var p=getProducts().find(function(x){return x.id===this.getAttribute('data-quickview')});
         if(p)showQuickView(p);
       });
     });
@@ -51,29 +55,27 @@
     var certsHTML=(p.certifications||[]).map(function(c){return '<span class="cert-tag">'+c+'</span>'}).join('');
     var infoHTML='';
     if(p.moq)infoHTML+='<span>MOQ: '+p.moq+'</span>';
-    if(p.leadTime)infoHTML+='<span>交期: '+p.leadTime+'</span>';
+    if(p.leadTime)infoHTML+='<span>'+__('common.leadTime')+p.leadTime+'</span>';
 
     return '<div class="product-card">'+
-      '<div class="product-card__image"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
+      '<a href="product-detail.html?id='+p.id+'" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
         (certsHTML?'<div class="product-card__certs">'+certsHTML+'</div>':'')+
-        '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="快速查看">'+
+        '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="'+__('home.quickView')+'">'+
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>'+
         '</button>'+
-      '</div>'+
+      '</a>'+
       '<div class="product-card__body">'+
         '<div class="product-card__category">'+getCatName(p.category)+' · '+getPowerLabel(p.powerType)+'</div>'+
-        '<h3 class="product-card__name">'+p.name+'</h3>'+
+        '<h3 class="product-card__name"><a href="product-detail.html?id='+p.id+'">'+p.name+'</a></h3>'+
         '<div class="product-card__specs"><span>'+getKeySpec(p)+'</span></div>'+
         '<div class="product-card__meta">'+infoHTML+'</div>'+
         '<div class="product-card__footer">'+
-          '<button class="btn btn--outline btn--sm" data-cart-add="'+p.id+'" style="width:100%">加入购物车</button>'+
+          '<button class="btn btn--outline btn--sm" data-cart-add="'+p.id+'" style="width:100%">'+__('cart.add')+'</button>'+
         '</div>'+
       '</div>'+
     '</div>';
   }
 
-  function getCatName(cat){var m={mower:'割灌机',chainsaw:'油锯',blower:'吹风机',brushcutter:'割灌机'};return m[cat]||cat}
-  function getPowerLabel(pt){var m={gasoline:'汽油',diesel:'柴油',hybrid:'混合动力'};return m[pt]||pt}
   function getKeySpec(p){if(p.specs.displacement)return p.specs.displacement;if(p.specs.motor)return p.specs.motor;return p.specs.power||''}
 
   /* === Quick View Modal === */
@@ -86,16 +88,16 @@
         '<button class="quickview__close" data-qv-close>&times;</button>'+
         '<div class="quickview__image"><img src="'+p.image+'" alt="'+p.name+'" onerror="this.parentElement.style.background=\'var(--color-border)\';this.style.display=\'none\'"></div>'+
         '<div class="quickview__body">'+
-          '<span class="tag">'+getCatName(p.category)+' · '+getPowerLabel(p.powerType)+'</span>'+
+          '<span class="tag">'+getCatName(p.category)+' · '+p.powerType+'</span>'+
           '<h3>'+p.name+'</h3>'+
           '<p style="color:var(--color-text-light);font-size:0.8125rem;margin-bottom:var(--space-2)">'+p.description+'</p>'+
           '<div class="quickview__specs">'+Object.entries(p.specs).map(function(e){return '<span><strong>'+e[0]+'</strong>: '+e[1]+'</span>'}).join('')+'</div>'+
           '<ul class="quickview__features">'+p.features.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
           (certsHTML?'<div style="margin-bottom:var(--space-2)">'+certsHTML+'</div>':'')+
-          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>交期:</strong> '+(p.leadTime||'咨询')+'</div>':'')+
+          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>'+__('common.leadTime')+'</strong> '+(p.leadTime||__('common.inquire'))+'</div>':'')+
           '<div class="quickview__footer">'+
-            '<span style="font-family:var(--font-heading);font-size:1.125rem;color:var(--color-gold-dark)">出厂价咨询</span>'+
-            '<a href="contact.html?tab=quote" class="btn btn--primary">发送询盘</a>'+
+            '<span style="font-family:var(--font-heading);font-size:1.125rem;color:var(--color-gold-dark)">'+__('home.factoryPrice')+'</span>'+
+            '<a href="contact.html?tab=quote" class="btn btn--primary">'+__('home.sendInquiry')+'</a>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -194,4 +196,6 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
+
+  document.addEventListener('lang:changed',function(){render()});
 })();

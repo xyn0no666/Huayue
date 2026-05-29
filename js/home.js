@@ -1,8 +1,12 @@
 (function(){'use strict';
-  var products=(window.APP_DATA&&window.APP_DATA.products)||[];
-  var categories=(window.APP_DATA&&window.APP_DATA.categories)||[];
-  var testimonials=(window.APP_DATA&&window.APP_DATA.testimonials)||[];
-  var stats=(window.APP_DATA&&window.APP_DATA.stats)||[];
+
+  function getProducts(){return (window.App&&window.App.getData().products)||[]}
+  function getCategories(){return (window.App&&window.App.getData().categories)||[]}
+  function getTestimonials(){return (window.App&&window.App.getData().testimonials)||[]}
+  function getStats(){return (window.App&&window.App.getData().stats)||[]}
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
+  function getCatName(cat){var cats=getCategories();var found=cats.find(function(c){return c.id===cat});return found?found.name:cat}
+  function getPowerLabel(pt){if(pt==='gasoline')return __('filter.gasoline');return pt}
 
   /* === Hero Slider === */
   function initHero(){
@@ -49,12 +53,12 @@
       chainsaw:'<img src="assets/images/chainsaw-category-bg.png" alt="油锯" style="max-width:90%;max-height:90%;object-fit:contain">',
       blower:'<img src="assets/images/blower-category-bg.png" alt="吹风机" style="max-width:95%;max-height:95%;object-fit:contain;position:relative;top:8%">',
     };
-    var catData=categories.filter(function(c){return c.id!=='all'});
+    var catData=getCategories().filter(function(c){return c.id!=='all'});
     grid.innerHTML=catData.map(function(c){
       return '<a href="products.html?category='+c.id+'" class="category-card">'+
         '<div class="category-card__bg" style="background:'+(catColors[c.id]||'#3a3a3a')+'">'+(catSVGs[c.id]||'')+'</div>'+
         '<div class="category-card__overlay"></div>'+
-        '<div class="category-card__content"><h3>'+c.name+'</h3><p>查看系列 →</p></div>'+
+        '<div class="category-card__content"><h3>'+c.name+'</h3><p>'+__('home.viewSeries')+'</p></div>'+
       '</a>';
     }).join('');
   }
@@ -63,7 +67,7 @@
   function renderFeatured(){
     var grid=document.getElementById('featuredGrid');
     if(!grid)return;
-    var featured=products.slice(0,3);
+    var featured=getProducts().slice(0,3);
     grid.innerHTML=featured.map(function(p){return createProductCard(p)}).join('');
     bindProductCardEvents();
   }
@@ -71,32 +75,30 @@
   function createProductCard(p){
     var certsHTML=(p.certifications||[]).slice(0,3).map(function(c){return '<span class="cert-tag">'+c+'</span>'}).join('');
     return '<div class="product-card">'+
-      '<div class="product-card__image"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
+      '<a href="product-detail.html?id='+p.id+'" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
         (certsHTML?'<div class="product-card__certs">'+certsHTML+'</div>':'')+
-        '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="快速查看">'+
+        '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="'+__('home.quickView')+'">'+
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>'+
         '</button>'+
-      '</div>'+
+      '</a>'+
       '<div class="product-card__body">'+
-        '<div class="product-card__category">'+getCategoryName(p.category)+' · '+getPowerLabel(p.powerType)+'</div>'+
-        '<h3 class="product-card__name">'+p.name+'</h3>'+
+        '<div class="product-card__category">'+getCatName(p.category)+' · '+getPowerLabel(p.powerType)+'</div>'+
+        '<h3 class="product-card__name"><a href="product-detail.html?id='+p.id+'">'+p.name+'</a></h3>'+
         '<div class="product-card__specs"><span>'+getKeySpec(p)+'</span></div>'+
-        (p.moq?'<div class="product-card__meta"><span>MOQ: '+p.moq+'</span><span>交期: '+p.leadTime+'</span></div>':'')+
+        (p.moq?'<div class="product-card__meta"><span>MOQ: '+p.moq+'</span><span>'+__('common.leadTime')+p.leadTime+'</span></div>':'')+
         '<div class="product-card__footer">'+
-          '<a href="products.html" class="btn btn--outline btn--sm" style="width:100%">查看</a>'+
+          '<a href="products.html" class="btn btn--outline btn--sm" style="width:100%">'+__('common.view')+'</a>'+
         '</div>'+
       '</div>'+
     '</div>';
   }
 
-  function getCategoryName(cat){var map={mower:'割灌机',chainsaw:'油锯',blower:'吹风机',brushcutter:'割灌机'};return map[cat]||cat}
-  function getPowerLabel(pt){var m={gasoline:'汽油',diesel:'柴油',hybrid:'混合动力'};return m[pt]||pt}
   function getKeySpec(p){if(p.specs.displacement)return p.specs.displacement;if(p.specs.motor)return p.specs.motor;return p.specs.power||''}
 
   function bindProductCardEvents(){
     document.querySelectorAll('[data-quickview]').forEach(function(btn){
       btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();
-        var p=products.find(function(x){return x.id===this.getAttribute('data-quickview')});
+        var p=getProducts().find(function(x){return x.id===this.getAttribute('data-quickview')});
         if(p)showQuickView(p);
       });
     });
@@ -111,16 +113,16 @@
         '<button class="quickview__close" data-qv-close>&times;</button>'+
         '<div class="quickview__image"><img src="'+p.image+'" alt="'+p.name+'" onerror="this.parentElement.style.background=\'var(--color-border)\';this.style.display=\'none\'"></div>'+
         '<div class="quickview__body">'+
-          '<span class="tag">'+getCategoryName(p.category)+' · '+getPowerLabel(p.powerType)+'</span>'+
+          '<span class="tag">'+getCatName(p.category)+' · '+p.powerType+'</span>'+
           '<h3>'+p.name+'</h3>'+
           '<p style="color:var(--color-text-light);font-size:0.8125rem;margin-bottom:var(--space-2)">'+p.description+'</p>'+
           '<div class="quickview__specs">'+Object.entries(p.specs).map(function(e){return '<span><strong>'+e[0]+'</strong>: '+e[1]+'</span>'}).join('')+'</div>'+
           '<ul class="quickview__features">'+p.features.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
           (certsHTML?'<div style="margin-bottom:var(--space-2)">'+certsHTML+'</div>':'')+
-          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>交期:</strong> '+(p.leadTime||'咨询')+'</div>':'')+
+          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>'+__('common.leadTime')+'</strong> '+(p.leadTime||__('common.inquire'))+'</div>':'')+
           '<div class="quickview__footer">'+
-            '<span style="font-family:var(--font-heading);font-size:1.125rem;color:var(--color-gold-dark)">出厂价咨询</span>'+
-            '<a href="contact.html?tab=quote" class="btn btn--primary">发送询盘</a>'+
+            '<span style="font-family:var(--font-heading);font-size:1.125rem;color:var(--color-gold-dark)">'+__('home.factoryPrice')+'</span>'+
+            '<a href="contact.html?tab=quote" class="btn btn--primary">'+__('home.sendInquiry')+'</a>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -143,7 +145,7 @@
   function renderStats(){
     var grid=document.getElementById('statsGrid');
     if(!grid)return;
-    grid.innerHTML=stats.map(function(s,i){
+    grid.innerHTML=getStats().map(function(s,i){
       return '<div class="stat-item fade-in"><div class="stat-item__number" data-count="'+s.value+'" data-suffix="'+s.suffix+'">0</div><div class="stat-item__label">'+s.label+'</div></div>';
     }).join('');
     observeStats();
@@ -198,7 +200,7 @@
         '<p class="testimonial-card__text">"'+t.text+'"</p>'+
         '<div class="testimonial-card__author">'+
           avatarHTML+
-          '<div><div class="testimonial-card__name">'+t.name+'</div><div class="testimonial-card__company">'+t.company+'</div><div class="testimonial-card__location">'+t.location+'</div></div>'+
+          '<div><div class="testimonial-card__name">'+t.name+'</div>'+(t.company?'<div class="testimonial-card__company">'+t.company+'</div>':'')+(t.location?'<div class="testimonial-card__location">'+t.location+'</div>':'')+'</div>'+
         '</div>'+
       '</div>';
     }).join('');
@@ -209,7 +211,7 @@
     var track=document.getElementById('testimonialTrack');
     var dotsContainer=document.getElementById('testimonialDots');
     if(!track)return;
-    var slides=testimonials.slice(0,4);
+    var slides=getTestimonials().slice(0,4);
     var current=0;var total=slides.length;var interval;
 
     track.innerHTML=slides.map(function(t,i){
@@ -223,7 +225,7 @@
             '<div class="testimonial-slide__avatar"><img src="'+t.avatar+'" alt="'+t.name+'" loading="lazy"></div>'+
             '<div style="text-align:left">'+
               '<div class="testimonial-slide__name">'+t.name+'</div>'+
-              '<div class="testimonial-slide__meta">'+t.company+' · '+t.location+'</div>'+
+              '<div class="testimonial-slide__meta">'+(t.company||'')+(t.location?' · '+t.location:'')+'</div>'+
             '</div>'+
           '</div>'+
         '</div>'+
@@ -232,7 +234,7 @@
 
     if(!dotsContainer)return;
     dotsContainer.innerHTML=slides.map(function(_,i){
-      return '<button class="testimonial-slider__dot'+(i===0?' testimonial-slider__dot--active':'')+'" data-tdot="'+i+'" aria-label="第'+(i+1)+'页"></button>';
+      return '<button class="testimonial-slider__dot'+(i===0?' testimonial-slider__dot--active':'')+'" data-tdot="'+i+'" aria-label="'+(i+1)+'"></button>';
     }).join('');
 
     function goTo(idx){
@@ -279,7 +281,7 @@
     if(!btn||!textarea)return;
     btn.addEventListener('click',function(){
       var val=textarea.value.trim();
-      if(!val){if(window.App&&window.App.toast)window.App.toast('请输入评价内容');return}
+      if(!val){if(window.App&&window.App.toast)window.App.toast(__('home.reviewPlaceholder'));return}
       btn.style.display='none';
       textarea.style.display='none';
       if(starsContainer)starsContainer.parentElement.style.display='none';
@@ -297,4 +299,9 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
+
+  // Re-render on language change
+  document.addEventListener('lang:changed',function(){
+    renderCategories();renderFeatured();renderStats();initTestimonialSlider();
+  });
 })();

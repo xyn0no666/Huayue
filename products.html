@@ -47,9 +47,9 @@
 <main>
   <section class="page-hero">
     <div class="u-container">
-      <span class="tag">Product Catalog</span>
-      <h1 class="page-hero__title">产品中心</h1>
-      <p class="page-hero__subtitle">全系列汽油园林机械设备，2冲程/4冲程双动力平台，CE/EPA国际认证，支持OEM/ODM定制</p>
+      <span class="tag" data-i18n="products.tag">Product Catalog</span>
+      <h1 class="page-hero__title" data-i18n="products.title">产品中心</h1>
+      <p class="page-hero__subtitle" data-i18n="products.subtitle">全系列汽油园林机械设备，2冲程/4冲程双动力平台，CE/EPA国际认证，支持OEM/ODM定制</p>
     </div>
   </section>
 
@@ -59,40 +59,40 @@
         <!-- Filter Sidebar -->
         <aside class="filter-sidebar" id="filterSidebar">
           <div class="filter-sidebar__header">
-            <h3>筛选条件</h3>
-            <button class="filter-reset" id="filterReset">重置</button>
+            <h3 data-i18n="products.filter">筛选条件</h3>
+            <button class="filter-reset" id="filterReset" data-i18n="products.reset">重置</button>
           </div>
 
           <div class="filter-group">
-            <h4 class="filter-group__title">搜索</h4>
-            <input type="text" class="form-input" id="filterSearch" placeholder="搜索产品名称...">
+            <h4 class="filter-group__title" data-i18n="products.searchLabel">搜索</h4>
+            <input type="text" class="form-input" id="filterSearch" data-i18n-placeholder="products.search" placeholder="搜索产品名称...">
           </div>
 
           <div class="filter-group">
-            <h4 class="filter-group__title">产品类别</h4>
+            <h4 class="filter-group__title" data-i18n="products.category">产品类别</h4>
             <div class="filter-options" id="filterCategory">
-              <label class="filter-option filter-option--active"><input type="radio" name="category" value="all" checked>全部产品</label>
-              <label class="filter-option"><input type="radio" name="category" value="mower">割灌机</label>
-              <label class="filter-option"><input type="radio" name="category" value="chainsaw">油锯</label>
-              <label class="filter-option"><input type="radio" name="category" value="blower">吹风机</label>
-              
+              <label class="filter-option filter-option--active"><input type="radio" name="category" value="all" checked><span data-i18n="products.all">全部产品</span></label>
+              <label class="filter-option"><input type="radio" name="category" value="mower"><span data-i18n="products.mower">割灌机</span></label>
+              <label class="filter-option"><input type="radio" name="category" value="chainsaw"><span data-i18n="products.chainsaw">油锯</span></label>
+              <label class="filter-option"><input type="radio" name="category" value="blower"><span data-i18n="products.blower">吹风机</span></label>
+
             </div>
           </div>
 
           <div class="filter-group">
-            <h4 class="filter-group__title">动力类型</h4>
+            <h4 class="filter-group__title" data-i18n="products.power">动力类型</h4>
             <div class="filter-options" id="filterPower">
-              <label class="filter-option filter-option--active"><input type="radio" name="powerType" value="all" checked>全部</label>
-              <label class="filter-option"><input type="radio" name="powerType" value="gasoline">汽油</label>
+              <label class="filter-option filter-option--active"><input type="radio" name="powerType" value="all" checked><span data-i18n="products.powerAll">全部</span></label>
+              <label class="filter-option"><input type="radio" name="powerType" value="gasoline"><span data-i18n="filter.gasoline">汽油</span></label>
             </div>
           </div>
 
           <div class="filter-group">
-            <h4 class="filter-group__title">排序方式</h4>
+            <h4 class="filter-group__title" data-i18n="products.sort">排序方式</h4>
             <select class="form-select" id="filterSort">
-              <option value="default">默认排序</option>
-              <option value="popular">按热门度</option>
-              <option value="name">按名称</option>
+              <option value="default" data-i18n="products.sortDefault">默认排序</option>
+              <option value="popular" data-i18n="products.sortPopular">按热门度</option>
+              <option value="name" data-i18n="products.sortName">按名称</option>
             </select>
           </div>
         </aside>
@@ -125,8 +125,10 @@
   <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span>浙ICP备2024XXXXXX号-1</span></div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/core.js?v=2"></script>
 <script src="js/data.js?v=7"></script>
+<script src="js/i18n-data.js"></script>
 <script src="js/cart.js?v=5"></script>
 <script src="js/products.js?v=3"></script>
 </body>

@@ -9,23 +9,14 @@
   function notify(){document.dispatchEvent(new CustomEvent('cart:updated',{detail:{count:getCount(),items:items.slice()}}))}
   function notifyOpen(){document.dispatchEvent(new CustomEvent(isOpen?'cart:opened':'cart:closed'))}
 
-  function getProduct(id){return (window.APP_DATA&&window.APP_DATA.products||[]).find(function(p){return p.id===id})}
+  function getProduct(id){var data=window.App&&window.App.getData?window.App.getData():null;return (data&&data.products||window.APP_DATA&&window.APP_DATA.products||[]).find(function(p){return p.id===id})}
 
   function add(productId,qty){
     qty=qty||1;
     var existing=items.find(function(i){return i.productId===productId});
     if(existing){existing.quantity+=qty}else{
       var p=getProduct(productId);if(!p)return;
-      items.push({
-        productId:productId,
-        name:p.name,
-        image:p.image,
-        category:p.category||'',
-        quantity:qty,
-        price:p.price||0,
-        moq:p.moq||'咨询',
-        leadTime:p.leadTime||'咨询'
-      });
+      items.push({productId:productId,quantity:qty});
     }
     save();notify();renderPanel();
   }
@@ -55,9 +46,11 @@
     document.body.style.overflow=isOpen?'hidden':'';
   }
 
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
   function getCategoryLabel(cat){
-    var m={mower:'割灌机',chainsaw:'油锯',blower:'吹风机'};
-    return m[cat]||cat||'';
+    var data=window.App&&window.App.getData?window.App.getData():null;
+    if(data&&data.categories){var found=data.categories.find(function(c){return c.id===cat});if(found)return found.name}
+    return cat||'';
   }
 
   function renderPanel(){
@@ -73,37 +66,44 @@
           '<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>'+
           '<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>'+
         '</svg>'+
-        '<p style="margin-top:var(--space-2)">购物车为空</p>'+
-        '<a href="products.html" style="color:var(--color-gold);font-size:0.8125rem;margin-top:12px;display:inline-block">去选购产品</a>'+
+        '<p style="margin-top:var(--space-2)">'+__('cart.empty')+'</p>'+
+        '<a href="products.html" style="color:var(--color-gold);font-size:0.8125rem;margin-top:12px;display:inline-block">'+__('cart.goShopping')+'</a>'+
       '</div>';
-      footerEl.innerHTML='<div class="cart-panel__total"><span class="cart-panel__total-label">购物车</span><span class="cart-panel__total-amount">暂无商品</span></div>';
+      footerEl.innerHTML='<div class="cart-panel__total"><span class="cart-panel__total-label">'+__('cart.title')+'</span><span class="cart-panel__total-amount">'+__('cart.noItems')+'</span></div>';
     }else{
       itemsEl.innerHTML=items.map(function(i){
-        var img=i.image||'';
-        var catLabel=getCategoryLabel(i.category);
-        var itemTotal=(i.price||0)*i.quantity;
+        var p=getProduct(i.productId);
+        var name=p?p.name:i.productId;
+        var img=p?p.image:'';
+        var cat=p?p.category:'';
+        var catLabel=getCategoryLabel(cat);
+        var price=p?p.price||0:0;
+        var moq=p?p.moq||'':'';var leadTime=p?p.leadTime||'':'';
+        var itemTotal=price*i.quantity;
         return '<div class="cart-item">'+
-          '<div class="cart-item__image"><img src="'+img+'" alt="'+i.name+'" onerror="this.style.display=\'none\'"></div>'+
+          '<div class="cart-item__image"><img src="'+img+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
           '<div class="cart-item__info">'+
-            '<div class="cart-item__name">'+i.name+(catLabel?' <span class="cart-item__cat">'+catLabel+'</span>':'')+'</div>'+
-            '<div class="cart-item__meta">MOQ: '+i.moq+' | 交期: '+i.leadTime+'</div>'+
-            '<div class="cart-item__price">$'+(i.price||0).toLocaleString()+' / 台</div>'+
+            '<div class="cart-item__name">'+name+(catLabel?' <span class="cart-item__cat">'+catLabel+'</span>':'')+'</div>'+
+            '<div class="cart-item__meta">MOQ: '+moq+' | '+__('common.leadTime')+leadTime+'</div>'+
+            '<div class="cart-item__price">¥'+price.toLocaleString()+' / '+__('common.unit')+'</div>'+
             '<div class="cart-item__qty">'+
-              '<button data-cart-qty="'+i.productId+'" data-delta="-1" aria-label="减少">−</button>'+
+              '<button data-cart-qty="'+i.productId+'" data-delta="-1" aria-label="'+__('cart.decrease')+'">−</button>'+
               '<span>'+i.quantity+'</span>'+
-              '<button data-cart-qty="'+i.productId+'" data-delta="1" aria-label="增加">+</button>'+
+              '<button data-cart-qty="'+i.productId+'" data-delta="1" aria-label="'+__('cart.increase')+'">+</button>'+
             '</div>'+
           '</div>'+
           '<div class="cart-item__right">'+
-            '<div class="cart-item__subtotal">$'+itemTotal.toLocaleString()+'</div>'+
-            '<button class="cart-item__remove" data-cart-remove="'+i.productId+'" aria-label="移除">删除</button>'+
+            '<div class="cart-item__subtotal">¥'+itemTotal.toLocaleString()+'</div>'+
+            '<button class="cart-item__remove" data-cart-remove="'+i.productId+'" aria-label="'+__('cart.remove')+'">'+__('cart.delete')+'</button>'+
           '</div>'+
         '</div>';
       }).join('');
-      var total=items.reduce(function(s,i){return s+(i.price||0)*i.quantity},0);
-      footerEl.innerHTML='<div class="cart-panel__total"><span class="cart-panel__total-label">合计 '+items.length+' 款 / '+getCount()+' 台</span><span class="cart-panel__total-amount">$'+total.toLocaleString()+'</span></div>'+
-        '<a href="checkout.html" class="btn btn--primary btn--block">去结算</a>'+
-        '<a href="products.html" style="display:block;text-align:center;margin-top:8px;font-size:0.8125rem;color:var(--color-gold)">继续选购</a>';
+      var total=items.reduce(function(s,i){var p=getProduct(i.productId);return s+(p?p.price||0:0)*i.quantity},0);
+      var summaryKey=__('cart.summary');
+      var summary=summaryKey.replace('{count}',items.length).replace('{qty}',getCount());
+      footerEl.innerHTML='<div class="cart-panel__total"><span class="cart-panel__total-label">'+summary+'</span><span class="cart-panel__total-amount">¥'+total.toLocaleString()+'</span></div>'+
+        '<a href="checkout.html" class="btn btn--primary btn--block">'+__('cart.checkout')+'</a>'+
+        '<a href="products.html" style="display:block;text-align:center;margin-top:8px;font-size:0.8125rem;color:var(--color-gold)">'+__('cart.continue')+'</a>';
     }
     updateBadge();
   }
@@ -117,16 +117,22 @@
   }
 
   function injectPanelDOM(){
-    if(document.querySelector('.cart-panel'))return;
+    // Remove existing panel to allow re-injection on language change
+    var existingPanel=document.querySelector('.cart-panel');
+    if(existingPanel){existingPanel.remove()}
+    var existingOverlay=document.querySelector('.cart-overlay');
+    if(existingOverlay){existingOverlay.remove()}
     var html='<div class="cart-overlay" data-cart-close></div>'+
       '<div class="cart-panel">'+
-        '<div class="cart-panel__header"><h3 class="cart-panel__title">购物车</h3><button class="cart-panel__close" data-cart-close aria-label="关闭">✕</button></div>'+
+        '<div class="cart-panel__header"><h3 class="cart-panel__title">'+__('cart.title')+'</h3><button class="cart-panel__close" data-cart-close aria-label="'+__('common.close')+'">✕</button></div>'+
         '<div class="cart-panel__items"></div>'+
         '<div class="cart-panel__footer"></div>'+
       '</div>';
     var div=document.createElement('div');
     div.innerHTML=html;
     while(div.firstChild)document.body.appendChild(div.firstChild);
+    // Re-apply panel state
+    updatePanelState();
   }
 
   function bindEvents(){
@@ -163,7 +169,7 @@
     if(existing){existing.remove()}
     var toast=document.createElement('div');
     toast.className='cart-toast';
-    toast.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>已加入购物车';
+    toast.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>'+__('cart.added');
     document.body.appendChild(toast);
     requestAnimationFrame(function(){toast.classList.add('cart-toast--visible')});
     setTimeout(function(){
@@ -181,4 +187,6 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
+
+  document.addEventListener('lang:changed',function(){injectPanelDOM();renderPanel();updateBadge();});
 })();

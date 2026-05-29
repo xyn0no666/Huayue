@@ -47,9 +47,9 @@
 <main>
   <section class="page-hero">
     <div class="u-container">
-      <span class="tag">Support Center</span>
-      <h1 class="page-hero__title">技术支持中心</h1>
-      <p class="page-hero__subtitle">全面的产品FAQ、维护保养知识及外贸常见问题解答</p>
+      <span class="tag" data-i18n="support.tag">Support Center</span>
+      <h1 class="page-hero__title" data-i18n="support.title">技术支持中心</h1>
+      <p class="page-hero__subtitle" data-i18n="support.subtitle">全面的产品FAQ、维护保养知识及外贸常见问题解答</p>
     </div>
   </section>
 
@@ -62,12 +62,12 @@
       </div>
 
       <div class="faq-categories">
-        <button class="faq-cat-btn faq-cat-btn--active" data-faq-cat="all">全部</button>
-        <button class="faq-cat-btn" data-faq-cat="产品选择">产品选择</button>
-        <button class="faq-cat-btn" data-faq-cat="维护保养">维护保养</button>
-        <button class="faq-cat-btn" data-faq-cat="保修服务">保修服务</button>
-        <button class="faq-cat-btn" data-faq-cat="配件订购">配件订购</button>
-        <button class="faq-cat-btn" data-faq-cat="经销商">经销商</button>
+        <button class="faq-cat-btn faq-cat-btn--active" data-faq-cat="all" data-i18n="support.catAll">全部</button>
+        <button class="faq-cat-btn" data-faq-cat="产品选择" data-i18n="support.catProduct">产品选择</button>
+        <button class="faq-cat-btn" data-faq-cat="维护保养" data-i18n="support.catMaintain">维护保养</button>
+        <button class="faq-cat-btn" data-faq-cat="保修服务" data-i18n="support.catWarranty">保修服务</button>
+        <button class="faq-cat-btn" data-faq-cat="配件订购" data-i18n="support.catParts">配件订购</button>
+        <button class="faq-cat-btn" data-faq-cat="经销商" data-i18n="support.catDealer">经销商</button>
       </div>
 
       <div class="accordion" id="faqAccordion"></div>
@@ -77,8 +77,8 @@
   <!-- Maintenance Guides -->
   <section class="section section--dark">
     <div class="u-container">
-      <h2 class="section-heading">技术指南</h2>
-      <p class="section-subtitle">从选型到维护，专业资料助您做出最佳决策</p>
+      <h2 class="section-heading" data-i18n="support.guides">技术指南</h2>
+      <p class="section-subtitle" data-i18n="support.guides.sub">从选型到维护，专业资料助您做出最佳决策</p>
       <div class="guides-grid" id="guidesGrid"></div>
     </div>
   </section>
@@ -86,14 +86,14 @@
   <!-- Manual Downloads -->
   <section class="section">
     <div class="u-container">
-      <h2 class="section-heading">资料下载</h2>
-      <p class="section-subtitle">选择产品类别，下载规格书与产品手册</p>
+      <h2 class="section-heading" data-i18n="support.downloads">资料下载</h2>
+      <p class="section-subtitle" data-i18n="support.downloads.sub">选择产品类别，下载规格书与产品手册</p>
       <div class="manual-filter">
         <select class="form-select" id="manualFilter" style="max-width:300px;margin:0 auto var(--space-4);display:block">
-          <option value="all">全部产品</option>
-          <option value="mower">割灌机</option>
-          <option value="chainsaw">油锯</option>
-          <option value="blower">吹风机</option>
+          <option value="all" data-i18n="products.all">全部产品</option>
+          <option value="mower" data-i18n="products.mower">割灌机</option>
+          <option value="chainsaw" data-i18n="products.chainsaw">油锯</option>
+          <option value="blower" data-i18n="products.blower">吹风机</option>
         </select>
       </div>
       <div class="manual-list" id="manualList"></div>
@@ -103,11 +103,11 @@
   <!-- CTA -->
   <section class="section support-cta">
     <div class="u-container u-text-center">
-      <h2>还没有找到答案？</h2>
-      <p style="color:var(--color-text-light);margin-bottom:var(--space-4);max-width:480px;margin-left:auto;margin-right:auto">直接联系我们的技术团队或外贸经理，获取一对一专业服务</p>
+      <h2 data-i18n="support.cta.title">还没有找到答案？</h2>
+      <p data-i18n="support.cta.desc" style="color:var(--color-text-light);margin-bottom:var(--space-4);max-width:480px;margin-left:auto;margin-right:auto">直接联系我们的技术团队或外贸经理，获取一对一专业服务</p>
       <div style="display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap">
-        <a href="contact.html" class="btn btn--primary btn--lg">联系我们</a>
-        <a href="contact.html?tab=quote" class="btn btn--gold-outline btn--lg">获取报价</a>
+        <a href="contact.html" class="btn btn--primary btn--lg" data-i18n="nav.contact">联系我们</a>
+        <a href="contact.html?tab=quote" class="btn btn--gold-outline btn--lg" data-i18n="contact.tab.quote">获取报价</a>
       </div>
     </div>
   </section>
@@ -150,8 +150,10 @@
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/core.js?v=2"></script>
 <script src="js/data.js?v=7"></script>
+<script src="js/i18n-data.js"></script>
 <script src="js/cart.js?v=5"></script>
 <script src="js/support.js?v=3"></script>
 </body>
