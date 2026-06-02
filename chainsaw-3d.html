@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="华悦园林 二冲程油锯 360°三维产品展示">
+<meta property="og:title" content="3D产品展示 — 华悦园林 二冲程油锯">
+<title>3D产品展示 — 二冲程油锯 — 华悦园林</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#c4a97d;--gold-light:#d4bf8f;--text-inv:#f5f2eb;--dark:#1a1814;--font-h:'Playfair Display','Noto Serif SC',serif;--font-b:'Inter','Noto Sans SC',-apple-system,sans-serif;--font-m:'JetBrains Mono','Noto Sans SC',monospace}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-b);background:var(--dark);color:var(--text-inv);overflow:hidden;height:100vh;width:100vw;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;touch-action:pan-x pan-y pinch-zoom}
+  #c{position:fixed;inset:0;cursor:grab}#c:active{cursor:grabbing}
+  .tb{position:fixed;top:0;left:0;right:0;z-index:10;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+  .tb>*{pointer-events:auto}
+  .tb-back{display:flex;align-items:center;gap:8px;color:var(--text-inv);font-size:.8125rem;font-weight:500;padding:8px 16px;border-radius:8px;background:rgba(26,24,20,.6);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);transition:.3s;text-decoration:none}
+  .tb-back:hover{background:rgba(26,24,20,.85);border-color:rgba(255,255,255,.15)}
+  .tb-back svg{width:16px;height:16px}
+  .tb-logo{font-family:var(--font-h);font-size:1.125rem;font-weight:600;color:var(--text-inv);text-decoration:none}
+  .tb-logo span{color:var(--gold)}
+  .cb{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:8px;background:rgba(26,24,20,.7);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:40px;padding:6px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+  .cb-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:.3s;cursor:pointer;border:none;background:transparent;position:relative}
+  .cb-btn:hover{color:#fff;background:rgba(255,255,255,.08)}
+  .cb-btn.on{color:var(--gold);background:rgba(196,169,125,.15)}
+  .cb-btn svg{width:20px;height:20px}
+  .cb-tt{position:absolute;bottom:calc(100%+10px);left:50%;transform:translateX(-50%);background:rgba(26,24,20,.9);color:#fff;font-size:.6875rem;padding:4px 10px;border-radius:4px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s}
+  .cb-btn:hover .cb-tt{opacity:1}
+  .ic{position:fixed;left:24px;top:50%;transform:translateY(-50%);z-index:10;max-width:280px;pointer-events:none}
+  .ic-inner{background:rgba(26,24,20,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:24px}
+  .ic-tag{font-size:.625rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px}
+  .ic-title{font-family:var(--font-h);font-size:1.375rem;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.2}
+  .ic-sub{font-size:.8125rem;color:#9b8e7e;margin-bottom:16px}
+  .ic-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:12px}
+  .ic-sl{font-size:.625rem;color:#9b8e7e;letter-spacing:.05em;text-transform:uppercase}
+  .ic-sv{font-size:.875rem;font-weight:600;color:#fff;font-family:var(--font-m)}
+  .rh{position:fixed;bottom:120px;left:50%;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:8px;font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.04em;transition:opacity .6s;pointer-events:none}
+  .rh svg{width:16px;height:16px;animation:rhA 2s ease-in-out infinite}
+  @keyframes rhA{0%,100%{transform:rotate(0deg)}50%{transform:rotate(180deg)}}
+  @media(max-width:768px){.ic{left:12px;right:12px;top:auto;bottom:140px;transform:none;max-width:none}.ic-inner{padding:16px}.ic-title{font-size:1.125rem}.ic-specs{grid-template-columns:1fr 1fr 1fr}.rh{bottom:108px}.tb{padding:12px 16px}}
+  @media(max-width:480px){.ic-specs{grid-template-columns:1fr 1fr}.cb{bottom:20px;gap:4px;padding:4px}.cb-btn{width:36px;height:36px}.cb-btn svg{width:16px;height:16px}}
+</style>
+</head>
+<body>
+<div id="c"></div>
+<div class="tb"><a href="products.html?category=chainsaw" class="tb-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>返回产品中心</a><a href="index.html" class="tb-logo">华悦<span>园林</span></a></div>
+<div class="ic"><div class="ic-inner"><div class="ic-tag">2-Stroke Gasoline Chainsaw</div><div class="ic-title">5200/5800 二冲程油锯</div><div class="ic-sub">专业级汽油链锯 · 360° 三维展示</div><div class="ic-specs"><div><div class="ic-sl">排量</div><div class="ic-sv">52cc</div></div><div><div class="ic-sl">功率</div><div class="ic-sv">2.4kW</div></div><div><div class="ic-sl">导板</div><div class="ic-sv">18" / 20"</div></div><div><div class="ic-sl">重量</div><div class="ic-sv">5.5 kg</div></div></div></div></div>
+<div class="rh" id="rh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>拖拽旋转 · 滚轮缩放</div>
+<div class="cb">
+  <button class="cb-btn on" id="ba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="cb-tt">自动旋转</span></button>
+  <button class="cb-btn" id="bf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span class="cb-tt">前视图</span></button>
+  <button class="cb-btn" id="bs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><span class="cb-tt">侧视图</span></button>
+  <button class="cb-btn" id="bt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg><span class="cb-tt">俯视图</span></button>
+  <button class="cb-btn" id="br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg><span class="cb-tt">重置视角</span></button>
+</div>
+
+<script type="importmap">
+{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const C = document.getElementById('c');
+
+/* ================================================================
+   RENDERER
+   ================================================================ */
+const R = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+R.setPixelRatio(Math.min(devicePixelRatio, 2));
+R.setSize(innerWidth, innerHeight);
+R.shadowMap.enabled = true;
+R.shadowMap.type = THREE.PCFSoftShadowMap;
+R.toneMapping = THREE.ACESFilmicToneMapping;
+R.toneMappingExposure = 1.1;
+R.outputColorSpace = THREE.SRGBColorSpace;
+C.appendChild(R.domElement);
+
+/* ================================================================
+   SCENE + CAMERA
+   ================================================================ */
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#1c1a16');
+scene.fog = new THREE.Fog('#1c1a16', 4, 16);
+
+const cam = new THREE.PerspectiveCamera(38, innerWidth / innerHeight, 0.1, 50);
+cam.position.set(2.6, 1.4, 3.8);
+const ctrl = new OrbitControls(cam, R.domElement);
+ctrl.target.set(0, 0.12, 0.4);
+ctrl.enableDamping = true; ctrl.dampingFactor = 0.08;
+ctrl.minDistance = 2; ctrl.maxDistance = 7;
+ctrl.maxPolarAngle = Math.PI * 0.72;
+ctrl.autoRotate = true; ctrl.autoRotateSpeed = 1.0;
+ctrl.update();
+
+/* ================================================================
+   ENVIRONMENT MAP (simulated photo studio)
+   ================================================================ */
+const pmrem = new THREE.PMREMGenerator(R);
+pmrem.compileEquirectangularShader();
+const eS = new THREE.Scene(); eS.background = new THREE.Color('#e0ddd6');
+[
+  { pos:[0,8,0], rot:[-Math.PI/2,0,0], size:[10,10], color:'#ffffff' },
+  { pos:[6,3,-2], rot:[0,0.5,0], size:[8,8], color:'#ffe8d0' },
+  { pos:[-5,2,-1], rot:[0,-0.5,0], size:[7,7], color:'#d0d8ff' },
+  { pos:[3,1,4], rot:[0,1.2,0], size:[6,6], color:'#fff8f0' },
+  { pos:[0,-4,0], rot:[Math.PI/2,0,0], size:[10,10], color:'#2a2520' },
+].forEach(l => {
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(...l.size), new THREE.MeshBasicMaterial({ color:l.color, side:THREE.DoubleSide }));
+  m.position.set(...l.pos); m.rotation.set(...l.rot); eS.add(m);
+});
+scene.environment = pmrem.fromScene(eS, 0.04).texture;
+scene.environmentIntensity = 1.1;
+pmrem.dispose();
+
+/* ================================================================
+   LIGHTING - Professional 3-point + accents
+   ================================================================ */
+scene.add(new THREE.AmbientLight('#d0d8e8', 0.8));
+const key = new THREE.DirectionalLight('#fffaf0', 6);
+key.position.set(5, 7, 4); key.castShadow = true;
+key.shadow.mapSize.width = 2048; key.shadow.mapSize.height = 2048;
+key.shadow.camera.near = 0.5; key.shadow.camera.far = 30;
+key.shadow.camera.left = -8; key.shadow.camera.right = 8;
+key.shadow.camera.top = 6; key.shadow.camera.bottom = -3;
+key.shadow.bias = -0.00006; key.shadow.normalBias = 0.02; key.shadow.radius = 1;
+scene.add(key);
+const fill = new THREE.DirectionalLight('#d0dcff', 2.2);
+fill.position.set(-4, 2.5, 1); scene.add(fill);
+const rim = new THREE.DirectionalLight('#ffffff', 3.5);
+rim.position.set(0, 3, -5); scene.add(rim);
+const bounce = new THREE.DirectionalLight('#ffe8d0', 1.5);
+bounce.position.set(0, -0.5, 3); scene.add(bounce);
+
+/* ================================================================
+   GROUND + SHADOW CATCHER
+   ================================================================ */
+const gn = new THREE.Mesh(new THREE.PlaneGeometry(14, 14), new THREE.ShadowMaterial({ opacity: 0.25 }));
+gn.rotation.x = -Math.PI / 2; gn.position.y = -1.8; gn.receiveShadow = true; scene.add(gn);
+const pt = new THREE.Mesh(
+  new THREE.CylinderGeometry(1.1, 1.15, 0.06, 64),
+  new THREE.MeshStandardMaterial({ color: '#2a2520', roughness: 0.45, metalness: 0.35 })
+);
+pt.position.y = -1.78; pt.receiveShadow = true; pt.castShadow = true; scene.add(pt);
+
+/* ================================================================
+   MATERIALS - PBR
+   ================================================================ */
+const MO = new THREE.MeshStandardMaterial({ color: '#e86a2c', roughness: 0.28, metalness: 0.06 });
+const MOD = new THREE.MeshStandardMaterial({ color: '#cc5518', roughness: 0.32, metalness: 0.06 });
+const MW = new THREE.MeshStandardMaterial({ color: '#f2ede4', roughness: 0.26, metalness: 0.04 });
+const MWD = new THREE.MeshStandardMaterial({ color: '#e6ded2', roughness: 0.30, metalness: 0.04 });
+const MB = new THREE.MeshStandardMaterial({ color: '#1a1a1a', roughness: 0.35, metalness: 0.1 });
+const MBR = new THREE.MeshStandardMaterial({ color: '#252525', roughness: 0.55, metalness: 0.06 });
+const MG = new THREE.MeshStandardMaterial({ color: '#1a1a1a', roughness: 0.72, metalness: 0.0 });
+const MM = new THREE.MeshStandardMaterial({ color: '#d8d8d8', roughness: 0.16, metalness: 0.95 });
+const MMD = new THREE.MeshStandardMaterial({ color: '#888888', roughness: 0.20, metalness: 0.9 });
+const MBAR = new THREE.MeshStandardMaterial({ color: '#dcdcdc', roughness: 0.12, metalness: 0.95 });
+const MCH = new THREE.MeshStandardMaterial({ color: '#3a3a3a', roughness: 0.28, metalness: 0.82 });
+const MMUFF = new THREE.MeshStandardMaterial({ color: '#5a5a5a', roughness: 0.33, metalness: 0.78 });
+const MRED = new THREE.MeshStandardMaterial({ color: '#cc3322', roughness: 0.24, metalness: 0.04 });
+
+/* ================================================================
+   GEOMETRY BUILDERS (like 3ds Max modeling tools)
+   ================================================================ */
+
+// Extrude a 2D shape profile into 3D (like 3ds Max Extrude modifier)
+function extrudeShape(points, depth, bevel = 0.015, bevelSteps = 3) {
+  const shape = new THREE.Shape();
+  shape.moveTo(points[0][0], points[0][1]);
+  for (let i = 1; i < points.length; i++) shape.lineTo(points[i][0], points[i][1]);
+  shape.closePath();
+  const geo = new THREE.ExtrudeGeometry(shape, { depth, bevelThickness: bevel, bevelSize: bevel, bevelSegments: bevelSteps, steps: 1 });
+  geo.computeVertexNormals();
+  return geo;
+}
+
+// Lathe/revolve a profile around Y axis (like 3ds Max Lathe modifier)
+function latheShape(points, segments = 48) {
+  const vecs = points.map(p => new THREE.Vector2(p[0], p[1]));
+  const geo = new THREE.LatheGeometry(vecs, segments);
+  geo.computeVertexNormals();
+  return geo;
+}
+
+// Tube along a curve path (like 3ds Max Sweep/Loft)
+function tubePath(curvePoints, radius, tubularSegments = 64, radiusSegments = 24) {
+  const curve = new THREE.CatmullRomCurve3(curvePoints.map(p => new THREE.Vector3(...p)));
+  const geo = new THREE.TubeGeometry(curve, tubularSegments, radius, radiusSegments, false);
+  geo.computeVertexNormals();
+  return geo;
+}
+
+// Rounded box via ExtrudeGeometry (beveled edges)
+function roundedBox(w, h, d, bevel = 0.04, bevelSteps = 4) {
+  const hw = w / 2, hh = h / 2;
+  const r = bevel * 2;
+  const shape = new THREE.Shape();
+  // Rounded rectangle profile
+  shape.moveTo(-hw + r, -hh);
+  shape.lineTo(hw - r, -hh);
+  shape.quadraticCurveTo(hw, -hh, hw, -hh + r);
+  shape.lineTo(hw, hh - r);
+  shape.quadraticCurveTo(hw, hh, hw - r, hh);
+  shape.lineTo(-hw + r, hh);
+  shape.quadraticCurveTo(-hw, hh, -hw, hh - r);
+  shape.lineTo(-hw, -hh + r);
+  shape.quadraticCurveTo(-hw, -hh, -hw + r, -hh);
+  const geo = new THREE.ExtrudeGeometry(shape, { depth: d, bevelThickness: bevel, bevelSize: bevel, bevelSegments: bevelSteps, steps: 1 });
+  geo.computeVertexNormals();
+  return geo;
+}
+
+/* ================================================================
+   BUILD THE CHAINSAW (like modeling in 3ds Max)
+   ================================================================ */
+const saw = new THREE.Group();
+
+// ── GUIDE BAR ──────────────────────────────────
+// Long profile with rounded ends, extruded thin
+const barLen = 2.3;
+const barProfile = [
+  [-0.065, -barLen/2 + 0.07],
+  [0.065, -barLen/2 + 0.07],
+  [0.065, barLen/2 - 0.07],
+  [0.04, barLen/2 - 0.02],
+  [0.02, barLen/2],
+  [-0.02, barLen/2],
+  [-0.04, barLen/2 - 0.02],
+  [-0.065, barLen/2 - 0.07],
+];
+const barGeo = extrudeShape(barProfile, 0.014, 0.004, 3);
+const barMesh = new THREE.Mesh(barGeo, MBAR);
+barMesh.rotation.x = Math.PI / 2;
+barMesh.position.set(0, 0.12, 1.4);
+barMesh.castShadow = true; barMesh.receiveShadow = true;
+saw.add(barMesh);
+
+// Bar nose sprocket
+const sprocketGeo = new THREE.TorusGeometry(0.026, 0.008, 12, 24);
+const sprocket = new THREE.Mesh(sprocketGeo, MMD);
+sprocket.position.set(0, 0.12, 2.55); sprocket.castShadow = true;
+saw.add(sprocket);
+
+// Bar studs
+for (let z of [0.16, 0.28]) {
+  const studGeo = new THREE.CylinderGeometry(0.014, 0.014, 0.026, 20);
+  const stud = new THREE.Mesh(studGeo, MMD);
+  stud.position.set(0, 0.12, z); stud.rotation.x = Math.PI / 2; stud.castShadow = true;
+  saw.add(stud);
+}
+
+// ── CHAIN ──────────────────────────────────────
+// Chain as separate strips on top and bottom of bar
+for (let s = 0; s < 2; s++) {
+  const yOff = s === 0 ? 0.131 : 0.109;
+  const chainStripGeo = roundedBox(0.14, 0.008, 2.08, 0.002, 2);
+  const chainStrip = new THREE.Mesh(chainStripGeo, MCH);
+  chainStrip.position.set(0, yOff, 1.36); chainStrip.castShadow = true;
+  saw.add(chainStrip);
+}
+// Nose chain
+const ncGeo = new THREE.TorusGeometry(0.065, 0.008, 8, 24, Math.PI);
+const nc = new THREE.Mesh(ncGeo, MCH);
+nc.position.set(0, 0.12, 2.55); nc.rotation.x = Math.PI / 2;
+saw.add(nc);
+
+// Chain cutters (teeth on top)
+for (let z = 0.35; z < 2.35; z += 0.09) {
+  const ctGeo = roundedBox(0.142, 0.01, 0.018, 0.003, 2);
+  const ct = new THREE.Mesh(ctGeo, MM);
+  ct.position.set(0, 0.141, z); ct.rotation.x = 0.1; ct.castShadow = true;
+  saw.add(ct);
+}
+
+// ── BUCKING SPIKES ─────────────────────────────
+const spikeBaseGeo = roundedBox(0.12, 0.04, 0.025, 0.005, 2);
+const spikeBase = new THREE.Mesh(spikeBaseGeo, MM);
+spikeBase.position.set(0, 0.06, 0.24); spikeBase.castShadow = true;
+saw.add(spikeBase);
+
+for (let i = 0; i < 3; i++) {
+  const spikeGeo = new THREE.ConeGeometry(0.01, 0.06, 6, 4);
+  const spike = new THREE.Mesh(spikeGeo, MM);
+  spike.position.set(0, 0.01 - i * 0.02, 0.27); spike.rotation.x = -0.4; spike.castShadow = true;
+  saw.add(spike);
+}
+
+// ── CRANKCASE (body base) ──────────────────────
+const crankGeo = roundedBox(0.44, 0.24, 0.46, 0.035, 5);
+const crank = new THREE.Mesh(crankGeo, MO);
+crank.position.set(0, -0.04, -0.15); crank.castShadow = true; crank.receiveShadow = true;
+saw.add(crank);
+
+// ── CYLINDER ───────────────────────────────────
+const cylGeo = roundedBox(0.33, 0.18, 0.34, 0.03, 5);
+const cyl = new THREE.Mesh(cylGeo, MO);
+cyl.position.set(0, 0.16, -0.15); cyl.castShadow = true; cyl.receiveShadow = true;
+saw.add(cyl);
+
+// Cylinder head plate
+const chGeo = roundedBox(0.35, 0.035, 0.36, 0.008, 3);
+const ch = new THREE.Mesh(chGeo, MOD);
+ch.position.set(0, 0.27, -0.15); ch.castShadow = true;
+saw.add(ch);
+
+// Cooling fins
+for (let i = 0; i < 6; i++) {
+  const fGeo = roundedBox(0.37, 0.014, 0.38, 0.003, 3);
+  const f = new THREE.Mesh(fGeo, MMD);
+  f.position.set(0, 0.06 + i * 0.04, -0.15); f.castShadow = true;
+  saw.add(f);
+}
+
+// ── TOP COVER ──────────────────────────────────
+const tcGeo = roundedBox(0.32, 0.06, 0.28, 0.018, 4);
+const tc = new THREE.Mesh(tcGeo, MW);
+tc.position.set(0, 0.33, -0.2); tc.castShadow = true;
+saw.add(tc);
+
+// Cover vent ridges
+for (let i = 0; i < 4; i++) {
+  const rGeo = roundedBox(0.31, 0.006, 0.012, 0.002, 2);
+  const ridge = new THREE.Mesh(rGeo, MWD);
+  ridge.position.set(0, 0.37, -0.1 - i * 0.065); ridge.castShadow = true;
+  saw.add(ridge);
+}
+
+// ── SPARK PLUG ─────────────────────────────────
+const plugBodyGeo = latheShape([
+  [0.02, -0.04], [0.026, -0.03], [0.028, -0.01], [0.028, 0.03], [0.022, 0.04], [0.02, 0.04]
+], 24);
+const plugBody = new THREE.Mesh(plugBodyGeo, MW);
+plugBody.position.set(0.1, 0.35, -0.15); plugBody.castShadow = true;
+saw.add(plugBody);
+
+const plugBootGeo = new THREE.CylinderGeometry(0.03, 0.02, 0.035, 16);
+const plugBootMesh = new THREE.Mesh(plugBootGeo, MB);
+plugBootMesh.position.set(0.1, 0.4, -0.15);
+saw.add(plugBootMesh);
+
+// ── STARTER HOUSING (left, white) ──────────────
+const starterGroup = new THREE.Group();
+
+// Main disc - using lathe for smooth circular profile
+const starterDiscGeo = latheShape([
+  [0.16, -0.02], [0.17, 0], [0.17, 0.02], [0.16, 0.04], [0.10, 0.04], [0.10, 0.02]
+], 48);
+const starterDisc = new THREE.Mesh(starterDiscGeo, MW);
+starterDisc.rotation.z = Math.PI / 2;
+starterDisc.position.set(-0.27, 0.16, -0.15); starterDisc.castShadow = true;
+starterGroup.add(starterDisc);
+
+// Center hub
+const hubGeo = latheShape([
+  [0.05, -0.025], [0.058, 0], [0.058, 0.025], [0.05, 0.05], [0.03, 0.05]
+], 36);
+const hub = new THREE.Mesh(hubGeo, MB);
+hub.rotation.z = Math.PI / 2;
+hub.position.set(-0.31, 0.16, -0.15); hub.castShadow = true;
+starterGroup.add(hub);
+
+// Pull handle
+const pullGeo = new THREE.CylinderGeometry(0.022, 0.026, 0.045, 20);
+const pull = new THREE.Mesh(pullGeo, MB);
+pull.rotation.z = Math.PI / 2;
+pull.position.set(-0.35, 0.16, -0.15);
+starterGroup.add(pull);
+
+saw.add(starterGroup);
+
+// ── CLUTCH COVER (right, orange) ───────────────
+const ccGeo = roundedBox(0.05, 0.21, 0.38, 0.012, 4);
+const cc = new THREE.Mesh(ccGeo, MO);
+cc.position.set(0.26, 0.05, -0.15); cc.castShadow = true;
+saw.add(cc);
+
+// Clutch emboss
+const embGeo = latheShape([
+  [0.08, -0.002], [0.09, 0], [0.09, 0.002], [0.08, 0.004], [0.04, 0.004]
+], 36);
+const emb = new THREE.Mesh(embGeo, MOD);
+emb.rotation.z = Math.PI / 2;
+emb.position.set(0.29, 0.16, -0.15); emb.castShadow = true;
+saw.add(emb);
+
+// ── MUFFLER ────────────────────────────────────
+const muffGroup = new THREE.Group();
+
+const muffGeo = roundedBox(0.09, 0.12, 0.14, 0.018, 4);
+const muff = new THREE.Mesh(muffGeo, MMUFF);
+muff.position.set(0.19, 0.11, -0.42); muff.castShadow = true;
+muffGroup.add(muff);
+
+const shieldGeo = roundedBox(0.1, 0.13, 0.025, 0.005, 3);
+const shield = new THREE.Mesh(shieldGeo, MMD);
+shield.position.set(0.19, 0.11, -0.34); shield.castShadow = true;
+muffGroup.add(shield);
+
+// Exhaust port
+const exGeo = new THREE.CylinderGeometry(0.022, 0.028, 0.03, 20);
+const ex = new THREE.Mesh(exGeo, MMD);
+ex.rotation.x = Math.PI / 2; ex.position.set(0.19, 0.11, -0.33);
+muffGroup.add(ex);
+
+// Muffler bolts
+for (let y of [0.06, 0.16]) {
+  const boltGeo = new THREE.CylinderGeometry(0.01, 0.01, 0.018, 12);
+  const bolt = new THREE.Mesh(boltGeo, MM);
+  bolt.position.set(0.19, y, -0.36); bolt.rotation.z = Math.PI / 2;
+  muffGroup.add(bolt);
+}
+
+saw.add(muffGroup);
+
+// ── TOP HANDLE (tube along curve) ──────────────
+const handlePath = [
+  [0, 0.52, 0.12],
+  [0, 0.53, 0.06],
+  [0, 0.52, 0],
+  [0, 0.49, -0.06],
+  [0, 0.44, -0.12],
+  [0, 0.38, -0.2],
+  [0, 0.36, -0.28],
+];
+const hTubeGeo = tubePath(handlePath, 0.026, 80, 20);
+const hTube = new THREE.Mesh(hTubeGeo, MB);
+hTube.castShadow = true;
+saw.add(hTube);
+
+// Grip section (thicker)
+const gripPath = [
+  [0, 0.53, 0.1],
+  [0, 0.53, 0.04],
+  [0, 0.52, -0.02],
+];
+const gripTubeGeo = tubePath(gripPath, 0.034, 32, 24);
+const gripTube = new THREE.Mesh(gripTubeGeo, MG);
+gripTube.castShadow = true;
+saw.add(gripTube);
+
+// Handle brace
+const bracePath = [[0, 0.44, -0.04], [0, 0.52, -0.02]];
+const braceGeo = tubePath(bracePath, 0.016, 16, 12);
+const brace = new THREE.Mesh(braceGeo, MB);
+saw.add(brace);
+
+// ── FRONT HAND GUARD ───────────────────────────
+const guardPath = [[0, 0.4, 0.2], [0, 0.36, 0.15], [0, 0.32, 0.08]];
+const guardTubeGeo = tubePath(guardPath, 0.024, 32, 16);
+const guardTube = new THREE.Mesh(guardTubeGeo, MB);
+guardTube.castShadow = true;
+saw.add(guardTube);
+
+// Guard plate
+const gpGeo = roundedBox(0.08, 0.14, 0.022, 0.01, 3);
+const gp = new THREE.Mesh(gpGeo, MO);
+gp.position.set(0, 0.28, 0.2); gp.castShadow = true;
+saw.add(gp);
+
+// ── REAR HANDLE ────────────────────────────────
+const rhGeo = roundedBox(0.09, 0.13, 0.22, 0.025, 6);
+const rh = new THREE.Mesh(rhGeo, MB);
+rh.position.set(0, -0.13, -0.42); rh.castShadow = true;
+saw.add(rh);
+
+// Grip wrap
+const rgGeo = roundedBox(0.10, 0.12, 0.19, 0.022, 5);
+const rg = new THREE.Mesh(rgGeo, MG);
+rg.position.set(0, -0.13, -0.44); rg.castShadow = true;
+saw.add(rg);
+
+// Connector to body
+const rconGeo = roundedBox(0.07, 0.06, 0.08, 0.012, 3);
+const rcon = new THREE.Mesh(rconGeo, MB);
+rcon.position.set(0, 0.04, -0.36); rcon.castShadow = true;
+saw.add(rcon);
+
+// ── THROTTLE ───────────────────────────────────
+const tgGeo = new THREE.TorusGeometry(0.055, 0.01, 8, 24, Math.PI);
+const tg = new THREE.Mesh(tgGeo, MMD);
+tg.position.set(0, -0.11, -0.55); tg.castShadow = true;
+saw.add(tg);
+
+const trigGeo = roundedBox(0.016, 0.044, 0.024, 0.005, 3);
+const trig = new THREE.Mesh(trigGeo, MRED);
+trig.position.set(0, -0.09, -0.57); trig.castShadow = true;
+saw.add(trig);
+
+// Safety lock
+const lockGeo = roundedBox(0.02, 0.01, 0.026, 0.003, 2);
+const lock = new THREE.Mesh(lockGeo, MB);
+lock.position.set(0, 0.02, -0.5);
+saw.add(lock);
+
+// ── FUEL CAP ───────────────────────────────────
+const fuelCapGeo = latheShape([
+  [0.035, 0], [0.04, 0.005], [0.04, 0.025], [0.036, 0.035], [0.028, 0.035], [0.028, 0.01]
+], 36);
+const fuelCap = new THREE.Mesh(fuelCapGeo, MW);
+fuelCap.position.set(0.09, 0.36, -0.32); fuelCap.castShadow = true;
+saw.add(fuelCap);
+
+// ── OIL CAP ────────────────────────────────────
+const oilCapGeo = latheShape([
+  [0.03, 0], [0.035, 0.005], [0.035, 0.022], [0.031, 0.032], [0.024, 0.032], [0.024, 0.01]
+], 36);
+const oilCap = new THREE.Mesh(oilCapGeo, MW);
+oilCap.position.set(-0.1, 0.36, -0.05); oilCap.castShadow = true;
+saw.add(oilCap);
+
+// ── CHAIN TENSIONER ────────────────────────────
+const tensGeo = new THREE.CylinderGeometry(0.022, 0.028, 0.035, 24);
+const tens = new THREE.Mesh(tensGeo, MW);
+tens.rotation.z = Math.PI / 2;
+tens.position.set(0.29, -0.01, 0.23); tens.castShadow = true;
+saw.add(tens);
+
+// ── ANTI-VIBRATION SPRINGS ─────────────────────
+for (let z of [-0.33, -0.2]) {
+  const svGeo = new THREE.CylinderGeometry(0.009, 0.009, 0.045, 12);
+  const sv = new THREE.Mesh(svGeo, MMD);
+  sv.position.set(0, 0.21, z); sv.castShadow = true;
+  saw.add(sv);
+}
+
+// ── ON/OFF SWITCH ──────────────────────────────
+const swGeo = roundedBox(0.024, 0.014, 0.032, 0.004, 2);
+const sw = new THREE.Mesh(swGeo, MRED);
+sw.position.set(0.1, 0.4, -0.22); sw.castShadow = true;
+saw.add(sw);
+
+// ── BADGE ──────────────────────────────────────
+const badgeGeo = roundedBox(0.16, 0.04, 0.004, 0.002, 2);
+const badge = new THREE.Mesh(badgeGeo, MM);
+badge.position.set(0.28, 0.19, -0.15); badge.castShadow = true;
+saw.add(badge);
+
+// ── BOTTOM PLATE ───────────────────────────────
+const bpGeo = roundedBox(0.36, 0.022, 0.36, 0.01, 3);
+const bp = new THREE.Mesh(bpGeo, MBR);
+bp.position.set(0, -0.16, -0.15); bp.castShadow = true; bp.receiveShadow = true;
+saw.add(bp);
+
+scene.add(saw);
+
+/* ================================================================
+   ANIMATION
+   ================================================================ */
+function anim() { requestAnimationFrame(anim); ctrl.update(); R.render(scene, cam); }
+anim();
+
+/* ================================================================
+   UI
+   ================================================================ */
+const ba = document.getElementById('ba'), rhEl = document.getElementById('rh');
+ba.addEventListener('click', () => { ctrl.autoRotate = !ctrl.autoRotate; ba.classList.toggle('on', ctrl.autoRotate); });
+let hDone = false;
+C.addEventListener('pointerdown', () => { if (!hDone) { hDone = true; rhEl.style.opacity = '0'; setTimeout(() => rhEl.remove(), 600); } });
+C.addEventListener('wheel', () => { if (!hDone) { hDone = true; rhEl.style.opacity = '0'; setTimeout(() => rhEl.remove(), 600); } });
+
+function animCam(pos, tgt, dur = 800) {
+  const sp = cam.position.clone(), st = ctrl.target.clone();
+  const ep = new THREE.Vector3(...pos), et = new THREE.Vector3(...tgt), t0 = performance.now();
+  (function s(t) { const e = Math.min((t - t0) / dur, 1), ee = e < .5 ? 2*e*e : -1 + (4 - 2*e)*e; cam.position.lerpVectors(sp, ep, ee); ctrl.target.lerpVectors(st, et, ee); ctrl.update(); if (e < 1) requestAnimationFrame(s); })(t0);
+}
+
+document.getElementById('bf').addEventListener('click', () => animCam([0, 0.3, 4.8], [0, 0.15, 0.8]));
+document.getElementById('bs').addEventListener('click', () => animCam([4.2, 0.3, 0.0], [0, 0.15, 0.4]));
+document.getElementById('bt').addEventListener('click', () => animCam([0, 5.0, 0.5], [0, 0.15, 0.4]));
+document.getElementById('br').addEventListener('click', () => animCam([2.6, 1.4, 3.8], [0, 0.12, 0.4]));
+
+addEventListener('keydown', e => { switch (e.key.toLowerCase()) { case 'f': document.getElementById('bf').click(); break; case 's': document.getElementById('bs').click(); break; case 't': document.getElementById('bt').click(); break; case 'r': document.getElementById('br').click(); break; case ' ': e.preventDefault(); ba.click(); break; } });
+addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); R.setSize(innerWidth, innerHeight); });
+C.addEventListener('touchstart', () => C.classList.add('grabbing'), { passive: true });
+C.addEventListener('touchend', () => C.classList.remove('grabbing'), { passive: true });
+
+console.log('🪚 油锯 3D — ExtrudeGeometry + LatheGeometry + TubeGeometry 建模');
+</script>
+</body>
+</html>
