@@ -7,8 +7,38 @@ window.APP_DATA_EN={
       specs:{engine:"2-Stroke",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
       certifications:["CE","GS","EPA"],
-      moq:"1 unit",leadTime:"15-25 days",price:185,
+      moq:"1 unit",leadTime:"15-25 days",price:280,
       description:"Handheld brush cutter, 42.7cc powerful engine, lightweight design at only 8.5kg. Switchable between trimmer head and brush blade — two tools in one. Ideal for bush clearing and weed cutting."
+    },
+    {
+      id:"mower-cg431",name:"CG431",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG431-green.png",
+      specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
+      certifications:["CE","GS","EPA"],
+      moq:"1 unit",leadTime:"15-25 days",price:320,
+      description:"Handheld brush cutter, 37.7cc engine with 1.0kw output, 1500mm drive shaft. Comfortable cowhorn handle grip, switchable between trimmer head and brush blade — two tools in one. Ideal for bush clearing and weed cutting."
+    },
+    {
+      id:"mower-cg435",name:"CG435",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG435-green.png",
+      specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["Portable handheld design","U-handle","Quick-release blade system","Interchangeable trimmer head","Aluminum alloy drive shaft"],
+      certifications:["CE","GS","EPA"],
+      moq:"1 unit",leadTime:"15-25 days",price:420,
+      description:"Handheld brush cutter, 37.7cc engine with 1.0kw output. U-handle design for flexible maneuverability at various angles. Lightweight aluminum alloy drive shaft, ideal for professional gardening and bush clearing."
+    },
+    {
+      id:"mower-cg550",name:"CG550",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG550-green.png",
+      specs:{engine:"2-Stroke",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["Lightweight handheld design","Loop handle","0.75L large fuel tank","Interchangeable trimmer head","Extended runtime"],
+      certifications:["CE","GS","EPA"],
+      moq:"1 unit",leadTime:"15-25 days",price:360,
+      description:"Lightweight handheld brush cutter, 31.0cc economical displacement with 0.75L large fuel tank for extended runtime. Only 9kg with convenient loop handle, ideal for home garden weeding and light commercial use."
     },
     {
       id:"mower-elite-x2",name:"5200",

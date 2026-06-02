@@ -7,8 +7,38 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:185,
+      moq:"1台",leadTime:"15-25天",price:280,
       description:"手提式割灌机，42.7cc强劲动力，轻量化设计仅8.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
+    },
+    {
+      id:"mower-cg431",name:"CG431",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG431-green.png",
+      specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
+      certifications:["CE","GS","EPA"],
+      moq:"1台",leadTime:"15-25天",price:320,
+      description:"手提式割灌机，37.7cc动力，1.0kw输出功率，1500mm传动轴。牛角手柄握持舒适，可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
+    },
+    {
+      id:"mower-cg435",name:"CG435",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG435-green.png",
+      specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
+      certifications:["CE","GS","EPA"],
+      moq:"1台",leadTime:"15-25天",price:420,
+      description:"手提式割灌机，37.7cc动力，1.0kw输出功率。U型把手设计操控灵活，适合不同角度作业。铝合金传动轴轻量耐用，适合专业园艺和灌木清理作业。"
+    },
+    {
+      id:"mower-cg550",name:"CG550",
+      category:"mower",powerType:"gasoline",
+      image:"assets/images/CG550-green.png",
+      specs:{engine:"二冲程",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
+      features:["轻量手提设计","环形手柄","0.75L大油箱","可换装打草头","长续航作业"],
+      certifications:["CE","GS","EPA"],
+      moq:"1台",leadTime:"15-25天",price:360,
+      description:"轻型手提式割灌机，31.0cc经济排量，0.75L大容量油箱提供更长续航。轻量机身仅9kg，环形手柄操作便捷，适合家庭庭院除草和轻型商业用途。"
     },
     {
       id:"mower-elite-x2",name:"5200",
