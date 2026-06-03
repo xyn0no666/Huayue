@@ -67,7 +67,7 @@
   function renderFeatured(){
     var grid=document.getElementById('featuredGrid');
     if(!grid)return;
-    var featured=getProducts().slice(0,3);
+    var featuredIds=['mower-pro-x1','mower-elite-x2','mower-ride-rx3'];var products=getProducts();var featured=featuredIds.map(function(id){return products.find(function(p){return p.id===id})}).filter(Boolean);
     grid.innerHTML=featured.map(function(p){return createProductCard(p)}).join('');
     bindProductCardEvents();
   }

@@ -40,7 +40,7 @@
       },800);
     });
     var forgotLink=document.querySelector('[data-forgot-password]');
-    if(forgotLink)forgotLink.addEventListener('click',function(e){e.preventDefault();window.App&&window.App.toast&&window.App.toast('请联系外贸经理重置密码: export@huayueyuanlin.com','success')});
+    if(forgotLink)forgotLink.addEventListener('click',function(e){e.preventDefault();window.App&&window.App.toast&&window.App.toast('请联系外贸经理重置密码: export\x40huayueyuanlin.com','success')});
   }
 
   function initLogout(){

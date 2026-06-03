@@ -186,9 +186,50 @@
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&sidebar.classList.contains('filter-sidebar--open'))close()});
   }
 
+  /* === JSON-LD Structured Data === */
+  function injectJSONLD(){
+    var existing=document.getElementById('productsJsonLd');
+    if(existing)existing.remove();
+    var products=getProducts();
+    var script=document.createElement('script');
+    script.id='productsJsonLd';
+    script.type='application/ld+json';
+    script.textContent=JSON.stringify({
+      '@context':'https://schema.org',
+      '@type':'ItemList',
+      'numberOfItems':products.length,
+      'itemListElement':products.map(function(p,i){
+        return {
+          '@type':'ListItem',
+          'position':i+1,
+          'item':{
+            '@type':'Product',
+            'name':p.name,
+            'category':getCatName(p.category),
+            'description':p.description,
+            'image':'https://xyn0no666.github.io/Huayue/'+p.image,
+            'url':'https://huayueyuanlin.com/product-detail.html?id='+p.id,
+            'offers':{
+              '@type':'Offer',
+              'price':p.price||0,
+              'priceCurrency':'USD',
+              'availability':'https://schema.org/InStock',
+              'eligibleQuantity':{'@type':'QuantitativeValue','value':p.moq||1,'unitText':'台'}
+            },
+            'manufacturer':{
+              '@type':'Organization',
+              'name':'华悦园林'
+            }
+          }
+        };
+      })
+    });
+    document.head.appendChild(script);
+  }
+
   /* === Init === */
   function init(){
-    readURL();initFilters();initMobileFilter();render();
+    readURL();initFilters();initMobileFilter();render();injectJSONLD();
   }
 
   window.App=window.App||{};
@@ -197,5 +238,5 @@
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
 
-  document.addEventListener('lang:changed',function(){render()});
+  document.addEventListener('lang:changed',function(){render();injectJSONLD();});
 })();

@@ -53,20 +53,6 @@
     }).join('');
     var featuresHTML=(p.features||[]).map(function(f){return '<li>'+f+'</li>'}).join('');
 
-    // 3D viewer button for blower and chainsaw products
-    var view3dPages = { blower:'blower-3d.html', chainsaw:'chainsaw-3d.html' };
-    var view3dPage = view3dPages[p.category];
-    var view3dHTML = view3dPage
-      ? '<a href="'+view3dPage+'" class="product-detail__view-3d" title="360°三维查看">'+
-          '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+
-            '<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>'+
-            '<polyline points="3.27 6.96 12 12.01 20.73 6.96"/>'+
-            '<line x1="12" y1="22.08" x2="12" y2="12"/>'+
-          '</svg>'+
-          '360° 三维查看'+
-        '</a>'
-      : '';
-
     var html='<div class="product-detail__layout">'+
 
       // Left: Image
@@ -74,7 +60,6 @@
         '<div class="product-detail__image-wrapper">'+
           '<img src="'+p.image+'" alt="'+p.name+'" onerror="this.parentElement.style.background=\'var(--color-border)\';this.style.display=\'none\'">'+
           (certsHTML?'<div class="product-detail__certs">'+certsHTML+'</div>':'')+
-          view3dHTML+
         '</div>'+
       '</div>'+
 

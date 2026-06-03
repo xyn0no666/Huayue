@@ -1,7 +1,7 @@
 window.APP_DATA={
   products:[
     {
-      id:"mower-pro-x1",name:"CG-430",
+      id:"mower-pro-x1",name:"CG430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.png",
       specs:{engine:"二冲程",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
@@ -18,7 +18,7 @@ window.APP_DATA={
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:320,
-      description:"手提式割灌机，37.7cc动力，1.0kw输出功率，1500mm传动轴。牛角手柄握持舒适，可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
+      description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
     {
       id:"mower-cg435",name:"CG435",
@@ -28,7 +28,7 @@ window.APP_DATA={
       features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:420,
-      description:"手提式割灌机，37.7cc动力，1.0kw输出功率。U型把手设计操控灵活，适合不同角度作业。铝合金传动轴轻量耐用，适合专业园艺和灌木清理作业。"
+      description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
     {
       id:"mower-cg550",name:"CG550",
@@ -38,7 +38,7 @@ window.APP_DATA={
       features:["轻量手提设计","环形手柄","0.75L大油箱","可换装打草头","长续航作业"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:360,
-      description:"轻型手提式割灌机，31.0cc经济排量，0.75L大容量油箱提供更长续航。轻量机身仅9kg，环形手柄操作便捷，适合家庭庭院除草和轻型商业用途。"
+      description:"手提式割灌机，31.0cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
     {
       id:"mower-elite-x2",name:"5200",
@@ -48,10 +48,10 @@ window.APP_DATA={
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:320,
-      description:"大功率油锯5200，52cc强劲动力，18寸/20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。"
+      description:"大功率油锯5200，52cc强劲动力，20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。",
     },
     {
-      id:"mower-ride-rx3",name:"EB-260",
+      id:"mower-ride-rx3",name:"EB260",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
@@ -61,7 +61,7 @@ window.APP_DATA={
       description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
-      id:"blower-eb260a",name:"EB-260A",
+      id:"blower-eb260a",name:"EB260A",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260A.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
@@ -71,7 +71,7 @@ window.APP_DATA={
       description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携4.5kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
-      id:"blower-eb260s",name:"EB-260S",
+      id:"blower-eb260s",name:"EB260S",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260S.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
@@ -81,7 +81,7 @@ window.APP_DATA={
       description:"EB260加强版，25.4cc动力优化调校，78m/s强劲风速。配备减震手柄和大型油箱，适合长时间商业吹扫作业。"
     },
     {
-      id:"blower-hbz2602",name:"HBZ-2602",
+      id:"blower-hbz2602",name:"HBZ2602",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-HBZ2602.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
@@ -91,7 +91,7 @@ window.APP_DATA={
       description:"手提式汽油吹风机，25.4cc动力，70m/s风速。轻量便携仅3.8kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
-      id:"blower-eb430",name:"EB-430",
+      id:"blower-eb430",name:"EB430",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB430.png",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
@@ -101,7 +101,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb650",name:"EB-650",
+      id:"blower-eb650",name:"EB650",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB650.png",
       specs:{engine:"二冲程",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
@@ -111,7 +111,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，63.3cc动力，87m/s风速。重量9.2/11kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb808",name:"EB-808",
+      id:"blower-eb808",name:"EB808",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB808.png",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
@@ -121,7 +121,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb850",name:"EB-850",
+      id:"blower-eb850",name:"EB850",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB850.png",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
@@ -131,7 +131,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.5/11.5kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb851",name:"EB-851",
+      id:"blower-eb851",name:"EB851",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB851.png",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
@@ -141,7 +141,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.4/12.2kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb8500",name:"EB-8500",
+      id:"blower-eb8500",name:"EB8500",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB8500.png",
       specs:{engine:"二冲程",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
@@ -151,7 +151,7 @@ window.APP_DATA={
       description:"背负式汽油吹风机，63.6cc动力，87m/s风速。重量9/10.8kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
-      id:"blower-eb850e",name:"EB-850E",
+      id:"blower-eb850e",name:"EB850E",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB850E.png",
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
