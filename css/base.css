@@ -82,6 +82,188 @@ h3{font-size:clamp(1.125rem,3vw,1.5rem);font-family:var(--font-body);font-weight
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
+/* ============================================
+   Dark Mode
+   ============================================ */
+
+/* --- Smooth transition (avoid flash on load, but smooth on toggle) --- */
+body, .site-header, .product-card, .product-card__image, .page-hero,
+.form-input, .form-select, .form-textarea, .filter-option, .quickview,
+.header__actions, .header__cart-btn, .header__theme-btn, .section,
+.btn, .badge, .toast, .accordion__trigger, .accordion__icon::before,
+.accordion__icon::after, .dtable td, .tabs__btn, .header__nav-link,
+.filter-option, .dtable th, .header__nav, .breadcrumb, .form-label,
+.cart-item__cat, .dstatus, .inv-status, .support-cta, .marketing-card,
+.quickview__body, .fab-wechat-popover, .manual-item, input, select, textarea {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease,
+              box-shadow 0.35s ease, fill 0.35s ease, stroke 0.35s ease;
+}
+
+/* --- Variable-level overrides --- */
+[data-theme="dark"] {
+  --color-base: #1a1814;
+  --color-surface: #24211c;
+  --color-text: #e8e4db;
+  --color-text-light: #b8ad9a;
+  --color-text-muted: #7a6f60;
+  --color-text-inverse: #f5f2eb;
+  --color-border: #3a352e;
+  --color-border-dark: #4a453e;
+  --color-gold-dark: #d4bf8f;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+  --shadow-gold: 0 4px 20px rgba(196,169,125,0.15);
+}
+
+/* --- Element-level overrides (hardcoded colors in light mode) --- */
+
+/* Header */
+[data-theme="dark"] .site-header {
+  background: rgba(26,24,20,0.95);
+}
+[data-theme="dark"] .header__cart-btn:hover {
+  background: rgba(196,169,125,0.1);
+}
+[data-theme="dark"] .header__dealer-link:hover {
+  color: var(--color-dark-bg);
+}
+[data-theme="dark"] .hamburger span {
+  background: var(--color-text);
+}
+
+/* Page hero */
+[data-theme="dark"] .page-hero {
+  background: linear-gradient(180deg, var(--color-base) 0%, rgba(26,24,20,0) 100%);
+}
+
+/* Product cards */
+[data-theme="dark"] .product-card__image {
+  background: var(--color-dark-bg);
+}
+[data-theme="dark"] .product-card__quickview {
+  background: rgba(36,33,28,0.95);
+}
+[data-theme="dark"] .product-card__image--placeholder::after {
+  opacity: 0.35;
+}
+[data-theme="dark"] .cert-tag {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Forms */
+[data-theme="dark"] .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%23b8ad9a'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(196,169,125,0.2);
+}
+
+/* Badges */
+[data-theme="dark"] .badge--sale {
+  color: var(--color-dark-bg);
+}
+
+/* Buttons */
+[data-theme="dark"] .btn--dark:hover {
+  background: #3a3530;
+}
+[data-theme="dark"] .btn--gold-outline:hover {
+  color: var(--color-dark-bg);
+}
+
+/* Cart */
+[data-theme="dark"] .cart-item__cat {
+  background: rgba(196,169,125,0.12);
+}
+[data-theme="dark"] .cart-toast {
+  box-shadow: 0 4px 16px rgba(196,169,125,0.25);
+}
+
+/* Accordion */
+[data-theme="dark"] .accordion__icon::before,
+[data-theme="dark"] .accordion__icon::after {
+  background: var(--color-text);
+}
+
+/* Dealer dashboard */
+[data-theme="dark"] .dtable tr:hover td {
+  background: rgba(196,169,125,0.06);
+}
+[data-theme="dark"] .dstatus--pending {
+  background: rgba(180,170,150,0.12);
+}
+
+/* Filter sidebar */
+[data-theme="dark"] .filter-option:hover {
+  background: rgba(196,169,125,0.1);
+}
+[data-theme="dark"] .filter-option--active {
+  background: rgba(196,169,125,0.18);
+}
+
+/* Support page */
+[data-theme="dark"] .support-cta {
+  background: linear-gradient(180deg, var(--color-base) 0%, rgba(196,169,125,0.06) 100%);
+}
+[data-theme="dark"] .manual-item:hover {
+  background: rgba(196,169,125,0.08);
+}
+[data-theme="dark"] .manual-item__icon {
+  background: rgba(196,169,125,0.12);
+}
+
+/* Dark sections stay dark */
+[data-theme="dark"] .section--dark {
+  background: #141210;
+}
+[data-theme="dark"] .section--dark .section-subtitle {
+  color: var(--color-text-muted);
+}
+
+/* Theme toggle button */
+.header__theme-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-text-light);
+  background: transparent;
+  border: none;
+}
+.header__theme-btn:hover {
+  background: rgba(196,169,125,0.12);
+  color: var(--color-gold-dark);
+}
+.header__theme-btn svg {
+  width: 20px; height: 20px;
+  stroke: currentColor;
+}
+.theme-icon-sun { display: none; }
+.theme-icon-moon { display: block; }
+[data-theme="dark"] .theme-icon-sun { display: block; }
+[data-theme="dark"] .theme-icon-moon { display: none; }
+
+/* Dark mode: mobile nav */
+[data-theme="dark"] .header__nav {
+  background: var(--color-surface);
+}
+
+/* Dark mode: cart overlay already dark — no change */
+
+/* Dark mode: 404 page gradient */
+[data-theme="dark"] .not-found {
+  background: linear-gradient(180deg, var(--color-base) 0%, rgba(26,24,20,0.6) 100%);
+}
+
+/* Dark mode: home hero overlay gradient */
+[data-theme="dark"] .hero__slide-overlay {
+  background: linear-gradient(to top, rgba(20,16,10,0.9) 0%, rgba(20,16,10,0.15) 50%, transparent 100%);
+}
+
 /* === Responsive Breakpoints === */
 @media (max-width:767px){
   .section{padding:var(--space-8) 0}

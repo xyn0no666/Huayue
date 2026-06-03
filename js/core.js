@@ -120,9 +120,45 @@
     navigator.serviceWorker.register('/Huayue/sw.js').catch(function(){});
   }
 
+  /* === Theme Toggle (Dark/Light Mode) === */
+  var THEME_KEY='huayue-theme';
+  var sysDark=window.matchMedia('(prefers-color-scheme: dark)');
+
+  function getTheme(){
+    var saved=localStorage.getItem(THEME_KEY);
+    if(saved==='dark'||saved==='light')return saved;
+    return sysDark.matches?'dark':'light';
+  }
+
+  function applyTheme(t){
+    document.documentElement.setAttribute('data-theme',t);
+    localStorage.setItem(THEME_KEY,t);
+  }
+
+  function initTheme(){
+    applyTheme(getTheme());
+    var btn=document.getElementById('themeToggle');
+    if(btn){
+      btn.addEventListener('click',function(){
+        var current=document.documentElement.getAttribute('data-theme');
+        applyTheme(current==='dark'?'light':'dark');
+      });
+    }
+    // Listen for system changes (only matters if user hasn't manually toggled)
+    sysDark.addEventListener('change',function(e){
+      // Always follow system on change if nothing saved or following system
+      var saved=localStorage.getItem(THEME_KEY);
+      if(!saved||(saved!=='dark'&&saved!=='light')){
+        applyTheme(e.matches?'dark':'light');
+      }else{
+        applyTheme(saved);
+      }
+    });
+  }
+
   /* === Init === */
   A.Core={init:function(){
-    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();
+    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}

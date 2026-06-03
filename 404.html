@@ -74,6 +74,30 @@
 </head>
 <body>
 
+<header class="site-header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">华悦<span>园林</span><i class="header__logo-dot"></i></a>
+    <button class="hamburger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="header__nav">
+      <a href="index.html" class="header__nav-link">首页</a>
+      <a href="products.html" class="header__nav-link">产品中心</a>
+      <a href="brand.html" class="header__nav-link">关于我们</a>
+      <a href="support.html" class="header__nav-link">技术支持</a>
+      <a href="contact.html" class="header__nav-link">联系我们</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__theme-btn" id="themeToggle" aria-label="切换暗色模式">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <g class="theme-icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="theme-icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+      <a href="dealer.html" class="header__dealer-link">经销商入口</a>
+      <a href="contact.html" class="btn btn--outline btn--sm">立即询问</a>
+    </div>
+  </div>
+</header>
+
 <div class="not-found">
   <div class="not-found__code">404</div>
   <h1 class="not-found__title">页面未找到</h1>
@@ -89,5 +113,7 @@
   </div>
 </div>
 
+<script src="js/i18n.js"></script>
+<script src="js/core.js?v=2"></script>
 </body>
 </html>
