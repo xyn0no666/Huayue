@@ -115,6 +115,11 @@
     }
   }
 
+  /* === Service Worker (PWA) === */
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/Huayue/sw.js').catch(function(){});
+  }
+
   /* === Init === */
   A.Core={init:function(){
     initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();
