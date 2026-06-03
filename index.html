@@ -249,7 +249,24 @@
         <button class="testimonial-slider__arrow testimonial-slider__arrow--next" id="tsArrowNext" aria-label="下一个">&#10095;</button>
         <div class="testimonial-slider__dots" id="testimonialDots" style="display:flex;justify-content:center;gap:8px;margin-top:var(--space-3)"></div>
       </div>
-      <!-- end testimonials slider -->
+      <textarea class="form-textarea" id="testimonialText" rows="6" data-i18n-placeholder="home.reviewPlaceholder" placeholder="在此输入客户评价内容..." style="max-width:700px;margin:var(--space-4) auto 0;display:block;min-height:180px"></textarea>
+      <div style="max-width:700px;margin:var(--space-2) auto 0;display:flex;align-items:center;gap:8px">
+        <span data-i18n="testimonials.rating" style="font-size:0.8125rem;color:var(--color-text-muted)">评分：</span>
+        <div id="testimonialStars" style="display:flex;gap:4px">
+          <button type="button" class="tstar" data-star="1" style="background:none;border:none;font-size:1.5rem;color:var(--color-border);cursor:pointer">★</button>
+          <button type="button" class="tstar" data-star="2" style="background:none;border:none;font-size:1.5rem;color:var(--color-border);cursor:pointer">★</button>
+          <button type="button" class="tstar" data-star="3" style="background:none;border:none;font-size:1.5rem;color:var(--color-border);cursor:pointer">★</button>
+          <button type="button" class="tstar" data-star="4" style="background:none;border:none;font-size:1.5rem;color:var(--color-border);cursor:pointer">★</button>
+          <button type="button" class="tstar" data-star="5" style="background:none;border:none;font-size:1.5rem;color:var(--color-border);cursor:pointer">★</button>
+        </div>
+      </div>
+      <div style="max-width:700px;margin:var(--space-3) auto 0">
+        <button class="btn btn--primary" id="submitTestimonial" style="width:100%" data-i18n="common.submit">提交</button>
+      </div>
+      <div id="testimonialSuccess" style="display:none;max-width:700px;margin:var(--space-3) auto 0;text-align:center">
+        <p data-i18n="home.submitSuccess" style="color:var(--color-gold-dark);font-weight:600;font-size:1.125rem;margin-bottom:4px">提交成功</p>
+        <p data-i18n="home.thanksReview" style="font-size:0.75rem;color:var(--color-text-muted)">感谢点评，砥砺前行</p>
+      </div>
     </div>
   </section>
 
