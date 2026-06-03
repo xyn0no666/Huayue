@@ -282,6 +282,10 @@
     btn.addEventListener('click',function(){
       var val=textarea.value.trim();
       if(!val){if(window.App&&window.App.toast)window.App.toast(__('home.reviewPlaceholder'));return}
+      // Save to localStorage
+      var submissions=JSON.parse(localStorage.getItem('huayue-testimonials')||'[]');
+      submissions.push({text:val,rating:rating,date:new Date().toISOString()});
+      localStorage.setItem('huayue-testimonials',JSON.stringify(submissions));
       btn.style.display='none';
       textarea.style.display='none';
       if(starsContainer)starsContainer.parentElement.style.display='none';

@@ -56,6 +56,18 @@
       form.addEventListener('submit',function(e){
         e.preventDefault();
         if(!validateForm(this))return;
+        // Collect form data
+        var formType=this.id.replace('form-','');
+        var typeLabels={inquiry:'在线询盘',quote:'获取报价',demo:'预约验厂',dealer:'经销商申请'};
+        var data={type:typeLabels[formType]||formType,date:new Date().toISOString(),fields:{}};
+        this.querySelectorAll('input,select,textarea').forEach(function(f){
+          if(f.type==='checkbox'){if(f.checked)data.fields[f.closest('label')?f.closest('label').textContent.trim():'product']=f.value}
+          else if(f.type==='submit'||f.type==='button')return;
+          else{var label=f.closest('.form-group');var key=label?label.querySelector('.form-label').textContent.replace(/[\/\*]/g,'').trim():f.placeholder||f.name;if(f.value.trim())data.fields[key]=f.value.trim()}
+        });
+        var submissions=JSON.parse(localStorage.getItem('huayue-inquiries')||'[]');
+        submissions.push(data);
+        localStorage.setItem('huayue-inquiries',JSON.stringify(submissions));
         // Disable button
         var btn=this.querySelector('button[type="submit"]');
         var origText=btn.textContent;

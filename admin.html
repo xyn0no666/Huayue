@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>数据面板 — 华悦园林</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css?v=4">
+<style>
+  .dashboard { max-width:1100px; margin:0 auto; padding:calc(var(--header-height) + var(--space-5)) var(--space-3) var(--space-10) }
+  .dashboard h1 { font-family:var(--font-heading); margin-bottom:var(--space-1) }
+  .dashboard-subtitle { color:var(--color-text-muted); font-size:0.875rem; margin-bottom:var(--space-5) }
+  .dboard-tabs { display:flex; gap:0; margin-bottom:var(--space-4); border-bottom:2px solid var(--color-border) }
+  .dboard-tab { padding:12px 28px; font-size:0.875rem; font-weight:500; color:var(--color-text-light); background:none; border:none; cursor:pointer; position:relative; transition:color var(--transition-fast) }
+  .dboard-tab:hover { color:var(--color-text) }
+  .dboard-tab--active { color:var(--color-text); font-weight:600 }
+  .dboard-tab--active::after { content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--color-gold);transform:scaleX(1) }
+  .dboard-tab .count { display:inline-block;background:var(--color-gold);color:#fff;font-size:0.625rem;padding:1px 7px;border-radius:10px;margin-left:6px;font-weight:700 }
+  .dboard-panel { display:none }
+  .dboard-panel--active { display:block;animation:fadeIn 0.3s ease }
+  .dboard-toolbar { display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-3) }
+  .dboard-toolbar .btn { font-size:0.75rem }
+  .entry-card { background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3);margin-bottom:var(--space-2);transition:all var(--transition-fast) }
+  .entry-card:hover { border-color:var(--color-gold) }
+  .entry-card__header { display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--space-2) }
+  .entry-card__type { font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-gold-dark);background:rgba(196,169,125,0.1);padding:3px 10px;border-radius:3px }
+  .entry-card__date { font-size:0.6875rem;color:var(--color-text-muted);font-family:var(--font-mono) }
+  .entry-card__text { font-size:0.875rem;color:var(--color-text);line-height:1.8;margin-bottom:var(--space-1) }
+  .entry-card__stars { color:var(--color-gold);margin-bottom:var(--space-1);font-size:1rem }
+  .entry-card__fields { display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;font-size:0.8125rem;margin-top:var(--space-2);padding-top:var(--space-2);border-top:1px solid var(--color-border) }
+  .entry-card__fields dt { color:var(--color-text-muted);font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.04em }
+  .entry-card__fields dd { color:var(--color-text-light);margin-bottom:6px }
+  .empty-state { text-align:center;padding:var(--space-10) var(--space-3);color:var(--color-text-muted) }
+  .empty-state svg { width:48px;height:48px;stroke:var(--color-border);margin-bottom:var(--space-2) }
+  .empty-state p { font-size:0.875rem }
+  @media (max-width:767px) {
+    .entry-card__fields { grid-template-columns:1fr }
+    .dboard-tabs { overflow-x:auto;-webkit-overflow-scrolling:touch }
+    .dboard-tab { white-space:nowrap;padding:12px 16px }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">华悦<span>园林</span><i class="header__logo-dot"></i></a>
+    <button class="hamburger" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="header__nav">
+      <a href="index.html" class="header__nav-link">首页</a>
+      <a href="products.html" class="header__nav-link">产品中心</a>
+      <a href="brand.html" class="header__nav-link">关于我们</a>
+      <a href="support.html" class="header__nav-link">技术支持</a>
+      <a href="contact.html" class="header__nav-link">联系我们</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__theme-btn" id="themeToggle" aria-label="切换暗色模式">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <g class="theme-icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="theme-icon-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+      <a href="dealer.html" class="header__dealer-link">经销商入口</a>
+      <a href="contact.html" class="btn btn--outline btn--sm">立即询问</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="dashboard">
+    <h1>数据面板</h1>
+    <p class="dashboard-subtitle">用户评价与询盘记录（本地存储 · 仅本设备可见）</p>
+
+    <div class="dboard-tabs" id="dboardTabs">
+      <button class="dboard-tab dboard-tab--active" data-dtab="testimonials">用户评价 <span class="count" id="countTestimonials">0</span></button>
+      <button class="dboard-tab" data-dtab="inquiries">询盘记录 <span class="count" id="countInquiries">0</span></button>
+    </div>
+
+    <div class="dboard-panel dboard-panel--active" id="panel-testimonials">
+      <div class="dboard-toolbar">
+        <span style="font-size:0.8125rem;color:var(--color-text-muted)">含静态评价与用户提交的评价</span>
+        <button class="btn btn--outline btn--sm" id="clearTestimonials">清除提交记录</button>
+      </div>
+      <div id="testimonialList"></div>
+    </div>
+
+    <div class="dboard-panel" id="panel-inquiries">
+      <div class="dboard-toolbar">
+        <span style="font-size:0.8125rem;color:var(--color-text-muted)" id="inquirySummary"></span>
+        <button class="btn btn--outline btn--sm" id="clearInquiries">清除全部询盘</button>
+      </div>
+      <div id="inquiryList"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__col"><div class="footer__brand-name">华悦<span style="color:var(--color-gold)">园林</span></div><p class="footer__brand-desc">专业园林机械制造商，源头工厂，20年OEM/ODM经验，产品出口50+国家，年产能20万台。</p></div>
+    <div class="footer__col"><div class="footer__col-title">产品</div><div class="footer__links"><a href="products.html?category=mower">割灌机</a><a href="products.html?category=chainsaw">油锯</a><a href="products.html?category=blower">吹风机</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">公司</div><div class="footer__links"><a href="brand.html">关于我们</a><a href="brand.html#factory">工厂实力</a><a href="brand.html#company-info">公司信息</a><a href="contact.html">加入我们</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">支持</div><div class="footer__links"><a href="support.html">技术支持</a><a href="support.html#faqAccordion">常见问题</a><a href="support.html#guidesGrid">保养指南</a><a href="contact.html">售后配件</a></div></div>
+    <div class="footer__col"><div class="footer__col-title">联系</div><div class="footer__links"><a href="tel:0579-8722-8888">0579-8722-8888</a><a href="mailto:&#101;&#120;&#112;&#111;&#114;&#116;&#64;&#104;&#117;&#97;&#121;&#117;&#101;&#121;&#117;&#97;&#110;&#108;&#105;&#110;&#46;&#99;&#111;&#109;">&#101;&#120;&#112;&#111;&#114;&#116;&#64;&#104;&#117;&#97;&#121;&#117;&#101;&#121;&#117;&#97;&#110;&#108;&#105;&#110;&#46;&#99;&#111;&#109;</a><a href="contact.html">在线询盘</a><a href="dealer.html">经销商门户</a></div></div>
+  </div>
+  <div class="footer__bottom"><span>&copy; 2026 华悦园林 — 永康华悦园林机械有限公司</span><span><a href="privacy.html" style="color:var(--color-gold-dark)">隐私政策</a></span></div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/core.js?v=2"></script>
+<script src="js/data.js?v=7"></script>
+<script>
+(function(){'use strict';
+
+  var staticTestimonials = (window.APP_DATA && window.APP_DATA.testimonials) || [];
+
+  /* === Render === */
+  function renderTestimonials(){
+    var container = document.getElementById('testimonialList');
+    var userSubs = JSON.parse(localStorage.getItem('huayue-testimonials') || '[]');
+    // Static ones
+    var html = '';
+    staticTestimonials.forEach(function(t){
+      html += '<div class="entry-card">'+
+        '<div class="entry-card__header"><span class="entry-card__type">静态评价</span><span class="entry-card__date">'+t.name+'</span></div>'+
+        '<div class="entry-card__stars">'+'★'.repeat(t.rating)+'</div>'+
+        '<div class="entry-card__text">"'+t.text+'"</div>'+
+      '</div>';
+    });
+    // User-submitted ones
+    userSubs.slice().reverse().forEach(function(s){
+      html += '<div class="entry-card">'+
+        '<div class="entry-card__header"><span class="entry-card__type">用户提交</span><span class="entry-card__date">'+new Date(s.date).toLocaleString('zh-CN')+'</span></div>'+
+        '<div class="entry-card__stars">'+(s.rating?'★'.repeat(s.rating):'未评分')+'</div>'+
+        '<div class="entry-card__text">"'+s.text+'"</div>'+
+      '</div>';
+    });
+    if(!html) html = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><p>暂无评价数据</p></div>';
+    container.innerHTML = html;
+    document.getElementById('countTestimonials').textContent = staticTestimonials.length + userSubs.length;
+  }
+
+  function renderInquiries(){
+    var container = document.getElementById('inquiryList');
+    var subs = JSON.parse(localStorage.getItem('huayue-inquiries') || '[]');
+    var html = '';
+    subs.slice().reverse().forEach(function(s){
+      var fieldsHTML = '';
+      if(s.fields){
+        fieldsHTML = '<dl class="entry-card__fields">';
+        Object.keys(s.fields).forEach(function(k){
+          fieldsHTML += '<dt>'+k+'</dt><dd>'+s.fields[k]+'</dd>';
+        });
+        fieldsHTML += '</dl>';
+      }
+      html += '<div class="entry-card">'+
+        '<div class="entry-card__header"><span class="entry-card__type">'+s.type+'</span><span class="entry-card__date">'+new Date(s.date).toLocaleString('zh-CN')+'</span></div>'+
+        fieldsHTML+
+      '</div>';
+    });
+    if(!html) html = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/></svg><p>暂无询盘记录<br><small>联系页面的表单提交后将在此显示</small></p></div>';
+    container.innerHTML = html;
+    document.getElementById('countInquiries').textContent = subs.length;
+    document.getElementById('inquirySummary').textContent = '共 ' + subs.length + ' 条询盘记录';
+  }
+
+  /* === Tabs === */
+  function initTabs(){
+    document.querySelectorAll('.dboard-tab').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var tab = this.getAttribute('data-dtab');
+        document.querySelectorAll('.dboard-tab').forEach(function(b){b.classList.remove('dboard-tab--active')});
+        this.classList.add('dboard-tab--active');
+        document.querySelectorAll('.dboard-panel').forEach(function(p){p.classList.toggle('dboard-panel--active', p.id === 'panel-' + tab)});
+      });
+    });
+  }
+
+  /* === Clear buttons === */
+  function initClear(){
+    var clearT = document.getElementById('clearTestimonials');
+    var clearI = document.getElementById('clearInquiries');
+    if(clearT) clearT.addEventListener('click',function(){
+      if(!confirm('确定清除所有用户提交的评价？')) return;
+      localStorage.removeItem('huayue-testimonials');
+      renderTestimonials();
+    });
+    if(clearI) clearI.addEventListener('click',function(){
+      if(!confirm('确定清除全部询盘记录？此操作不可撤销。')) return;
+      localStorage.removeItem('huayue-inquiries');
+      renderInquiries();
+    });
+  }
+
+  function init(){
+    renderTestimonials();
+    renderInquiries();
+    initTabs();
+    initClear();
+  }
+
+  if(document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
+  else { init(); }
+})();
+</script>
+</body>
+</html>
