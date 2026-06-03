@@ -156,9 +156,32 @@
     });
   }
 
+  /* === Cookie Consent === */
+  var COOKIE_KEY='huayue-cookie';
+
+  function initCookieBanner(){
+    if(localStorage.getItem(COOKIE_KEY))return;
+    var banner=document.getElementById('cookieBanner');
+    if(!banner)return;
+    // Delay slightly so the banner animates in after page load
+    setTimeout(function(){banner.classList.add('cookie-banner--visible')},400);
+    banner.addEventListener('click',function(e){
+      var btn=e.target.closest('[data-cookie]');
+      if(!btn)return;
+      var val=btn.getAttribute('data-cookie');
+      localStorage.setItem(COOKIE_KEY,val);
+      if(val==='essential'){
+        // Disable GA tracking
+        window['ga-disable-G-XXXXXXXXXX']=true;
+      }
+      banner.classList.remove('cookie-banner--visible');
+      setTimeout(function(){banner.remove()},600);
+    });
+  }
+
   /* === Init === */
   A.Core={init:function(){
-    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();
+    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}
