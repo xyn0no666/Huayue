@@ -239,22 +239,36 @@
     if(empty)empty.style.display='none';
     if(itemCount)itemCount.textContent=items.length+' 款产品';
 
+    // Look up product data from APP_DATA (same approach as cart.js renderPanel)
+    function getProduct(id){
+      var data=window.App&&window.App.getData?window.App.getData():null;
+      return (data&&data.products||window.APP_DATA&&window.APP_DATA.products||[]).find(function(p){return p.id===id});
+    }
+
     list.innerHTML=items.map(function(i){
-      var img=i.image||'';
-      var unitPrice=i.price?'¥'+i.price.toLocaleString():'咨询';
+      var p=getProduct(i.productId);
+      var name=p?p.name:i.productId;
+      var img=p?p.image:'';
+      var moq=p?p.moq||'咨询':'咨询';
+      var leadTime=p?p.leadTime||'咨询':'咨询';
+      var unitPrice=p&&p.price?'¥'+p.price.toLocaleString():'咨询';
+      var lineTotal=p&&p.price?'¥'+(p.price*i.quantity).toLocaleString():'—';
       return '<div class="checkout-item">'+
-        '<div class="checkout-item__image"><img src="'+img+'" alt="'+i.name+'" onerror="this.parentElement.style.background=\'var(--color-border-dark)\';this.style.display=\'none\'"></div>'+
+        '<div class="checkout-item__image"><img src="'+img+'" alt="'+name+'" onerror="this.parentElement.style.background=\'var(--color-border-dark)\';this.style.display=\'none\'"></div>'+
         '<div class="checkout-item__info">'+
-          '<div class="checkout-item__name">'+i.name+'</div>'+
-          '<div class="checkout-item__meta">MOQ: '+(i.moq||'咨询')+' | 交期: '+(i.leadTime||'咨询')+' | 单价: '+unitPrice+'</div>'+
+          '<div class="checkout-item__name">'+name+'</div>'+
+          '<div class="checkout-item__meta">MOQ: '+moq+' | 交期: '+leadTime+' | 单价: '+unitPrice+'</div>'+
         '</div>'+
         '<div class="checkout-item__qty">x'+i.quantity+'</div>'+
-        '<div class="checkout-item__price">'+(i.price?'¥'+(i.price*i.quantity).toLocaleString():'—')+'</div>'+
+        '<div class="checkout-item__price">'+lineTotal+'</div>'+
       '</div>';
     }).join('');
 
     var totalQty=items.reduce(function(s,i){return s+i.quantity},0);
-    var totalPrice=items.reduce(function(s,i){return s+(i.price||0)*i.quantity},0);
+    var totalPrice=items.reduce(function(s,i){
+      var p=getProduct(i.productId);
+      return s+(p&&p.price||0)*i.quantity;
+    },0);
     if(summaryCount)summaryCount.textContent=totalQty+' 台';
     if(summaryTotal)summaryTotal.textContent='¥'+totalPrice.toLocaleString();
   }
