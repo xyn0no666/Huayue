@@ -20,7 +20,7 @@
       'footer.products.mower':'割灌机','footer.products.chainsaw':'油锯','footer.products.blower':'吹风机',
       'footer.company.about':'关于我们','footer.company.factory':'工厂实力','footer.company.info':'公司信息','footer.company.join':'加入我们',
       'footer.support.tech':'技术支持','footer.support.faq':'常见问题','footer.support.guides':'保养指南','footer.support.parts':'售后配件',
-      'footer.contact.tel':'0539-XXXXXXXXXXX','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
+      'footer.contact.tel':'19862905209','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
       'footer.copyright':'© 2026 华悦园林 — 华悦园林机械',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'专业园林机械<br>制造商','hero.desc1':'源头工厂，多年OEM/ODM经验，全工序自主生产',
@@ -77,7 +77,7 @@
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'联系我们','contact.subtitle':'无论产品咨询、获取报价还是预约验厂，我们的专业外贸团队随时为您服务',
       'contact.tab.inquiry':'产品咨询','contact.tab.quote':'获取报价','contact.tab.demo':'预约验厂','contact.tab.dealer':'经销商申请',
-      'contact.phone':'0539-XXXXXXXXXXX','contact.phone.label':'服务热线','contact.phone.hours':'周一至周六 8:00 - 18:00 (GMT+8)',
+      'contact.phone':'19862905209','contact.phone.label':'服务热线','contact.phone.hours':'周一至周六 8:00 - 18:00 (GMT+8)',
       'contact.email.label':'电子邮箱','contact.email.hint':'外贸团队24小时内回复',
       'contact.addr.label':'工厂地址','contact.addr.hint':'距临沂机场30分钟 / 临沂北站25分钟',
       'contact.wechat.label':'微信 / WeChat','contact.wechat.hint':'请备注"园林机械询盘"',
@@ -158,7 +158,7 @@
       'footer.products.mower':'Brush Cutter','footer.products.chainsaw':'Chainsaw','footer.products.blower':'Leaf Blower',
       'footer.company.about':'About Us','footer.company.factory':'Factory Strength','footer.company.info':'Company Info','footer.company.join':'Join Us',
       'footer.support.tech':'Tech Support','footer.support.faq':'FAQ','footer.support.guides':'Maintenance Guides','footer.support.parts':'Spare Parts',
-      'footer.contact.tel':'0539-XXXXXXXXXXX','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
+      'footer.contact.tel':'19862905209','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
       'footer.copyright':'© 2026 Huayue Garden — Huayue Garden Machinery',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'Professional Garden<br>Machinery Manufacturer','hero.desc1':'Source factory, years of OEM/ODM experience, full in-house production',
@@ -215,7 +215,7 @@
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'Contact Us','contact.subtitle':'Whether product inquiry, quotation request, or factory visit — our professional trade team is here to serve you',
       'contact.tab.inquiry':'Product Inquiry','contact.tab.quote':'Get Quote','contact.tab.demo':'Factory Visit','contact.tab.dealer':'Dealer Application',
-      'contact.phone':'0539-XXXXXXXXXXX','contact.phone.label':'Hotline','contact.phone.hours':'Mon-Sat 8:00-18:00 (GMT+8)',
+      'contact.phone':'19862905209','contact.phone.label':'Hotline','contact.phone.hours':'Mon-Sat 8:00-18:00 (GMT+8)',
       'contact.email.label':'Email','contact.email.hint':'Trade team responds within 24 hours',
       'contact.addr.label':'Factory Address','contact.addr.hint':'30 min from Linyi Airport / 25 min from Linyubei Station',
       'contact.wechat.label':'WeChat','contact.wechat.hint':'Please note "Garden Machinery Inquiry"',

@@ -96,7 +96,7 @@
         '<span class="fab-tooltip">WeChat</span>'+
       '</button>'+
       '<div class="fab-wechat-popover" id="fabWechatPop">'+
-        '<div class="fab-wechat-popover__qr">'+(window.App&&window.App.__?window.App.__('fab.wechatQr'):'微信扫码<br>添加好友').replace(/\n/g,'<br>')+'</div>'+
+        '<div class="fab-wechat-popover__qr"><img src="assets/images/wechat-qr.jpg" alt="微信二维码" style="width:120px;height:120px;display:block;margin:0 auto"></div>'+
         '<span>'+(window.App&&window.App.__?window.App.__('fab.wechatAccount'):'公众号：华悦园林机械')+'</span>'+
       '</div>'+
       '<a href="mailto:export\x40huayueyuanlin.com" class="fab-btn fab-btn--email" aria-label="Email">'+
