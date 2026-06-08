@@ -6,7 +6,7 @@ window.APP_DATA={
       image:"assets/images/CG430-green.png",
       specs:{engine:"二冲程",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
-      certifications:["CE","GS","EPA"],
+      certifications:["强劲动力","低油耗","轻量化"],
       moq:"1台",leadTime:"15-25天",price:280,
       description:"手提式割灌机，42.7cc强劲动力，轻量化设计仅8.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
     },
@@ -16,7 +16,7 @@ window.APP_DATA={
       image:"assets/images/CG431-green.png",
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
-      certifications:["CE","GS","EPA"],
+      certifications:["强劲动力","低油耗","轻量化"],
       moq:"1台",leadTime:"15-25天",price:320,
       description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
@@ -26,7 +26,7 @@ window.APP_DATA={
       image:"assets/images/CG435-green.png",
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
-      certifications:["CE","GS","EPA"],
+      certifications:["强劲动力","低油耗","轻量化"],
       moq:"1台",leadTime:"15-25天",price:420,
       description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
@@ -36,7 +36,7 @@ window.APP_DATA={
       image:"assets/images/CG550-green.png",
       specs:{engine:"二冲程",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["轻量手提设计","环形手柄","0.75L大油箱","可换装打草头","长续航作业"],
-      certifications:["CE","GS","EPA"],
+      certifications:["强劲动力","低油耗","轻量化"],
       moq:"1台",leadTime:"15-25天",price:360,
       description:"手提式割灌机，31.0cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
@@ -46,7 +46,7 @@ window.APP_DATA={
       image:"assets/images/chainsaw-5800.png",
       specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",weight:"5.5kg"},
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
-      certifications:["CE","GS","EPA"],
+      certifications:["强劲动力","防震设计","耐用可靠"],
       moq:"1台",leadTime:"15-25天",price:320,
       description:"大功率油锯5200，52cc强劲动力，20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。",
     },
@@ -56,7 +56,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB260.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["轻量手提设计","无级变速油门","巡航定速","低振动","大容量油箱"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:145,
       description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
@@ -66,7 +66,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB260A.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","低振动","大容量油箱"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:220,
       description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携4.5kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
@@ -76,7 +76,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB260S.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","减震手柄","大型油箱"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:330,
       description:"EB260加强版，25.4cc动力优化调校，78m/s强劲风速。配备减震手柄和大型油箱，适合长时间商业吹扫作业。"
     },
@@ -86,7 +86,7 @@ window.APP_DATA={
       image:"assets/images/blower-HBZ2602.png",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
       features:["轻量手提设计","高效涡流风道","巡航定速","人体工学手柄","低振动"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:450,
       description:"手提式汽油吹风机，25.4cc动力，70m/s风速。轻量便携仅3.8kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
@@ -96,7 +96,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB430.png",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc大排量","高效涡流风道","无级变速","背带减负系统","加厚机身"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:360,
       description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -106,7 +106,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB650.png",
       specs:{engine:"二冲程",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc大功率","双涡轮风道","背带减负系统","防震设计","大油箱续航"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:350,
       description:"背负式汽油吹风机，63.3cc动力，87m/s风速。重量9.2/11kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -116,7 +116,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB808.png",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc动力","高效涡流风道","背带减负系统","强力启动马达","耐用型机身"],
-      certifications:["CE","GS","EPA/CARB"],
+      certifications:["四冲程","低噪音","大风速"],
       moq:"1台",leadTime:"15-25天",price:350,
       description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -126,7 +126,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB850.png",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc四冲程动力","低噪音低振动","四涡轮风道系统","人体工学背带","一键启动"],
-      certifications:["CE","GS","EPA/CARB"],
+      certifications:["四冲程","低噪音","大风速"],
       moq:"1台",leadTime:"15-25天",price:600,
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.5/11.5kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -136,7 +136,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB851.png",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc四冲程旗舰","五涡轮增压系统","全悬浮减震","电子点火","航空级材质"],
-      certifications:["CE","GS","EPA/CARB"],
+      certifications:["四冲程","低噪音","大风速"],
       moq:"1台",leadTime:"15-25天",price:650,
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.4/12.2kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -146,7 +146,7 @@ window.APP_DATA={
       image:"assets/images/blower-EB8500.png",
       specs:{engine:"二冲程",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
       features:["63.6cc大功率","高效涡轮风道","省油技术","背带减负系统","耐用型空滤"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:550,
       description:"背负式汽油吹风机，63.6cc动力，87m/s风速。重量9/10.8kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
@@ -156,9 +156,19 @@ window.APP_DATA={
       image:"assets/images/blower-EB850E.png",
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc电子点火","高效涡轮风道","电子燃油喷射","一键启动","智能温控"],
-      certifications:["CE","GS","EPA"],
+      certifications:["高效风道","低振动","大风速"],
       moq:"1台",leadTime:"15-25天",price:550,
       description:"背负式汽油吹风机，75.6cc动力，92m/s风速。重量11/12.9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
+    },
+    {
+      id:"blower-eb990",name:"EB990",
+      category:"blower",powerType:"gasoline",
+      image:"assets/images/blower-EB990.png",
+      specs:{engine:"二冲程",displacement:"75.6cc",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
+      features:["大排量动力","超大2.3L油箱","92.2m/s飓风级风速","背带减负系统","高效涡流风道"],
+      certifications:["高效风道","低振动","大风速"],
+      moq:"1台",leadTime:"15-25天",price:680,
+      description:"背负式汽油吹风机旗舰款EB990，92.2m/s飓风级风速，2.3L超大油箱超长续航，重量仅11.1kg。配备专业背带减负系统，适合专业林场、大型绿地和市政环卫吹扫作业。"
     }
   ],
   categories:[
@@ -168,31 +178,31 @@ window.APP_DATA={
     {id:"blower",name:"吹风机"}
   ],
   testimonials:[
-    {name:"陈志远",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=chen-zhiyuan&backgroundColor=b6e3f4&mouth=smile&eyes=happy",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
-    {name:"赵明辉",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=zhao-minghui&backgroundColor=c0aede,d1d4f9,b6e3f4,ffd5dc,ffdfbf&mouth=smile&eyes=happy",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
-    {name:"林小雨",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=lin-xiaoyu&backgroundColor=ffd5dc,ffdfbf,c0aede&mouth=smile&eyes=happy",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:5},
-    {name:"孙文博",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=sun-wenbo&backgroundColor=b6e3f4,c0aede,d1d4f9&mouth=smile&eyes=happy",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
-    {name:"Marco Ferrara",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=marco-ferrara&backgroundColor=d1d4f9,b6e3f4,ffdfbf&mouth=smile&eyes=happy",text:"我们在法国定位中高端园艺市场，对自有品牌调性要求很高。华悦的灵活定制能力让人服气——从潘通配色到压铸铭牌到彩盒设计，全部按需落地，新品开发周期仅 60-75 天，比欧洲本地 OEM 厂还快两周。合作五年，年订单从 30 万欧元增长到 180 万欧元，是最信赖的亚洲制造伙伴。",rating:5},
-    {name:"Karim Hassan",avatar:"https://api.dicebear.com/8.x/avataaars/svg?seed=karim-hassan&backgroundColor=b6e3f4,c0aede,ffd5dc,ffdfbf&mouth=smile&eyes=happy",text:"中东市场对设备的要求比较特殊——夏季 45°C 高温 + 细沙粉尘，普通发动机空滤三个月就堵。华悦为我们定制了双层油浴空滤方案，装在 VP-B630 吹风机和 VP-C580 油锯上，故障率降到之前的 1/5。他们还有专业的阿拉伯语外贸经理，沟通零障碍，信用证、SASO 认证单证处理非常专业。",rating:5}
+    {name:"陈志远",location:"山东烟台",avatar:"https://picsum.photos/seed/green-garden/200/200",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
+    {name:"赵明辉",location:"浙江杭州",avatar:"https://picsum.photos/seed/forest-path/200/200",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
+    {name:"林小雨",location:"广东深圳",avatar:"https://picsum.photos/seed/flower-meadow/200/200",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:5},
+    {name:"孙文博",location:"黑龙江伊春",avatar:"https://picsum.photos/seed/mountain-forest/200/200",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
+    {name:"王建军",location:"浙江宁波",avatar:"https://picsum.photos/seed/nature-lake/200/200",text:"我们做自有品牌园林机械，对产品品质和品牌形象要求高。华悦的定制能力令人印象深刻——从配色到铭牌到包装，全部按需落地，新品开发效率高，品质始终稳定。合作以来供货及时、售后到位，是值得长期合作的制造伙伴。",rating:5},
+    {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://picsum.photos/seed/desert-oasis/200/200",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。华悦为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
   ],
   faq:[
-    {q:"如何选择适合我市场的割灌机型号？",a:"选择型号需考虑目标市场法规(EPA/CE等)、草坪面积、地形和价格定位。面积<200㎡推荐手推式，200-800㎡推荐自走式，>800㎡推荐驾乘式。我们的外贸经理可针对您的市场需求提供专业建议。",cat:"产品选择"},
+    {q:"如何选择适合我市场的割灌机型号？",a:"选择型号需考虑草坪面积、地形、目标市场价格定位和使用场景。面积<200㎡推荐手推式，200-800㎡推荐自走式，>800㎡推荐驾乘式。我们的外贸经理可针对您的市场需求提供专业建议。",cat:"产品选择"},
     {q:"支持OEM/ODM定制吗？",a:"完全支持。我们提供品牌贴牌、色彩定制、配置调整、包装设计等全链路OEM/ODM服务。最小起订量根据型号不同为50-200台。可提供免费样品确认品质。",cat:"产品选择"},
     {q:"最小起订量(MOQ)是多少？",a:"常规型号MOQ为50-200台不等，驾乘式割灌机MOQ可低至10台。试订单可接受混批。具体MOQ请咨询外贸经理获取各型号详细报价单。",cat:"经销商"},
     {q:"交货周期需要多久？",a:"常规型号收到定金后25-35天发货，驾乘式需35-45天。旺季(1-4月)建议提前60天下单锁定产能。紧急订单可协商加急，最快15天。",cat:"经销商"},
-    {q:"产品获得哪些国际认证？",a:"全系列产品通过CE(欧盟)、GS(德国)、EPA/CARB(美国)、FCC、RoHS等认证。可配合提供认证证书复印件用于目的国清关。新客户验厂我们免费提供3天食宿。",cat:"保修服务"},
+    {q:"产品符合哪些质量标准？",a:"我们的产品严格按照行业标准设计制造，执行来料检验、过程巡检、成品全检三道品控关口，每台设备均有唯一追溯码。可根据客户需求配合提供相关合规文件用于目的国清关。欢迎预约验厂，新客户免费提供3天食宿。",cat:"保修服务"},
     {q:"如何进行日常维护保养？",a:"每次使用后应清洁机身、检查空气滤清器、紧固松动的螺丝。汽油设备需每50小时更换机油、清洗火花塞。链条需定期磨锐。我们提供全套配件和维修视频。",cat:"维护保养"},
     {q:"产品保修政策是怎样的？",a:"所有产品提供1-2年质保(根据订单协议)，发动机核心部件2年质保。质保期内免费提供替换零件。我们在德国和美国设有售后备件仓。",cat:"保修服务"},
     {q:"可以单独采购配件和耗材吗？",a:"可以。我们提供全系列原装配件和易损件，包括链条、刀片、打草绳、滤清器、火花塞、机油等。配件可与整机订单拼柜发货，降低物流成本。",cat:"配件订购"},
     {q:"支持哪些运输方式？",a:"支持FOB宁波/上海、CIF到港、DDP到门等多种贸易条款。常规走海运整柜/拼柜，小批量可走铁路或空运。我们在欧洲和美国有海外仓，可提供本地配送。",cat:"经销商"},
     {q:"如何获取样品和报价？",a:"请通过联系我们页面提交询盘，或直接发送邮件至外贸团队。我们会在24小时内回复报价单、规格书和高清产品图。样品通常3-5个工作日可发出。",cat:"经销商"},
-    {q:"工厂在哪里？可以验厂吗？",a:"工厂位于浙江省永康市五金科技工业园，占地41,000㎡，距义乌国际商贸城40分钟车程。随时欢迎客户预约验厂，我们提供免费接机和住宿安排。",cat:"经销商"},
+    {q:"工厂在哪里？可以验厂吗？",a:"工厂位于山东省临沂市罗庄区休闲垂钓园东北200米（银杏路东），占地41,000㎡，随时欢迎客户预约验厂。",cat:"经销商"},
     {q:"设备长期存放需要注意什么？",a:"汽油设备存放前需排空燃油或添加燃油稳定剂，火花塞滴入少量机油后拉动启动绳数次。所有设备应清洁后罩防尘罩存放。",cat:"维护保养"}
   ],
   stats:[
-    {value:20,label:"年制造经验",suffix:"+"},
-    {value:200000,label:"年产能(台)",suffix:"+"},
-    {value:50,label:"出口国家",suffix:"+"},
+    {value:18,label:"年制造经验",suffix:"+"},
+    {value:150000,label:"年产能(台)",suffix:"+"},
+    {value:30,label:"出口国家",suffix:"+"},
     {value:41334,label:"工厂面积(㎡)",suffix:""}
   ],
   guides:[
@@ -202,11 +212,11 @@ window.APP_DATA={
     {title:"2冲程vs4冲程：动力系统选型指南",readTime:"15分钟",image:"assets/images/guide-engine.png",desc:"全面对比各动力系统优劣，帮助选择最适合的汽油机型",url:"guide-4.html"}
   ],
   certifications:[
-    {name:"ISO 9001:2015",desc:"质量管理体系认证",id:"QAIC/CN/186523",issuer:"QA International Certification"},
-    {name:"CE Marking",desc:"欧盟安全准入认证",id:"MD-2023-08876",issuer:"TÜV Rheinland"},
-    {name:"GS (TÜV)",desc:"德国产品安全认证",id:"GS-2023-09123",issuer:"TÜV Rheinland"},
-    {name:"EPA & CARB",desc:"美国排放标准认证",id:"EPA-FE-2023-445",issuer:"U.S. EPA"},
-    {name:"RoHS 2.0",desc:"有害物质限制指令",id:"R2-2023-1553",issuer:"SGS-CSTC"},
-    {name:"FCC",desc:"美国电磁兼容认证",id:"FCC-ID-XY2023EMC",issuer:"FCC"}
+    {name:"来料检验体系",desc:"关键零部件入库前逐批抽检，确保材料符合标准",id:"",issuer:""},
+    {name:"过程巡检制度",desc:"生产过程中每2小时巡检一次，关键工序100%监控",id:"",issuer:""},
+    {name:"成品全检流程",desc:"每台设备出厂前经过功率测试、油耗测试、安全检测",id:"",issuer:""},
+    {name:"耐久性验证",desc:"模拟极端工况连续运行测试，确保产品耐用可靠",id:"",issuer:""},
+    {name:"环保材料管控",desc:"严格选用符合环保要求的原材料和表面处理工艺",id:"",issuer:""},
+    {name:"产品追溯系统",desc:"每台设备唯一追溯码，质量问题可快速定位批次与工序",id:"",issuer:""}
   ]
 };

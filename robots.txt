@@ -3,4 +3,4 @@ Allow: /
 Disallow: /checkout.html
 Disallow: /dealer.html
 
-Sitemap: https://xyn0no666.github.io/Huayue/sitemap.xml
+Sitemap: https://huayueyuanlin.com/sitemap.xml

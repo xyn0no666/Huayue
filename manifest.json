@@ -1,9 +1,9 @@
 {
   "name": "华悦园林 — 园林机械制造",
   "short_name": "华悦园林",
-  "description": "专业园林机械制造商，割灌机、油锯、吹风机全系列，CE/EPA认证，支持OEM/ODM",
-  "start_url": "/Huayue/index.html",
-  "scope": "/Huayue/",
+  "description": "专业园林机械制造商，割灌机、油锯、吹风机全系列，源头工厂，支持OEM/ODM",
+  "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#1a1814",

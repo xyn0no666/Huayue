@@ -200,7 +200,7 @@
         '<p class="testimonial-card__text">"'+t.text+'"</p>'+
         '<div class="testimonial-card__author">'+
           avatarHTML+
-          '<div><div class="testimonial-card__name">'+t.name+'</div>'+(t.company?'<div class="testimonial-card__company">'+t.company+'</div>':'')+(t.location?'<div class="testimonial-card__location">'+t.location+'</div>':'')+'</div>'+
+          '<div><div class="testimonial-card__name">'+t.name+(t.location?' <span class="testimonial-card__location">· '+t.location+'</span>':'')+'</div>'+(t.company?'<div class="testimonial-card__company">'+t.company+'</div>':'')+'</div>'+
         '</div>'+
       '</div>';
     }).join('');
@@ -224,8 +224,8 @@
           '<div class="testimonial-slide__author">'+
             '<div class="testimonial-slide__avatar"><img src="'+t.avatar+'" alt="'+t.name+'" loading="lazy"></div>'+
             '<div style="text-align:left">'+
-              '<div class="testimonial-slide__name">'+t.name+'</div>'+
-              '<div class="testimonial-slide__meta">'+(t.company||'')+(t.location?' · '+t.location:'')+'</div>'+
+              '<div class="testimonial-slide__name">'+t.name+(t.location?' · '+t.location:'')+'</div>'+
+              '<div class="testimonial-slide__meta">'+(t.company||'')+'</div>'+
             '</div>'+
           '</div>'+
         '</div>'+
