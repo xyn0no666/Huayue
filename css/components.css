@@ -252,6 +252,8 @@
 .fab-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .fab-btn--whatsapp{background:#25D366;color:#fff}
 .fab-btn--whatsapp:hover{background:#1da851}
+.fab-btn--phone{background:var(--color-gold-dark);color:#fff}
+.fab-btn--phone:hover{background:var(--color-gold)}
 .fab-btn--wechat{background:#07C160;color:#fff}
 .fab-btn--wechat:hover{background:#06a050}
 .fab-btn--email{background:var(--color-gold-dark);color:#fff}
@@ -262,6 +264,33 @@
 .fab-wechat-popover{position:absolute;right:64px;bottom:0;background:var(--color-surface);padding:var(--space-2);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);text-align:center;font-size:0.75rem;color:var(--color-text-light);display:none}
 .fab-wechat-popover--visible{display:block}
 .fab-wechat-popover__qr{width:120px;height:120px;background:var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:6px;font-size:0.6875rem;color:var(--color-text-muted)}
+
+/* Phone popover */
+.fab-phone-popover{
+  position:absolute;right:64px;bottom:0;
+  background:var(--color-surface);padding:var(--space-3);
+  border-radius:var(--radius-md);box-shadow:var(--shadow-lg);
+  text-align:center;font-size:0.8125rem;color:var(--color-text);
+  display:none;white-space:nowrap;z-index:1101;
+}
+.fab-phone-popover--visible{display:block}
+.fab-phone-popover__number{
+  font-size:1.125rem;font-weight:700;font-family:var(--font-mono);
+  letter-spacing:0.04em;margin-bottom:var(--space-2);color:var(--color-text);
+}
+.fab-phone-popover__copy{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 16px;border-radius:var(--radius-sm);
+  background:var(--color-gold);color:#fff;
+  font-size:0.75rem;font-weight:600;cursor:pointer;border:none;
+  transition:background var(--transition-fast);
+}
+.fab-phone-popover__copy:hover{background:var(--color-gold-dark)}
+.fab-phone-popover__copied{
+  display:none;font-size:0.75rem;color:var(--color-success);font-weight:600;
+}
+
+[data-theme="dark"] .fab-phone-popover{background:var(--color-dark-surface)}
 
 /* === Quick View Overlay === */
 .quickview-overlay{
@@ -333,3 +362,101 @@
   background:rgba(196,169,125,0.15);padding:1px 6px;border-radius:3px;
   vertical-align:middle;font-weight:500;
 }
+
+/* ============================================
+   Contact Popup
+   ============================================ */
+
+/* Bubble button */
+.contact-bubble{
+  position:fixed;bottom:220px;right:24px;z-index:1150;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--color-gold);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(196,169,125,0.4);
+  cursor:pointer;border:none;
+  transition:all var(--transition);
+}
+.contact-bubble:hover{background:var(--color-gold-light);transform:scale(1.08);box-shadow:0 6px 28px rgba(196,169,125,0.5)}
+.contact-bubble svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5}
+.contact-bubble__dot{
+  position:absolute;top:4px;right:4px;width:12px;height:12px;
+  background:#22c55e;border:2px solid #fff;border-radius:50%;
+}
+.contact-bubble__dot--offline{background:#9b8e7e}
+
+/* Popup card */
+.contact-popup{
+  position:fixed;bottom:290px;right:24px;z-index:1140;
+  width:320px;max-width:calc(100vw - 32px);
+  background:var(--color-surface);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);border:1px solid var(--color-border);
+  opacity:0;transform:translateY(16px) scale(0.95);
+  pointer-events:none;transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+  overflow:hidden;
+}
+.contact-popup--open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+
+.contact-popup__header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:var(--space-3) var(--space-3) var(--space-2);
+}
+.contact-popup__title{font-size:1.0625rem;font-weight:700;font-family:var(--font-heading);color:var(--color-text)}
+.contact-popup__close{
+  width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--color-text-muted);font-size:1.25rem;
+  transition:all var(--transition-fast);cursor:pointer;border:none;background:none;
+}
+.contact-popup__close:hover{background:rgba(0,0,0,0.06);color:var(--color-text)}
+
+.contact-popup__intro{
+  padding:0 var(--space-3) var(--space-3);
+  font-size:0.8125rem;color:var(--color-text-light);line-height:1.7;
+}
+.contact-popup__status{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:0.75rem;color:var(--color-text-muted);margin-top:6px;
+}
+.contact-popup__status-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.contact-popup__status-dot--offline{background:#e0d9cc}
+
+/* Contact method rows */
+.contact-popup__list{
+  padding:0 var(--space-3) var(--space-3);
+  display:flex;flex-direction:column;gap:2px;
+}
+.contact-popup__item{
+  display:flex;align-items:center;gap:var(--space-2);
+  padding:10px 12px;border-radius:var(--radius-md);
+  text-decoration:none;color:var(--color-text);
+  transition:all var(--transition-fast);cursor:pointer;
+}
+.contact-popup__item:hover{background:rgba(196,169,125,0.08)}
+.contact-popup__item-icon{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-popup__item-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
+.contact-popup__item-icon--whatsapp{background:#dcf8c6;color:#25D366}
+.contact-popup__item-icon--wechat{background:#d4f5e2;color:#07C160}
+.contact-popup__item-icon--email{background:rgba(196,169,125,0.15);color:var(--color-gold-dark)}
+.contact-popup__item-icon--phone{background:rgba(196,169,125,0.15);color:var(--color-gold-dark)}
+.contact-popup__item-body{flex:1;min-width:0}
+.contact-popup__item-label{font-size:0.75rem;font-weight:600;line-height:1.3}
+.contact-popup__item-value{font-size:0.6875rem;color:var(--color-text-muted);line-height:1.4;margin-top:1px}
+.contact-popup__item-arrow{color:var(--color-text-muted);font-size:0.875rem;flex-shrink:0}
+
+@media (max-width:767px){
+  .contact-bubble{bottom:200px;right:16px;width:50px;height:50px}
+  .contact-bubble svg{width:22px;height:22px}
+  .contact-popup{bottom:265px;right:8px;width:calc(100vw - 16px)}
+}
+
+/* Dark mode */
+[data-theme="dark"] .contact-popup{border-color:var(--color-border)}
+[data-theme="dark"] .contact-popup__close:hover{background:rgba(255,255,255,0.08)}
+[data-theme="dark"] .contact-popup__item:hover{background:rgba(196,169,125,0.08)}
+[data-theme="dark"] .contact-popup__item-icon--whatsapp{background:rgba(37,211,102,0.15)}
+[data-theme="dark"] .contact-popup__item-icon--wechat{background:rgba(7,193,96,0.15)}
+[data-theme="dark"] .contact-bubble__dot{border-color:var(--color-dark-bg)}

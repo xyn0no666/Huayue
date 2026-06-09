@@ -81,7 +81,7 @@
       'contact.email.label':'电子邮箱','contact.email.hint':'外贸团队24小时内回复',
       'contact.addr.label':'工厂地址','contact.addr.hint':'距临沂机场30分钟 / 临沂北站25分钟',
       'contact.wechat.label':'微信 / WeChat','contact.wechat.hint':'请备注"园林机械询盘"',
-      'contact.qr.label':'微信公众号','contact.qr.hint':'公众号：华悦园林机械','contact.qr.placeholder':'微信扫码关注',
+      'contact.qr.label':'微信二维码','contact.qr.hint':'扫码添加微信好友','contact.qr.placeholder':'微信扫码关注',
       'contact.expo':'国际展会','contact.expo.desc':'2026年展会计划：','contact.expo.1':'德国科隆 spoga+gafa (6月)','contact.expo.2':'美国 GIE+EXPO (10月)','contact.expo.3':'广交会 (4月/10月)',
       // Support page
       'support.tag':'Support Center','support.title':'技术支持中心','support.subtitle':'全面的产品FAQ、维护保养知识及外贸常见问题解答',
@@ -143,7 +143,14 @@
       'spec.barLength':'导板长度','spec.chainPitch':'链条节距','spec.airVolume':'风量','spec.airSpeed':'风速',
       'spec.power':'功率','spec.tank':'油箱','spec.size':'尺寸',
       // Mobile contact bar
-      'mobile.tel':'电话','mobile.email':'邮件','mobile.inquire':'发送询盘'
+      'mobile.tel':'电话','mobile.email':'邮件','mobile.inquire':'发送询盘',
+      // Contact popup
+      'contactPopup.title':'联系我们','contactPopup.intro':'专业园林机械制造商，源头工厂直供。无论产品咨询还是合作洽谈，我们随时为您服务。',
+      'contactPopup.online':'在线','contactPopup.offline':'离线中，将在工作日回复',
+      'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
+      'contactPopup.wc.label':'微信','contactPopup.wc.val':'HuayueGarden',
+      'contactPopup.em.label':'电子邮件','contactPopup.em.val':'export@huayueyuanlin.com',
+      'contactPopup.ph.label':'电话','contactPopup.ph.val':'19862905209'
     },
     en: {
       // Meta
@@ -219,7 +226,7 @@
       'contact.email.label':'Email','contact.email.hint':'Trade team responds within 24 hours',
       'contact.addr.label':'Factory Address','contact.addr.hint':'30 min from Linyi Airport / 25 min from Linyubei Station',
       'contact.wechat.label':'WeChat','contact.wechat.hint':'Please note "Garden Machinery Inquiry"',
-      'contact.qr.label':'WeChat Official Account','contact.qr.hint':'Account: 华悦园林机械','contact.qr.placeholder':'Scan QR Code',
+      'contact.qr.label':'WeChat QR Code','contact.qr.hint':'Scan to add on WeChat','contact.qr.placeholder':'Scan QR Code',
       'contact.expo':'International Trade Shows','contact.expo.desc':'2026 Exhibition Schedule:','contact.expo.1':'Germany Cologne spoga+gafa (June)','contact.expo.2':'USA GIE+EXPO (October)','contact.expo.3':'Canton Fair (April/October)',
       // Support page
       'support.tag':'Support Center','support.title':'Technical Support','support.subtitle':'Comprehensive product FAQ, maintenance guides, and trade-related information',
@@ -281,7 +288,15 @@
       'spec.barLength':'Bar Length','spec.chainPitch':'Chain Pitch','spec.airVolume':'Air Volume','spec.airSpeed':'Air Speed',
       'spec.power':'Power','spec.tank':'Fuel Tank','spec.size':'Dimensions',
       // Mobile contact bar
-      'mobile.tel':'Call','mobile.email':'Email','mobile.inquire':'Inquire'
+      'mobile.tel':'Call','mobile.email':'Email','mobile.inquire':'Inquire',
+      // Contact popup
+      'contactPopup.title':'Contact Us','contactPopup.intro':'Professional garden machinery manufacturer, direct from the source factory. We\'re here for product inquiries and partnership discussions.',
+      'contactPopup.online':'Online','contactPopup.offline':'Offline — will respond on business days',
+      'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
+      'contactPopup.wc.label':'WeChat','contactPopup.wc.val':'HuayueGarden',
+      'contactPopup.em.label':'Email','contactPopup.em.val':'export@huayueyuanlin.com',
+      'contactPopup.ph.label':'Phone','contactPopup.ph.val':'19862905209'
+    }
     }
   };
 
