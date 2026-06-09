@@ -20,7 +20,7 @@
       'footer.products.mower':'割灌机','footer.products.chainsaw':'油锯','footer.products.blower':'吹风机',
       'footer.company.about':'关于我们','footer.company.factory':'工厂实力','footer.company.info':'公司信息','footer.company.join':'加入我们',
       'footer.support.tech':'技术支持','footer.support.faq':'常见问题','footer.support.guides':'保养指南','footer.support.parts':'售后配件',
-      'footer.contact.tel':'19862905209','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
+      'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
       'footer.copyright':'© 2026 华悦园林 — 华悦园林机械',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'专业园林机械<br>制造商','hero.desc1':'源头工厂，多年OEM/ODM经验，全工序自主生产',
@@ -103,7 +103,7 @@
       'dealer.inventory.search':'搜索产品名称或SKU...',
       'dealer.fillBoth':'请填写邮箱和密码','dealer.invalidEmail':'请输入有效的邮箱地址','dealer.passwordShort':'密码长度不能少于6位',
       'dealer.verifying':'验证中...','dealer.loginSuccess':'登录成功','dealer.loginFailed':'邮箱或密码错误',
-      'dealer.resetPassword':'请联系外贸经理重置密码，邮箱: export\x40huayueyuanlin.com',
+      'dealer.resetPassword':'请联系外贸经理重置密码，邮箱: 3539576340@qq.com',
       'dealer.partner':'合作伙伴',
       'dealer.dl.pdf':'下载 PDF','dealer.dl.assets':'下载素材','dealer.dl.gallery':'浏览图库','dealer.dl.video':'下载视频','dealer.dl.pack':'下载素材包','dealer.dl.excel':'下载 Excel',
       'dealer.marketing.cat1':'2026 产品画册','dealer.marketing.desc1':'全系列产品高清画册，适合印刷及电子分发',
@@ -149,7 +149,7 @@
       'contactPopup.online':'在线','contactPopup.offline':'离线中，将在工作日回复',
       'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
       'contactPopup.wc.label':'微信','contactPopup.wc.val':'HuayueGarden',
-      'contactPopup.em.label':'电子邮件','contactPopup.em.val':'export@huayueyuanlin.com',
+      'contactPopup.em.label':'电子邮件','contactPopup.em.val':'3539576340@qq.com',
       'contactPopup.ph.label':'电话','contactPopup.ph.val':'19862905209'
     },
     en: {
@@ -165,7 +165,7 @@
       'footer.products.mower':'Brush Cutter','footer.products.chainsaw':'Chainsaw','footer.products.blower':'Leaf Blower',
       'footer.company.about':'About Us','footer.company.factory':'Factory Strength','footer.company.info':'Company Info','footer.company.join':'Join Us',
       'footer.support.tech':'Tech Support','footer.support.faq':'FAQ','footer.support.guides':'Maintenance Guides','footer.support.parts':'Spare Parts',
-      'footer.contact.tel':'19862905209','footer.contact.email':'export\x40huayueyuanlin.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
+      'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
       'footer.copyright':'© 2026 Huayue Garden — Huayue Garden Machinery',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'Professional Garden<br>Machinery Manufacturer','hero.desc1':'Source factory, years of OEM/ODM experience, full in-house production',
@@ -248,7 +248,7 @@
       'dealer.inventory.search':'Search product name or SKU...',
       'dealer.fillBoth':'Please enter email and password','dealer.invalidEmail':'Please enter a valid email address','dealer.passwordShort':'Password must be at least 6 characters',
       'dealer.verifying':'Verifying...','dealer.loginSuccess':'Login successful','dealer.loginFailed':'Invalid email or password',
-      'dealer.resetPassword':'Please contact your account manager to reset your password: export\x40huayueyuanlin.com',
+      'dealer.resetPassword':'Please contact your account manager to reset your password: 3539576340@qq.com',
       'dealer.partner':'Partner',
       'dealer.dl.pdf':'Download PDF','dealer.dl.assets':'Download Assets','dealer.dl.gallery':'Browse Gallery','dealer.dl.video':'Download Video','dealer.dl.pack':'Download Pack','dealer.dl.excel':'Download Excel',
       'dealer.marketing.cat1':'2026 Product Catalog','dealer.marketing.desc1':'Full-range HD product catalog suitable for print and digital distribution',
@@ -294,7 +294,7 @@
       'contactPopup.online':'Online','contactPopup.offline':'Offline — will respond on business days',
       'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
       'contactPopup.wc.label':'WeChat','contactPopup.wc.val':'HuayueGarden',
-      'contactPopup.em.label':'Email','contactPopup.em.val':'export@huayueyuanlin.com',
+      'contactPopup.em.label':'Email','contactPopup.em.val':'3539576340@qq.com',
       'contactPopup.ph.label':'Phone','contactPopup.ph.val':'19862905209'
     }
     }

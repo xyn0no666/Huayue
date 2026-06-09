@@ -106,7 +106,7 @@
       '<div class="fab-wechat-popover" id="fabWechatPop">'+
         '<div class="fab-wechat-popover__qr"><img src="assets/images/wechat-qr.jpg" alt="微信二维码" style="width:120px;height:120px;display:block;margin:0 auto"></div>'+
       '</div>'+
-      '<a href="mailto:export\x40huayueyuanlin.com" class="fab-btn fab-btn--email" aria-label="Email">'+
+      '<a href="mailto:3539576340@qq.com" class="fab-btn fab-btn--email" aria-label="Email">'+
         '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>'+
         '<span class="fab-tooltip">Email</span>'+
       '</a>'+
@@ -182,7 +182,7 @@
             '<div class="contact-popup__item-body"><div class="contact-popup__item-label">'+__('contactPopup.wa.label')+'</div><div class="contact-popup__item-value">'+__('contactPopup.wa.val')+'</div></div>'+
             '<span class="contact-popup__item-arrow">&rarr;</span>'+
           '</a>'+
-          '<a href="mailto:export@huayueyuanlin.com" class="contact-popup__item">'+
+          '<a href="mailto:3539576340@qq.com" class="contact-popup__item">'+
             '<div class="contact-popup__item-icon contact-popup__item-icon--email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>'+
             '<div class="contact-popup__item-body"><div class="contact-popup__item-label">'+__('contactPopup.em.label')+'</div><div class="contact-popup__item-value">'+__('contactPopup.em.val')+'</div></div>'+
             '<span class="contact-popup__item-arrow">&rarr;</span>'+
