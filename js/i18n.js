@@ -297,7 +297,6 @@
       'contactPopup.em.label':'Email','contactPopup.em.val':'3539576340@qq.com',
       'contactPopup.ph.label':'Phone','contactPopup.ph.val':'19862905209'
     }
-    }
   };
 
   // --- Public API ---
