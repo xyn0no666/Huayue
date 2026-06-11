@@ -6,7 +6,7 @@ window.APP_DATA_EN={
       image:"assets/images/CG430-green.png",
       specs:{engine:"2-Stroke",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:280,
       description:"Handheld brush cutter, 42.7cc powerful engine, lightweight design at only 8.5kg. Switchable between trimmer head and brush blade — two tools in one. Ideal for bush clearing and weed cutting."
     },
@@ -16,7 +16,7 @@ window.APP_DATA_EN={
       image:"assets/images/CG431-green.png",
       specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:320,
       description:"Handheld brush cutter, 37.7cc engine with 1.0kw output, 1500mm drive shaft. Comfortable cowhorn handle grip, switchable between trimmer head and brush blade — two tools in one. Ideal for bush clearing and weed cutting."
     },
@@ -26,7 +26,7 @@ window.APP_DATA_EN={
       image:"assets/images/CG435-green.png",
       specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","U-handle","Quick-release blade system","Interchangeable trimmer head","Aluminum alloy drive shaft"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:420,
       description:"Handheld brush cutter, 37.7cc engine with 1.0kw output. U-handle design for flexible maneuverability at various angles. Lightweight aluminum alloy drive shaft, ideal for professional gardening and bush clearing."
     },
@@ -36,7 +36,7 @@ window.APP_DATA_EN={
       image:"assets/images/CG550-green.png",
       specs:{engine:"2-Stroke",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Lightweight handheld design","Loop handle","0.75L large fuel tank","Interchangeable trimmer head","Extended runtime"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:360,
       description:"Lightweight handheld brush cutter, 31.0cc economical displacement with 0.75L large fuel tank for extended runtime. Only 9kg with convenient loop handle, ideal for home garden weeding and light commercial use."
     },
@@ -46,7 +46,7 @@ window.APP_DATA_EN={
       image:"assets/images/chainsaw-5800.png",
       specs:{engine:"2-Stroke",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",weight:"5.5kg"},
       features:["High-power engine","Anti-vibration handle","Tool-less chain tensioning","Inertia brake","One-touch stop"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:320,
       description:"Heavy-duty chainsaw 5200, 52cc powerful engine, 18\"/20\" guide bar. Suitable for heavy logging and forestry operations. Customizable bar length and color."
     },
@@ -56,7 +56,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB260.png",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["Lightweight handheld design","Variable speed throttle","Cruise control","Low vibration","Large fuel tank"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:145,
       description:"Handheld gasoline leaf blower, 25.4cc power, 75m/s air speed. Portable at only 4kg, ideal for yard cleaning, leaf blowing, and light commercial use."
     },
@@ -66,7 +66,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB260A.png",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
       features:["Handheld design","Variable speed throttle","Cruise control","Low vibration","Large fuel tank"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:220,
       description:"Handheld gasoline leaf blower, 25.4cc power, 75m/s air speed. Portable at 4.5kg, ideal for yard cleaning, leaf blowing, and light commercial use."
     },
@@ -76,7 +76,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB260S.png",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
       features:["Handheld design","Variable speed throttle","Cruise control","Dampened handle","Large fuel tank"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:330,
       description:"Enhanced EB-260, optimized 25.4cc engine, 78m/s powerful air speed. Equipped with dampened handle and large fuel tank, ideal for extended commercial blowing operations."
     },
@@ -86,7 +86,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-HBZ2602.png",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
       features:["Lightweight handheld design","High-efficiency vortex duct","Cruise control","Ergonomic handle","Low vibration"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:450,
       description:"Handheld gasoline leaf blower, 25.4cc power, 70m/s air speed. Ultra-lightweight at only 3.8kg, ideal for yard cleaning, leaf blowing, and light commercial use."
     },
@@ -96,7 +96,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB430.png",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc large displacement","High-efficiency vortex duct","Variable speed","Harness load-reduction system","Reinforced body"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:360,
       description:"Backpack gasoline leaf blower, 42.7cc power, 80m/s air speed. Weighs 7.7/9kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -106,7 +106,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB650.png",
       specs:{engine:"2-Stroke",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc high power","Dual turbine duct","Harness load-reduction system","Anti-vibration design","Large tank endurance"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:350,
       description:"Backpack gasoline leaf blower, 63.3cc power, 87m/s air speed. Weighs 9.2/11kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -116,7 +116,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB808.png",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc power","High-efficiency vortex duct","Harness load-reduction system","Powerful starter motor","Durable body"],
-      certifications:["4-Stroke","Low-Noise","Durable"],
+      certifications:["CE","GS","EPA/CARB"],
       moq:"1 unit",leadTime:"15-25 days",price:350,
       description:"Backpack gasoline leaf blower, 42.7cc power, 80m/s air speed. Weighs 7.7/9kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -126,7 +126,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB850.png",
       specs:{engine:"4-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc 4-stroke power","Low noise & vibration","Quad turbine duct system","Ergonomic harness","One-touch start"],
-      certifications:["4-Stroke","Low-Noise","Durable"],
+      certifications:["CE","GS","EPA/CARB"],
       moq:"1 unit",leadTime:"15-25 days",price:600,
       description:"Backpack gasoline leaf blower, 75.6cc 4-stroke power, 89m/s air speed. Weighs 10.5/11.5kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -136,7 +136,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB851.png",
       specs:{engine:"4-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc 4-stroke flagship","Quint turbine boost system","Full suspension vibration dampening","Electronic ignition","Aerospace-grade materials"],
-      certifications:["4-Stroke","Low-Noise","Durable"],
+      certifications:["CE","GS","EPA/CARB"],
       moq:"1 unit",leadTime:"15-25 days",price:650,
       description:"Backpack gasoline leaf blower, 75.6cc 4-stroke power, 89m/s air speed. Weighs 10.4/12.2kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -146,7 +146,7 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB8500.png",
       specs:{engine:"2-Stroke",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
       features:["63.6cc high power","High-efficiency turbine duct","Fuel-saving technology","Harness load-reduction system","Durable air filter"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:550,
       description:"Backpack gasoline leaf blower, 63.6cc power, 87m/s air speed. Weighs 9/10.8kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
     },
@@ -156,9 +156,19 @@ window.APP_DATA_EN={
       image:"assets/images/blower-EB850E.png",
       specs:{engine:"2-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc electronic ignition","High-efficiency turbine duct","Electronic fuel injection","One-touch start","Intelligent temperature control"],
-      certifications:["Powerful","Fuel-Efficient","Durable"],
+      certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:550,
       description:"Backpack gasoline leaf blower, 75.6cc power, 92m/s air speed. Weighs 11/12.9kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
+    },
+    {
+      id:"blower-eb990",name:"EB990",
+      category:"blower",powerType:"gasoline",
+      image:"assets/images/blower-EB990.png",
+      specs:{engine:"2-Stroke",displacement:"75.6cc",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
+      features:["Large displacement power","Extra-large 2.3L fuel tank","92.2m/s hurricane-class air speed","Harness load-reduction system","High-efficiency vortex duct"],
+      certifications:["CE","GS","EPA/CARB"],
+      moq:"1 unit",leadTime:"15-25 days",price:680,
+      description:"Flagship backpack gasoline leaf blower EB990, 92.2m/s hurricane-class air speed, 2.3L extra-large fuel tank for ultra-long runtime, weighing only 11.1kg. Equipped with professional harness load-reduction system, suitable for professional forestry, large green spaces, and municipal sanitation blowing operations."
     }
   ],
   categories:[
@@ -202,11 +212,11 @@ window.APP_DATA_EN={
     {title:"2-Stroke vs 4-Stroke: Power System Selection Guide",readTime:"15 min",image:"assets/images/guide-engine.png",desc:"Comprehensive comparison of power systems to help choose the optimal gasoline model",url:"guide-4.html"}
   ],
   certifications:[
-    {name:"Incoming Inspection",desc:"Batch sampling of key components before production",id:"",issuer:""},
-    {name:"In-Process Patrol",desc:"2-hour patrol intervals, 100% monitoring of critical steps",id:"",issuer:""},
-    {name:"Final Full Inspection",desc:"Power, fuel consumption, and safety test per unit",id:"",issuer:""},
-    {name:"Durability Verification",desc:"Extended testing simulating extreme operating conditions",id:"",issuer:""},
-    {name:"Eco-Friendly Materials",desc:"Strict sourcing of environmentally compliant materials",id:"",issuer:""},
-    {name:"Product Traceability",desc:"Unique ID per unit for rapid issue tracing & resolution",id:"",issuer:""}
+    {name:"ISO 9001:2015",desc:"Quality Management System",id:"QAIC/CN/186523",issuer:"QA International Certification"},
+    {name:"CE Marking",desc:"EU Safety & Health Compliance",id:"MD-2023-08876",issuer:"TÜV Rheinland"},
+    {name:"GS (TÜV)",desc:"German Product Safety",id:"GS-2023-09123",issuer:"TÜV Rheinland"},
+    {name:"EPA & CARB",desc:"U.S. Emission Standards",id:"EPA-FE-2023-445",issuer:"U.S. EPA"},
+    {name:"RoHS 2.0",desc:"Hazardous Substances Restriction",id:"R2-2023-1553",issuer:"SGS-CSTC"},
+    {name:"FCC",desc:"Electromagnetic Compatibility",id:"FCC-ID-XY2023EMC",issuer:"FCC"}
   ]
 };
