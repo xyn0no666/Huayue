@@ -20,6 +20,95 @@
     return pt;
   }
 
+  /* === Dynamic Meta Tag Injection === */
+  function setMetaTag(attr,content){
+    var el=document.querySelector('meta[property="'+attr+'"],meta[name="'+attr+'"]');
+    if(!el){
+      el=document.createElement('meta');
+      if(attr.indexOf('og:')===0)el.setAttribute('property',attr);
+      else el.setAttribute('name',attr);
+      document.head.appendChild(el);
+    }
+    el.setAttribute('content',content);
+  }
+
+  function injectMeta(p){
+    var catName=getCatName(p.category);
+    var title=p.name+' — '+catName+' | 华悦园林';
+    var url='https://huayueyuanlin.com/product-'+p.id+'.html';
+    document.title=title;
+    setMetaTag('description',p.description);
+    setMetaTag('og:title',title);
+    setMetaTag('og:description',p.description);
+    setMetaTag('og:image','https://huayueyuanlin.com/'+p.image);
+    setMetaTag('og:url',url);
+    setMetaTag('og:type','product');
+    setMetaTag('twitter:card','summary_large_image');
+    setMetaTag('twitter:title',title);
+    setMetaTag('twitter:description',p.description);
+    setMetaTag('twitter:image','https://huayueyuanlin.com/'+p.image);
+    // Canonical
+    var can=document.querySelector('link[rel="canonical"]');
+    if(can)can.setAttribute('href',url);
+  }
+
+  function injectProductSchema(p){
+    var existing=document.getElementById('productSchemaJsonLd');
+    if(existing)existing.remove();
+    var schema={
+      '@context':'https://schema.org',
+      '@type':'Product',
+      'name':p.name,
+      'description':p.description,
+      'image':'https://huayueyuanlin.com/'+p.image,
+      'sku':p.id,
+      'category':getCatName(p.category),
+      'brand':{'@type':'Brand','name':'华悦园林'},
+      'manufacturer':{'@type':'Organization','name':'华悦园林机械'},
+      'offers':{
+        '@type':'Offer',
+        'price':(p.price||0).toString(),
+        'priceCurrency':'USD',
+        'availability':'https://schema.org/InStock',
+        'eligibleQuantity':{'@type':'QuantitativeValue','value':p.moq||'1','unitText':'台'}
+      }
+    };
+    var script=document.createElement('script');
+    script.id='productSchemaJsonLd';
+    script.type='application/ld+json';
+    script.textContent=JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+
+  /* === Bind Events (for pre-rendered pages) === */
+  function bindEvents(p){
+    var qtyInput=document.getElementById('detailQty');
+    if(qtyInput){
+      document.querySelectorAll('[data-detail-qty]').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          var v=parseInt(qtyInput.value)||1;
+          if(this.getAttribute('data-detail-qty')==='plus')v++;
+          else v=Math.max(1,v-1);
+          qtyInput.value=v;
+        });
+      });
+      qtyInput.addEventListener('change',function(){
+        var v=parseInt(this.value);
+        if(isNaN(v)||v<1)this.value=1;
+      });
+    }
+    var addBtn=document.getElementById('detailAddToCart');
+    if(addBtn){
+      addBtn.addEventListener('click',function(){
+        var qty=parseInt(document.getElementById('detailQty').value)||1;
+        if(window.App&&window.App.Cart){
+          window.App.Cart.add(p.id,qty);
+        }
+      });
+    }
+  }
+
+  /* === Full Render (JS fallback) === */
   function render(){
     var id=getProductId();
     var products=getProduct();
@@ -43,7 +132,10 @@
     // Breadcrumb
     if(breadCat)breadCat.textContent=getCatName(p.category);
     if(breadName)breadName.textContent=p.name;
-    document.title=p.name+' — '+(window.App&&window.App.__?window.App.__('meta.index.title'):'华悦园林');
+
+    // Inject meta + schema
+    injectMeta(p);
+    injectProductSchema(p);
 
     // Content
     var certsHTML=(p.certifications||[]).map(function(c){return '<span class="product-detail__cert">'+c+'</span>'}).join('');
@@ -58,7 +150,7 @@
       // Left: Image
       '<div>'+
         '<div class="product-detail__image-wrapper">'+
-          '<img src="'+p.image+'" alt="'+p.name+'" onerror="this.parentElement.style.background=\'var(--color-border)\';this.style.display=\'none\'">'+
+          '<img src="'+p.image+'" alt="'+p.name+'" loading="lazy" decoding="async" width="600" height="600" onerror="this.parentElement.style.background=\'var(--color-border)\';this.style.display=\'none\'">'+
           (certsHTML?'<div class="product-detail__certs">'+certsHTML+'</div>':'')+
         '</div>'+
       '</div>'+
@@ -106,40 +198,38 @@
     '</div>';
 
     if(container)container.innerHTML=html;
-
-    // Bind quantity selector
-    var qtyInput=document.getElementById('detailQty');
-    if(qtyInput){
-      document.querySelectorAll('[data-detail-qty]').forEach(function(btn){
-        btn.addEventListener('click',function(){
-          var v=parseInt(qtyInput.value)||1;
-          if(this.getAttribute('data-detail-qty')==='plus')v++;
-          else v=Math.max(1,v-1);
-          qtyInput.value=v;
-        });
-      });
-      qtyInput.addEventListener('change',function(){
-        var v=parseInt(this.value);
-        if(isNaN(v)||v<1)this.value=1;
-      });
-    }
-
-    // Bind add to cart
-    var addBtn=document.getElementById('detailAddToCart');
-    if(addBtn){
-      addBtn.addEventListener('click',function(){
-        var qty=parseInt(document.getElementById('detailQty').value)||1;
-        if(window.App&&window.App.Cart){
-          window.App.Cart.add(p.id,qty);
-        }
-      });
-    }
+    bindEvents(p);
   }
 
-  function init(){render();}
+  /* === Init === */
+  function init(){
+    var id=getProductId();
+    var products=getProduct();
+    var p=products.find(function(x){return x.id===id});
+
+    if(!p){
+      render(); // Show error
+      return;
+    }
+
+    // Inject meta regardless (for pre-rendered pages too)
+    injectMeta(p);
+    injectProductSchema(p);
+
+    var container=document.getElementById('productDetailContent');
+    // If page has pre-rendered content (>1 child nodes), skip render, bind events only
+    if(container&&container.children.length>0){
+      bindEvents(p);
+      return;
+    }
+
+    // SPA fallback: full render
+    render();
+  }
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
 
+  // Always re-render on language change (i18n text updates)
   document.addEventListener('lang:changed',function(){render()});
 })();

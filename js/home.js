@@ -75,7 +75,7 @@
   function createProductCard(p){
     var certsHTML=(p.certifications||[]).slice(0,3).map(function(c){return '<span class="cert-tag">'+c+'</span>'}).join('');
     return '<div class="product-card">'+
-      '<a href="product-detail.html?id='+p.id+'" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
+      '<a href="product-'+p.id+'.html" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" decoding="async" width="400" height="300" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
         (certsHTML?'<div class="product-card__certs">'+certsHTML+'</div>':'')+
         '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="'+__('home.quickView')+'">'+
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>'+
@@ -83,7 +83,7 @@
       '</a>'+
       '<div class="product-card__body">'+
         '<div class="product-card__category">'+getCatName(p.category)+' · '+getPowerLabel(p.powerType)+'</div>'+
-        '<h3 class="product-card__name"><a href="product-detail.html?id='+p.id+'">'+p.name+'</a></h3>'+
+        '<h3 class="product-card__name"><a href="product-'+p.id+'.html">'+p.name+'</a></h3>'+
         '<div class="product-card__specs"><span>'+getKeySpec(p)+'</span></div>'+
         (p.moq?'<div class="product-card__meta"><span>MOQ: '+p.moq+'</span><span>'+__('common.leadTime')+p.leadTime+'</span></div>':'')+
         '<div class="product-card__footer">'+

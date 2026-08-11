@@ -143,7 +143,7 @@
       'spec.barLength':'导板长度','spec.chainPitch':'链条节距','spec.airVolume':'风量','spec.airSpeed':'风速',
       'spec.power':'功率','spec.tank':'油箱','spec.size':'尺寸',
       // Mobile contact bar
-      'mobile.tel':'电话','mobile.email':'邮件','mobile.inquire':'发送询盘',
+      'mobile.tel':'电话','mobile.email':'邮件','mobile.wa':'WhatsApp','mobile.inquire':'发送询盘',
       // Contact popup
       'contactPopup.title':'联系我们','contactPopup.intro':'专业园林机械制造商，源头工厂直供。无论产品咨询还是合作洽谈，我们随时为您服务。',
       'contactPopup.online':'在线','contactPopup.offline':'离线中，将在工作日回复',
@@ -288,7 +288,7 @@
       'spec.barLength':'Bar Length','spec.chainPitch':'Chain Pitch','spec.airVolume':'Air Volume','spec.airSpeed':'Air Speed',
       'spec.power':'Power','spec.tank':'Fuel Tank','spec.size':'Dimensions',
       // Mobile contact bar
-      'mobile.tel':'Call','mobile.email':'Email','mobile.inquire':'Inquire',
+      'mobile.tel':'Call','mobile.email':'Email','mobile.wa':'WhatsApp','mobile.inquire':'Inquire',
       // Contact popup
       'contactPopup.title':'Contact Us','contactPopup.intro':'Professional garden machinery manufacturer, direct from the source factory. We\'re here for product inquiries and partnership discussions.',
       'contactPopup.online':'Online','contactPopup.offline':'Offline — will respond on business days',

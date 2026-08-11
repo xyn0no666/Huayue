@@ -35,3 +35,48 @@
   from = "/checkout"
   to = "/checkout.html"
   status = 200
+
+[[redirects]]
+  from = "/product-detail"
+  to = "/product-detail.html"
+  status = 200
+
+[[redirects]]
+  from = "/guide-1"
+  to = "/guide-1.html"
+  status = 200
+
+[[redirects]]
+  from = "/guide-2"
+  to = "/guide-2.html"
+  status = 200
+
+[[redirects]]
+  from = "/guide-3"
+  to = "/guide-3.html"
+  status = 200
+
+[[redirects]]
+  from = "/guide-4"
+  to = "/guide-4.html"
+  status = 200
+
+[[redirects]]
+  from = "/blower-3d"
+  to = "/blower-3d.html"
+  status = 200
+
+[[redirects]]
+  from = "/chainsaw-3d"
+  to = "/chainsaw-3d.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200

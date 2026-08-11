@@ -321,3 +321,15 @@ body, .site-header, .product-card, .product-card__image, .page-hero,
   .section{padding:var(--space-8) 0}
   .u-container{padding:0 var(--space-2)}
 }
+
+/* === Touch Device Overrides === */
+@media (hover:none) and (pointer:coarse){
+  .product-card:hover{box-shadow:var(--shadow-sm);transform:none}
+  .product-card:hover .product-card__image img{transform:none}
+  .product-card:hover .product-card__quickview{opacity:0;transform:translateY(-4px)}
+  .fab-btn:hover{transform:none;box-shadow:var(--shadow-md)}
+  .fab-btn:hover .fab-tooltip{opacity:0}
+  .contact-bubble:hover{transform:none}
+  .header__nav-link:hover::after{width:0}
+  .btn--primary:hover{transform:none}
+}
