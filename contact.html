@@ -21,14 +21,7 @@
 <link rel="stylesheet" href="css/components.css?v=4">
 <link rel="stylesheet" href="css/contact.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+<script src="js/analytics.js"></script>
 
 
 <link rel="manifest" href="/manifest.json">
@@ -87,8 +80,9 @@
           </div>
 
           <!-- Inquiry Form -->
-          <form class="tabs__panel tabs__panel--active contact-form" id="form-inquiry" novalidate>
-            <div class="form-group"><label class="form-label form-label--required">姓名 / Name</label><input type="text" class="form-input" required placeholder="您的姓名"></div>
+          <form class="tabs__panel tabs__panel--active contact-form" id="form-inquiry" name="inquiry" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="inquiry">
+            <div class="form-group"><label class="form-label form-label--required">姓名 / Name</label><input type="text" class="form-input" name="name" required placeholder="您的姓名"></div>
             <div class="form-group"><label class="form-label form-label--required">邮箱 / Email</label><input type="email" class="form-input" required placeholder="example@email.com"></div>
             <div class="form-group"><label class="form-label">电话 / Phone</label><input type="tel" class="form-input" placeholder="+86 或 +1 等"></div>
             <div class="form-group"><label class="form-label">感兴趣的产品</label>
@@ -104,7 +98,8 @@
           </form>
 
           <!-- Quote Form -->
-          <form class="tabs__panel contact-form" id="form-quote" novalidate>
+          <form class="tabs__panel contact-form" id="form-quote" name="quote" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="quote">
             <div class="form-group"><label class="form-label form-label--required">公司名称 / Company</label><input type="text" class="form-input" required placeholder="公司名称"></div>
             <div class="form-group"><label class="form-label form-label--required">联系人 / Contact</label><input type="text" class="form-input" required placeholder="联系人姓名"></div>
             <div class="form-row">
@@ -128,7 +123,8 @@
           </form>
 
           <!-- Factory Visit Form -->
-          <form class="tabs__panel contact-form" id="form-demo" novalidate>
+          <form class="tabs__panel contact-form" id="form-demo" name="factory-visit" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="factory-visit">
             <div class="form-row">
               <div class="form-group"><label class="form-label form-label--required">姓名 / Name</label><input type="text" class="form-input" required placeholder="您的姓名"></div>
               <div class="form-group"><label class="form-label form-label--required">邮箱 / Email</label><input type="email" class="form-input" required placeholder="example@email.com"></div>
@@ -147,7 +143,8 @@
           </form>
 
           <!-- Dealer Application Form -->
-          <form class="tabs__panel contact-form" id="form-dealer" novalidate>
+          <form class="tabs__panel contact-form" id="form-dealer" name="dealer-application" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="dealer-application">
             <div class="form-row">
               <div class="form-group"><label class="form-label form-label--required">公司名称</label><input type="text" class="form-input" required placeholder="公司注册名称"></div>
               <div class="form-group"><label class="form-label form-label--required">国家/地区</label><input type="text" class="form-input" required placeholder="Country / Region"></div>

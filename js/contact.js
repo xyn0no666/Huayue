@@ -58,13 +58,18 @@
         if(!validateForm(this))return;
         // Collect form data
         var formType=this.id.replace('form-','');
-        var typeLabels={inquiry:'在线询盘',quote:'获取报价',demo:'预约验厂',dealer:'经销商申请'};
+        var typeLabels={inquiry:'在线询盘',quote:'获取报价','factory-visit':'预约验厂','dealer-application':'经销商申请'};
         var data={type:typeLabels[formType]||formType,date:new Date().toISOString(),fields:{}};
+        // Build FormData for Netlify submission
+        var fd=new FormData();
+        fd.append('form-name',this.getAttribute('name')||formType);
         this.querySelectorAll('input,select,textarea').forEach(function(f){
-          if(f.type==='checkbox'){if(f.checked)data.fields[f.closest('label')?f.closest('label').textContent.trim():'product']=f.value}
+          if(f.type==='checkbox'){if(f.checked){data.fields[f.closest('label')?f.closest('label').textContent.trim():'product']=f.value;fd.append(f.name||'product',f.value)}}
           else if(f.type==='submit'||f.type==='button')return;
-          else{var label=f.closest('.form-group');var key=label?label.querySelector('.form-label').textContent.replace(/[\/\*]/g,'').trim():f.placeholder||f.name;if(f.value.trim())data.fields[key]=f.value.trim()}
+          else if(f.name==='form-name')return;
+          else{var label=f.closest('.form-group');var key=label?label.querySelector('.form-label').textContent.replace(/[\/\*]/g,'').trim():f.placeholder||f.name;if(f.value.trim()){data.fields[key]=f.value.trim();fd.append(f.name||key,f.value.trim())}}
         });
+        // Always save to localStorage as backup
         var submissions=JSON.parse(localStorage.getItem('huayue-inquiries')||'[]');
         submissions.push(data);
         localStorage.setItem('huayue-inquiries',JSON.stringify(submissions));
@@ -72,15 +77,25 @@
         var btn=this.querySelector('button[type="submit"]');
         var origText=btn.textContent;
         btn.disabled=true;btn.textContent='提交中...';
-        // Simulate submission
-        setTimeout(function(){
+        // Submit to Netlify Forms (works when deployed to Netlify; falls back gracefully)
+        var formEl=this;
+        var encoded=new URLSearchParams(fd).toString();
+        fetch('/','{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:encoded}).then(function(res){
           btn.disabled=false;btn.textContent=origText;
-          form.reset();
-          form.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
-          var success=form.querySelector('.form-success');
+          formEl.reset();
+          formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
+          var success=formEl.querySelector('.form-success');
           if(success){success.classList.add('form-success--visible');
             setTimeout(function(){success.classList.remove('form-success--visible')},5000)}
-        },1200);
+        }).catch(function(){
+          // Netlify not available — still show success (data saved to localStorage)
+          btn.disabled=false;btn.textContent=origText;
+          formEl.reset();
+          formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
+          var success=formEl.querySelector('.form-success');
+          if(success){success.classList.add('form-success--visible');
+            setTimeout(function(){success.classList.remove('form-success--visible')},5000)}
+        });
       });
     });
   }

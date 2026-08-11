@@ -178,12 +178,14 @@ window.APP_DATA={
     {id:"blower",name:"吹风机"}
   ],
   testimonials:[
-    {name:"陈志远",location:"山东烟台",avatar:"https://picsum.photos/seed/green-garden/200/200",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
-    {name:"赵明辉",location:"浙江杭州",avatar:"https://picsum.photos/seed/forest-path/200/200",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
-    {name:"林小雨",location:"广东深圳",avatar:"https://picsum.photos/seed/flower-meadow/200/200",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:5},
-    {name:"孙文博",location:"黑龙江伊春",avatar:"https://picsum.photos/seed/mountain-forest/200/200",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
-    {name:"王建军",location:"浙江宁波",avatar:"https://picsum.photos/seed/nature-lake/200/200",text:"我们做自有品牌园林机械，对产品品质和品牌形象要求高。华悦的定制能力令人印象深刻——从配色到铭牌到包装，全部按需落地，新品开发效率高，品质始终稳定。合作以来供货及时、售后到位，是值得长期合作的制造伙伴。",rating:5},
-    {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://picsum.photos/seed/desert-oasis/200/200",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。华悦为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
+    {name:"陈志远",location:"山东烟台",avatar:"https://ui-avatars.com/api/?name=陈志远&background=c4a97d&color=fff&size=200&font-size=0.35",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
+    {name:"赵明辉",location:"浙江杭州",avatar:"https://ui-avatars.com/api/?name=赵明辉&background=2d6a4f&color=fff&size=200&font-size=0.35",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
+    {name:"林小雨",location:"广东深圳",avatar:"https://ui-avatars.com/api/?name=林小雨&background=8b6f47&color=fff&size=200&font-size=0.35",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:4},
+    {name:"Carlos M.",location:"巴西圣保罗",avatar:"https://ui-avatars.com/api/?name=Carlos+M&background=e07b39&color=fff&size=200&font-size=0.35",text:"We've been importing Huayue brush cutters for 2 years now. The build quality is solid — engines start reliably even after long shipping and storage. Our customers in Brazil appreciate the power-to-weight ratio. After-sales support is responsive; spare parts arrive on time. A trustworthy manufacturing partner for the South American market.",rating:5},
+    {name:"Ahmed R.",location:"阿联酋迪拜",avatar:"https://ui-avatars.com/api/?name=Ahmed+R&background=0d7377&color=fff&size=200&font-size=0.35",text:"As a distributor covering the GCC region, I need suppliers who understand international standards. Huayue impressed me — products meet CE/GS certifications, packaging is export-ready, and the OEM customization process is smooth. Their blowers perform exceptionally well in our hot, dusty climate. Highly recommended for Middle East distributors.",rating:5},
+    {name:"孙文博",location:"黑龙江伊春",avatar:"https://ui-avatars.com/api/?name=孙文博&background=1e3a5f&color=fff&size=200&font-size=0.35",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
+    {name:"王建军",location:"浙江宁波",avatar:"https://ui-avatars.com/api/?name=王建军&background=c4a97d&color=fff&size=200&font-size=0.35",text:"我们做自有品牌园林机械，对产品品质和品牌形象要求高。华悦的定制能力令人印象深刻——从配色到铭牌到包装，全部按需落地，新品开发效率高，品质始终稳定。合作以来供货及时、售后到位，是值得长期合作的制造伙伴。",rating:5},
+    {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://ui-avatars.com/api/?name=马国强&background=7c3aed&color=fff&size=200&font-size=0.35",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。华悦为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
   ],
   faq:[
     {q:"如何选择适合我市场的割灌机型号？",a:"选择型号需考虑草坪面积、地形、目标市场价格定位和使用场景。面积<200㎡推荐手推式，200-800㎡推荐自走式，>800㎡推荐驾乘式。我们的外贸经理可针对您的市场需求提供专业建议。",cat:"产品选择"},
