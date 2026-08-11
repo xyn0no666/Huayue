@@ -118,6 +118,7 @@
 (function(){'use strict';
 
   var staticTestimonials = (window.APP_DATA && window.APP_DATA.testimonials) || [];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
   /* === Render === */
   function renderTestimonials(){
@@ -129,7 +130,7 @@
       html += '<div class="entry-card">'+
         '<div class="entry-card__header"><span class="entry-card__type">静态评价</span><span class="entry-card__date">'+t.name+'</span></div>'+
         '<div class="entry-card__stars">'+'★'.repeat(t.rating)+'</div>'+
-        '<div class="entry-card__text">"'+t.text+'"</div>'+
+        '<div class="entry-card__text">"'+esc(t.text)+'"</div>'+
       '</div>';
     });
     // User-submitted ones
@@ -137,7 +138,7 @@
       html += '<div class="entry-card">'+
         '<div class="entry-card__header"><span class="entry-card__type">用户提交</span><span class="entry-card__date">'+new Date(s.date).toLocaleString('zh-CN')+'</span></div>'+
         '<div class="entry-card__stars">'+(s.rating?'★'.repeat(s.rating):'未评分')+'</div>'+
-        '<div class="entry-card__text">"'+s.text+'"</div>'+
+        '<div class="entry-card__text">"'+esc(s.text)+'"</div>'+
       '</div>';
     });
     if(!html) html = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><p>暂无评价数据</p></div>';
@@ -154,7 +155,7 @@
       if(s.fields){
         fieldsHTML = '<dl class="entry-card__fields">';
         Object.keys(s.fields).forEach(function(k){
-          fieldsHTML += '<dt>'+k+'</dt><dd>'+s.fields[k]+'</dd>';
+          fieldsHTML += '<dt>'+esc(k)+'</dt><dd>'+esc(s.fields[k])+'</dd>';
         });
         fieldsHTML += '</dl>';
       }

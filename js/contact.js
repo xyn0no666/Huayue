@@ -88,13 +88,13 @@
           if(success){success.classList.add('form-success--visible');
             setTimeout(function(){success.classList.remove('form-success--visible')},5000)}
         }).catch(function(){
-          // Netlify not available — still show success (data saved to localStorage)
+          // Netlify not available — warn user data was saved offline only
           btn.disabled=false;btn.textContent=origText;
           formEl.reset();
           formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
           var success=formEl.querySelector('.form-success');
-          if(success){success.classList.add('form-success--visible');
-            setTimeout(function(){success.classList.remove('form-success--visible')},5000)}
+          if(success){success.classList.add('form-success--visible');success.style.background='#fef3c7';success.style.border='1px solid #f59e0b';success.textContent='⚠️ 提交未成功（网络问题），数据已暂存本地，请稍后重试或直接拨打电话联系。';
+            setTimeout(function(){success.classList.remove('form-success--visible');success.style.background='';success.style.border='';success.textContent='';},8000)}
         });
       });
     });
