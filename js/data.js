@@ -3,7 +3,7 @@ window.APP_DATA={
     {
       id:"mower-pro-x1",name:"CG430",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG430-green.png",
+      image:"assets/images/CG430-green.webp",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
@@ -13,7 +13,7 @@ window.APP_DATA={
     {
       id:"mower-cg431",name:"CG431",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG431-green.png",
+      image:"assets/images/CG431-green.webp",
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
@@ -23,7 +23,7 @@ window.APP_DATA={
     {
       id:"mower-cg435",name:"CG435",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG435-green.png",
+      image:"assets/images/CG435-green.webp",
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
       certifications:["CE","GS","EPA"],
@@ -33,7 +33,7 @@ window.APP_DATA={
     {
       id:"mower-cg550",name:"CG550",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG550-green.png",
+      image:"assets/images/CG550-green.webp",
       specs:{engine:"二冲程",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["轻量手提设计","环形手柄","0.75L大油箱","可换装打草头","长续航作业"],
       certifications:["CE","GS","EPA"],
@@ -43,7 +43,7 @@ window.APP_DATA={
     {
       id:"mower-elite-x2",name:"5200",
       category:"chainsaw",powerType:"gasoline",
-      image:"assets/images/chainsaw-5800.png",
+      image:"assets/images/chainsaw-5800.webp",
       specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
       certifications:["CE","GS","EPA"],
@@ -53,7 +53,7 @@ window.APP_DATA={
     {
       id:"mower-ride-rx3",name:"EB260",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260.png",
+      image:"assets/images/blower-EB260.webp",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["轻量手提设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
@@ -63,7 +63,7 @@ window.APP_DATA={
     {
       id:"blower-eb260a",name:"EB260A",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260A.png",
+      image:"assets/images/blower-EB260A.webp",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
@@ -73,7 +73,7 @@ window.APP_DATA={
     {
       id:"blower-eb260s",name:"EB260S",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260S.png",
+      image:"assets/images/blower-EB260S.webp",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","减震手柄","大型油箱"],
       certifications:["CE","GS","EPA"],
@@ -83,7 +83,7 @@ window.APP_DATA={
     {
       id:"blower-hbz2602",name:"HBZ2602",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-HBZ2602.png",
+      image:"assets/images/blower-HBZ2602.webp",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
       features:["轻量手提设计","高效涡流风道","巡航定速","人体工学手柄","低振动"],
       certifications:["CE","GS","EPA"],
@@ -93,7 +93,7 @@ window.APP_DATA={
     {
       id:"blower-eb430",name:"EB430",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB430.png",
+      image:"assets/images/blower-EB430.webp",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc大排量","高效涡流风道","无级变速","背带减负系统","加厚机身"],
       certifications:["CE","GS","EPA"],
@@ -103,7 +103,7 @@ window.APP_DATA={
     {
       id:"blower-eb650",name:"EB650",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB650.png",
+      image:"assets/images/blower-EB650.webp",
       specs:{engine:"二冲程",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc大功率","双涡轮风道","背带减负系统","防震设计","大油箱续航"],
       certifications:["CE","GS","EPA"],
@@ -113,7 +113,7 @@ window.APP_DATA={
     {
       id:"blower-eb808",name:"EB808",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB808.png",
+      image:"assets/images/blower-EB808.webp",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc动力","高效涡流风道","背带减负系统","强力启动马达","耐用型机身"],
       certifications:["CE","GS","EPA/CARB"],
@@ -123,7 +123,7 @@ window.APP_DATA={
     {
       id:"blower-eb850",name:"EB850",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB850.png",
+      image:"assets/images/blower-EB850.webp",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc四冲程动力","低噪音低振动","四涡轮风道系统","人体工学背带","一键启动"],
       certifications:["CE","GS","EPA/CARB"],
@@ -133,7 +133,7 @@ window.APP_DATA={
     {
       id:"blower-eb851",name:"EB851",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB851.png",
+      image:"assets/images/blower-EB851.webp",
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc四冲程旗舰","五涡轮增压系统","全悬浮减震","电子点火","航空级材质"],
       certifications:["CE","GS","EPA/CARB"],
@@ -143,7 +143,7 @@ window.APP_DATA={
     {
       id:"blower-eb8500",name:"EB8500",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB8500.png",
+      image:"assets/images/blower-EB8500.webp",
       specs:{engine:"二冲程",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
       features:["63.6cc大功率","高效涡轮风道","省油技术","背带减负系统","耐用型空滤"],
       certifications:["CE","GS","EPA"],
@@ -153,7 +153,7 @@ window.APP_DATA={
     {
       id:"blower-eb850e",name:"EB850E",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB850E.png",
+      image:"assets/images/blower-EB850E.webp",
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc电子点火","高效涡轮风道","电子燃油喷射","一键启动","智能温控"],
       certifications:["CE","GS","EPA"],
@@ -163,7 +163,7 @@ window.APP_DATA={
     {
       id:"blower-eb990",name:"EB990",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB990.png",
+      image:"assets/images/blower-EB990.webp",
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
       features:["大排量动力","超大2.3L油箱","92.2m/s飓风级风速","背带减负系统","高效涡流风道"],
       certifications:["CE","GS","EPA/CARB"],

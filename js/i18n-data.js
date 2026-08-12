@@ -3,7 +3,7 @@ window.APP_DATA_EN={
     {
       id:"mower-pro-x1",name:"CG-430",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG430-green.png",
+      image:"assets/images/CG430-green.webp",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
       certifications:["CE","GS","EPA"],
@@ -13,7 +13,7 @@ window.APP_DATA_EN={
     {
       id:"mower-cg431",name:"CG431",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG431-green.png",
+      image:"assets/images/CG431-green.webp",
       specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
       certifications:["CE","GS","EPA"],
@@ -23,7 +23,7 @@ window.APP_DATA_EN={
     {
       id:"mower-cg435",name:"CG435",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG435-green.png",
+      image:"assets/images/CG435-green.webp",
       specs:{engine:"2-Stroke",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","U-handle","Quick-release blade system","Interchangeable trimmer head","Aluminum alloy drive shaft"],
       certifications:["CE","GS","EPA"],
@@ -33,7 +33,7 @@ window.APP_DATA_EN={
     {
       id:"mower-cg550",name:"CG550",
       category:"mower",powerType:"gasoline",
-      image:"assets/images/CG550-green.png",
+      image:"assets/images/CG550-green.webp",
       specs:{engine:"2-Stroke",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Lightweight handheld design","Loop handle","0.75L large fuel tank","Interchangeable trimmer head","Extended runtime"],
       certifications:["CE","GS","EPA"],
@@ -43,7 +43,7 @@ window.APP_DATA_EN={
     {
       id:"mower-elite-x2",name:"5200",
       category:"chainsaw",powerType:"gasoline",
-      image:"assets/images/chainsaw-5800.png",
+      image:"assets/images/chainsaw-5800.webp",
       specs:{engine:"2-Stroke",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
       features:["High-power engine","Anti-vibration handle","Tool-less chain tensioning","Inertia brake","One-touch stop"],
       certifications:["CE","GS","EPA"],
@@ -53,7 +53,7 @@ window.APP_DATA_EN={
     {
       id:"mower-ride-rx3",name:"EB-260",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260.png",
+      image:"assets/images/blower-EB260.webp",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["Lightweight handheld design","Variable speed throttle","Cruise control","Low vibration","Large fuel tank"],
       certifications:["CE","GS","EPA"],
@@ -63,7 +63,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb260a",name:"EB-260A",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260A.png",
+      image:"assets/images/blower-EB260A.webp",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
       features:["Handheld design","Variable speed throttle","Cruise control","Low vibration","Large fuel tank"],
       certifications:["CE","GS","EPA"],
@@ -73,7 +73,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb260s",name:"EB-260S",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB260S.png",
+      image:"assets/images/blower-EB260S.webp",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
       features:["Handheld design","Variable speed throttle","Cruise control","Dampened handle","Large fuel tank"],
       certifications:["CE","GS","EPA"],
@@ -83,7 +83,7 @@ window.APP_DATA_EN={
     {
       id:"blower-hbz2602",name:"HBZ-2602",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-HBZ2602.png",
+      image:"assets/images/blower-HBZ2602.webp",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
       features:["Lightweight handheld design","High-efficiency vortex duct","Cruise control","Ergonomic handle","Low vibration"],
       certifications:["CE","GS","EPA"],
@@ -93,7 +93,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb430",name:"EB-430",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB430.png",
+      image:"assets/images/blower-EB430.webp",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc large displacement","High-efficiency vortex duct","Variable speed","Harness load-reduction system","Reinforced body"],
       certifications:["CE","GS","EPA"],
@@ -103,7 +103,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb650",name:"EB-650",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB650.png",
+      image:"assets/images/blower-EB650.webp",
       specs:{engine:"2-Stroke",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc high power","Dual turbine duct","Harness load-reduction system","Anti-vibration design","Large tank endurance"],
       certifications:["CE","GS","EPA"],
@@ -113,7 +113,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb808",name:"EB-808",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB808.png",
+      image:"assets/images/blower-EB808.webp",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc power","High-efficiency vortex duct","Harness load-reduction system","Powerful starter motor","Durable body"],
       certifications:["CE","GS","EPA/CARB"],
@@ -123,7 +123,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb850",name:"EB-850",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB850.png",
+      image:"assets/images/blower-EB850.webp",
       specs:{engine:"4-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc 4-stroke power","Low noise & vibration","Quad turbine duct system","Ergonomic harness","One-touch start"],
       certifications:["CE","GS","EPA/CARB"],
@@ -133,7 +133,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb851",name:"EB-851",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB851.png",
+      image:"assets/images/blower-EB851.webp",
       specs:{engine:"4-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc 4-stroke flagship","Quint turbine boost system","Full suspension vibration dampening","Electronic ignition","Aerospace-grade materials"],
       certifications:["CE","GS","EPA/CARB"],
@@ -143,7 +143,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb8500",name:"EB-8500",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB8500.png",
+      image:"assets/images/blower-EB8500.webp",
       specs:{engine:"2-Stroke",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
       features:["63.6cc high power","High-efficiency turbine duct","Fuel-saving technology","Harness load-reduction system","Durable air filter"],
       certifications:["CE","GS","EPA"],
@@ -153,7 +153,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb850e",name:"EB-850E",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB850E.png",
+      image:"assets/images/blower-EB850E.webp",
       specs:{engine:"2-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc electronic ignition","High-efficiency turbine duct","Electronic fuel injection","One-touch start","Intelligent temperature control"],
       certifications:["CE","GS","EPA"],
@@ -163,7 +163,7 @@ window.APP_DATA_EN={
     {
       id:"blower-eb990",name:"EB990",
       category:"blower",powerType:"gasoline",
-      image:"assets/images/blower-EB990.png",
+      image:"assets/images/blower-EB990.webp",
       specs:{engine:"2-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
       features:["Large displacement power","Extra-large 2.3L fuel tank","92.2m/s hurricane-class air speed","Harness load-reduction system","High-efficiency vortex duct"],
       certifications:["CE","GS","EPA/CARB"],

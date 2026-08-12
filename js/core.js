@@ -407,9 +407,29 @@
     })();
   }
 
+  /* === WebP Fallback === */
+  function initWebPFallback(){
+    var hasWebP=false;
+    try{
+      hasWebP=document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp')===0;
+    }catch(e){}
+    if(hasWebP)return;
+    // Swap .webp → .jpg for browsers that don't support WebP
+    document.addEventListener('error',function(e){
+      var el=e.target;
+      if(el&&el.tagName==='IMG'&&el.src&&el.src.indexOf('.webp')!==-1){
+        el.src=el.src.replace('.webp','.jpg');
+      }
+    },true); // capture phase — catches errors before they bubble
+    // Also proactively swap all current images
+    document.querySelectorAll('img[src*=\".webp\"]').forEach(function(img){
+      img.src=img.src.replace('.webp','.jpg');
+    });
+  }
+
   /* === Init === */
   A.Core={init:function(){
-    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initTawkTo();
+    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initTawkTo();initWebPFallback();
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}
