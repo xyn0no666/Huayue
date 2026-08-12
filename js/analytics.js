@@ -1,14 +1,21 @@
-/* === Google Analytics (条件加载) ===
- * 使用方法：将下方 gaId 替换为你的 Google Analytics 测量 ID（格式：G-XXXXXXXXXX）
- * 留空或保持 'G-XXXXXXXXXX' 则不会加载任何 GA 脚本
+/* === Google Analytics 4 (条件加载) ===
+ *
+ * 当前状态：⚠️ 未启用 — GA4 测量 ID 尚未配置
+ * 启用步骤：
+ *   1. 前往 https://analytics.google.com 创建 GA4 数据流
+ *   2. 获取测量 ID（格式：G-XXXXXXXXXX）
+ *   3. 将下方 gaId 变量的值替换为真实的测量 ID
+ *   4. 部署后验证：在 GA4 实时报告中出现数据即表示成功
+ *
+ * 未配置真实 ID 时，不会加载任何 GA 脚本，不影响网站性能。
  */
 (function(){
   'use strict';
 
-  var gaId = 'G-XXXXXXXXXX'; // ← 替换为真实 GA ID 即可启用
+  var gaId = ''; // TODO: 替换为真实 GA4 测量 ID（格式：G-XXXXXXXXXX）
 
   // 未配置真实 ID 时不加载
-  if (!gaId || gaId === 'G-XXXXXXXXXX') return;
+  if (!gaId) return;
 
   // 加载 gtag.js
   var script = document.createElement('script');

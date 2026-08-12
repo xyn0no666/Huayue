@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /checkout.html
-Disallow: /dealer.html
 
-Sitemap: https://huayueyuanlin.com/sitemap.xml
+Sitemap: https://xyn0no666.github.io/Huayue/sitemap.xml

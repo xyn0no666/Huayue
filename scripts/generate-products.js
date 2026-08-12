@@ -130,10 +130,12 @@ function buildPage(p) {
         <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <button class="header__cart-btn" id="headerCartBtn" aria-label="Cart">
+      <button class="header__cart-btn" id="headerCartBtn" data-cart-toggle aria-label="购物车">
         <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <span class="header__cart-count" id="headerCartCount">0</span>
       </button>
+      <a href="dealer.html" class="header__dealer-link">经销商入口</a>
+      <a href="contact.html" class="btn btn--outline btn--sm">立即询问</a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
