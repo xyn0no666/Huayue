@@ -77,24 +77,30 @@
         var btn=this.querySelector('button[type="submit"]');
         var origText=btn.textContent;
         btn.disabled=true;btn.textContent='提交中...';
-        // Submit to Netlify Forms (works when deployed to Netlify; falls back gracefully)
+        // Primary: Submit via FormSubmit.co (free tier, works on any hosting)
+        fd.append('_subject','华悦园林询盘 - '+typeLabels[formType]);
+        fd.append('_template','table');
         var formEl=this;
-        var encoded=new URLSearchParams(fd).toString();
-        fetch('/','{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:encoded}).then(function(res){
+        fetch('https://formsubmit.co/ajax/3539576340@qq.com',{method:'POST',body:fd}).then(function(res){return res.json()}).then(function(result){
           btn.disabled=false;btn.textContent=origText;
-          formEl.reset();
-          formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
-          var success=formEl.querySelector('.form-success');
-          if(success){success.classList.add('form-success--visible');
-            setTimeout(function(){success.classList.remove('form-success--visible')},5000)}
+          if(result.success){
+            formEl.reset();
+            formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
+            var success=formEl.querySelector('.form-success');
+            if(success){success.classList.add('form-success--visible');
+              setTimeout(function(){success.classList.remove('form-success--visible')},6000)}
+          }else{
+            throw new Error('FormSubmit rejected');
+          }
         }).catch(function(){
-          // Netlify not available — warn user data was saved offline only
+          // FormSubmit failed — data is in localStorage, tell user to email
           btn.disabled=false;btn.textContent=origText;
           formEl.reset();
           formEl.querySelectorAll('.form-group--error').forEach(function(g){g.classList.remove('form-group--error')});
           var success=formEl.querySelector('.form-success');
-          if(success){success.classList.add('form-success--visible');success.style.background='#fef3c7';success.style.border='1px solid #f59e0b';success.textContent='⚠️ 提交未成功（网络问题），数据已暂存本地，请稍后重试或直接拨打电话联系。';
-            setTimeout(function(){success.classList.remove('form-success--visible');success.style.background='';success.style.border='';success.textContent='';},8000)}
+          if(success){success.classList.add('form-success--visible');success.style.background='#fef3c7';success.style.border='1px solid #f59e0b';
+            success.innerHTML='提交未能发送到服务器，但数据已安全暂存。请直接发送邮件至 <a href=\"mailto:3539576340@qq.com\" style=\"color:#b45309;font-weight:600\">3539576340@qq.com</a>，或拨打电话 19862905209，我们立即处理。';
+            setTimeout(function(){success.classList.remove('form-success--visible');success.style.background='';success.style.border='';success.innerHTML=''},12000)}
         });
       });
     });

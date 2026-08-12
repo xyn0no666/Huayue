@@ -118,6 +118,8 @@
       'cart.decrease':'减少','cart.increase':'增加','cart.remove':'移除','cart.delete':'删除',
       'cart.summary':'合计 {count} 款 / {qty} 台','cart.checkout':'去结算','cart.continue':'继续选购',
       'cart.add':'加入购物车','cart.added':'已加入购物车',
+      // Compare
+      'compare.add':'加入对比','compare.remove':'移除对比','compare.bar':'开始对比 ({count})','compare.title':'产品对比','compare.clear':'清空全部','compare.empty':'请选择2-4款产品进行对比','compare.limit':'最多选择4款产品','compare.spec':'规格参数','compare.price':'出厂价','compare.inquire':'询盘',
       // Checkout
       'checkout.tag':'Checkout','checkout.title':'结算','checkout.subtitle':'确认产品清单，填写收货信息并完成支付。',
       'checkout.summary':'订单摘要','checkout.items':'商品清单','checkout.form':'收货信息',
@@ -264,6 +266,8 @@
       'cart.decrease':'Decrease','cart.increase':'Increase','cart.remove':'Remove','cart.delete':'Delete',
       'cart.summary':'{count} models / {qty} units','cart.checkout':'Checkout','cart.continue':'Continue Shopping',
       'cart.add':'Add to Cart','cart.added':'Added to cart',
+      // Compare
+      'compare.add':'Compare','compare.remove':'Remove','compare.bar':'Compare ({count})','compare.title':'Product Comparison','compare.clear':'Clear All','compare.empty':'Select 2-4 products to compare','compare.limit':'Max 4 products','compare.spec':'Specifications','compare.price':'Factory Price','compare.inquire':'Inquire',
       // Checkout
       'checkout.tag':'Checkout','checkout.title':'Checkout','checkout.subtitle':'Review your items and fill in shipping information to complete your order.',
       'checkout.summary':'Order Summary','checkout.items':'Items','checkout.form':'Shipping Information',

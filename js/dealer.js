@@ -1,5 +1,7 @@
 (function(){'use strict';
 
+  function __(key){return window.App&&window.App.__?window.App.__(key):key}
+
   /* === Dealer Application Form === */
   function initDealerForm(){
     var form=document.getElementById('dealerForm');
@@ -18,12 +20,12 @@
       var country=document.getElementById('dlrCountry').value.trim();
 
       if(!company||!contact||!email||!country){
-        error.textContent='请填写所有必填字段';
+        error.textContent=__('validate.required');
         error.style.display='block';
         return;
       }
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-        error.textContent='请输入有效的邮箱地址';
+        error.textContent=__('validate.email');
         error.style.display='block';
         return;
       }
@@ -50,24 +52,29 @@
       submissions.push(data);
       localStorage.setItem('huayue-dealer-apps',JSON.stringify(submissions));
 
-      // Build FormData for Netlify
+      // Build FormData for FormSubmit
       var fd=new FormData();
-      fd.append('form-name','dealer-application');
+      fd.append('_subject','华悦园林经销商申请 - '+company);
+      fd.append('_template','table');
       Object.keys(data.fields).forEach(function(k){if(data.fields[k])fd.append(k,data.fields[k])});
 
       submitBtn.textContent='提交中...';
       submitBtn.disabled=true;
 
-      // Attempt Netlify Forms submission
-      fetch('/','{method:\"POST\",headers:{\"Content-Type\":\"application/x-www-form-urlencoded\"},body:new URLSearchParams(fd).toString()}').then(function(){
-        form.style.display='none';
-        success.classList.add('dealer-apply__success--visible');
+      // Submit via FormSubmit.co (free tier, works on any hosting)
+      fetch('https://formsubmit.co/ajax/3539576340@qq.com',{method:'POST',body:fd}).then(function(r){return r.json()}).then(function(result){
+        if(result.success){
+          form.style.display='none';
+          success.classList.add('dealer-apply__success--visible');
+        }else{
+          throw new Error('FormSubmit rejected');
+        }
       }).catch(function(){
-        // Netlify not available — data saved to localStorage only
+        // FormSubmit failed — data saved to localStorage
         form.style.display='none';
         success.classList.add('dealer-apply__success--visible');
         success.style.background='#fef3c7';success.style.border='1px solid #f59e0b';
-        success.querySelector('p').textContent='申请已暂存本地。网络恢复后将自动同步，或直接拨打电话联系我们。';
+        var p=success.querySelector('p');if(p)p.innerHTML='申请已安全暂存。请直接发送邮件至 <a href=\"mailto:3539576340@qq.com\" style=\"color:#b45309;font-weight:600\">3539576340@qq.com</a> 确认，我们将立即处理。';
       }).then(function(){
         submitBtn.textContent='提交申请';
         submitBtn.disabled=false;
