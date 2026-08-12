@@ -5,16 +5,25 @@ const path = require('path');
 
 const root = path.join(__dirname, '..');
 
-// Read data.js and extract products
+// Read data.js (Chinese) and i18n-data.js (English)
 const dataRaw = fs.readFileSync(path.join(root, 'js', 'data.js'), 'utf8');
+const i18nRaw = fs.readFileSync(path.join(root, 'js', 'i18n-data.js'), 'utf8');
 
 // Fake window object to eval the data
 global.window = {};
 eval(dataRaw);
 const APP = global.window.APP_DATA;
 
+global.window = {};
+eval(i18nRaw);
+const APP_EN = global.window.APP_DATA_EN;
+
 const products = APP.products;
 const categories = APP.categories;
+
+// Build English product lookup
+const enProductMap = {};
+(APP_EN.products || []).forEach(p => { enProductMap[p.id] = p; });
 
 function getCatName(catId) {
   const c = categories.find(x => x.id === catId);
@@ -35,10 +44,14 @@ function getCatEnglish(catId) {
 function buildPage(p) {
   const catName = getCatName(p.category);
   const catEN = getCatEnglish(p.category);
-  const title = `${p.name} — ${catName} | 华悦园林`;
+  const enP = enProductMap[p.id] || {};
+  const enName = enP.name || p.name;
+  const enDesc = enP.description || p.description;
+  const seoTitle = `${enName} ${catEN} — 华悦园林 Huayue Garden Machinery`;
   const url = `https://xyn0no666.github.io/Huayue/product-${p.id}.html`;
   const imgUrl = `https://xyn0no666.github.io/Huayue/${p.image}`;
   const desc = p.description;
+  const seoDesc = enDesc || desc;
 
   // Certs
   const certsHTML = (p.certifications || []).map(c =>
@@ -66,20 +79,22 @@ function buildPage(p) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="${desc}">
-<meta name="keywords" content="${p.name},${catName},华悦园林,园林机械,${catEN},汽油园林机械,源头工厂">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${desc}">
+<meta name="description" content="${seoDesc}">
+<meta name="keywords" content="${enName},${catEN},Huayue Garden Machinery,Chinese Factory,OEM,Wholesale">
+<meta property="og:title" content="${seoTitle}">
+<meta property="og:description" content="${seoDesc}">
 <meta property="og:image" content="${imgUrl}">
 <meta property="og:url" content="${url}">
 <meta property="og:type" content="product">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${title}">
-<meta name="twitter:description" content="${desc}">
+<meta name="twitter:title" content="${seoTitle}">
+<meta name="twitter:description" content="${seoDesc}">
 <meta name="twitter:image" content="${imgUrl}">
-<title>${title}</title>
+<title>${seoTitle}</title>
 <link rel="canonical" href="${url}">
-<link rel="alternate" hreflang="en" href="https://xyn0no666.github.io/Huayue/product-detail.html?id=${p.id}&lang=en">
+<link rel="alternate" hreflang="en" href="${url}?lang=en">
+<link rel="alternate" hreflang="zh" href="${url}">
+<link rel="alternate" hreflang="x-default" href="${url}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -112,6 +127,13 @@ function buildPage(p) {
 </script>
 </head>
 <body>
+<noscript>
+  <div style="background:#fff;color:#1a1a2e;text-align:center;padding:16px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-bottom:3px solid #c4a97d;line-height:1.6">
+    <p style="margin:0 0 6px;font-size:15px;font-weight:600">华悦园林 Huayue Garden Machinery</p>
+    <p style="margin:0;font-size:13px;color:#666">⚠️ 请启用 JavaScript 以浏览完整网站（产品展示 / 在线询盘 / 经销商系统）<br>Please enable JavaScript to view the full site (Products · Inquiry · Dealer Portal)</p>
+    <p style="margin:8px 0 0;font-size:13px">📞 <a href="tel:19862905209" style="color:#c4a97d">19862905209</a> &nbsp;|&nbsp; ✉️ <a href="mailto:3539576340@qq.com" style="color:#c4a97d">3539576340@qq.com</a> &nbsp;|&nbsp; 🏭 山东·临沂</p>
+  </div>
+</noscript>
 
 <header class="site-header" id="siteHeader">
   <div class="header__inner">
