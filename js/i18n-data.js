@@ -4,7 +4,7 @@ window.APP_DATA_EN={
       id:"mower-pro-x1",name:"CG-430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.png",
-      specs:{engine:"2-Stroke",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
+      specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["Portable handheld design","Cowhorn handle","Quick-change blade","Interchangeable trimmer head","Low vibration technology"],
       certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:280,
@@ -44,7 +44,7 @@ window.APP_DATA_EN={
       id:"mower-elite-x2",name:"5200",
       category:"chainsaw",powerType:"gasoline",
       image:"assets/images/chainsaw-5800.png",
-      specs:{engine:"2-Stroke",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",weight:"5.5kg"},
+      specs:{engine:"2-Stroke",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
       features:["High-power engine","Anti-vibration handle","Tool-less chain tensioning","Inertia brake","One-touch stop"],
       certifications:["CE","GS","EPA"],
       moq:"1 unit",leadTime:"15-25 days",price:320,
@@ -118,7 +118,7 @@ window.APP_DATA_EN={
       features:["42.7cc power","High-efficiency vortex duct","Harness load-reduction system","Powerful starter motor","Durable body"],
       certifications:["CE","GS","EPA/CARB"],
       moq:"1 unit",leadTime:"15-25 days",price:350,
-      description:"Backpack gasoline leaf blower, 42.7cc power, 80m/s air speed. Weighs 7.7/9kg, equipped with harness load-reduction system. Suitable for professional forestry and large green space blowing."
+      description:"Standard backpack blower, 42.7cc power, 80m/s air speed. Powerful starter motor and durable reinforced body with harness system — built for high-intensity daily professional use."
     },
     {
       id:"blower-eb850",name:"EB-850",
@@ -164,7 +164,7 @@ window.APP_DATA_EN={
       id:"blower-eb990",name:"EB990",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB990.png",
-      specs:{engine:"2-Stroke",displacement:"75.6cc",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
+      specs:{engine:"2-Stroke",displacement:"75.6cc",power:"3.8kw/7000rpm",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
       features:["Large displacement power","Extra-large 2.3L fuel tank","92.2m/s hurricane-class air speed","Harness load-reduction system","High-efficiency vortex duct"],
       certifications:["CE","GS","EPA/CARB"],
       moq:"1 unit",leadTime:"15-25 days",price:680,

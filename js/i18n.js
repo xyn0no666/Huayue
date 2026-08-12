@@ -136,6 +136,7 @@
       'contact.submitting':'提交中...',
       // FAB (core.js)
       'fab.wechatQr':'微信扫码\n添加好友','fab.wechatAccount':'公众号：华悦园林机械',
+      'fab.tooltip.wechat':'微信','fab.tooltip.copyPhone':'复制','fab.tooltip.copyWechat':'复制微信号','fab.copied':'已复制 ✓','fab.wechatQrAlt':'微信二维码',
       // Product detail
       'detail.specs':'技术参数','detail.features':'产品特点','detail.moq':'最小起订量','detail.leadTime':'交货周期','detail.price':'参考单价','detail.askQuestion':'咨询详情',
       // Spec keys
@@ -281,6 +282,7 @@
       'contact.submitting':'Submitting...',
       // FAB (core.js)
       'fab.wechatQr':'Scan QR\nAdd on WeChat','fab.wechatAccount':'WeChat: 华悦园林机械',
+      'fab.tooltip.wechat':'WeChat','fab.tooltip.copyPhone':'Copy','fab.tooltip.copyWechat':'Copy WeChat ID','fab.copied':'Copied ✓','fab.wechatQrAlt':'WeChat QR Code',
       // Product detail
       'detail.specs':'Specifications','detail.features':'Features','detail.moq':'MOQ','detail.leadTime':'Lead Time','detail.price':'Reference Price','detail.askQuestion':'Ask a Question',
       // Spec keys

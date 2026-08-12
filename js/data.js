@@ -4,7 +4,7 @@ window.APP_DATA={
       id:"mower-pro-x1",name:"CG430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.png",
-      specs:{engine:"二冲程",displacement:"42.7cc",tank:"0.65L",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
+      specs:{engine:"二冲程",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:280,
@@ -18,7 +18,7 @@ window.APP_DATA={
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:320,
-      description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
+      description:"手提式割灌机，37.7cc动力，牛角手柄设计。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割，兼顾家用和轻型商用。",
     },
     {
       id:"mower-cg435",name:"CG435",
@@ -28,7 +28,7 @@ window.APP_DATA={
       features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:420,
-      description:"手提式割灌机，37.7cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
+      description:"升级版手提式割灌机，U型把手操控更省力，铝合金传动轴耐用升级。快拆刀片系统提升换装效率，适合长时间高强度作业。",
     },
     {
       id:"mower-cg550",name:"CG550",
@@ -44,7 +44,7 @@ window.APP_DATA={
       id:"mower-elite-x2",name:"5200",
       category:"chainsaw",powerType:"gasoline",
       image:"assets/images/chainsaw-5800.png",
-      specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",weight:"5.5kg"},
+      specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:320,
@@ -68,7 +68,7 @@ window.APP_DATA={
       features:["手提式设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
       moq:"1台",leadTime:"15-25天",price:220,
-      description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携4.5kg，适合庭院清扫、落叶清理和轻型商业用途。"
+      description:"入门级手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4.5kg，适合家庭庭院清扫、落叶清理等轻型日常使用场景。"
     },
     {
       id:"blower-eb260s",name:"EB260S",
@@ -118,7 +118,7 @@ window.APP_DATA={
       features:["42.7cc动力","高效涡流风道","背带减负系统","强力启动马达","耐用型机身"],
       certifications:["CE","GS","EPA/CARB"],
       moq:"1台",leadTime:"15-25天",price:350,
-      description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
+      description:"标准型背负式汽油吹风机，42.7cc动力，80m/s风速。强力启动马达搭配耐用型机身，配备背带减负系统，适合专业林场和大型绿地高强度日常吹扫。"
     },
     {
       id:"blower-eb850",name:"EB850",
@@ -164,7 +164,7 @@ window.APP_DATA={
       id:"blower-eb990",name:"EB990",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB990.png",
-      specs:{engine:"二冲程",displacement:"75.6cc",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
+      specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
       features:["大排量动力","超大2.3L油箱","92.2m/s飓风级风速","背带减负系统","高效涡流风道"],
       certifications:["CE","GS","EPA/CARB"],
       moq:"1台",leadTime:"15-25天",price:680,

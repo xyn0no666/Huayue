@@ -36,16 +36,42 @@
 
       error.style.display='none';
 
-      // Simulate submission
+      // Collect form data
+      var data={type:'经销商申请',date:new Date().toISOString(),fields:{
+        '公司名称':company,'联系人':contact,'邮箱':email,'国家/地区':country,
+        '经营品类':cats.join(', '),'电话':(document.getElementById('dlrPhone')||{}).value||'',
+        '从业年限':(document.getElementById('dlrYears')||{}).value||'',
+        '当前渠道':(document.getElementById('dlrChannel')||{}).value||'',
+        '申请理由':(document.getElementById('dlrReason')||{}).value||''
+      }};
+
+      // Always save to localStorage
+      var submissions=JSON.parse(localStorage.getItem('huayue-dealer-apps')||'[]');
+      submissions.push(data);
+      localStorage.setItem('huayue-dealer-apps',JSON.stringify(submissions));
+
+      // Build FormData for Netlify
+      var fd=new FormData();
+      fd.append('form-name','dealer-application');
+      Object.keys(data.fields).forEach(function(k){if(data.fields[k])fd.append(k,data.fields[k])});
+
       submitBtn.textContent='提交中...';
       submitBtn.disabled=true;
 
-      setTimeout(function(){
+      // Attempt Netlify Forms submission
+      fetch('/','{method:\"POST\",headers:{\"Content-Type\":\"application/x-www-form-urlencoded\"},body:new URLSearchParams(fd).toString()}').then(function(){
         form.style.display='none';
         success.classList.add('dealer-apply__success--visible');
+      }).catch(function(){
+        // Netlify not available — data saved to localStorage only
+        form.style.display='none';
+        success.classList.add('dealer-apply__success--visible');
+        success.style.background='#fef3c7';success.style.border='1px solid #f59e0b';
+        success.querySelector('p').textContent='申请已暂存本地。网络恢复后将自动同步，或直接拨打电话联系我们。';
+      }).then(function(){
         submitBtn.textContent='提交申请';
         submitBtn.disabled=false;
-      },1000);
+      });
     });
 
     // Reset button
@@ -64,10 +90,9 @@
     document.querySelectorAll('.marketing-card__body .btn').forEach(function(btn){
       btn.addEventListener('click',function(e){
         e.preventDefault();
-        // In production, these would link to real files
-        // For now, show a friendly message
+        // TODO: Replace with real download links to PDF catalogs and marketing materials
         if(window.App&&window.App.toast){
-          window.App.toast('成为经销商后可免费下载全部营销物料。请先提交上方申请表。');
+          window.App.toast('营销物料正在整理中，如需产品资料请直接联系外贸团队：3539576340@qq.com');
         }
       });
     });

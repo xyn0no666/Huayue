@@ -95,9 +95,9 @@
         '<div class="fab-phone-popover__number">19862905209</div>'+
         '<button class="fab-phone-popover__copy" id="fabPhoneCopy">'+
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'+
-          ' 复制'+
+          ' '+__('fab.tooltip.copyPhone')+'+
         '</button>'+
-        '<span class="fab-phone-popover__copied" id="fabPhoneCopied">已复制 ✓</span>'+
+        '<span class="fab-phone-popover__copied" id="fabPhoneCopied">'+__('fab.copied')+'</span>'+
       '</div>'+
       '<a href="https://wa.me/8619862905209" target="_blank" rel="noopener" class="fab-btn fab-btn--whatsapp" aria-label="WhatsApp">'+
         '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>'+
@@ -105,16 +105,16 @@
       '</a>'+
       '<button class="fab-btn fab-btn--wechat" aria-label="WeChat" id="fabWechatBtn">'+
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>'+
-        '<span class="fab-tooltip">微信</span>'+
+        '<span class="fab-tooltip">'+__('fab.tooltip.wechat')+'</span>'+
       '</button>'+
       '<div class="fab-wechat-popover" id="fabWechatPop">'+
-        '<div class="fab-wechat-popover__qr"><img src="assets/images/wechat-qr.jpg" alt="微信二维码" style="width:120px;height:120px;display:block;margin:0 auto"></div>'+
+        '<div class="fab-wechat-popover__qr"><img src="assets/images/wechat-qr.jpg" alt="'+__('fab.wechatQrAlt')+'" style="width:120px;height:120px;display:block;margin:0 auto"></div>'+
         '<div style="margin-top:8px;font-size:0.75rem;color:var(--color-text)">WeChat ID: HuayueGarden</div>'+
         '<button class="fab-phone-popover__copy" id="fabWcCopy" style="margin-top:6px">'+
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'+
-          ' 复制微信号'+
+          ' '+__('fab.tooltip.copyWechat')+'+
         '</button>'+
-        '<span style="display:none;font-size:0.75rem;color:var(--color-success);font-weight:600" id="fabWcCopied">已复制 ✓</span>'+
+        '<span style="display:none;font-size:0.75rem;color:var(--color-success);font-weight:600" id="fabWcCopied">'+__('fab.copied')+'</span>'+
       '</div>'+
       '<a href="mailto:3539576340@qq.com" class="fab-btn fab-btn--email" aria-label="Email">'+
         '<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>'+
@@ -161,6 +161,20 @@
         }).catch(function(){});
       });
     }
+
+    // Update text on language change
+    document.addEventListener('lang:changed',function(){
+      var wcTooltip=document.querySelector('.fab-btn--wechat .fab-tooltip');
+      if(wcTooltip)wcTooltip.textContent=__('fab.tooltip.wechat');
+      var qrImg=document.querySelector('.fab-wechat-popover__qr img');
+      if(qrImg)qrImg.alt=__('fab.wechatQrAlt');
+      [document.getElementById('fabPhoneCopy'),document.getElementById('fabWcCopy')].forEach(function(btn){
+        if(btn){var txt=btn.lastChild;if(txt&&txt.nodeType===3)txt.textContent=' '+(btn.id==='fabPhoneCopy'?__('fab.tooltip.copyPhone'):__('fab.tooltip.copyWechat'))}
+      });
+      [document.getElementById('fabPhoneCopied'),document.getElementById('fabWcCopied')].forEach(function(el){
+        if(el)el.textContent=__('fab.copied');
+      });
+    });
   }
 
   /* === Mobile Contact Bar (injected to all pages) === */
