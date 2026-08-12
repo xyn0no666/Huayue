@@ -88,7 +88,7 @@ function buildPage(p) {
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/product-detail.css">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#c4a97d">
 <script type="application/ld+json">
 {
