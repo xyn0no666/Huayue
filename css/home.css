@@ -12,7 +12,7 @@
   padding:0 var(--space-3);height:100%;display:flex;flex-direction:column;justify-content:center;
   color:#fff;
 }
-.hero__content h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:700;line-height:1.05;margin:var(--space-2) 0 var(--space-3)}
+.hero__content h1,.hero__content .hero__title{font-size:clamp(2.5rem,7vw,5rem);font-weight:700;line-height:1.05;margin:var(--space-2) 0 var(--space-3)}
 .hero__content p{font-size:1.125rem;color:rgba(255,255,255,0.6);max-width:480px;line-height:1.8}
 .hero__actions{display:flex;gap:var(--space-2);margin-top:var(--space-5);flex-wrap:wrap}
 .hero__nav{position:absolute;bottom:var(--space-6);left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:var(--space-4)}
