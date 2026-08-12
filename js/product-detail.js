@@ -34,18 +34,23 @@
 
   function injectMeta(p){
     var catName=getCatName(p.category);
-    var title=p.name+' — '+catName+' | 华悦园林';
+    // Try to get English name for bilingual SEO
+    var enCatMap={mower:'Brush Cutter',chainsaw:'Chainsaw',blower:'Leaf Blower'};
+    var enCat=enCatMap[p.category]||p.category;
+    var enName=p.name;var enDesc=p.description;
+    if(window.APP_DATA_EN){var enP=(window.APP_DATA_EN.products||[]).find(function(x){return x.id===p.id});if(enP){enName=enP.name;enDesc=enP.description}}
+    var title=enName+' '+enCat+' — 华悦园林 Huayue Garden Machinery';
     var url='https://xyn0no666.github.io/Huayue/product-'+p.id+'.html';
     document.title=title;
-    setMetaTag('description',p.description);
+    setMetaTag('description',enDesc);
     setMetaTag('og:title',title);
-    setMetaTag('og:description',p.description);
+    setMetaTag('og:description',enDesc);
     setMetaTag('og:image','https://xyn0no666.github.io/Huayue/'+p.image);
     setMetaTag('og:url',url);
     setMetaTag('og:type','product');
     setMetaTag('twitter:card','summary_large_image');
     setMetaTag('twitter:title',title);
-    setMetaTag('twitter:description',p.description);
+    setMetaTag('twitter:description',enDesc);
     setMetaTag('twitter:image','https://xyn0no666.github.io/Huayue/'+p.image);
     // Canonical
     var can=document.querySelector('link[rel="canonical"]');
