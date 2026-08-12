@@ -179,7 +179,7 @@ async function main() {
 
   y = text(pg2, '建议修改', y, 10, GOLD_LT);
   y -= 6;
-  const fixes = ['所有 canonical 统一改为  https://huayueyuanlin.com/xxx.html', '所有 og:image 统一改为  https://huayueyuanlin.com/assets/images/...', 'manifest 从 /Huayue/manifest.json  改为  /manifest.json'];
+  const fixes = ['所有 canonical 统一改为  https://xyn0no666.github.io/Huayue/xxx.html', '所有 og:image 统一改为  https://xyn0no666.github.io/Huayue/assets/images/...', 'manifest 从 /Huayue/manifest.json  改为  /manifest.json'];
   for (const f of fixes) { pg2.drawText(f, { x: MX + 16, y, size: 8.5, font: cn, color: WHITE }); y -= 16; }
 
   // ============== PAGE 3: PLACEHOLDERS + FAKE ==============

@@ -207,8 +207,8 @@
             'name':p.name,
             'category':getCatName(p.category),
             'description':p.description,
-            'image':'https://huayueyuanlin.com/'+p.image,
-            'url':'https://huayueyuanlin.com/product-'+p.id+'.html',
+            'image':'https://xyn0no666.github.io/Huayue/'+p.image,
+            'url':'https://xyn0no666.github.io/Huayue/product-'+p.id+'.html',
             'offers':{
               '@type':'Offer',
               'price':p.price||0,

@@ -35,18 +35,18 @@
   function injectMeta(p){
     var catName=getCatName(p.category);
     var title=p.name+' — '+catName+' | 华悦园林';
-    var url='https://huayueyuanlin.com/product-'+p.id+'.html';
+    var url='https://xyn0no666.github.io/Huayue/product-'+p.id+'.html';
     document.title=title;
     setMetaTag('description',p.description);
     setMetaTag('og:title',title);
     setMetaTag('og:description',p.description);
-    setMetaTag('og:image','https://huayueyuanlin.com/'+p.image);
+    setMetaTag('og:image','https://xyn0no666.github.io/Huayue/'+p.image);
     setMetaTag('og:url',url);
     setMetaTag('og:type','product');
     setMetaTag('twitter:card','summary_large_image');
     setMetaTag('twitter:title',title);
     setMetaTag('twitter:description',p.description);
-    setMetaTag('twitter:image','https://huayueyuanlin.com/'+p.image);
+    setMetaTag('twitter:image','https://xyn0no666.github.io/Huayue/'+p.image);
     // Canonical
     var can=document.querySelector('link[rel="canonical"]');
     if(can)can.setAttribute('href',url);
@@ -60,7 +60,7 @@
       '@type':'Product',
       'name':p.name,
       'description':p.description,
-      'image':'https://huayueyuanlin.com/'+p.image,
+      'image':'https://xyn0no666.github.io/Huayue/'+p.image,
       'sku':p.id,
       'category':getCatName(p.category),
       'brand':{'@type':'Brand','name':'华悦园林'},

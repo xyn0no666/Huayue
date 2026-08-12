@@ -36,8 +36,8 @@ function buildPage(p) {
   const catName = getCatName(p.category);
   const catEN = getCatEnglish(p.category);
   const title = `${p.name} — ${catName} | 华悦园林`;
-  const url = `https://huayueyuanlin.com/product-${p.id}.html`;
-  const imgUrl = `https://huayueyuanlin.com/${p.image}`;
+  const url = `https://xyn0no666.github.io/Huayue/product-${p.id}.html`;
+  const imgUrl = `https://xyn0no666.github.io/Huayue/${p.image}`;
   const desc = p.description;
 
   // Certs
@@ -79,7 +79,7 @@ function buildPage(p) {
 <meta name="twitter:image" content="${imgUrl}">
 <title>${title}</title>
 <link rel="canonical" href="${url}">
-<link rel="alternate" hreflang="en" href="https://huayueyuanlin.com/product-detail.html?id=${p.id}&lang=en">
+<link rel="alternate" hreflang="en" href="https://xyn0no666.github.io/Huayue/product-detail.html?id=${p.id}&lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://www.googletagmanager.com">
