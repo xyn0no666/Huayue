@@ -22,6 +22,8 @@
       'footer.support.tech':'技术支持','footer.support.faq':'常见问题','footer.support.guides':'保养指南','footer.support.parts':'售后配件',
       'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
       'footer.copyright':'© 2026 华悦园林 — 华悦园林机械',
+      // Cookie banner
+      'cookie.text':'本站使用Cookie以提升您的浏览体验。继续访问即表示您同意我们的 <a href=\"privacy.html\">隐私政策</a>。','cookie.essential':'仅必要','cookie.accept':'全部接受',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'专业园林机械<br>制造商','hero.desc1':'源头工厂，多年OEM/ODM经验，全工序自主生产',
       'hero.tag2':'Precision Engineering','hero.title2':'精工铸械<br>匠心造机','hero.desc2':'深耕园林机械领域，以严苛工艺打磨每一台设备，坚守品质初心，精研性能细节',
@@ -170,6 +172,8 @@
       'footer.support.tech':'Tech Support','footer.support.faq':'FAQ','footer.support.guides':'Maintenance Guides','footer.support.parts':'Spare Parts',
       'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
       'footer.copyright':'© 2026 Huayue Garden — Huayue Garden Machinery',
+      // Cookie banner
+      'cookie.text':'This site uses cookies to enhance your browsing experience. By continuing, you agree to our <a href=\"privacy.html\">Privacy Policy</a>.','cookie.essential':'Essential Only','cookie.accept':'Accept All',
       // Home hero
       'hero.tag1':'Made in China · Sold Worldwide','hero.title1':'Professional Garden<br>Machinery Manufacturer','hero.desc1':'Source factory, years of OEM/ODM experience, full in-house production',
       'hero.tag2':'Precision Engineering','hero.title2':'Precision Crafted<br>Built to Last','hero.desc2':'Deeply rooted in garden machinery, every device refined through rigorous craftsmanship and relentless quality pursuit',
