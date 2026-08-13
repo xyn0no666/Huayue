@@ -402,7 +402,6 @@
     s1.async=true;
     s1.src='https://embed.tawk.to/6a7bd87a73934d1d3e07bc24/1jvpsb8fn';
     s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
   }
