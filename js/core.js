@@ -85,6 +85,7 @@
 
   /* === FAB Buttons === */
   function initFab(){
+    var __=window.App&&window.App.__?window.App.__:function(k){return k;};
     if(document.querySelector('.fab-stack'))return;
     var html='<div class="fab-stack">'+
       '<button class="fab-btn fab-btn--phone" aria-label="Phone" id="fabPhoneBtn">'+
