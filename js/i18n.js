@@ -145,9 +145,11 @@
       // Product detail
       'detail.specs':'技术参数','detail.features':'产品特点','detail.moq':'最小起订量','detail.leadTime':'交货周期','detail.price':'参考单价','detail.askQuestion':'咨询详情',
       // Spec keys
-      'spec.engine':'发动机','spec.displacement':'排量','spec.cuttingWidth':'割幅','spec.weight':'重量','spec.shaftType':'杆类型',
+      'spec.engine':'发动机','spec.displacement':'排量','spec.cuttingWidth':'割幅','spec.weight':'重量','spec.shaftType':'杆类型','spec.shaft':'杆长','spec.engineSpeed':'转速',
       'spec.barLength':'导板长度','spec.chainPitch':'链条节距','spec.airVolume':'风量','spec.airSpeed':'风速',
       'spec.power':'功率','spec.tank':'油箱','spec.size':'尺寸',
+      // Guide pages
+      'guide1.h1':'割灌机选购指南——按市场选型','guide.meta.category':'分类：',
       // Mobile contact bar
       'mobile.tel':'电话','mobile.email':'邮件','mobile.wa':'WhatsApp','mobile.inquire':'发送询盘',
       // Contact popup
@@ -296,9 +298,11 @@
       // Product detail
       'detail.specs':'Specifications','detail.features':'Features','detail.moq':'MOQ','detail.leadTime':'Lead Time','detail.price':'Reference Price','detail.askQuestion':'Ask a Question',
       // Spec keys
-      'spec.engine':'Engine','spec.displacement':'Displacement','spec.cuttingWidth':'Cutting Width','spec.weight':'Weight','spec.shaftType':'Shaft Type',
+      'spec.engine':'Engine','spec.displacement':'Displacement','spec.cuttingWidth':'Cutting Width','spec.weight':'Weight','spec.shaftType':'Shaft Type','spec.shaft':'Shaft Length','spec.engineSpeed':'Engine Speed',
       'spec.barLength':'Bar Length','spec.chainPitch':'Chain Pitch','spec.airVolume':'Air Volume','spec.airSpeed':'Air Speed',
       'spec.power':'Power','spec.tank':'Fuel Tank','spec.size':'Dimensions',
+      // Guide pages
+      'guide1.h1':'Brush Cutter Buying Guide — Selection by Market','guide.meta.category':'Category:',
       // Mobile contact bar
       'mobile.tel':'Call','mobile.email':'Email','mobile.wa':'WhatsApp','mobile.inquire':'Inquire',
       // Contact popup
@@ -461,35 +465,41 @@
   // --- Language Toggle Injection ---
   function injectLangToggle(){
     var actionsEl = document.querySelector('.header__actions');
-    if (!actionsEl) return;
+    var navEl = document.querySelector('.header__nav');
+    var existingBtn = document.getElementById('langToggle');
+    var existingMobile = document.querySelector('.header__lang-btn--mobile');
 
-    // Create toggle button
-    var btn = document.createElement('button');
-    btn.className = 'header__lang-btn';
-    btn.id = 'langToggle';
-    btn.setAttribute('aria-label', 'Switch language');
-    btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
-    btn.addEventListener('click', function(){
-      window.App.setLang(currentLang === 'zh' ? 'en' : 'zh');
-    });
-
-    // Insert before the first child (cart button) in header__actions
-    var firstChild = actionsEl.firstChild;
-    if (firstChild) {
-      actionsEl.insertBefore(btn, firstChild);
-    } else {
-      actionsEl.appendChild(btn);
+    function bind(btn){
+      btn.addEventListener('click', function(){
+        window.App.setLang(currentLang === 'zh' ? 'en' : 'zh');
+      });
     }
 
-    // Inject a copy into mobile nav
-    var navEl = document.querySelector('.header__nav');
-    if (navEl) {
+    // Desktop toggle: reuse existing hardcoded button, else inject one
+    if (existingBtn) {
+      bind(existingBtn);
+    } else if (actionsEl) {
+      var btn = document.createElement('button');
+      btn.className = 'header__lang-btn';
+      btn.id = 'langToggle';
+      btn.setAttribute('aria-label', 'Switch language');
+      btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+      bind(btn);
+      if (actionsEl.firstChild) {
+        actionsEl.insertBefore(btn, actionsEl.firstChild);
+      } else {
+        actionsEl.appendChild(btn);
+      }
+    }
+
+    // Mobile toggle: reuse existing hardcoded button, else inject one
+    if (existingMobile) {
+      bind(existingMobile);
+    } else if (navEl) {
       var mobileBtn = document.createElement('button');
       mobileBtn.className = 'header__lang-btn header__lang-btn--mobile';
       mobileBtn.textContent = currentLang === 'zh' ? 'Switch to English' : '切换到中文';
-      mobileBtn.addEventListener('click', function(){
-        window.App.setLang(currentLang === 'zh' ? 'en' : 'zh');
-      });
+      bind(mobileBtn);
       navEl.insertBefore(mobileBtn, navEl.firstChild);
     }
 

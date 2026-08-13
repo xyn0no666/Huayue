@@ -102,7 +102,7 @@
           '<span class="tag">'+getCatName(p.category)+' · '+p.powerType+'</span>'+
           '<h3>'+p.name+'</h3>'+
           '<p style="color:var(--color-text-light);font-size:0.8125rem;margin-bottom:var(--space-2)">'+p.description+'</p>'+
-          '<div class="quickview__specs">'+Object.entries(p.specs).map(function(e){return '<span><strong>'+e[0]+'</strong>: '+e[1]+'</span>'}).join('')+'</div>'+
+          '<div class="quickview__specs">'+Object.entries(p.specs).map(function(e){return '<span><strong>'+__('spec.'+e[0])+'</strong>: '+e[1]+'</span>'}).join('')+'</div>'+
           '<ul class="quickview__features">'+p.features.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
           (certsHTML?'<div style="margin-bottom:var(--space-2)">'+certsHTML+'</div>':'')+
           (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>'+__('common.leadTime')+'</strong> '+(p.leadTime||__('common.inquire'))+'</div>':'')+
