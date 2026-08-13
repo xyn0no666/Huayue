@@ -110,7 +110,6 @@
       '</button>'+
       '<div class="fab-wechat-popover" id="fabWechatPop">'+
         '<div class="fab-wechat-popover__qr"><img src="assets/images/wechat-qr.jpg" alt="'+__('fab.wechatQrAlt')+'" style="width:120px;height:120px;display:block;margin:0 auto"></div>'+
-        '<div style="margin-top:8px;font-size:0.75rem;color:var(--color-text)">WeChat ID: HuayueGarden</div>'+
         '<button class="fab-phone-popover__copy" id="fabWcCopy" style="margin-top:6px">'+
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'+
           ' '+__('fab.tooltip.copyWechat')+
