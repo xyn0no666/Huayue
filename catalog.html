@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="华悦园林产品画册 — 在线浏览全系列割灌机、油锯、吹风机产品及工厂实力。源头工厂，支持 OEM/ODM 定制。">
+<meta name="keywords" content="华悦园林,产品画册,Catalog,割灌机,油锯,吹风机,园林机械,OEM,ODM">
+<meta property="og:title" content="公司画册 Company Catalog — 华悦园林 Huayue Garden Machinery">
+<meta property="og:description" content="在线浏览华悦园林产品画册，了解全系列园林机械产品与工厂实力。">
+<meta property="og:image" content="https://xyn0no666.github.io/Huayue/assets/images/catalog/catalog-01.webp">
+<meta property="og:url" content="https://xyn0no666.github.io/Huayue/catalog.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="公司画册 Company Catalog — 华悦园林">
+<meta name="twitter:description" content="在线浏览华悦园林产品画册，了解全系列园林机械产品与工厂实力。">
+<meta name="twitter:image" content="https://xyn0no666.github.io/Huayue/assets/images/catalog/catalog-01.webp">
+<title>公司画册 Company Catalog — 华悦园林 Huayue Garden Machinery</title>
+<link rel="canonical" href="https://xyn0no666.github.io/Huayue/catalog.html">
+<link rel="alternate" hreflang="en" href="https://xyn0no666.github.io/Huayue/catalog.html?lang=en">
+<link rel="alternate" hreflang="zh" href="https://xyn0no666.github.io/Huayue/catalog.html">
+<link rel="alternate" hreflang="x-default" href="https://xyn0no666.github.io/Huayue/catalog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://ui-avatars.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#c4a97d">
+<style>
+  .catalog-hero{text-align:center;padding:clamp(48px,8vh,80px) 20px clamp(20px,4vh,36px);}
+  .catalog-hero__tag{display:inline-block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-gold);font-weight:600;margin-bottom:var(--space-2);}
+  .catalog-hero__title{font-family:var(--font-heading);font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 var(--space-2);}
+  .catalog-hero__sub{font-size:1.0625rem;color:var(--color-text-light);max-width:600px;margin:0 auto var(--space-4);line-height:1.7;}
+  .catalog-hero__meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--space-5);}
+  .catalog-hero__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .catalog-pages{max-width:900px;margin:0 auto;padding:0 20px clamp(56px,9vh,90px);}
+  .catalog-page{margin:0 0 22px;border-radius:10px;overflow:hidden;box-shadow:0 10px 34px rgba(0,0,0,.14);cursor:zoom-in;transition:transform .22s ease,box-shadow .22s ease;background:var(--color-card,#fff);}
+  .catalog-page:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,.2);}
+  .catalog-page img{width:100%;height:auto;display:block;}
+  .catalog-lightbox{position:fixed;inset:0;background:rgba(8,8,14,.95);z-index:1200;display:none;align-items:center;justify-content:center;}
+  .catalog-lightbox--open{display:flex;}
+  .catalog-lightbox__img{max-width:94vw;max-height:84vh;object-fit:contain;border-radius:6px;box-shadow:0 24px 70px rgba(0,0,0,.6);}
+  .catalog-lightbox__close{position:fixed;top:16px;right:22px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:1201;}
+  .catalog-lightbox__close:hover{background:rgba(255,255,255,.16);}
+  .catalog-lightbox__nav{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;font-size:30px;line-height:1;cursor:pointer;z-index:1201;display:flex;align-items:center;justify-content:center;padding-bottom:3px;}
+  .catalog-lightbox__nav:hover{background:rgba(255,255,255,.16);}
+  .catalog-lightbox__nav--prev{left:16px;}
+  .catalog-lightbox__nav--next{right:16px;}
+  .catalog-lightbox__counter{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.85);font-size:.9rem;letter-spacing:.08em;font-family:var(--font-mono,JetBrains Mono,monospace);}
+  @media (max-width:640px){
+    .catalog-lightbox__nav{width:42px;height:42px;font-size:24px;}
+    .catalog-lightbox__nav--prev{left:8px;}
+    .catalog-lightbox__nav--next{right:8px;}
+  }
+</style>
+</head>
+<body>
+<noscript>
+  <div style="background:#fff;color:#1a1a2e;text-align:center;padding:16px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-bottom:3px solid #c4a97d;line-height:1.6">
+    <p style="margin:0 0 6px;font-size:15px;font-weight:600">华悦园林 Huayue Garden Machinery</p>
+    <p style="margin:0;font-size:13px;color:#666">⚠️ 请启用 JavaScript 以浏览完整网站（产品展示 / 在线询盘 / 经销商系统）<br>Please enable JavaScript to view the full site (Products · Inquiry · Dealer Portal)</p>
+    <p style="margin:8px 0 0;font-size:13px">📞 <a href="tel:19862905209" style="color:#c4a97d">19862905209</a> &nbsp;|&nbsp; ✉️ <a href="mailto:3539576340@qq.com" style="color:#c4a97d">3539576340@qq.com</a> &nbsp;|&nbsp; 🏭 山东·临沂</p>
+  </div>
+</noscript>
+
+<header class="site-header" id="siteHeader">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="华悦园林">华悦<span>园林</span><span class="header__logo-dot"></span></a>
+    <nav class="header__nav" id="headerNav">
+      <a href="index.html" class="header__nav-link" data-i18n="nav.home">首页</a>
+      <a href="products.html" class="header__nav-link" data-i18n="nav.products">产品中心</a>
+      <a href="brand.html" class="header__nav-link" data-i18n="nav.brand">关于我们</a>
+      <a href="catalog.html" class="header__nav-link" data-i18n="nav.catalog">公司画册</a>
+      <a href="support.html" class="header__nav-link" data-i18n="nav.support">技术支持</a>
+      <a href="contact.html" class="header__nav-link" data-i18n="nav.contact">联系我们</a>
+      <button class="header__lang-btn header__lang-btn--mobile" id="langToggleMobile" aria-label="Switch language">EN</button>
+    </nav>
+    <div class="header__actions">
+      <button class="header__lang-btn" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="header__theme-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="header__cart-btn" id="headerCartBtn" data-cart-toggle aria-label="购物车">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="header__cart-count" id="headerCartCount">0</span>
+      </button>
+      <a href="dealer.html" class="header__dealer-link">经销商入口</a>
+      <a href="contact.html" class="btn btn--outline btn--sm">立即询问</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="catalog-hero">
+    <div class="u-container">
+      <span class="catalog-hero__tag" data-i18n="catalog.tag">Company Catalog</span>
+      <h1 class="catalog-hero__title" data-i18n="catalog.title">公司画册</h1>
+      <p class="catalog-hero__sub" data-i18n="catalog.subtitle">在线浏览产品画册，了解全系列园林机械产品与工厂实力</p>
+      <div class="catalog-hero__meta">
+        <span class="tag" data-i18n="catalog.pages">共 28 页</span>
+        <span class="tag" data-i18n="catalog.hint">点击任意页面放大浏览</span>
+      </div>
+      <div class="catalog-hero__actions">
+        <a href="assets/downloads/huayue-catalog.pdf" download class="btn btn--primary btn--lg" data-i18n="catalog.download">下载画册 PDF</a>
+        <a href="contact.html" class="btn btn--outline btn--lg" data-i18n="nav.contact">联系我们</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog-pages" id="catalogPages">
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-01.webp" alt="公司画册 第1页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-02.webp" alt="公司画册 第2页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-03.webp" alt="公司画册 第3页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-04.webp" alt="公司画册 第4页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-05.webp" alt="公司画册 第5页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-06.webp" alt="公司画册 第6页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-07.webp" alt="公司画册 第7页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-08.webp" alt="公司画册 第8页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-09.webp" alt="公司画册 第9页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-10.webp" alt="公司画册 第10页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-11.webp" alt="公司画册 第11页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-12.webp" alt="公司画册 第12页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-13.webp" alt="公司画册 第13页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-14.webp" alt="公司画册 第14页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-15.webp" alt="公司画册 第15页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-16.webp" alt="公司画册 第16页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-17.webp" alt="公司画册 第17页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-18.webp" alt="公司画册 第18页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-19.webp" alt="公司画册 第19页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-20.webp" alt="公司画册 第20页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-21.webp" alt="公司画册 第21页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-22.webp" alt="公司画册 第22页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-23.webp" alt="公司画册 第23页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-24.webp" alt="公司画册 第24页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-25.webp" alt="公司画册 第25页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-26.webp" alt="公司画册 第26页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-27.webp" alt="公司画册 第27页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+    <figure class="catalog-page"><img src="assets/images/catalog/catalog-28.webp" alt="公司画册 第28页" loading="lazy" decoding="async" width="2516" height="1719"></figure>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__brand-name">华悦园林</div>
+      <p class="footer__brand-desc">专业园林机械制造商 — 割灌机、油锯、吹风机源头工厂。多年OEM/ODM经验，服务全球50+国家客户。</p>
+    </div>
+    <div class="footer__col">
+      <div class="footer__col-title">导航</div>
+      <div class="footer__links">
+        <a href="index.html">首页</a><a href="products.html">产品中心</a><a href="brand.html">关于我们</a><a href="support.html">技术支持</a><a href="contact.html">联系我们</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__col-title">产品</div>
+      <div class="footer__links">
+        <a href="products.html?category=mower">割灌机</a><a href="products.html?category=chainsaw">油锯</a><a href="products.html?category=blower">吹风机</a><a href="product-detail.html">查看全部</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__col-title">服务</div>
+      <div class="footer__links">
+        <a href="catalog.html">公司画册</a><a href="support.html">FAQ</a><a href="dealer.html">经销商门户</a><a href="guide-1.html">选购指南</a><a href="privacy.html">隐私政策</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <div class="footer__col-title">联系</div>
+      <div class="footer__links">
+        <a href="tel:19862905209">19862905209</a>
+        <a href="mailto:&#51;&#53;&#51;&#57;&#53;&#55;&#54;&#51;&#52;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;">&#51;&#53;&#51;&#57;&#53;&#55;&#54;&#51;&#52;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;</a>
+        <a href="contact.html">在线询盘</a>
+        <a href="dealer.html">经销商门户</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 华悦园林 版权所有</span>
+    <span>永康市华悦园林机械有限公司</span>
+  </div>
+</footer>
+
+<div class="catalog-lightbox" id="catalogLightbox" aria-hidden="true" role="dialog" aria-label="画册预览">
+  <button class="catalog-lightbox__close" id="lbClose" aria-label="关闭">✕</button>
+  <button class="catalog-lightbox__nav catalog-lightbox__nav--prev" id="lbPrev" aria-label="上一页">‹</button>
+  <img class="catalog-lightbox__img" id="lbImg" src="" alt="">
+  <button class="catalog-lightbox__nav catalog-lightbox__nav--next" id="lbNext" aria-label="下一页">›</button>
+  <div class="catalog-lightbox__counter" id="lbCounter">1 / 28</div>
+</div>
+
+<script src="js/analytics.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/i18n-data.js"></script>
+<script src="js/cart.js"></script>
+<script>
+(function(){
+  var pages = document.querySelectorAll('.catalog-page');
+  if(!pages.length) return;
+  var pageCount = pages.length;
+  var lb = document.getElementById('catalogLightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCounter = document.getElementById('lbCounter');
+  var idx = 0;
+
+  function render(){
+    var im = pages[idx].querySelector('img');
+    var webp = im.getAttribute('src');
+    var jpg = webp.replace('.webp','.jpg');
+    lbImg.onerror = function(){
+      if(lbImg.getAttribute('src').indexOf('.webp') !== -1){ lbImg.src = jpg; }
+    };
+    lbImg.src = webp;
+    lbImg.alt = im.alt;
+    lbCounter.textContent = (idx+1) + ' / ' + pageCount;
+  }
+  function open(i){
+    idx = i;
+    render();
+    lb.classList.add('catalog-lightbox--open');
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('catalog-lightbox--open');
+    lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  function next(){ idx = (idx+1) % pageCount; render(); }
+  function prev(){ idx = (idx-1+pageCount) % pageCount; render(); }
+
+  Array.prototype.forEach.call(pages, function(page, i){
+    page.addEventListener('click', function(){ open(i); });
+  });
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbNext').addEventListener('click', next);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('catalog-lightbox--open')) return;
+    if(e.key === 'Escape') close();
+    else if(e.key === 'ArrowRight') next();
+    else if(e.key === 'ArrowLeft') prev();
+  });
+})();
+</script>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span data-i18n-html="cookie.text">本站使用Cookie以提升您的浏览体验。继续访问即表示您同意我们的 <a href="privacy.html">隐私政策</a>。</span>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--outline btn--sm" data-cookie="essential" data-i18n="cookie.essential">仅必要</button>
+      <button class="btn btn--primary btn--sm" data-cookie="all" data-i18n="cookie.accept">全部接受</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

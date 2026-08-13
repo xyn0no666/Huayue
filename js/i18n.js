@@ -11,7 +11,7 @@
       // Meta
       'meta.index.title':'华悦园林 — 专业园林机械制造商 | 源头工厂','meta.index.desc':'华悦园林 — 专业园林机械制造商，割灌机、油锯、吹风机源头工厂。多年OEM/ODM经验，欢迎全球客户询盘合作。',
       // Nav
-      'nav.home':'首页','nav.products':'产品中心','nav.brand':'关于我们','nav.support':'技术支持','nav.contact':'联系我们',
+      'nav.home':'首页','nav.products':'产品中心','nav.brand':'关于我们','nav.catalog':'公司画册','nav.support':'技术支持','nav.contact':'联系我们',
       // Header actions
       'header.dealer':'经销商入口','header.inquire':'立即询问','header.cart':'购物车','header.menu':'菜单',
       // Footer
@@ -74,8 +74,9 @@
       'brand.company.fullname.val':'华悦园林机械','brand.company.est.val':'2008年','brand.company.addr.val':'山东省临沂市罗庄区休闲垂钓园东北200米（银杏路东）','brand.company.area.val':'41,334 平方米','brand.company.staff.val':'100+ 人','brand.company.capacity.val':'15 万台',
       'brand.cert':'品质管控','brand.cert.1':'来料检验体系 — 关键零部件逐批抽检','brand.cert.2':'过程巡检制度 — 关键工序100%监控','brand.cert.3':'成品全检流程 — 功率/油耗/安全逐台检测','brand.cert.4':'耐久性验证 — 模拟极端工况连续运行测试','brand.cert.5':'环保材料管控 — 严格选用环保原材料与工艺','brand.cert.6':'产品追溯系统 — 唯一追溯码，48小时快速响应',
       'brand.partners':'服务承诺','brand.partner.1':'源头工厂直供 — 完全自主生产，成本可控','brand.partner.2':'灵活定制服务 — OEM/ODM全案，低MOQ试单','brand.partner.3':'多语言外贸团队 — 英语/德语/日语/西班牙语','brand.partner.4':'快速响应机制 — 询盘24h回复，样品3-5天发出','brand.partner.5':'完善的售后体系 — 备件充足，技术远程支持',
-      'brand.cta.title':'期待与您合作','brand.cta.desc':'欢迎预约验厂，近距离了解我们的制造实力','brand.cta.btn':'发送询盘','brand.cta.catalog':'下载产品画册',
+      'brand.cta.title':'期待与您合作','brand.cta.desc':'欢迎预约验厂，近距离了解我们的制造实力','brand.cta.btn':'发送询盘','brand.cta.browse':'在线浏览画册','brand.cta.catalog':'下载产品画册',
       'brand.issuer':'发证机构:',
+      'catalog.tag':'Company Catalog','catalog.title':'公司画册','catalog.subtitle':'在线浏览产品画册，了解全系列园林机械产品与工厂实力','catalog.download':'下载画册 PDF','catalog.pages':'共 28 页','catalog.hint':'点击任意页面放大浏览','catalog.close':'关闭',
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'联系我们','contact.subtitle':'无论产品咨询、获取报价还是预约验厂，我们的专业外贸团队随时为您服务',
       'contact.tab.inquiry':'产品咨询','contact.tab.quote':'获取报价','contact.tab.demo':'预约验厂','contact.tab.dealer':'经销商申请',
@@ -161,7 +162,7 @@
       // Meta
       'meta.index.title':'Huayue Garden — Professional Garden Machinery Manufacturer | Source Factory','meta.index.desc':'Huayue Garden — Professional garden machinery manufacturer. Brush cutters, chainsaws, and blowers direct from the source factory. Years of OEM/ODM experience. Contact us for cooperation.',
       // Nav
-      'nav.home':'Home','nav.products':'Products','nav.brand':'About Us','nav.support':'Support','nav.contact':'Contact',
+      'nav.home':'Home','nav.products':'Products','nav.brand':'About Us','nav.catalog':'Catalog','nav.support':'Support','nav.contact':'Contact',
       // Header actions
       'header.dealer':'Dealer Portal','header.inquire':'Inquire Now','header.cart':'Cart','header.menu':'Menu',
       // Footer
@@ -224,8 +225,9 @@
       'brand.company.fullname.val':'Huayue Garden Machinery','brand.company.est.val':'2008','brand.company.addr.val':'200m NE of Leisure Fishing Garden, Luozhuang District, Linyi, Shandong, China (east of Yinxing Road)','brand.company.area.val':'41,334 m²','brand.company.staff.val':'100+','brand.company.capacity.val':'150,000 units',
       'brand.cert':'Quality Control','brand.cert.1':'Incoming Inspection — Batch sampling of key components','brand.cert.2':'In-Process Patrol — 100% monitoring of critical steps','brand.cert.3':'Final Full Inspection — Power, fuel & safety per unit','brand.cert.4':'Durability Verification — Extended testing under extreme conditions','brand.cert.5':'Eco-Friendly Materials — Strict sourcing of green materials','brand.cert.6':'Product Traceability — Unique ID, 48-hour rapid response',
       'brand.partners':'Service Commitments','brand.partner.1':'Direct Factory Supply — Full in-house, cost under control','brand.partner.2':'Flexible Customization — Full OEM/ODM, low MOQ trials','brand.partner.3':'Multilingual Team — EN/DE/JP/ES trade managers','brand.partner.4':'Rapid Response — 24h reply, 3-5 day sample dispatch','brand.partner.5':'Complete After-Sales — Ample spare parts, remote support',
-      'brand.cta.title':'Looking Forward to Working With You','brand.cta.desc':'Schedule a factory visit to experience our manufacturing strength up close','brand.cta.btn':'Send Inquiry','brand.cta.catalog':'Download Catalog',
+      'brand.cta.title':'Looking Forward to Working With You','brand.cta.desc':'Schedule a factory visit to experience our manufacturing strength up close','brand.cta.btn':'Send Inquiry','brand.cta.browse':'View Catalog Online','brand.cta.catalog':'Download Catalog',
       'brand.issuer':'Issuer: ',
+      'catalog.tag':'Company Catalog','catalog.title':'Company Catalog','catalog.subtitle':'Browse our product catalog online to explore the full range of garden machinery and factory capabilities','catalog.download':'Download Catalog PDF','catalog.pages':'28 pages','catalog.hint':'Click any page to enlarge','catalog.close':'Close',
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'Contact Us','contact.subtitle':'Whether product inquiry, quotation request, or factory visit — our professional trade team is here to serve you',
       'contact.tab.inquiry':'Product Inquiry','contact.tab.quote':'Get Quote','contact.tab.demo':'Factory Visit','contact.tab.dealer':'Dealer Application',
@@ -333,12 +335,14 @@
       ['.header__nav-link[href="index.html"]', 'nav.home'],
       ['.header__nav-link[href="products.html"]', 'nav.products'],
       ['.header__nav-link[href="brand.html"]', 'nav.brand'],
+      ['.header__nav-link[href="catalog.html"]', 'nav.catalog'],
       ['.header__nav-link[href="support.html"]', 'nav.support'],
       ['.header__nav-link[href="contact.html"]', 'nav.contact'],
       // Also match clean URLs (Netlify)
       ['a.header__nav-link[href="/"]', 'nav.home'],
       ['.header__nav-link[href="/products"]', 'nav.products'],
       ['.header__nav-link[href="/brand"]', 'nav.brand'],
+      ['.header__nav-link[href="/catalog"]', 'nav.catalog'],
       ['.header__nav-link[href="/support"]', 'nav.support'],
       ['.header__nav-link[href="/contact"]', 'nav.contact'],
       // Header actions
