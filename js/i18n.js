@@ -74,7 +74,7 @@
       'brand.company.fullname.val':'华悦园林机械','brand.company.est.val':'2008年','brand.company.addr.val':'山东省临沂市罗庄区休闲垂钓园东北200米（银杏路东）','brand.company.area.val':'41,334 平方米','brand.company.staff.val':'100+ 人','brand.company.capacity.val':'15 万台',
       'brand.cert':'品质管控','brand.cert.1':'来料检验体系 — 关键零部件逐批抽检','brand.cert.2':'过程巡检制度 — 关键工序100%监控','brand.cert.3':'成品全检流程 — 功率/油耗/安全逐台检测','brand.cert.4':'耐久性验证 — 模拟极端工况连续运行测试','brand.cert.5':'环保材料管控 — 严格选用环保原材料与工艺','brand.cert.6':'产品追溯系统 — 唯一追溯码，48小时快速响应',
       'brand.partners':'服务承诺','brand.partner.1':'源头工厂直供 — 完全自主生产，成本可控','brand.partner.2':'灵活定制服务 — OEM/ODM全案，低MOQ试单','brand.partner.3':'多语言外贸团队 — 英语/德语/日语/西班牙语','brand.partner.4':'快速响应机制 — 询盘24h回复，样品3-5天发出','brand.partner.5':'完善的售后体系 — 备件充足，技术远程支持',
-      'brand.cta.title':'期待与您合作','brand.cta.desc':'欢迎预约验厂，近距离了解我们的制造实力','brand.cta.btn':'发送询盘',
+      'brand.cta.title':'期待与您合作','brand.cta.desc':'欢迎预约验厂，近距离了解我们的制造实力','brand.cta.btn':'发送询盘','brand.cta.catalog':'下载产品画册',
       'brand.issuer':'发证机构:',
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'联系我们','contact.subtitle':'无论产品咨询、获取报价还是预约验厂，我们的专业外贸团队随时为您服务',
@@ -224,7 +224,7 @@
       'brand.company.fullname.val':'Huayue Garden Machinery','brand.company.est.val':'2008','brand.company.addr.val':'200m NE of Leisure Fishing Garden, Luozhuang District, Linyi, Shandong, China (east of Yinxing Road)','brand.company.area.val':'41,334 m²','brand.company.staff.val':'100+','brand.company.capacity.val':'150,000 units',
       'brand.cert':'Quality Control','brand.cert.1':'Incoming Inspection — Batch sampling of key components','brand.cert.2':'In-Process Patrol — 100% monitoring of critical steps','brand.cert.3':'Final Full Inspection — Power, fuel & safety per unit','brand.cert.4':'Durability Verification — Extended testing under extreme conditions','brand.cert.5':'Eco-Friendly Materials — Strict sourcing of green materials','brand.cert.6':'Product Traceability — Unique ID, 48-hour rapid response',
       'brand.partners':'Service Commitments','brand.partner.1':'Direct Factory Supply — Full in-house, cost under control','brand.partner.2':'Flexible Customization — Full OEM/ODM, low MOQ trials','brand.partner.3':'Multilingual Team — EN/DE/JP/ES trade managers','brand.partner.4':'Rapid Response — 24h reply, 3-5 day sample dispatch','brand.partner.5':'Complete After-Sales — Ample spare parts, remote support',
-      'brand.cta.title':'Looking Forward to Working With You','brand.cta.desc':'Schedule a factory visit to experience our manufacturing strength up close','brand.cta.btn':'Send Inquiry',
+      'brand.cta.title':'Looking Forward to Working With You','brand.cta.desc':'Schedule a factory visit to experience our manufacturing strength up close','brand.cta.btn':'Send Inquiry','brand.cta.catalog':'Download Catalog',
       'brand.issuer':'Issuer: ',
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'Contact Us','contact.subtitle':'Whether product inquiry, quotation request, or factory visit — our professional trade team is here to serve you',

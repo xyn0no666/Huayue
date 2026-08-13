@@ -94,7 +94,7 @@
 
   /* === Marketing Download Buttons (informational) === */
   function initMarketingButtons(){
-    document.querySelectorAll('.marketing-card__body .btn').forEach(function(btn){
+    document.querySelectorAll('.marketing-card__body button.btn').forEach(function(btn){
       btn.addEventListener('click',function(e){
         e.preventDefault();
         // TODO: Replace with real download links to PDF catalogs and marketing materials
