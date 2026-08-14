@@ -493,7 +493,7 @@
 
   /* === Init === */
   A.Core={init:function(){
-    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initTawkTo();initWebPFallback();initReadingProgress();initBackToTop();
+    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initWebPFallback();initReadingProgress();initBackToTop();
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}
