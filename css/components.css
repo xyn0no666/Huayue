@@ -274,7 +274,7 @@
 }
 
 /* === Floating Contact Buttons === */
-.fab-stack{position:fixed;bottom:24px;right:24px;z-index:1100;display:flex;flex-direction:column;gap:12px}
+.fab-stack{position:fixed;bottom:88px;right:24px;z-index:1100;display:flex;flex-direction:column;gap:12px}
 .fab-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:all var(--transition);position:relative}
 .fab-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .fab-btn--whatsapp{background:#25D366;color:#fff}
@@ -318,6 +318,14 @@
 }
 
 [data-theme="dark"] .fab-phone-popover{background:var(--color-dark-surface)}
+
+/* === Tawk.to Live Chat Widget（位置对齐右侧 FAB；尺寸缩放见 core.js） === */
+iframe[title='chat widget'],
+iframe[src*="tawk.to"],
+iframe[id*="tawk"]{
+  bottom:24px !important;
+  right:24px !important;
+}
 
 /* === Quick View Overlay === */
 .quickview-overlay{
@@ -522,7 +530,8 @@
     display:flex;align-items:center;justify-content:space-around;gap:0;
   }
   body{padding-bottom:75px}
-  .fab-stack{bottom:90px}
+  .fab-stack{bottom:154px}
+  iframe[title='chat widget'],iframe[src*="tawk.to"],iframe[id*="tawk"]{bottom:90px !important;right:16px !important}
   .contact-bubble{bottom:165px}
   .contact-popup{bottom:230px}
 }

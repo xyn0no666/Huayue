@@ -397,6 +397,11 @@
   /* === Tawk.to Live Chat === */
   function initTawkTo(){
     window.Tawk_API=window.Tawk_API||{}; window.Tawk_LoadStart=new Date();
+    window.Tawk_API.onLoad=function(){
+      styleTawkWidget();
+      setTimeout(styleTawkWidget,500);
+      setTimeout(styleTawkWidget,1500);
+    };
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
@@ -404,6 +409,23 @@
     s1.charset='UTF-8';
     s0.parentNode.insertBefore(s1,s0);
     })();
+  }
+
+  /* 让 Tawk 气泡与右侧 FAB 按钮等大并对齐 */
+  function styleTawkWidget(){
+    var small=window.innerWidth<=767;
+    var f=document.querySelector("iframe[title='chat widget']")||document.querySelector("iframe[src*='tawk.to']")||document.querySelector("iframe[id*='tawk']");
+    if(!f)return;
+    f.style.setProperty('bottom',small?'90px':'24px','important');
+    f.style.setProperty('right',small?'16px':'24px','important');
+    // 尺寸：仅当 iframe 本身是「气泡大小」(40~120px) 时才缩放；太大说明是聊天面板容器，不缩
+    var rect=f.getBoundingClientRect();
+    var size=Math.round(Math.max(rect.width,rect.height));
+    if(size>=40&&size<=120&&size!==52){
+      var s=52/size;
+      f.style.setProperty('transform','scale('+s+')','important');
+      f.style.setProperty('transform-origin','bottom right','important');
+    }
   }
 
   /* === WebP Fallback === */
