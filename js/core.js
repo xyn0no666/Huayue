@@ -494,6 +494,8 @@
   /* === Init === */
   A.Core={init:function(){
     initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initWebPFallback();initReadingProgress();initBackToTop();
+    // 右下角悬浮联系图标 + tawk 仅保留在「联系我们」页
+    if(/(^|\/)contact\.html([?#]|$)/.test(location.pathname)){initFab();initTawkTo();}
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}

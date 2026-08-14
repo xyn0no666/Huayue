@@ -106,35 +106,8 @@
     });
   }
 
-  /* === Tawk 在线客服（仅联系页：隐藏悬浮气泡，点击卡片打开聊天） === */
-  function initTawkChat(){
-    var card=document.getElementById('tawkChatCard');
-    if(!card)return;
-    window.Tawk_API=window.Tawk_API||{}; window.Tawk_LoadStart=new Date();
-    window.Tawk_API.onLoad=function(){
-      try{ window.Tawk_API.hideWidget(); }catch(e){}
-    };
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/6a7bd87a73934d1d3e07bc24/1jvpsb8fn';
-      s1.charset='UTF-8';
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-    function openChat(){
-      if(window.Tawk_API){
-        try{ window.Tawk_API.showWidget(); }catch(e){}
-        try{ window.Tawk_API.maximize(); }catch(e){}
-      }
-    }
-    card.addEventListener('click',openChat);
-    card.addEventListener('keydown',function(e){
-      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openChat(); }
-    });
-  }
-
   function init(){
-    initTabs();initForms();initTawkChat();
+    initTabs();initForms();
   }
 
   window.App=window.App||{};
