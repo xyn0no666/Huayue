@@ -186,26 +186,6 @@
     document.querySelectorAll('[data-count]').forEach(function(el){animateCounter(el)});
   }
 
-  /* === Testimonials === */
-  function renderTestimonials(){
-    var grid=document.getElementById('testimonialsGrid');
-    if(!grid)return;
-    grid.innerHTML=testimonials.map(function(t){
-      var initials=t.name.charAt(0);
-      var avatarHTML=t.avatar
-        ?'<div class="testimonial-card__avatar"><img src="'+t.avatar+'" alt="'+t.name+'" loading="lazy" style="width:100%;height:100%;border-radius:50%;object-fit:cover"></div>'
-        :'<div class="testimonial-card__avatar">'+initials+'</div>';
-      return '<div class="testimonial-card fade-in">'+
-        '<div class="testimonial-card__stars">'+'★'.repeat(t.rating)+'</div>'+
-        '<p class="testimonial-card__text">"'+t.text+'"</p>'+
-        '<div class="testimonial-card__author">'+
-          avatarHTML+
-          '<div><div class="testimonial-card__name">'+t.name+(t.location?' <span class="testimonial-card__location">· '+t.location+'</span>':'')+'</div>'+(t.company?'<div class="testimonial-card__company">'+t.company+'</div>':'')+'</div>'+
-        '</div>'+
-      '</div>';
-    }).join('');
-  }
-
   /* === Testimonial Slider === */
   function initTestimonialSlider(){
     var track=document.getElementById('testimonialTrack');
@@ -259,7 +239,6 @@
     interval=setInterval(rotate,5000);
   }
 
-  /* === Init === */
   /* === Testimonial Submit === */
   function initTestimonialSubmit(){
     var btn=document.getElementById('submitTestimonial');
@@ -293,9 +272,25 @@
     });
   }
 
+  /* === Fade-in（动态注入元素重新观察） === */
+  function initFadeIn(){
+    var els=document.querySelectorAll('.fade-in:not(.visible)');
+    if(!els.length)return;
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('visible')});
+      return;
+    }
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+      });
+    },{threshold:0.15});
+    els.forEach(function(el){observer.observe(el)});
+  }
+
   /* === Init === */
   function init(){
-    renderCategories();renderFeatured();renderStats();initHero();initTestimonialSlider();initTestimonialSubmit();
+    renderCategories();renderFeatured();renderStats();initHero();initTestimonialSlider();initTestimonialSubmit();initFadeIn();
   }
 
   window.App=window.App||{};
@@ -306,6 +301,6 @@
 
   // Re-render on language change
   document.addEventListener('lang:changed',function(){
-    renderCategories();renderFeatured();renderStats();initTestimonialSlider();
+    renderCategories();renderFeatured();renderStats();initTestimonialSlider();initFadeIn();
   });
 })();

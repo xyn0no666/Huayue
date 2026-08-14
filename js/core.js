@@ -426,9 +426,52 @@
     });
   }
 
+  /* === Reading Progress Bar === */
+  function initReadingProgress(){
+    if(document.querySelector('.reading-progress'))return;
+    var bar=document.createElement('div');
+    bar.className='reading-progress';
+    document.body.appendChild(bar);
+    var ticking=false;
+    function update(){
+      ticking=false;
+      var doc=document.documentElement;
+      var max=doc.scrollHeight-window.innerHeight;
+      bar.style.width=(max>0?(window.scrollY/max)*100:0).toFixed(3)+'%';
+    }
+    window.addEventListener('scroll',function(){
+      if(!ticking){requestAnimationFrame(update);ticking=true;}
+    },{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+
+  /* === Back to Top === */
+  function initBackToTop(){
+    if(document.querySelector('.back-to-top'))return;
+    var btn=document.createElement('button');
+    btn.className='back-to-top';
+    btn.setAttribute('aria-label','Back to top');
+    btn.innerHTML='<svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>';
+    document.body.appendChild(btn);
+    var ticking=false;
+    function toggle(){
+      ticking=false;
+      btn.classList.toggle('back-to-top--visible',window.scrollY>400);
+    }
+    window.addEventListener('scroll',function(){
+      if(!ticking){requestAnimationFrame(toggle);ticking=true;}
+    },{passive:true});
+    btn.addEventListener('click',function(){
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    });
+    toggle();
+  }
+
   /* === Init === */
   A.Core={init:function(){
-    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initTawkTo();initWebPFallback();
+    initHeaderScroll();initMobileMenu();initActiveNav();initSmoothScroll();initFadeIn();initFab();initTheme();initCookieBanner();initMobileContactBar();initFooterWhatsApp();initTawkTo();initWebPFallback();initReadingProgress();initBackToTop();
   }};
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',A.Core.init)}

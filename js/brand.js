@@ -26,9 +26,49 @@
     }).join('');
   }
 
+  /* === 发展历程 · 滚动联动（scrub） === */
+  var timelineBound=false;
+  function initTimeline(){
+    var timeline=document.querySelector('.timeline');
+    var items=document.querySelectorAll('.timeline__item');
+    if(!timeline||!items.length)return;
+
+    var thresholds=[];
+    function measure(){
+      var r=timeline.getBoundingClientRect();
+      var top=r.top;var h=r.height;
+      thresholds=[];
+      items.forEach(function(it){
+        var ir=it.getBoundingClientRect();
+        thresholds.push(Math.max(0,Math.min(1,(ir.top-top+24)/Math.max(1,h))));
+      });
+    }
+    function update(){
+      var rect=timeline.getBoundingClientRect();
+      var vh=window.innerHeight;
+      var p=Math.max(0,Math.min(1,(vh-rect.top)/(vh+rect.height)));
+      timeline.style.setProperty('--p',p.toFixed(4));
+      items.forEach(function(it,i){it.classList.toggle('is-active',p>=thresholds[i])});
+    }
+
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      timeline.style.setProperty('--p',1);
+      items.forEach(function(it){it.classList.add('is-active')});
+      return;
+    }
+    measure();
+    update();
+    if(timelineBound)return;
+    timelineBound=true;
+    window.addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});
+    window.addEventListener('resize',function(){measure();update()});
+    window.addEventListener('load',function(){measure();update()});
+  }
+
   function init(){
     renderCerts();
     initFadeIn();
+    initTimeline();
   }
 
   function initFadeIn(){
@@ -51,5 +91,5 @@
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}
   else{init()}
 
-  document.addEventListener('lang:changed',function(){renderCerts();});
+  document.addEventListener('lang:changed',function(){renderCerts();initTimeline();});
 })();

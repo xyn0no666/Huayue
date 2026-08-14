@@ -1,5 +1,5 @@
 // Service Worker for 华悦园林 — offline cache
-const CACHE_NAME = 'huayue-v1';
+const CACHE_NAME = 'huayue-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -89,21 +89,18 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Static assets (CSS, JS, images, fonts) — Cache-first, network update
+  // Static assets (CSS, JS, images, fonts) — Network-first, fallback to cache
   if (url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff2?|ttf|otf)$/i) ||
       url.hostname === 'fonts.googleapis.com' ||
       url.hostname === 'fonts.gstatic.com') {
     event.respondWith(
-      caches.match(request).then(cached => {
-        const fetchPromise = fetch(request).then(response => {
-          if (response.ok) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
-          }
-          return response;
-        }).catch(() => null);
-        return cached || fetchPromise;
-      })
+      fetch(request).then(response => {
+        if (response && response.status === 200) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+        }
+        return response;
+      }).catch(() => caches.match(request))
     );
     return;
   }

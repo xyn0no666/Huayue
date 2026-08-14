@@ -104,3 +104,27 @@
   .factory-grid,.categories-grid,.featured-grid,.stats-grid{grid-template-columns:1fr}
   .hero__scroll-hint{display:none}
 }
+
+/* === Hero 电影感动画 === */
+.hero__slide .hero__content>*{opacity:0;transform:translateY(24px)}
+.hero__slide--active .hero__content>*{animation:heroReveal .7s cubic-bezier(.22,.61,.36,1) forwards}
+.hero__slide--active .hero__content>*:nth-child(1){animation-delay:.2s}
+.hero__slide--active .hero__content>*:nth-child(2){animation-delay:.35s}
+.hero__slide--active .hero__content>*:nth-child(3){animation-delay:.5s}
+.hero__slide--active .hero__content>*:nth-child(4){animation-delay:.65s}
+@keyframes heroReveal{to{opacity:1;transform:translateY(0)}}
+
+/* Ken Burns 缓速推进 */
+.hero__slide--active .hero__bg{animation:heroZoom 7s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+
+/* 工厂卡片错落进场 */
+.factory-card:nth-child(2){transition-delay:.08s}
+.factory-card:nth-child(3){transition-delay:.16s}
+.factory-card:nth-child(4){transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  .hero__slide .hero__content>*{opacity:1;transform:none}
+  .hero__slide--active .hero__bg,.hero__slide--active .hero__content>*{animation:none}
+  .factory-card:nth-child(2),.factory-card:nth-child(3),.factory-card:nth-child(4){transition-delay:0s}
+}
