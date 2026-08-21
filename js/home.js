@@ -239,39 +239,6 @@
     interval=setInterval(rotate,5000);
   }
 
-  /* === Testimonial Submit === */
-  function initTestimonialSubmit(){
-    var btn=document.getElementById('submitTestimonial');
-    var textarea=document.getElementById('testimonialText');
-    var success=document.getElementById('testimonialSuccess');
-    var starsContainer=document.getElementById('testimonialStars');
-    var rating=0;
-    if(starsContainer){
-      var stars=starsContainer.querySelectorAll('.tstar');
-      stars.forEach(function(s){
-        s.addEventListener('click',function(){
-          rating=parseInt(this.getAttribute('data-star'));
-          stars.forEach(function(star,i){star.style.color=i<rating?'var(--color-gold)':'var(--color-border)'});
-        });
-        s.addEventListener('mouseenter',function(){var v=parseInt(this.getAttribute('data-star'));stars.forEach(function(star,i){star.style.color=i<v?'var(--color-gold)':'var(--color-border)'})});
-      });
-      starsContainer.addEventListener('mouseleave',function(){stars.forEach(function(star,i){star.style.color=i<rating?'var(--color-gold)':'var(--color-border)'})});
-    }
-    if(!btn||!textarea)return;
-    btn.addEventListener('click',function(){
-      var val=textarea.value.trim();
-      if(!val){if(window.App&&window.App.toast)window.App.toast(__('home.reviewPlaceholder'));return}
-      // Save to localStorage
-      var submissions=JSON.parse(localStorage.getItem('huayue-testimonials')||'[]');
-      submissions.push({text:val,rating:rating,date:new Date().toISOString()});
-      localStorage.setItem('huayue-testimonials',JSON.stringify(submissions));
-      btn.style.display='none';
-      textarea.style.display='none';
-      if(starsContainer)starsContainer.parentElement.style.display='none';
-      if(success)success.style.display='block';
-    });
-  }
-
   /* === Fade-in（动态注入元素重新观察） === */
   function initFadeIn(){
     var els=document.querySelectorAll('.fade-in:not(.visible)');
@@ -290,7 +257,7 @@
 
   /* === Init === */
   function init(){
-    renderCategories();renderFeatured();renderStats();initHero();initTestimonialSlider();initTestimonialSubmit();initFadeIn();
+    renderCategories();renderFeatured();renderStats();initHero();initTestimonialSlider();initFadeIn();
   }
 
   window.App=window.App||{};
