@@ -49,9 +49,9 @@
     if(!grid)return;
     var catColors={mower:'transparent',chainsaw:'transparent',blower:'transparent'};
     var catSVGs={
-      mower:'<img src="assets/images/mower-icon.png" alt="割灌机" style="max-width:80%;max-height:80%;object-fit:contain">',
-      chainsaw:'<img src="assets/images/chainsaw-category-bg.png" alt="油锯" style="max-width:90%;max-height:90%;object-fit:contain">',
-      blower:'<img src="assets/images/blower-category-bg.png" alt="吹风机" style="max-width:95%;max-height:95%;object-fit:contain;position:relative;top:8%">',
+      mower:'<img src="assets/images/mower-icon.webp" alt="割灌机" style="max-width:80%;max-height:80%;object-fit:contain">',
+      chainsaw:'<img src="assets/images/chainsaw-category-bg.webp" alt="油锯" style="max-width:90%;max-height:90%;object-fit:contain">',
+      blower:'<img src="assets/images/blower-category-bg.webp" alt="吹风机" style="max-width:95%;max-height:95%;object-fit:contain;position:relative;top:8%">',
     };
     var catData=getCategories().filter(function(c){return c.id!=='all'});
     grid.innerHTML=catData.map(function(c){
@@ -239,6 +239,16 @@
     interval=setInterval(rotate,5000);
   }
 
+  /* === Certifications Trust Strip === */
+  function renderCerts(){
+    var el=document.getElementById('homeCerts');
+    if(!el)return;
+    var certs=(window.App&&window.App.getData().certifications)||[];
+    el.innerHTML=certs.map(function(c){
+      return '<div class="cert-pill"><span class="cert-pill__name">'+c.name+'</span><span class="cert-pill__issuer">'+c.issuer+'</span></div>';
+    }).join('');
+  }
+
   /* === Fade-in（动态注入元素重新观察） === */
   function initFadeIn(){
     var els=document.querySelectorAll('.fade-in:not(.visible)');
@@ -257,7 +267,7 @@
 
   /* === Init === */
   function init(){
-    renderCategories();renderFeatured();renderStats();initHero();initTestimonialSlider();initFadeIn();
+    renderCategories();renderFeatured();renderStats();renderCerts();initHero();initTestimonialSlider();initFadeIn();
   }
 
   window.App=window.App||{};

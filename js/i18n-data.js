@@ -211,7 +211,7 @@ window.APP_DATA_EN={
     {title:"Brush Cutter Buying Guide — Model Selection by Market",readTime:"10 min",image:"assets/images/guide-brushcutter.jpg",desc:"Analysis of regulations, usage habits, and price bands for brush cutters across different country markets",url:"guide-1.html"},
     {title:"Chainsaw Safety Operation & Maintenance Manual",readTime:"12 min",image:"assets/images/guide-chainsaw.jpg",desc:"Safety standards and routine maintenance guide for professional chainsaw operation",url:"guide-2.html"},
     {title:"Garden Equipment Ocean Freight Packaging Standards",readTime:"8 min",image:"assets/images/guide-shipping.jpg",desc:"Rust prevention, packaging standards, and container loading solutions for export equipment",url:"guide-3.html"},
-    {title:"2-Stroke vs 4-Stroke: Power System Selection Guide",readTime:"15 min",image:"assets/images/guide-engine.png",desc:"Comprehensive comparison of power systems to help choose the optimal gasoline model",url:"guide-4.html"}
+    {title:"2-Stroke vs 4-Stroke: Power System Selection Guide",readTime:"15 min",image:"assets/images/guide-engine.webp",desc:"Comprehensive comparison of power systems to help choose the optimal gasoline model",url:"guide-4.html"}
   ],
   certifications:[
     {name:"ISO 9001:2015",desc:"Quality Management System",id:"QAIC/CN/186523",issuer:"QA International Certification"},

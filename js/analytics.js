@@ -12,7 +12,7 @@
 (function(){
   'use strict';
 
-  var gaId = ''; // TODO: 替换为真实 GA4 测量 ID（格式：G-XXXXXXXXXX）
+  var gaId = 'G-LTPFMRYXFF';
 
   // 未配置真实 ID 时不加载
   if (!gaId) return;
