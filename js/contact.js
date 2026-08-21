@@ -80,6 +80,9 @@
         // Primary: Submit via FormSubmit.co (free tier, works on any hosting)
         fd.append('_subject','华悦园林询盘 - '+typeLabels[formType]);
         fd.append('_template','table');
+        fd.append('_captcha','false');
+        var emailField=this.querySelector('input[type="email"]');
+        if(emailField&&emailField.value.trim())fd.append('_replyto',emailField.value.trim());
         var formEl=this;
         fetch('https://formsubmit.co/ajax/3539576340@qq.com',{method:'POST',body:fd}).then(function(res){return res.json()}).then(function(result){
           btn.disabled=false;btn.textContent=origText;

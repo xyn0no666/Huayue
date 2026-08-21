@@ -56,6 +56,9 @@
       var fd=new FormData();
       fd.append('_subject','华悦园林经销商申请 - '+company);
       fd.append('_template','table');
+      fd.append('_captcha','false');
+      var emailField=form.querySelector('input[type="email"]');
+      if(emailField&&emailField.value.trim())fd.append('_replyto',emailField.value.trim());
       Object.keys(data.fields).forEach(function(k){if(data.fields[k])fd.append(k,data.fields[k])});
 
       submitBtn.textContent='提交中...';
