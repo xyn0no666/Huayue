@@ -28,8 +28,8 @@
 /* Manual List */
 .manual-list{max-width:800px;margin:0 auto}
 .manual-item{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-bottom:1px solid var(--color-border);transition:background var(--transition-fast)}
-.manual-item:hover{background:rgba(76,175,80,0.06)}
-.manual-item__icon{width:44px;height:44px;background:rgba(76,175,80,0.1);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.manual-item:hover{background:rgba(196,169,125,0.06)}
+.manual-item__icon{width:44px;height:44px;background:rgba(196,169,125,0.1);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
 .manual-item__info{flex:1}
 .manual-item__name{font-size:0.9375rem;font-weight:500}
 .manual-item__meta{font-size:0.75rem;color:var(--color-text-muted)}
@@ -37,7 +37,7 @@
 .manual-item__download:hover{background:var(--color-gold);color:#fff}
 
 /* CTA Section */
-.support-cta{background:linear-gradient(180deg,var(--color-base) 0%,rgba(76,175,80,0.08) 100%)}
+.support-cta{background:linear-gradient(180deg,var(--color-base) 0%,rgba(196,169,125,0.08) 100%)}
 
 @media (max-width:1023px){
   .guides-grid{grid-template-columns:repeat(2,1fr)}

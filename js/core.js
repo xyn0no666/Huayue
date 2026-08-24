@@ -342,7 +342,7 @@
   function getTheme(){
     var saved=localStorage.getItem(THEME_KEY);
     if(saved==='dark'||saved==='light')return saved;
-    return 'light';
+    return sysDark.matches?'dark':'light';
   }
 
   function applyTheme(t){
@@ -351,7 +351,7 @@
   }
 
   function initTheme(){
-    applyTheme('light');
+    applyTheme(getTheme());
     var btn=document.getElementById('themeToggle');
     if(btn){
       btn.addEventListener('click',function(){

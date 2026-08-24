@@ -14,7 +14,7 @@
 .guide-article table th{background:var(--color-dark-bg);color:var(--color-text-inverse);font-weight:600}
 .guide-article table td{color:var(--color-text-light)}
 .guide-article table tr:nth-child(even) td{background:var(--color-surface)}
-.guide-article .guide-tip{background:rgba(76,175,80,0.1);border-left:3px solid var(--color-gold);padding:var(--space-2) var(--space-3);margin:var(--space-3) 0;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.guide-article .guide-tip{background:rgba(196,169,125,0.1);border-left:3px solid var(--color-gold);padding:var(--space-2) var(--space-3);margin:var(--space-3) 0;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
 .guide-article .guide-tip strong{color:var(--color-gold-dark)}
 .guide-article .guide-tip p{font-size:0.875rem;margin:0}
 .guide-article .guide-back{margin-top:var(--space-8);padding-top:var(--space-4);border-top:2px solid var(--color-border)}
