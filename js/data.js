@@ -7,7 +7,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:280,
+      moq:"1台",price:280,
       description:"手提式割灌机，42.7cc强劲动力，轻量化设计仅8.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。"
     },
     {
@@ -17,7 +17,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","牛角手柄","快速装卸刀片","可换装打草头","低振动技术"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:320,
+      moq:"1台",price:320,
       description:"手提式割灌机，37.7cc动力，牛角手柄设计。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割，兼顾家用和轻型商用。",
     },
     {
@@ -27,7 +27,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"37.7cc",power:"1.0kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["便携手提设计","U型把手","快拆刀片系统","可换装打草头","铝合金传动轴"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:420,
+      moq:"1台",price:420,
       description:"升级版手提式割灌机，U型把手操控更省力，铝合金传动轴耐用升级。快拆刀片系统提升换装效率，适合长时间高强度作业。",
     },
     {
@@ -37,7 +37,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"31.0cc",power:"0.75kw/6500rpm",tank:"0.75L",shaft:"1500mm",weight:"9/10.5kg",size:"340×320×450mm / 1650×100×100mm"},
       features:["轻量手提设计","环形手柄","0.75L大油箱","可换装打草头","长续航作业"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:360,
+      moq:"1台",price:360,
       description:"手提式割灌机，31.0cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
     {
@@ -47,7 +47,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
       features:["大功率发动机","防震手柄","免工具链条张紧","惯性刹车","一键熄火"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:320,
+      moq:"1台",price:320,
       description:"大功率油锯5200，52cc强劲动力，20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。",
     },
     {
@@ -57,7 +57,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
       features:["轻量手提设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:145,
+      moq:"1台",price:145,
       description:"手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
@@ -67,7 +67,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"4.5/6kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","低振动","大容量油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:220,
+      moq:"1台",price:220,
       description:"入门级手提式汽油吹风机，25.4cc动力，75m/s风速。轻量便携仅4.5kg，适合家庭庭院清扫、落叶清理等轻型日常使用场景。"
     },
     {
@@ -77,7 +77,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"78m/s",weight:"4.2/5.8kg",size:"460×290×390mm"},
       features:["手提式设计","无级变速油门","巡航定速","减震手柄","大型油箱"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:330,
+      moq:"1台",price:330,
       description:"EB260加强版，25.4cc动力优化调校，78m/s强劲风速。配备减震手柄和大型油箱，适合长时间商业吹扫作业。"
     },
     {
@@ -87,7 +87,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"25.4cc",power:"1kw/7890rpm",airSpeed:"70m/s",weight:"3.8kg",size:"327×268×360mm"},
       features:["轻量手提设计","高效涡流风道","巡航定速","人体工学手柄","低振动"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:450,
+      moq:"1台",price:450,
       description:"手提式汽油吹风机，25.4cc动力，70m/s风速。轻量便携仅3.8kg，适合庭院清扫、落叶清理和轻型商业用途。"
     },
     {
@@ -97,7 +97,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc大排量","高效涡流风道","无级变速","背带减负系统","加厚机身"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:360,
+      moq:"1台",price:360,
       description:"背负式汽油吹风机，42.7cc动力，80m/s风速。重量7.7/9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -107,7 +107,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"63.3cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9.2/11kg",size:"520×390×570mm"},
       features:["63.3cc大功率","双涡轮风道","背带减负系统","防震设计","大油箱续航"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:350,
+      moq:"1台",price:350,
       description:"背负式汽油吹风机，63.3cc动力，87m/s风速。重量9.2/11kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -117,7 +117,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.25kw/6500rpm",airSpeed:"80m/s",weight:"7.7/9kg",size:"420×360×500mm"},
       features:["42.7cc动力","高效涡流风道","背带减负系统","强力启动马达","耐用型机身"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"1台",leadTime:"15-25天",price:350,
+      moq:"1台",price:350,
       description:"标准型背负式汽油吹风机，42.7cc动力，80m/s风速。强力启动马达搭配耐用型机身，配备背带减负系统，适合专业林场和大型绿地高强度日常吹扫。"
     },
     {
@@ -127,7 +127,7 @@ window.APP_DATA={
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.5/11.5kg",size:"520×390×540mm"},
       features:["75.6cc四冲程动力","低噪音低振动","四涡轮风道系统","人体工学背带","一键启动"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"1台",leadTime:"15-25天",price:600,
+      moq:"1台",price:600,
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.5/11.5kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -137,7 +137,7 @@ window.APP_DATA={
       specs:{engine:"四冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"89m/s",weight:"10.4/12.2kg",size:"520×390×540mm"},
       features:["75.6cc四冲程旗舰","五涡轮增压系统","全悬浮减震","电子点火","航空级材质"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"1台",leadTime:"15-25天",price:650,
+      moq:"1台",price:650,
       description:"背负式汽油吹风机，75.6cc四冲程动力，89m/s风速。重量10.4/12.2kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -147,7 +147,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"63.6cc",power:"2.7kw/6800rpm",airSpeed:"87m/s",weight:"9/10.8kg",size:"520×390×570mm"},
       features:["63.6cc大功率","高效涡轮风道","省油技术","背带减负系统","耐用型空滤"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:550,
+      moq:"1台",price:550,
       description:"背负式汽油吹风机，63.6cc动力，87m/s风速。重量9/10.8kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -157,7 +157,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",airSpeed:"92m/s",weight:"11/12.9kg",size:"520×390×570mm"},
       features:["75.6cc电子点火","高效涡轮风道","电子燃油喷射","一键启动","智能温控"],
       certifications:["CE","GS","EPA"],
-      moq:"1台",leadTime:"15-25天",price:550,
+      moq:"1台",price:550,
       description:"背负式汽油吹风机，75.6cc动力，92m/s风速。重量11/12.9kg，配备背带减负系统，适合专业林场和大型绿地吹扫。"
     },
     {
@@ -167,7 +167,7 @@ window.APP_DATA={
       specs:{engine:"二冲程",displacement:"75.6cc",power:"3.8kw/7000rpm",tank:"2.3L",airSpeed:"92.2m/s",engineSpeed:"2000-7250rpm",weight:"11.1kg",size:"530×430×590mm"},
       features:["大排量动力","超大2.3L油箱","92.2m/s飓风级风速","背带减负系统","高效涡流风道"],
       certifications:["CE","GS","EPA/CARB"],
-      moq:"1台",leadTime:"15-25天",price:680,
+      moq:"1台",price:680,
       description:"背负式汽油吹风机旗舰款EB990，92.2m/s飓风级风速，2.3L超大油箱超长续航，重量仅11.1kg。配备专业背带减负系统，适合专业林场、大型绿地和市政环卫吹扫作业。"
     }
   ],
@@ -191,7 +191,6 @@ window.APP_DATA={
     {q:"如何选择适合我市场的割灌机型号？",a:"选择割灌机需考虑排量、地形、作业强度和用途。轻型杂草/家用庭院选25-35cc手提式（如CG431/CG435），灌木清理选37-43cc（如CG430/CG550），大面积开荒选更大排量机型。我们的外贸经理可针对您的市场需求推荐型号。",cat:"selection"},
     {q:"支持OEM/ODM定制吗？",a:"完全支持。我们提供品牌贴牌、色彩定制、配置调整、包装设计等全链路OEM/ODM服务。最小起订量根据型号不同为50-200台。可提供免费样品确认品质。",cat:"selection"},
     {q:"最小起订量(MOQ)是多少？",a:"支持1台样品试单（确认品质），批量订单常规型号MOQ为50-200台不等，可接受混批。具体MOQ请咨询外贸经理获取各型号详细报价单。",cat:"dealer"},
-    {q:"交货周期需要多久？",a:"常规型号收到定金后25-35天发货，驾乘式需35-45天。旺季(1-4月)建议提前60天下单锁定产能。紧急订单可协商加急，最快15天。",cat:"dealer"},
     {q:"产品符合哪些质量标准？",a:"我们的产品严格按照行业标准设计制造，执行来料检验、过程巡检、成品全检三道品控关口，每台设备均有唯一追溯码。可根据客户需求配合提供相关合规文件用于目的国清关。欢迎预约验厂，新客户免费提供3天食宿。",cat:"warranty"},
     {q:"如何进行日常维护保养？",a:"每次使用后应清洁机身、检查空气滤清器、紧固松动的螺丝。汽油设备需每50小时更换机油、清洗火花塞。链条需定期磨锐。我们提供全套配件和维修视频。",cat:"maintenance"},
     {q:"产品保修政策是怎样的？",a:"所有产品提供1-2年质保(根据订单协议)，发动机核心部件2年质保。质保期内免费提供替换零件。我们在德国和美国设有售后备件仓。",cat:"warranty"},

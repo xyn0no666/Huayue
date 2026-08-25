@@ -35,7 +35,7 @@
       'factory.card1.title':'源头工厂','factory.card1.desc':'完全自主生产，冲压/焊接/涂装/注塑/电机/总装全工序覆盖，无中间环节，成本可控',
       'factory.card2.title':'品质管控','factory.card2.desc':'来料检验、过程巡检、成品全检三道品控关口，每台设备唯一追溯码，为客户提供品质保障',
       'factory.card3.title':'灵活定制','factory.card3.desc':'OEM/ODM全案服务，品牌、配色、配置、包装均可定制。低MOQ试订单，60天新品开发周期',
-      'factory.card4.title':'准时交付','factory.card4.desc':'ERP排产管理，常规订单25-35天交货，交付准时率98%以上。双海外仓提供本地配送',
+      'factory.card4.title':'准时交付','factory.card4.desc':'ERP排产管理，交付准时率98%以上。双海外仓提供本地配送',
       'section.products':'产品系列','section.products.sub':'全场景园林机械设备，汽油动力硬核高效',
       'section.featured':'推荐产品','section.featured.sub':'全球客户一致推荐的畅销机型',
       'section.testimonials':'客户评价','section.testimonials.sub':'来自全球合作伙伴的真实反馈',
@@ -65,7 +65,7 @@
       'brand.qcard1.title':'全流程品控体系','brand.qcard1.desc':'从来料检验到成品出厂的全流程质量管理，每台设备均有唯一追溯码，质量问题48小时响应。',
       'brand.qcard2.title':'研发与模具能力','brand.qcard2.desc':'20余位研发工程师，自主模具加工中心，可60天内完成从设计到样机的全流程开发，年新品开发能力15款以上。',
       'brand.qcard3.title':'供应链整合','brand.qcard3.desc':'与国内外优质供应商建立长期采购合作，核心零部件经过严格筛选与测试，确保关键部件品质稳定。',
-      'brand.qcard4.title':'快速响应','brand.qcard4.desc':'询盘24小时内回复，样品3-5个工作日发出，常规订单25-35天交货。专职外贸团队提供英语、德语、日语、西班牙语服务。',
+      'brand.qcard4.title':'快速响应','brand.qcard4.desc':'询盘24小时内回复，样品3-5个工作日发出。专职外贸团队提供英语、德语、日语、西班牙语服务。',
       'brand.why':'为什么选择我们','brand.why.sub':'全球客户的信赖之选',
       'brand.vcard1.title':'源头工厂','brand.vcard1.desc':'完全自主生产，无中间环节。从冲压到总装全工序自制，成本可控，品质可溯。',
       'brand.vcard2.title':'灵活定制','brand.vcard2.desc':'OEM/ODM全案服务。品牌、配色、配置、包装均可定制，低MOQ试订单支持，助您快速测试市场。',
@@ -131,7 +131,7 @@
       'checkout.name':'收货人姓名','checkout.phone':'联系电话','checkout.email':'电子邮箱',
       'checkout.address':'收货地址','checkout.note':'备注信息','checkout.submit':'确认下单',
       // Common
-      'common.close':'关闭','common.submit':'提交','common.view':'查看','common.leadTime':'交期:','common.unit':'台',
+      'common.close':'关闭','common.submit':'提交','common.view':'查看','common.unit':'台',
       'common.prev':'上一个','common.next':'下一个','common.inquire':'咨询',
       // Home JS labels
       'home.viewSeries':'查看系列 →','home.quickView':'快速查看','home.factoryPrice':'出厂价咨询','home.sendInquiry':'发送询盘',
@@ -145,7 +145,7 @@
       'fab.wechatQr':'微信扫码\n添加好友','fab.wechatAccount':'公众号：华悦园林机械',
       'fab.tooltip.wechat':'微信','fab.tooltip.copyPhone':'复制','fab.tooltip.copyWechat':'复制微信号','fab.copied':'已复制 ✓','fab.wechatQrAlt':'微信二维码',
       // Product detail
-      'detail.specs':'技术参数','detail.features':'产品特点','detail.moq':'最小起订量','detail.leadTime':'交货周期','detail.price':'参考单价','detail.askQuestion':'咨询详情',
+      'detail.specs':'技术参数','detail.features':'产品特点','detail.moq':'最小起订量','detail.price':'参考单价','detail.askQuestion':'咨询详情',
       // Spec keys
       'spec.engine':'发动机','spec.displacement':'排量','spec.cuttingWidth':'割幅','spec.weight':'重量','spec.shaftType':'杆类型','spec.shaft':'杆长','spec.engineSpeed':'转速',
       'spec.barLength':'导板长度','spec.chainPitch':'链条节距','spec.airVolume':'风量','spec.airSpeed':'风速',
@@ -190,7 +190,7 @@
       'factory.card1.title':'Source Factory','factory.card1.desc':'Complete in-house production covering stamping, welding, coating, injection molding, motor, and final assembly — no middlemen, cost under control',
       'factory.card2.title':'Quality Control','factory.card2.desc':'Three quality gates — incoming inspection, in-process patrol, and final full inspection. Each unit carries a unique traceability code for quality assurance.',
       'factory.card3.title':'Flexible Customization','factory.card3.desc':'Full OEM/ODM services: brand, color, configuration, and packaging all customizable. Low MOQ trial orders, 60-day new product development cycle',
-      'factory.card4.title':'On-Time Delivery','factory.card4.desc':'ERP production scheduling, 25-35 day standard lead time, 98%+ on-time delivery rate. Dual overseas warehouses for local distribution',
+      'factory.card4.title':'On-Time Delivery','factory.card4.desc':'ERP production scheduling, 98%+ on-time delivery rate. Dual overseas warehouses for local distribution',
       'section.products':'Product Series','section.products.sub':'Full-scene garden machinery, gasoline-powered for hardcore efficiency',
       'section.featured':'Featured Products','section.featured.sub':'Best-selling models recommended by global customers',
       'section.testimonials':'Customer Reviews','section.testimonials.sub':'Authentic feedback from global partners',
@@ -220,7 +220,7 @@
       'brand.qcard1.title':'Full-Process Quality Control','brand.qcard1.desc':'Full-process quality management from incoming material inspection to finished product delivery. Each unit has a unique traceability code; quality issues receive 48-hour response.',
       'brand.qcard2.title':'R&D & Tooling Capability','brand.qcard2.desc':'20+ R&D engineers, in-house mold machining center. Complete development from design to prototype in 60 days; annual new product development capacity of 15+ models.',
       'brand.qcard3.title':'Supply Chain Integration','brand.qcard3.desc':'Long-term procurement partnerships with quality domestic and international suppliers. Critical components undergo rigorous screening and testing for consistent quality.',
-      'brand.qcard4.title':'Rapid Response','brand.qcard4.desc':'Inquiries answered within 24 hours, samples shipped in 3-5 business days, standard orders delivered in 25-35 days. Dedicated trade team provides service in English, German, Japanese, and Spanish.',
+      'brand.qcard4.title':'Rapid Response','brand.qcard4.desc':'Inquiries answered within 24 hours, samples shipped in 3-5 business days. Dedicated trade team provides service in English, German, Japanese, and Spanish.',
       'brand.why':'Why Choose Us','brand.why.sub':'Trusted by clients worldwide',
       'brand.vcard1.title':'Source Factory','brand.vcard1.desc':'Complete in-house production, zero intermediaries. From stamping to final assembly — all self-manufactured for cost control and quality traceability.',
       'brand.vcard2.title':'Flexible Customization','brand.vcard2.desc':'Full OEM/ODM services. Brand, color, configuration, and packaging all customizable. Low MOQ trial orders to help you test your market quickly.',
@@ -286,7 +286,7 @@
       'checkout.name':'Recipient Name','checkout.phone':'Phone','checkout.email':'Email',
       'checkout.address':'Shipping Address','checkout.note':'Order Notes','checkout.submit':'Place Order',
       // Common
-      'common.close':'Close','common.submit':'Submit','common.view':'View','common.leadTime':'Lead time: ','common.unit':'units',
+      'common.close':'Close','common.submit':'Submit','common.view':'View','common.unit':'units',
       'common.prev':'Previous','common.next':'Next','common.inquire':'Inquire',
       // Home JS labels
       'home.viewSeries':'View Series →','home.quickView':'Quick View','home.factoryPrice':'Factory Price Inquiry','home.sendInquiry':'Send Inquiry',
@@ -300,7 +300,7 @@
       'fab.wechatQr':'Scan QR\nAdd on WeChat','fab.wechatAccount':'WeChat: 华悦园林机械',
       'fab.tooltip.wechat':'WeChat','fab.tooltip.copyPhone':'Copy','fab.tooltip.copyWechat':'Copy WeChat ID','fab.copied':'Copied ✓','fab.wechatQrAlt':'WeChat QR Code',
       // Product detail
-      'detail.specs':'Specifications','detail.features':'Features','detail.moq':'MOQ','detail.leadTime':'Lead Time','detail.price':'Reference Price','detail.askQuestion':'Ask a Question',
+      'detail.specs':'Specifications','detail.features':'Features','detail.moq':'MOQ','detail.price':'Reference Price','detail.askQuestion':'Ask a Question',
       // Spec keys
       'spec.engine':'Engine','spec.displacement':'Displacement','spec.cuttingWidth':'Cutting Width','spec.weight':'Weight','spec.shaftType':'Shaft Type','spec.shaft':'Shaft Length','spec.engineSpeed':'Engine Speed',
       'spec.barLength':'Bar Length','spec.chainPitch':'Chain Pitch','spec.airVolume':'Air Volume','spec.airSpeed':'Air Speed',

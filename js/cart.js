@@ -78,13 +78,13 @@
         var cat=p?p.category:'';
         var catLabel=getCategoryLabel(cat);
         var price=p?p.price||0:0;
-        var moq=p?p.moq||'':'';var leadTime=p?p.leadTime||'':'';
+        var moq=p?p.moq||'':'';
         var itemTotal=price*i.quantity;
         return '<div class="cart-item">'+
           '<div class="cart-item__image"><img src="'+img+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
           '<div class="cart-item__info">'+
             '<div class="cart-item__name">'+name+(catLabel?' <span class="cart-item__cat">'+catLabel+'</span>':'')+'</div>'+
-            '<div class="cart-item__meta">MOQ: '+moq+' | '+__('common.leadTime')+leadTime+'</div>'+
+            '<div class="cart-item__meta">MOQ: '+moq+'</div>'+
             '<div class="cart-item__price">¥'+price.toLocaleString()+' / '+__('common.unit')+'</div>'+
             '<div class="cart-item__qty">'+
               '<button data-cart-qty="'+i.productId+'" data-delta="-1" aria-label="'+__('cart.decrease')+'">−</button>'+

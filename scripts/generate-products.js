@@ -197,7 +197,6 @@ function buildPage(p) {
             <div class="product-detail__trade">
               <div class="product-detail__trade-grid">
                 ${p.moq ? `<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">最小起订量</div><div class="product-detail__trade-item__value">${p.moq}</div></div>` : ''}
-                ${p.leadTime ? `<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">交货周期</div><div class="product-detail__trade-item__value">${p.leadTime}</div></div>` : ''}
                 ${priceStr ? `<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">参考单价</div><div class="product-detail__trade-item__value">${priceStr}</div></div>` : ''}
               </div>
             </div>

@@ -257,14 +257,13 @@
       var name=p?p.name:i.productId;
       var img=p?p.image:'';
       var moq=p?p.moq||'咨询':'咨询';
-      var leadTime=p?p.leadTime||'咨询':'咨询';
       var unitPrice=p&&p.price?'¥'+p.price.toLocaleString():'咨询';
       var lineTotal=p&&p.price?'¥'+(p.price*i.quantity).toLocaleString():'—';
       return '<div class="checkout-item">'+
         '<div class="checkout-item__image"><img src="'+img+'" alt="'+name+'" onerror="this.parentElement.style.background=\'var(--color-border-dark)\';this.style.display=\'none\'"></div>'+
         '<div class="checkout-item__info">'+
           '<div class="checkout-item__name">'+name+'</div>'+
-          '<div class="checkout-item__meta">MOQ: '+moq+' | 交期: '+leadTime+' | 单价: '+unitPrice+'</div>'+
+          '<div class="checkout-item__meta">MOQ: '+moq+' | 单价: '+unitPrice+'</div>'+
         '</div>'+
         '<div class="checkout-item__qty">x'+i.quantity+'</div>'+
         '<div class="checkout-item__price">'+lineTotal+'</div>'+

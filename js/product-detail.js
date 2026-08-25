@@ -185,7 +185,6 @@
         '<div class="product-detail__trade">'+
           '<div class="product-detail__trade-grid">'+
             (p.moq?'<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">'+__('detail.moq')+'</div><div class="product-detail__trade-item__value">'+p.moq+'</div></div>':'')+
-            (p.leadTime?'<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">'+__('detail.leadTime')+'</div><div class="product-detail__trade-item__value">'+p.leadTime+'</div></div>':'')+
             (p.price?'<div class="product-detail__trade-item"><div class="product-detail__trade-item__label">'+__('detail.price')+'</div><div class="product-detail__trade-item__value">¥'+p.price.toLocaleString()+' / '+__('common.unit')+'</div></div>':'')+
           '</div>'+
         '</div>'+
