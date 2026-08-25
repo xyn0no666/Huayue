@@ -89,3 +89,18 @@
   from = "/admin"
   to = "/admin.html"
   status = 200
+
+[[redirects]]
+  from = "/product-mower-pro-x1.html"
+  to = "/product-mower-cg430.html"
+  status = 301
+
+[[redirects]]
+  from = "/product-mower-elite-x2.html"
+  to = "/product-chainsaw-5200.html"
+  status = 301
+
+[[redirects]]
+  from = "/product-mower-ride-rx3.html"
+  to = "/product-blower-eb260.html"
+  status = 301
