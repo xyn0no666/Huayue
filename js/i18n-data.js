@@ -1,7 +1,7 @@
 window.APP_DATA_EN={
   products:[
     {
-      id:"mower-pro-x1",name:"CG-430",
+      id:"mower-cg430",name:"CG-430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.webp",
       specs:{engine:"2-Stroke",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
@@ -41,7 +41,7 @@ window.APP_DATA_EN={
       description:"Lightweight handheld brush cutter, 31.0cc economical displacement with 0.75L large fuel tank for extended runtime. Only 9kg with convenient loop handle, ideal for home garden weeding and light commercial use."
     },
     {
-      id:"mower-elite-x2",name:"5200",
+      id:"chainsaw-5200",name:"5200",
       category:"chainsaw",powerType:"gasoline",
       image:"assets/images/chainsaw-5800.webp",
       specs:{engine:"2-Stroke",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
@@ -51,7 +51,7 @@ window.APP_DATA_EN={
       description:"Heavy-duty chainsaw 5200, 52cc powerful engine, 18\"/20\" guide bar. Suitable for heavy logging and forestry operations. Customizable bar length and color."
     },
     {
-      id:"mower-ride-rx3",name:"EB-260",
+      id:"blower-eb260",name:"EB-260",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260.webp",
       specs:{engine:"2-Stroke",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
@@ -188,9 +188,9 @@ window.APP_DATA_EN={
     {name:"Ma Guoqiang",location:"Urumqi, Xinjiang",avatar:"https://ui-avatars.com/api/?name=Ma+Guoqiang&background=7c3aed&color=fff&size=200&font-size=0.35",text:"Summers here are scorching and dusty — standard air filters can't cope. Huayue built us a heavy-duty air filter solution for their blowers and chainsaws, and the failure rate dropped sharply. Responsive support, timely spare parts, smooth communication. Very confident in this partnership.",rating:5}
   ],
   faq:[
-    {q:"How do I choose the right brush cutter model for my market?",a:"Model selection depends on lawn area, terrain, target market price positioning, and usage scenarios. Areas under 200m²: push mower recommended. 200-800m²: self-propelled. Over 800m²: ride-on. Our sales managers can provide professional advice tailored to your market needs.",cat:"selection"},
+    {q:"How do I choose the right brush cutter model for my market?",a:"Brush cutter selection depends on engine displacement, terrain, workload, and usage. Light weeding and home gardens: 25-35cc handheld models (CG431/CG435). Brush clearing: 37-43cc (CG430/CG550). Large-scale land clearing: larger-displacement models. Our sales managers can recommend the right model for your market.",cat:"selection"},
     {q:"Do you support OEM/ODM customization?",a:"Absolutely. We offer full-chain OEM/ODM services including private labeling, color customization, configuration adjustment, and packaging design. MOQ varies from 50-200 units depending on the model. Free samples available for quality confirmation.",cat:"selection"},
-    {q:"What is the minimum order quantity (MOQ)?",a:"Standard models MOQ ranges from 50-200 units; ride-on mower MOQ can be as low as 10 units. Mixed trial orders are welcome. Please contact our sales manager for detailed model-specific quotations.",cat:"dealer"},
+    {q:"What is the minimum order quantity (MOQ)?",a:"1-unit sample/trial orders are supported to confirm quality. For bulk orders, standard models MOQ ranges from 50-200 units; mixed orders welcome. Please contact our sales manager for detailed model-specific quotations.",cat:"dealer"},
     {q:"What is the lead time?",a:"Standard models ship within 25-35 days after deposit receipt; ride-on models require 35-45 days. During peak season (Jan-Apr), we recommend placing orders 60 days in advance to secure production capacity. Rush orders negotiable, fastest 15 days.",cat:"dealer"},
     {q:"What quality standards do your products meet?",a:"Our products are designed and manufactured to strict industry standards, with three quality control gates: incoming inspection, in-process patrol, and final full inspection. Each unit has a unique traceability code. We can provide relevant compliance documentation for customs clearance upon request. Factory visits welcome — 3 days free accommodation for new clients.",cat:"warranty"},
     {q:"How do I perform routine maintenance?",a:"After each use: clean the body, check the air filter, tighten loose screws. Gasoline equipment: change oil every 50 hours, clean spark plugs. Chains need regular sharpening. We provide full spare parts kits and maintenance videos.",cat:"maintenance"},
@@ -214,11 +214,11 @@ window.APP_DATA_EN={
     {title:"2-Stroke vs 4-Stroke: Power System Selection Guide",readTime:"15 min",image:"assets/images/guide-engine.webp",desc:"Comprehensive comparison of power systems to help choose the optimal gasoline model",url:"guide-4.html"}
   ],
   certifications:[
-    {name:"ISO 9001:2015",desc:"Quality Management System",id:"QAIC/CN/186523",issuer:"QA International Certification"},
-    {name:"CE Marking",desc:"EU Safety & Health Compliance",id:"MD-2023-08876",issuer:"TÜV Rheinland"},
-    {name:"GS (TÜV)",desc:"German Product Safety",id:"GS-2023-09123",issuer:"TÜV Rheinland"},
-    {name:"EPA & CARB",desc:"U.S. Emission Standards",id:"EPA-FE-2023-445",issuer:"U.S. EPA"},
-    {name:"RoHS 2.0",desc:"Hazardous Substances Restriction",id:"R2-2023-1553",issuer:"SGS-CSTC"},
-    {name:"FCC",desc:"Electromagnetic Compatibility",id:"FCC-ID-XY2023EMC",issuer:"FCC"}
+    {name:"ISO 9001:2015",desc:"Quality Management System",issuer:"QA International Certification"},
+    {name:"CE Marking",desc:"EU Safety & Health Compliance",issuer:"TÜV Rheinland"},
+    {name:"GS (TÜV)",desc:"German Product Safety",issuer:"TÜV Rheinland"},
+    {name:"EPA & CARB",desc:"U.S. Emission Standards",issuer:"U.S. EPA"},
+    {name:"RoHS 2.0",desc:"Hazardous Substances Restriction",issuer:"SGS-CSTC"},
+    {name:"FCC",desc:"Electromagnetic Compatibility",issuer:"FCC"}
   ]
 };

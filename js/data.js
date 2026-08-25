@@ -1,7 +1,7 @@
 window.APP_DATA={
   products:[
     {
-      id:"mower-pro-x1",name:"CG430",
+      id:"mower-cg430",name:"CG430",
       category:"mower",powerType:"gasoline",
       image:"assets/images/CG430-green.webp",
       specs:{engine:"二冲程",displacement:"42.7cc",power:"1.2kw/6500rpm",tank:"0.65L",shaft:"1500mm",weight:"8.5/10kg",size:"340×320×450mm / 1650×100×100mm"},
@@ -41,7 +41,7 @@ window.APP_DATA={
       description:"手提式割灌机，31.0cc强劲动力，轻量化设计仅9/10.5kg。可换装打草头和割灌刀片，一机两用。适合灌木清理和杂草收割。",
     },
     {
-      id:"mower-elite-x2",name:"5200",
+      id:"chainsaw-5200",name:"5200",
       category:"chainsaw",powerType:"gasoline",
       image:"assets/images/chainsaw-5800.webp",
       specs:{engine:"二冲程",displacement:"52cc",power:"2.4kw/8500r/min",barLength:"18\"/20\"",tank:"0.55L",chainPitch:"0.325\"",weight:"5.5kg",size:"450×280×300mm"},
@@ -51,7 +51,7 @@ window.APP_DATA={
       description:"大功率油锯5200，52cc强劲动力，20寸导板，适合重度伐木及林业作业。可定制导板长度和颜色。",
     },
     {
-      id:"mower-ride-rx3",name:"EB260",
+      id:"blower-eb260",name:"EB260",
       category:"blower",powerType:"gasoline",
       image:"assets/images/blower-EB260.webp",
       specs:{engine:"二冲程",displacement:"25.4cc",power:"0.75kw/7000rpm",airSpeed:"75m/s",weight:"3.8/4.9kg",size:"380×235×350mm"},
@@ -188,9 +188,9 @@ window.APP_DATA={
     {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://ui-avatars.com/api/?name=马国强&background=7c3aed&color=fff&size=200&font-size=0.35",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。华悦为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
   ],
   faq:[
-    {q:"如何选择适合我市场的割灌机型号？",a:"选择型号需考虑草坪面积、地形、目标市场价格定位和使用场景。面积<200㎡推荐手推式，200-800㎡推荐自走式，>800㎡推荐驾乘式。我们的外贸经理可针对您的市场需求提供专业建议。",cat:"selection"},
+    {q:"如何选择适合我市场的割灌机型号？",a:"选择割灌机需考虑排量、地形、作业强度和用途。轻型杂草/家用庭院选25-35cc手提式（如CG431/CG435），灌木清理选37-43cc（如CG430/CG550），大面积开荒选更大排量机型。我们的外贸经理可针对您的市场需求推荐型号。",cat:"selection"},
     {q:"支持OEM/ODM定制吗？",a:"完全支持。我们提供品牌贴牌、色彩定制、配置调整、包装设计等全链路OEM/ODM服务。最小起订量根据型号不同为50-200台。可提供免费样品确认品质。",cat:"selection"},
-    {q:"最小起订量(MOQ)是多少？",a:"常规型号MOQ为50-200台不等，驾乘式割灌机MOQ可低至10台。试订单可接受混批。具体MOQ请咨询外贸经理获取各型号详细报价单。",cat:"dealer"},
+    {q:"最小起订量(MOQ)是多少？",a:"支持1台样品试单（确认品质），批量订单常规型号MOQ为50-200台不等，可接受混批。具体MOQ请咨询外贸经理获取各型号详细报价单。",cat:"dealer"},
     {q:"交货周期需要多久？",a:"常规型号收到定金后25-35天发货，驾乘式需35-45天。旺季(1-4月)建议提前60天下单锁定产能。紧急订单可协商加急，最快15天。",cat:"dealer"},
     {q:"产品符合哪些质量标准？",a:"我们的产品严格按照行业标准设计制造，执行来料检验、过程巡检、成品全检三道品控关口，每台设备均有唯一追溯码。可根据客户需求配合提供相关合规文件用于目的国清关。欢迎预约验厂，新客户免费提供3天食宿。",cat:"warranty"},
     {q:"如何进行日常维护保养？",a:"每次使用后应清洁机身、检查空气滤清器、紧固松动的螺丝。汽油设备需每50小时更换机油、清洗火花塞。链条需定期磨锐。我们提供全套配件和维修视频。",cat:"maintenance"},
@@ -214,11 +214,11 @@ window.APP_DATA={
     {title:"2冲程vs4冲程：动力系统选型指南",readTime:"15分钟",image:"assets/images/guide-engine.webp",desc:"全面对比各动力系统优劣，帮助选择最适合的汽油机型",url:"guide-4.html"}
   ],
   certifications:[
-    {name:"ISO 9001:2015",desc:"质量管理体系认证",id:"QAIC/CN/186523",issuer:"QA International Certification"},
-    {name:"CE Marking",desc:"欧盟安全准入认证",id:"MD-2023-08876",issuer:"TÜV Rheinland"},
-    {name:"GS (TÜV)",desc:"德国产品安全认证",id:"GS-2023-09123",issuer:"TÜV Rheinland"},
-    {name:"EPA & CARB",desc:"美国排放标准认证",id:"EPA-FE-2023-445",issuer:"U.S. EPA"},
-    {name:"RoHS 2.0",desc:"有害物质限制指令",id:"R2-2023-1553",issuer:"SGS-CSTC"},
-    {name:"FCC",desc:"美国电磁兼容认证",id:"FCC-ID-XY2023EMC",issuer:"FCC"}
+    {name:"ISO 9001:2015",desc:"质量管理体系认证",issuer:"QA International Certification"},
+    {name:"CE Marking",desc:"欧盟安全准入认证",issuer:"TÜV Rheinland"},
+    {name:"GS (TÜV)",desc:"德国产品安全认证",issuer:"TÜV Rheinland"},
+    {name:"EPA & CARB",desc:"美国排放标准认证",issuer:"U.S. EPA"},
+    {name:"RoHS 2.0",desc:"有害物质限制指令",issuer:"SGS-CSTC"},
+    {name:"FCC",desc:"美国电磁兼容认证",issuer:"FCC"}
   ]
 };

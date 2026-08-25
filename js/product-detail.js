@@ -6,7 +6,10 @@
 
   function getProductId(){
     var params=new URLSearchParams(window.location.search);
-    return params.get('id')||'';
+    var id=params.get('id');
+    if(id)return id;
+    var m=window.location.pathname.match(/product-(.+)\.html$/);
+    return m?m[1]:'';
   }
 
   function getCatName(cat){

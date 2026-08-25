@@ -20,7 +20,7 @@
       'footer.products.mower':'割灌机','footer.products.chainsaw':'油锯','footer.products.blower':'吹风机',
       'footer.company.about':'关于我们','footer.company.factory':'工厂实力','footer.company.info':'公司信息','footer.company.join':'加入我们',
       'footer.support.tech':'技术支持','footer.support.faq':'常见问题','footer.support.guides':'保养指南','footer.support.parts':'售后配件',
-      'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
+      'footer.contact.tel':'+86 19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
       'footer.copyright':'© 2026 华悦园林 — 华悦园林机械',
       // Cookie banner
       'cookie.text':'本站使用Cookie以提升您的浏览体验。继续访问即表示您同意我们的 <a href=\"privacy.html\">隐私政策</a>。','cookie.essential':'仅必要','cookie.accept':'全部接受',
@@ -81,7 +81,7 @@
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'联系我们','contact.subtitle':'无论产品咨询、获取报价还是预约验厂，我们的专业外贸团队随时为您服务',
       'contact.tab.inquiry':'产品咨询','contact.tab.quote':'获取报价','contact.tab.demo':'预约验厂','contact.tab.dealer':'经销商申请',
-      'contact.phone':'19862905209','contact.phone.label':'服务热线','contact.phone.hours':'周一至周六 8:00 - 18:00 (GMT+8)',
+      'contact.phone':'+86 19862905209','contact.phone.label':'服务热线','contact.phone.hours':'周一至周六 8:00 - 18:00 (GMT+8)',
       'contact.email.label':'电子邮箱','contact.email.hint':'外贸团队24小时内回复',
       'contact.wa.label':'WhatsApp','contact.wa.hint':'点击立即通过 WhatsApp 联系',
       'contact.addr.label':'工厂地址','contact.addr.hint':'距临沂机场30分钟 / 临沂北站25分钟',
@@ -160,7 +160,7 @@
       'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
       'contactPopup.wc.label':'微信','contactPopup.wc.val':'HuayueGarden',
       'contactPopup.em.label':'电子邮件','contactPopup.em.val':'3539576340@qq.com',
-      'contactPopup.ph.label':'电话','contactPopup.ph.val':'19862905209'
+      'contactPopup.ph.label':'电话','contactPopup.ph.val':'+86 19862905209'
     },
     en: {
       // Meta
@@ -175,7 +175,7 @@
       'footer.products.mower':'Brush Cutter','footer.products.chainsaw':'Chainsaw','footer.products.blower':'Leaf Blower',
       'footer.company.about':'About Us','footer.company.factory':'Factory Strength','footer.company.info':'Company Info','footer.company.join':'Join Us',
       'footer.support.tech':'Tech Support','footer.support.faq':'FAQ','footer.support.guides':'Maintenance Guides','footer.support.parts':'Spare Parts',
-      'footer.contact.tel':'19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
+      'footer.contact.tel':'+86 19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
       'footer.copyright':'© 2026 Huayue Garden — Huayue Garden Machinery',
       // Cookie banner
       'cookie.text':'This site uses cookies to enhance your browsing experience. By continuing, you agree to our <a href=\"privacy.html\">Privacy Policy</a>.','cookie.essential':'Essential Only','cookie.accept':'Accept All',
@@ -236,7 +236,7 @@
       // Contact page
       'contact.tag':'Get In Touch','contact.title':'Contact Us','contact.subtitle':'Whether product inquiry, quotation request, or factory visit — our professional trade team is here to serve you',
       'contact.tab.inquiry':'Product Inquiry','contact.tab.quote':'Get Quote','contact.tab.demo':'Factory Visit','contact.tab.dealer':'Dealer Application',
-      'contact.phone':'19862905209','contact.phone.label':'Hotline','contact.phone.hours':'Mon-Sat 8:00-18:00 (GMT+8)',
+      'contact.phone':'+86 19862905209','contact.phone.label':'Hotline','contact.phone.hours':'Mon-Sat 8:00-18:00 (GMT+8)',
       'contact.email.label':'Email','contact.email.hint':'Trade team responds within 24 hours',
       'contact.wa.label':'WhatsApp','contact.wa.hint':'Click to chat on WhatsApp',
       'contact.addr.label':'Factory Address','contact.addr.hint':'30 min from Linyi Airport / 25 min from Linyubei Station',
@@ -315,7 +315,7 @@
       'contactPopup.wa.label':'WhatsApp','contactPopup.wa.val':'+86 19862905209',
       'contactPopup.wc.label':'WeChat','contactPopup.wc.val':'HuayueGarden',
       'contactPopup.em.label':'Email','contactPopup.em.val':'3539576340@qq.com',
-      'contactPopup.ph.label':'Phone','contactPopup.ph.val':'19862905209'
+      'contactPopup.ph.label':'Phone','contactPopup.ph.val':'+86 19862905209'
     }
   };
 
