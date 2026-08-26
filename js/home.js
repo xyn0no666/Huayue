@@ -202,7 +202,7 @@
           '<div class="testimonial-slide__stars">'+'★'.repeat(t.rating)+'</div>'+
           '<p class="testimonial-slide__text" style="font-size:'+fontSize+'">"'+t.text+'"</p>'+
           '<div class="testimonial-slide__author">'+
-            '<div class="testimonial-slide__avatar"><img src="'+t.avatar+'" alt="'+t.name+'" loading="lazy"></div>'+
+            (t.avatar?'<div class="testimonial-slide__avatar"><img src="'+t.avatar+'" alt="'+t.name+'" loading="lazy"></div>':'')+
             '<div style="text-align:left">'+
               '<div class="testimonial-slide__name">'+t.name+(t.location?' · '+t.location:'')+'</div>'+
               '<div class="testimonial-slide__meta">'+(t.company||'')+'</div>'+
