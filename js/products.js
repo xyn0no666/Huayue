@@ -318,7 +318,7 @@
                 return '<tr><td class="compare-table__label">'+key+'</td>'+products.map(function(p){return '<td>'+(p.specs[key]||'—')+'</td>'}).join('')+'</tr>';
               }).join('')+
               // Certifications
-              '<tr><td class="compare-table__label">Certifications</td>'+products.map(function(p){return '<td>'+(p.certifications||[]).join(', ')+'</td>'}).join('')+'</tr>'+
+              '<tr><td class="compare-table__label">Source</td>'+products.map(function(p){return '<td>'+(p.certifications||[]).join(', ')+'</td>'}).join('')+'</tr>'+
               // Action row
               '<tr><td class="compare-table__label"></td>'+products.map(function(p){return '<td><a href="contact.html?tab=quote" class="btn btn--primary btn--sm">'+__('compare.inquire')+'</a></td>'}).join('')+'</tr>'+
             '</tbody>'+
