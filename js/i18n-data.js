@@ -193,9 +193,9 @@ window.APP_DATA_EN={
     {q:"What is the minimum order quantity (MOQ)?",a:"1-unit sample/trial orders are supported to confirm quality. For bulk orders, standard models MOQ ranges from 50-200 units; mixed orders welcome. Please contact our sales manager for detailed model-specific quotations.",cat:"dealer"},
     {q:"What quality standards do your products meet?",a:"Our products are designed and manufactured to strict industry standards, with three quality control gates: incoming inspection, in-process patrol, and final full inspection. Each unit has a unique traceability code. We can provide relevant compliance documentation for customs clearance upon request. Factory visits welcome — 3 days free accommodation for new clients.",cat:"warranty"},
     {q:"How do I perform routine maintenance?",a:"After each use: clean the body, check the air filter, tighten loose screws. Gasoline equipment: change oil every 50 hours, clean spark plugs. Chains need regular sharpening. We provide full spare parts kits and maintenance videos.",cat:"maintenance"},
-    {q:"What is your warranty policy?",a:"All products come with 1-2 year warranty (based on order agreement), with 2-year warranty on core engine components. Free replacement parts during the warranty period. We maintain after-sales spare parts warehouses in Germany and the United States.",cat:"warranty"},
+    {q:"What is your warranty policy?",a:"All products come with 1-2 year warranty (based on order agreement), with 2-year warranty on core engine components. Free replacement parts during the warranty period.",cat:"warranty"},
     {q:"Can I order spare parts and consumables separately?",a:"Yes. We offer a full range of OEM parts and wear items including chains, blades, trimmer line, filters, spark plugs, and oil. Parts can be shipped consolidated with equipment orders to reduce logistics costs.",cat:"parts"},
-    {q:"What shipping methods do you support?",a:"We support FOB Ningbo/Shanghai, CIF to destination port, DDP door-to-door, and other trade terms. Standard shipping is by sea (FCL/LCL); small volumes can go by rail or air. We have overseas warehouses in Europe and the US for local delivery.",cat:"dealer"},
+    {q:"What shipping methods do you support?",a:"We support FOB Ningbo/Shanghai, CIF to destination port, DDP door-to-door, and other trade terms. Standard shipping is by sea (FCL/LCL); small volumes can go by rail or air.",cat:"dealer"},
     {q:"How do I get samples and quotations?",a:"Please submit an inquiry via our Contact page or email our trade team directly. We respond within 24 hours with a quotation, specification sheet, and high-resolution product images. Samples are typically dispatched within 3-5 business days.",cat:"dealer"},
     {q:"Where is the factory? Can I visit?",a:"Our factory is located 200m northeast of Leisure Fishing Garden, Luozhuang District, Linyi City, Shandong Province (east of Yinxing Road), covering 41,000m². Clients are welcome to schedule factory visits anytime.",cat:"dealer"},
     {q:"What should I note for long-term equipment storage?",a:"Before storing gasoline equipment: drain the fuel or add fuel stabilizer, add a few drops of oil to the spark plug hole and pull the starter cord several times. All equipment should be cleaned, covered with a dust cover, and stored in a dry place.",cat:"maintenance"}
@@ -216,7 +216,7 @@ window.APP_DATA_EN={
     {name:"Direct from Factory",desc:"Source factory, no middlemen markup",issuer:"Direct factory supply"},
     {name:"OEM/ODM",desc:"Private label & customization",issuer:"Branding / color / config"},
     {name:"Low MOQ",desc:"1-unit trial order",issuer:"Sample trial supported"},
-    {name:"Overseas Warehouses",desc:"Local delivery",issuer:"Germany / US warehouses"},
+    {name:"18 Years Experience",desc:"Founded 2008",issuer:"Mature craft, stable quality"},
     {name:"Warranty",desc:"1-2 year warranty",issuer:"2-year core parts + spares"},
     {name:"Fast Response",desc:"Reply within 24h",issuer:"Dedicated trade team"}
   ]
