@@ -63,6 +63,7 @@
     var certsHTML=(p.certifications||[]).map(function(c){return '<span class="cert-tag">'+c+'</span>'}).join('');
     var infoHTML='';
     if(p.moq)infoHTML+='<span>MOQ: '+p.moq+'</span>';
+    if(p.leadTime)infoHTML+='<span>'+__('common.leadTime')+p.leadTime+'</span>';
 
     return '<div class="product-card">'+
       '<a href="product-'+p.id+'.html" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" decoding="async" width="400" height="300" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
@@ -104,7 +105,7 @@
           '<div class="quickview__specs">'+Object.entries(p.specs).map(function(e){return '<span><strong>'+__('spec.'+e[0])+'</strong>: '+e[1]+'</span>'}).join('')+'</div>'+
           '<ul class="quickview__features">'+p.features.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
           (certsHTML?'<div style="margin-bottom:var(--space-2)">'+certsHTML+'</div>':'')+
-          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+'</div>':'')+
+          (p.moq?'<div style="font-size:0.8125rem;color:var(--color-text-light);margin-bottom:4px"><strong>MOQ:</strong> '+p.moq+' &nbsp; <strong>'+__('common.leadTime')+'</strong> '+(p.leadTime||__('common.inquire'))+'</div>':'')+
           '<div class="quickview__footer">'+
             '<span style="font-family:var(--font-heading);font-size:1.125rem;color:var(--color-gold-dark)">'+__('home.factoryPrice')+'</span>'+
             '<a href="contact.html?tab=quote" class="btn btn--primary">'+__('home.sendInquiry')+'</a>'+
@@ -318,7 +319,7 @@
                 return '<tr><td class="compare-table__label">'+key+'</td>'+products.map(function(p){return '<td>'+(p.specs[key]||'—')+'</td>'}).join('')+'</tr>';
               }).join('')+
               // Certifications
-              '<tr><td class="compare-table__label">Source</td>'+products.map(function(p){return '<td>'+(p.certifications||[]).join(', ')+'</td>'}).join('')+'</tr>'+
+              '<tr><td class="compare-table__label">Certifications</td>'+products.map(function(p){return '<td>'+(p.certifications||[]).join(', ')+'</td>'}).join('')+'</tr>'+
               // Action row
               '<tr><td class="compare-table__label"></td>'+products.map(function(p){return '<td><a href="contact.html?tab=quote" class="btn btn--primary btn--sm">'+__('compare.inquire')+'</a></td>'}).join('')+'</tr>'+
             '</tbody>'+
