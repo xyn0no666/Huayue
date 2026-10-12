@@ -181,11 +181,11 @@ window.APP_DATA={
     {name:"陈志远",location:"山东烟台",avatar:"https://ui-avatars.com/api/?name=陈志远&background=c4a97d&color=fff&size=200&font-size=0.35",text:"自家种植大片果园，一直采购这家工厂的汽油园林机械使用，机器动力强劲充足，不管是割草除草还是山地开荒作业都十分利索。整机做工扎实皮实耐用，油耗控制得很好，长时间作业也不费油，日常操作简单顺手，故障率低，用着特别省心，已经多次回购并推荐给周边农户朋友。",rating:5},
     {name:"赵明辉",location:"浙江杭州",avatar:"https://ui-avatars.com/api/?name=赵明辉&background=2d6a4f&color=fff&size=200&font-size=0.35",text:"我们市政绿化工程项目长期采购这家的园林设备，整体品质超出预期，机身用料扎实，发动机启动顺畅不卡顿，运行时噪音小、震动轻，工人长时间手持作业也不容易累手。厂家售后响应及时，配件齐全，合作下来靠谱放心，后续还会长期批量采购。",rating:5},
     {name:"林小雨",location:"广东深圳",avatar:"https://ui-avatars.com/api/?name=林小雨&background=8b6f47&color=fff&size=200&font-size=0.35",text:"家里庭院面积大，日常打理全靠这款园林机械，汽油动力爆发力强，修剪绿篱、清理落叶、杂草清除一机多用。机身轻量化设计，女生也能轻松操作，质量稳定靠谱，使用大半年几乎没出过故障，对比同类型产品性价比超高，真心推荐入手。",rating:4},
-    {name:"Carlos M.",location:"巴西圣保罗",avatar:"https://ui-avatars.com/api/?name=Carlos+M&background=e07b39&color=fff&size=200&font-size=0.35",text:"We've been importing Huayue brush cutters for 2 years now. The build quality is solid — engines start reliably even after long shipping and storage. Our customers in Brazil appreciate the power-to-weight ratio. After-sales support is responsive; spare parts arrive on time. A trustworthy manufacturing partner for the South American market.",rating:5},
-    {name:"Ahmed R.",location:"阿联酋迪拜",avatar:"https://ui-avatars.com/api/?name=Ahmed+R&background=0d7377&color=fff&size=200&font-size=0.35",text:"As a distributor covering the GCC region, I need suppliers who understand international standards. Huayue impressed me — products meet CE/GS certifications, packaging is export-ready, and the OEM customization process is smooth. Their blowers perform exceptionally well in our hot, dusty climate. Highly recommended for Middle East distributors.",rating:5},
+    {name:"Carlos M.",location:"巴西圣保罗",avatar:"https://ui-avatars.com/api/?name=Carlos+M&background=e07b39&color=fff&size=200&font-size=0.35",text:"We've been importing Yongtai brush cutters for 2 years now. The build quality is solid — engines start reliably even after long shipping and storage. Our customers in Brazil appreciate the power-to-weight ratio. After-sales support is responsive; spare parts arrive on time. A trustworthy manufacturing partner for the South American market.",rating:5},
+    {name:"Ahmed R.",location:"阿联酋迪拜",avatar:"https://ui-avatars.com/api/?name=Ahmed+R&background=0d7377&color=fff&size=200&font-size=0.35",text:"As a distributor covering the GCC region, I need suppliers who understand international standards. Yongtai impressed me — products meet CE/GS certifications, packaging is export-ready, and the OEM customization process is smooth. Their blowers perform exceptionally well in our hot, dusty climate. Highly recommended for Middle East distributors.",rating:5},
     {name:"孙文博",location:"黑龙江伊春",avatar:"https://ui-avatars.com/api/?name=孙文博&background=1e3a5f&color=fff&size=200&font-size=0.35",text:"主要在林场、山地做开荒作业，环境比较恶劣，这款园林机械抗造耐造，续航表现优秀，长时间高强度工作动力依旧在线。操作上手简单，老人也能快速学会使用，有效减轻户外作业的人工负担，是山林开荒必备的实用好设备。",rating:5},
-    {name:"王建军",location:"浙江宁波",avatar:"https://ui-avatars.com/api/?name=王建军&background=c4a97d&color=fff&size=200&font-size=0.35",text:"我们做自有品牌园林机械，对产品品质和品牌形象要求高。华悦的定制能力令人印象深刻——从配色到铭牌到包装，全部按需落地，新品开发效率高，品质始终稳定。合作以来供货及时、售后到位，是值得长期合作的制造伙伴。",rating:5},
-    {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://ui-avatars.com/api/?name=马国强&background=7c3aed&color=fff&size=200&font-size=0.35",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。华悦为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
+    {name:"王建军",location:"浙江宁波",avatar:"https://ui-avatars.com/api/?name=王建军&background=c4a97d&color=fff&size=200&font-size=0.35",text:"我们做自有品牌园林机械，对产品品质和品牌形象要求高。永太的定制能力令人印象深刻——从配色到铭牌到包装，全部按需落地，新品开发效率高，品质始终稳定。合作以来供货及时、售后到位，是值得长期合作的制造伙伴。",rating:5},
+    {name:"马国强",location:"新疆乌鲁木齐",avatar:"https://ui-avatars.com/api/?name=马国强&background=7c3aed&color=fff&size=200&font-size=0.35",text:"新疆这边夏季高温、风沙大，对环境要求很苛刻，普通空滤扛不住。永太为我们做了加强型空滤定制方案，用在他们吹风机和油锯上，故障率大幅降低。他们售后响应快、配件供应及时，沟通顺畅，合作很放心。",rating:5}
   ],
   faq:[
     {q:"如何选择适合我市场的割灌机型号？",a:"选择割灌机需考虑排量、地形、作业强度和用途。轻型杂草/家用庭院选25-35cc手提式（如CG431/CG435），灌木清理选37-43cc（如CG430/CG550），大面积开荒选更大排量机型。我们的外贸经理可针对您的市场需求推荐型号。",cat:"selection"},
@@ -198,7 +198,7 @@ window.APP_DATA={
     {q:"可以单独采购配件和耗材吗？",a:"可以。我们提供全系列原装配件和易损件，包括链条、刀片、打草绳、滤清器、火花塞、机油等。配件可与整机订单拼柜发货，降低物流成本。",cat:"parts"},
     {q:"支持哪些运输方式？",a:"支持FOB宁波/上海、CIF到港、DDP到门等多种贸易条款。常规走海运整柜/拼柜，小批量可走铁路或空运。我们在欧洲和美国有海外仓，可提供本地配送。",cat:"dealer"},
     {q:"如何获取样品和报价？",a:"请通过联系我们页面提交询盘，或直接发送邮件至外贸团队。我们会在24小时内回复报价单、规格书和高清产品图。样品通常3-5个工作日可发出。",cat:"dealer"},
-    {q:"工厂在哪里？可以验厂吗？",a:"工厂位于山东省临沂市罗庄区休闲垂钓园东北200米（银杏路东），占地41,000㎡，随时欢迎客户预约验厂。",cat:"dealer"},
+    {q:"工厂在哪里？可以验厂吗？",a:"工厂位于山东省临沂市罗庄区付庄街道东店子村生产路与银杏路交汇向东100米路南，占地41,000㎡，随时欢迎客户预约验厂。",cat:"dealer"},
     {q:"设备长期存放需要注意什么？",a:"汽油设备存放前需排空燃油或添加燃油稳定剂，火花塞滴入少量机油后拉动启动绳数次。所有设备应清洁后罩防尘罩存放。",cat:"maintenance"}
   ],
   stats:[

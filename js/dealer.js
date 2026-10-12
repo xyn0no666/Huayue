@@ -54,7 +54,7 @@
 
       // Build FormData for FormSubmit
       var fd=new FormData();
-      fd.append('_subject','华悦园林经销商申请 - '+company);
+      fd.append('_subject','永太园林经销商申请 - '+company);
       fd.append('_template','table');
       fd.append('_captcha','false');
       var emailField=form.querySelector('input[type="email"]');

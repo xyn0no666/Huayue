@@ -37,7 +37,7 @@ async function main() {
   }
 
   function header(pg, num) {
-    pg.drawText('HUAYUE  GARDEN  MACHINERY', { x: MX, y: H - 26, size: 7, font: enB, color: GOLD });
+    pg.drawText('YONGTAI  GARDEN  MACHINERY', { x: MX, y: H - 26, size: 7, font: enB, color: GOLD });
     pg.drawText('网站审查报告  ·  Confidential', { x: MX, y: H - 36, size: 7, font: cn, color: MUTED });
     if (num > 0) pg.drawText(`— ${num} —`, { x: W - MX - 30, y: 18, size: 7, font: en, color: MUTED });
   }
@@ -83,8 +83,8 @@ async function main() {
   const pg0 = addPage();
   header(pg0, 0);
   let y = H - 170;
-  y = text(pg0, '华悦园林机械', y, 34, GOLD);
-  y = text(pg0, 'HUAYUE  GARDEN  MACHINERY', y + 10, 9, MUTED, en, true);
+  y = text(pg0, '永太园林机械', y, 34, GOLD);
+  y = text(pg0, 'YONGTAI  GARDEN  MACHINERY', y + 10, 9, MUTED, en, true);
   y -= 6;
 
   const dx = (W - 200) / 2;
@@ -96,14 +96,14 @@ async function main() {
   y -= 40;
 
   // Meta box
-  const meta = ['日    期          2026 年 6 月 8 日', '版    本          v1.0', '审查范围          16 个 HTML 页面  +  3 个 JS 数据文件', '正式域名          huayueyuanlin.com'];
+  const meta = ['日    期          2026 年 6 月 8 日', '版    本          v1.0', '审查范围          16 个 HTML 页面  +  3 个 JS 数据文件'];
   const mw = 280, mh = meta.length * 22 + 24, mx2 = (W - mw) / 2;
   pg0.drawRectangle({ x: mx2, y: y - mh, width: mw, height: mh, color: CARD, borderRadius: 4 });
   let my = y - 20;
   for (const m of meta) { pg0.drawText(m, { x: mx2 + 16, y: my, size: 8.5, font: cn, color: MUTED }); my -= 22; }
   y = y - mh - 50;
 
-  pg0.drawText('— 华悦园林机械  —', { x: MX, y: 60, size: 8, font: cn, color: GOLD });
+  pg0.drawText('— 永太园林机械  —', { x: MX, y: 60, size: 8, font: cn, color: GOLD });
   pg0.drawText('专业园林机械制造商', { x: MX, y: 46, size: 8, font: cn, color: MUTED });
 
   // ============== PAGE 1: OVERVIEW ==============
@@ -165,7 +165,7 @@ async function main() {
   y = text(pg2, '网站的 canonical URL、Open Graph URL 和资源路径指向三个不同的域名/路径，严重损害 SEO 和品牌一致性。', y, 9, WHITE);
   y -= 8;
 
-  const urls = [{ l: 'canonical', v: 'xyn0no666.github.io/Huayue/', c: RED, d: 'GitHub Pages 测试域名' }, { l: 'og:url', v: 'huayueyuanlin.com', c: GREEN, d: '正式域名' }, { l: 'manifest', v: '/Huayue/manifest.json', c: RED, d: '子目录路径，正式部署不可用' }];
+  const urls = [{ l: 'canonical', v: 'xyn0no666.github.io/Huayue/', c: RED, d: 'GitHub Pages 测试域名' }, { l: 'manifest', v: '/Huayue/manifest.json', c: RED, d: '子目录路径，正式部署不可用' }];
   const uh = urls.length * 26 + 18;
   pg2.drawRectangle({ x: MX + 6, y: y - uh + 6, width: CW - 12, height: uh, color: CARD, borderRadius: 4 });
   let uy = y - 18;

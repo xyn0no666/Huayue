@@ -229,7 +229,7 @@
             },
             'manufacturer':{
               '@type':'Organization',
-              'name':'华悦园林'
+              'name':'永太园林'
             }
           }
         };

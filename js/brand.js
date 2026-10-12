@@ -60,7 +60,12 @@
     update();
     if(timelineBound)return;
     timelineBound=true;
-    window.addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});
+    /* 用 ticking 去重：这里每次都 getBoundingClientRect()，不去重的话
+       每个滚动事件都会排队一个新 rAF 并强制一次布局 */
+    var ticking=false;
+    window.addEventListener('scroll',function(){
+      if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;update()})}
+    },{passive:true});
     window.addEventListener('resize',function(){measure();update()});
     window.addEventListener('load',function(){measure();update()});
   }

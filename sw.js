@@ -1,4 +1,4 @@
-// Service Worker for 华悦园林 — offline cache
+// Service Worker for 永太园林 — offline cache
 const CACHE_NAME = 'huayue-v2';
 const STATIC_ASSETS = [
   '/',

@@ -5,7 +5,7 @@
 .hero__slides{position:relative;height:100%}
 .hero__slide{position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease}
 .hero__slide--active{opacity:1;z-index:1}
-.hero__bg{position:absolute;inset:0}
+.hero__bg{position:absolute;inset:0;transform:translate3d(0,var(--fx-y,0px),0);will-change:transform}
 .hero__accent{position:absolute;inset:0;pointer-events:none}
 .hero__content{
   position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;
@@ -114,19 +114,20 @@
 .hero__slide--active .hero__content>*:nth-child(4){animation-delay:.65s}
 @keyframes heroReveal{to{opacity:1;transform:translateY(0)}}
 
-/* Ken Burns 缓速推进 */
-.hero__slide--active .hero__bg{animation:heroZoom 7s ease-out forwards}
-@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+/* Ken Burns 缓速推进 + 为视差留出位移余量。
+   缩放必须挂在包装层：.hero__bg 要留给 scroll-fx.js 写 inline transform，
+   而动画的 animation-fill-mode:forwards 会让它永久压过 inline transform。
+   基座 scale(1.10) 向四周各溢出 5%，正好等于视差的最大位移（见 scroll-fx.js 的 AMP）。
+   background:center/cover 仍按包装层的原始尺寸计算，静止取景与原先一致。 */
+.hero__bg-wrap{position:absolute;inset:0;overflow:hidden}
+.hero__slide--active .hero__bg-wrap{animation:heroZoom 7s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.10)}to{transform:scale(1.17)}}
 
-/* 工厂卡片错落进场 */
-.factory-card:nth-child(2){transition-delay:.08s}
-.factory-card:nth-child(3){transition-delay:.16s}
-.factory-card:nth-child(4){transition-delay:.24s}
+/* 工厂卡片的错落进场已改由 scroll-fx.js 写 --fx-i 统一驱动，见 base.css 的 .fade-in.visible */
 
 @media (prefers-reduced-motion:reduce){
   .hero__slide .hero__content>*{opacity:1;transform:none}
-  .hero__slide--active .hero__bg,.hero__slide--active .hero__content>*{animation:none}
-  .factory-card:nth-child(2),.factory-card:nth-child(3),.factory-card:nth-child(4){transition-delay:0s}
+  .hero__slide--active .hero__bg-wrap,.hero__slide--active .hero__content>*{animation:none}
 }
 
 /* 认证资质信任条 */

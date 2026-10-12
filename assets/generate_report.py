@@ -140,7 +140,7 @@ story = []
 
 # ===== COVER =====
 story.append(Spacer(1, 35*mm))
-story.append(Paragraph("华悦园林机械", ParagraphStyle('cover_cn', fontName=CN_FONT, fontSize=36,
+story.append(Paragraph("永太园林机械", ParagraphStyle('cover_cn', fontName=CN_FONT, fontSize=36,
     leading=46, textColor=GOLD, alignment=TA_CENTER)))
 story.append(Spacer(1, 6*mm))
 story.append(Paragraph("HUAYUE  GARDEN  MACHINERY", ParagraphStyle('cover_en', fontName='Helvetica',
@@ -159,7 +159,6 @@ meta_items = [
     Paragraph(f'{muted("日期")}　　2026年6月8日', body_small),
     Paragraph(f'{muted("版本")}　　v1.0', body_small),
     Paragraph(f'{muted("范围")}　　16个HTML页面 + 3个JS数据文件', body_small),
-    Paragraph(f'{muted("域名")}　　huayueyuanlin.com', body_small),
 ]
 meta_tbl = Table([[item] for item in meta_items], colWidths=[120*mm])
 meta_tbl.setStyle(TableStyle([
@@ -265,9 +264,6 @@ url_items = [
     [Paragraph(gold("canonical"), ParagraphStyle('lbl', fontName='Courier', fontSize=9, textColor=GOLD, leading=14)),
      Paragraph(red("xyn0no666.github.io/Huayue/"), code_style),
      Paragraph("GitHub Pages 测试域名", body_small)],
-    [Paragraph(gold("og:url"), ParagraphStyle('lbl', fontName='Courier', fontSize=9, textColor=GOLD, leading=14)),
-     Paragraph(green("huayueyuanlin.com"), code_style),
-     Paragraph("正式域名", body_small)],
     [Paragraph(gold("manifest"), ParagraphStyle('lbl', fontName='Courier', fontSize=9, textColor=GOLD, leading=14)),
      Paragraph("/Huayue/manifest.json", code_style),
      Paragraph("子目录路径，正式部署不可用", body_small)],
@@ -294,8 +290,6 @@ story.append(Spacer(1, 6*mm))
 
 # Fix suggestion
 fix_items = [
-    Paragraph('所有 canonical URL 统一改为 <font color="#4caf84">https://huayueyuanlin.com/xxx.html</font>', list_style),
-    Paragraph('所有 og:image 统一改为 <font color="#4caf84">https://huayueyuanlin.com/assets/images/...</font>', list_style),
     Paragraph('manifest.json 路径从 <font color="#e05555">/Huayue/manifest.json</font> 改为 <font color="#4caf84">/manifest.json</font>', list_style),
 ]
 story.append(Paragraph(gold("建议修改方案"), card_title))
@@ -462,8 +456,8 @@ story.append(Paragraph("—  END  —", ParagraphStyle('end', fontName='Helvetic
 
 # ---------- build ----------
 doc = DarkBackgroundDocTemplate(OUTPUT, pagesize=A4,
-    title='华悦园林机械 — 网站审查报告',
-    author='Huayue Garden Machinery',
+    title='永太园林机械 — 网站审查报告',
+    author='Yongtai Garden Machinery',
     subject='Website Audit Report')
 
 doc.build(story)

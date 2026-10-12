@@ -9,7 +9,7 @@
   var DICT = {
     zh: {
       // Meta
-      'meta.index.title':'华悦园林 — 专业园林机械制造商 | 源头工厂','meta.index.desc':'华悦园林 — 专业园林机械制造商，割灌机、油锯、吹风机源头工厂。多年OEM/ODM经验，欢迎全球客户询盘合作。',
+      'meta.index.title':'永太园林 — 专业园林机械制造商 | 源头工厂','meta.index.desc':'永太园林 — 专业园林机械制造商，割灌机、油锯、吹风机源头工厂。多年OEM/ODM经验，欢迎全球客户询盘合作。',
       // Nav
       'nav.home':'首页','nav.products':'产品中心','nav.brand':'关于我们','nav.catalog':'公司画册','nav.support':'技术支持','nav.contact':'联系我们',
       // Header actions
@@ -21,7 +21,7 @@
       'footer.company.about':'关于我们','footer.company.factory':'工厂实力','footer.company.info':'公司信息','footer.company.join':'加入我们',
       'footer.support.tech':'技术支持','footer.support.faq':'常见问题','footer.support.guides':'保养指南','footer.support.parts':'售后配件',
       'footer.contact.tel':'+86 19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'在线询盘','footer.contact.dealer':'经销商门户',
-      'footer.copyright':'© 2026 华悦园林 — 华悦园林机械',
+      'footer.copyright':'© 2026 永太园林 — 永太园林机械',
       // Cookie banner
       'cookie.text':'本站使用Cookie以提升您的浏览体验。继续访问即表示您同意我们的 <a href=\"privacy.html\">隐私政策</a>。','cookie.essential':'仅必要','cookie.accept':'全部接受',
       // Home hero
@@ -72,7 +72,7 @@
       'brand.vcard3.title':'准时交付','brand.vcard3.desc':'ERP生产管理系统排产，订单进度实时追踪。交付准时率98%以上，旺季产能预留服务保障老客户。',
       'brand.vcard4.title':'全球服务','brand.vcard4.desc':'英语、德语、日语、西班牙语外贸团队，德国/美国双海外仓，售后备件72小时全球可达。',
       'brand.company':'公司信息','brand.company.fullname':'公司全称：','brand.company.est':'成立时间：','brand.company.addr':'注册地址：','brand.company.area':'厂房面积：','brand.company.staff':'员工人数：','brand.company.capacity':'年产能：',
-      'brand.company.fullname.val':'华悦园林机械','brand.company.est.val':'2008年','brand.company.addr.val':'山东省临沂市罗庄区休闲垂钓园东北200米（银杏路东）','brand.company.area.val':'41,334 平方米','brand.company.staff.val':'100+ 人','brand.company.capacity.val':'15 万台',
+      'brand.company.fullname.val':'永太园林机械','brand.company.est.val':'2008年','brand.company.addr.val':'山东省临沂市罗庄区付庄街道东店子村生产路与银杏路交汇向东100米路南','brand.company.area.val':'41,334 平方米','brand.company.staff.val':'100+ 人','brand.company.capacity.val':'15 万台',
       'brand.cert':'品质管控','brand.cert.1':'来料检验体系 — 关键零部件逐批抽检','brand.cert.2':'过程巡检制度 — 关键工序100%监控','brand.cert.3':'成品全检流程 — 功率/油耗/安全逐台检测','brand.cert.4':'耐久性验证 — 模拟极端工况连续运行测试','brand.cert.5':'环保材料管控 — 严格选用环保原材料与工艺','brand.cert.6':'产品追溯系统 — 唯一追溯码，48小时快速响应',
       'brand.partners':'服务承诺','brand.partner.1':'源头工厂直供 — 完全自主生产，成本可控','brand.partner.2':'灵活定制服务 — OEM/ODM全案，低MOQ试单','brand.partner.3':'多语言外贸团队 — 英语/德语/日语/西班牙语','brand.partner.4':'快速响应机制 — 询盘24h回复，样品3-5天发出','brand.partner.5':'完善的售后体系 — 备件充足，技术远程支持',
       'brand.cta.title':'期待与您合作','brand.cta.desc':'欢迎预约验厂，近距离了解我们的制造实力','brand.cta.btn':'发送询盘','brand.cta.browse':'在线浏览画册','brand.cta.catalog':'下载产品画册',
@@ -142,7 +142,7 @@
       'validate.required':'请填写此项','validate.email':'请输入有效的邮箱地址',
       'contact.submitting':'提交中...',
       // FAB (core.js)
-      'fab.wechatQr':'微信扫码\n添加好友','fab.wechatAccount':'公众号：华悦园林机械',
+      'fab.wechatQr':'微信扫码\n添加好友','fab.wechatAccount':'公众号：永太园林机械',
       'fab.tooltip.wechat':'微信','fab.tooltip.copyPhone':'复制','fab.tooltip.copyWechat':'复制微信号','fab.copied':'已复制 ✓','fab.wechatQrAlt':'微信二维码',
       // Product detail
       'detail.specs':'技术参数','detail.features':'产品特点','detail.moq':'最小起订量','detail.leadTime':'交货周期','detail.price':'参考单价','detail.askQuestion':'咨询详情',
@@ -164,7 +164,7 @@
     },
     en: {
       // Meta
-      'meta.index.title':'Huayue Garden — Professional Garden Machinery Manufacturer | Source Factory','meta.index.desc':'Huayue Garden — Professional garden machinery manufacturer. Brush cutters, chainsaws, and blowers direct from the source factory. Years of OEM/ODM experience. Contact us for cooperation.',
+      'meta.index.title':'Yongtai Garden — Professional Garden Machinery Manufacturer | Source Factory','meta.index.desc':'Yongtai Garden — Professional garden machinery manufacturer. Brush cutters, chainsaws, and blowers direct from the source factory. Years of OEM/ODM experience. Contact us for cooperation.',
       // Nav
       'nav.home':'Home','nav.products':'Products','nav.brand':'About Us','nav.catalog':'Catalog','nav.support':'Support','nav.contact':'Contact',
       // Header actions
@@ -176,7 +176,7 @@
       'footer.company.about':'About Us','footer.company.factory':'Factory Strength','footer.company.info':'Company Info','footer.company.join':'Join Us',
       'footer.support.tech':'Tech Support','footer.support.faq':'FAQ','footer.support.guides':'Maintenance Guides','footer.support.parts':'Spare Parts',
       'footer.contact.tel':'+86 19862905209','footer.contact.email':'3539576340@qq.com','footer.contact.inquiry':'Online Inquiry','footer.contact.dealer':'Dealer Portal',
-      'footer.copyright':'© 2026 Huayue Garden — Huayue Garden Machinery',
+      'footer.copyright':'© 2026 Yongtai Garden — Yongtai Garden Machinery',
       // Cookie banner
       'cookie.text':'This site uses cookies to enhance your browsing experience. By continuing, you agree to our <a href=\"privacy.html\">Privacy Policy</a>.','cookie.essential':'Essential Only','cookie.accept':'Accept All',
       // Home hero
@@ -227,7 +227,7 @@
       'brand.vcard3.title':'On-Time Delivery','brand.vcard3.desc':'ERP production management with real-time order tracking. 98%+ on-time delivery rate; peak-season capacity reservation for loyal customers.',
       'brand.vcard4.title':'Global Service','brand.vcard4.desc':'Trade team fluent in English, German, Japanese, and Spanish. Dual warehouses in Germany and USA; after-sales spare parts delivered globally within 72 hours.',
       'brand.company':'Company Information','brand.company.fullname':'Company: ','brand.company.est':'Established: ','brand.company.addr':'Address: ','brand.company.area':'Facility Area: ','brand.company.staff':'Employees: ','brand.company.capacity':'Annual Capacity: ',
-      'brand.company.fullname.val':'Huayue Garden Machinery','brand.company.est.val':'2008','brand.company.addr.val':'200m NE of Leisure Fishing Garden, Luozhuang District, Linyi, Shandong, China (east of Yinxing Road)','brand.company.area.val':'41,334 m²','brand.company.staff.val':'100+','brand.company.capacity.val':'150,000 units',
+      'brand.company.fullname.val':'Yongtai Garden Machinery','brand.company.est.val':'2008','brand.company.addr.val':'East 100m from the intersection of Shengchan Road and Yinxing Road, Dongdianzi Village, Fuzhuang Subdistrict, Luozhuang District, Linyi, Shandong, China','brand.company.area.val':'41,334 m²','brand.company.staff.val':'100+','brand.company.capacity.val':'150,000 units',
       'brand.cert':'Quality Control','brand.cert.1':'Incoming Inspection — Batch sampling of key components','brand.cert.2':'In-Process Patrol — 100% monitoring of critical steps','brand.cert.3':'Final Full Inspection — Power, fuel & safety per unit','brand.cert.4':'Durability Verification — Extended testing under extreme conditions','brand.cert.5':'Eco-Friendly Materials — Strict sourcing of green materials','brand.cert.6':'Product Traceability — Unique ID, 48-hour rapid response',
       'brand.partners':'Service Commitments','brand.partner.1':'Direct Factory Supply — Full in-house, cost under control','brand.partner.2':'Flexible Customization — Full OEM/ODM, low MOQ trials','brand.partner.3':'Multilingual Team — EN/DE/JP/ES trade managers','brand.partner.4':'Rapid Response — 24h reply, 3-5 day sample dispatch','brand.partner.5':'Complete After-Sales — Ample spare parts, remote support',
       'brand.cta.title':'Looking Forward to Working With You','brand.cta.desc':'Schedule a factory visit to experience our manufacturing strength up close','brand.cta.btn':'Send Inquiry','brand.cta.browse':'View Catalog Online','brand.cta.catalog':'Download Catalog',
@@ -297,7 +297,7 @@
       'validate.required':'This field is required','validate.email':'Please enter a valid email address',
       'contact.submitting':'Submitting...',
       // FAB (core.js)
-      'fab.wechatQr':'Scan QR\nAdd on WeChat','fab.wechatAccount':'WeChat: 华悦园林机械',
+      'fab.wechatQr':'Scan QR\nAdd on WeChat','fab.wechatAccount':'WeChat: 永太园林机械',
       'fab.tooltip.wechat':'WeChat','fab.tooltip.copyPhone':'Copy','fab.tooltip.copyWechat':'Copy WeChat ID','fab.copied':'Copied ✓','fab.wechatQrAlt':'WeChat QR Code',
       // Product detail
       'detail.specs':'Specifications','detail.features':'Features','detail.moq':'MOQ','detail.leadTime':'Lead Time','detail.price':'Reference Price','detail.askQuestion':'Ask a Question',

@@ -3,9 +3,16 @@
 /* Hero */
 .brand-hero{
   position:relative;height:70vh;min-height:500px;
-  background:url('../assets/images/brand-hero-new.webp') center/cover no-repeat;
   display:flex;align-items:center;justify-content:center;overflow:hidden;
   margin-top:var(--header-height);
+}
+/* 背景独立成层以便做视差。scale 的 10% 是位移余量，与 scroll-fx.js 的 AMP 对应；
+   --fx-y 由 scroll-fx.js 写入。scale 写在这里而不是 inline，避免被 JS 覆盖。 */
+.brand-hero__bg{
+  position:absolute;inset:0;
+  background:url('../assets/images/brand-hero-new.webp') center/cover no-repeat;
+  transform:scale(1.10) translate3d(0,var(--fx-y,0px),0);
+  will-change:transform;
 }
 .brand-hero__overlay{
   position:absolute;inset:0;

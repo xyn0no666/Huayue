@@ -47,7 +47,7 @@ function buildPage(p) {
   const enP = enProductMap[p.id] || {};
   const enName = enP.name || p.name;
   const enDesc = enP.description || p.description;
-  const seoTitle = `${enName} ${catEN} — 华悦园林 Huayue Garden Machinery`;
+  const seoTitle = `${enName} ${catEN} — 永太园林 Yongtai Garden Machinery`;
   const url = `https://xyn0no666.github.io/Huayue/product-${p.id}.html`;
   const imgUrl = `https://xyn0no666.github.io/Huayue/${p.image}`;
   const desc = p.description;
@@ -80,7 +80,7 @@ function buildPage(p) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="${seoDesc}">
-<meta name="keywords" content="${enName},${catEN},Huayue Garden Machinery,Chinese Factory,OEM,Wholesale">
+<meta name="keywords" content="${enName},${catEN},Yongtai Garden Machinery,Chinese Factory,OEM,Wholesale">
 <meta property="og:title" content="${seoTitle}">
 <meta property="og:description" content="${seoDesc}">
 <meta property="og:image" content="${imgUrl}">
@@ -114,8 +114,8 @@ function buildPage(p) {
   "image":"${imgUrl}",
   "sku":"${p.id}",
   "category":"${catName}",
-  "brand":{"@type":"Brand","name":"华悦园林"},
-  "manufacturer":{"@type":"Organization","name":"华悦园林机械"},
+  "brand":{"@type":"Brand","name":"永太园林"},
+  "manufacturer":{"@type":"Organization","name":"永太园林机械"},
   "offers":{
     "@type":"Offer",
     "price":"${p.price || 0}",
@@ -129,7 +129,7 @@ function buildPage(p) {
 <body>
 <noscript>
   <div style="background:#fff;color:#1a1a2e;text-align:center;padding:16px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;border-bottom:3px solid #c4a97d;line-height:1.6">
-    <p style="margin:0 0 6px;font-size:15px;font-weight:600">华悦园林 Huayue Garden Machinery</p>
+    <p style="margin:0 0 6px;font-size:15px;font-weight:600">永太园林 Yongtai Garden Machinery</p>
     <p style="margin:0;font-size:13px;color:#666">⚠️ 请启用 JavaScript 以浏览完整网站（产品展示 / 在线询盘 / 经销商系统）<br>Please enable JavaScript to view the full site (Products · Inquiry · Dealer Portal)</p>
     <p style="margin:8px 0 0;font-size:13px">📞 <a href="tel:19862905209" style="color:#c4a97d">19862905209</a> &nbsp;|&nbsp; ✉️ <a href="mailto:3539576340@qq.com" style="color:#c4a97d">3539576340@qq.com</a> &nbsp;|&nbsp; 🏭 山东·临沂</p>
   </div>
@@ -137,7 +137,7 @@ function buildPage(p) {
 
 <header class="site-header" id="siteHeader">
   <div class="header__inner">
-    <a href="index.html" class="header__logo" aria-label="华悦园林">华悦<span>园林</span><span class="header__logo-dot"></span></a>
+    <a href="index.html" class="header__logo" aria-label="永太园林">永太<span>园林</span><span class="header__logo-dot"></span></a>
     <nav class="header__nav" id="headerNav">
       <a href="index.html" class="header__nav-link" data-i18n="nav.home">首页</a>
       <a href="products.html" class="header__nav-link" data-i18n="nav.products">产品中心</a>
@@ -222,7 +222,7 @@ function buildPage(p) {
 <footer class="site-footer">
   <div class="footer__grid">
     <div class="footer__col">
-      <div class="footer__brand-name">华悦园林</div>
+      <div class="footer__brand-name">永太园林</div>
       <p class="footer__brand-desc">专业园林机械制造商 — 割灌机、油锯、吹风机源头工厂。多年OEM/ODM经验，服务全球50+国家客户。</p>
     </div>
     <div class="footer__col">
@@ -254,8 +254,8 @@ function buildPage(p) {
     </div>
   </div>
   <div class="footer__bottom">
-    <span>&copy; 2026 华悦园林 版权所有</span>
-    <span>山东临沂·华悦园林机械有限公司</span>
+    <span>&copy; 2026 永太园林 版权所有</span>
+    <span>山东临沂·永太园林机械有限公司</span>
   </div>
 </footer>
 

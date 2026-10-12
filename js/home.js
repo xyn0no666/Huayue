@@ -55,7 +55,7 @@
     };
     var catData=getCategories().filter(function(c){return c.id!=='all'});
     grid.innerHTML=catData.map(function(c){
-      return '<a href="products.html?category='+c.id+'" class="category-card">'+
+      return '<a href="products.html?category='+c.id+'" class="category-card fade-in">'+
         '<div class="category-card__bg" style="background:'+(catColors[c.id]||'#3a3a3a')+'">'+(catSVGs[c.id]||'')+'</div>'+
         '<div class="category-card__overlay"></div>'+
         '<div class="category-card__content"><h3>'+c.name+'</h3><p>'+__('home.viewSeries')+'</p></div>'+
@@ -74,7 +74,7 @@
 
   function createProductCard(p){
     var certsHTML=(p.certifications||[]).slice(0,3).map(function(c){return '<span class="cert-tag">'+c+'</span>'}).join('');
-    return '<div class="product-card">'+
+    return '<div class="product-card fade-in">'+
       '<a href="product-'+p.id+'.html" class="product-card__image" style="display:block"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy" decoding="async" width="400" height="300" onerror="this.style.display=\'none\';this.parentElement.style.background=\'var(--color-border)\'">'+
         (certsHTML?'<div class="product-card__certs">'+certsHTML+'</div>':'')+
         '<button class="product-card__quickview" data-quickview="'+p.id+'" aria-label="'+__('home.quickView')+'">'+
@@ -163,14 +163,17 @@
           observer.unobserve(el)}
       });
     },{threshold:0.5});
-    counters.forEach(function(c){observer.observe(c);animated.add(c)});
-    setTimeout(function(){counters.forEach(function(c){if(!c.dataset.animated)animateCounter(c)})},2000);
+    counters.forEach(function(c){observer.observe(c)});
   }
 
   function animateCounter(el){
     if(el.dataset.animated)return;el.dataset.animated='1';
     var target=parseInt(el.getAttribute('data-count'));
     var suffix=el.getAttribute('data-suffix')||'';
+    /* 尊重减弱动效偏好：直接落到终值，不跑 1.8s 的递增 */
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      el.textContent=target.toLocaleString()+suffix;return;
+    }
     var duration=1800;var start=performance.now();
     function update(now){
       var elapsed=now-start;var progress=Math.min(elapsed/duration,1);

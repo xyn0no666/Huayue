@@ -42,7 +42,7 @@
     var enCat=enCatMap[p.category]||p.category;
     var enName=p.name;var enDesc=p.description;
     if(window.APP_DATA_EN){var enP=(window.APP_DATA_EN.products||[]).find(function(x){return x.id===p.id});if(enP){enName=enP.name;enDesc=enP.description}}
-    var title=enName+' '+enCat+' — 华悦园林 Huayue Garden Machinery';
+    var title=enName+' '+enCat+' — 永太园林 Yongtai Garden Machinery';
     var url='https://xyn0no666.github.io/Huayue/product-'+p.id+'.html';
     document.title=title;
     setMetaTag('description',enDesc);
@@ -71,8 +71,8 @@
       'image':'https://xyn0no666.github.io/Huayue/'+p.image,
       'sku':p.id,
       'category':getCatName(p.category),
-      'brand':{'@type':'Brand','name':'华悦园林'},
-      'manufacturer':{'@type':'Organization','name':'华悦园林机械'},
+      'brand':{'@type':'Brand','name':'永太园林'},
+      'manufacturer':{'@type':'Organization','name':'永太园林机械'},
       'offers':{
         '@type':'Offer',
         'price':(p.price||0).toString(),

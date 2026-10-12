@@ -78,7 +78,7 @@
         var origText=btn.textContent;
         btn.disabled=true;btn.textContent='提交中...';
         // Primary: Submit via FormSubmit.co (free tier, works on any hosting)
-        fd.append('_subject','华悦园林询盘 - '+typeLabels[formType]);
+        fd.append('_subject','永太园林询盘 - '+typeLabels[formType]);
         fd.append('_template','table');
         fd.append('_captcha','false');
         var emailField=this.querySelector('input[type="email"]');
